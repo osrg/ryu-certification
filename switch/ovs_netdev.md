@@ -5,7 +5,7 @@ title: ovs_netdev
 # action
 
 | |IPv4|IPv6|ARP|
-|:----------|---:|---:|---:|
+|-----------|----|----|----|
 |[OUTPUT](#7a352e3512f38379b485f134027ab25c) | OK | OK | OK |
 |[PUSH_VLAN](#0ff360d2030da3a14f9fbeb67a5eb9d7) | ERROR | ERROR | ERROR |
 |[PUSH_MPLS](#84114b5397172ba5a314008b52c36388) | OK | ERROR | ERROR |
@@ -22,7 +22,7 @@ title: ovs_netdev
 |[POP_PBB](#1dd12601d2ca1cc3425fed290f033b6d) | ERROR | ERROR | ERROR |
 
 | |ether|vlan|mpls|pbb|
-|:----------|---:|---:|---:|---:|
+|-----------|----|----|----|----|
 |[SET_NW_TTL (IPv4)](#8d22f11393c5477f32a0ffec71d1e876) | OK | ERROR | ERROR | ERROR |
 |[DEC_NW_TTL (IPv4)](#f471c07fa8015a1122291b7856271775) | OK | ERROR | ERROR | ERROR |
 |[SET_NW_TTL (IPv6)](#e681feea42a220cf08b32c4a6cacbda5) | OK | ERROR | ERROR | ERROR |
@@ -30,7 +30,7 @@ title: ovs_netdev
 # set_field
 
 | |IPv4|IPv6|ARP|
-|:----------|---:|---:|---:|
+|-----------|----|----|----|
 |[ETH_DST](#054537c75c2343772badd2d72824d6d0) | OK | OK | OK |
 |[ETH_SRC](#0c20b607710509d07df984934ea6e709) | OK | OK | OK |
 |[ETH_TYPE](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | ERROR | ERROR | ERROR |
@@ -43,7 +43,7 @@ title: ovs_netdev
 |[PBB_ISID](#9e9826295e4fcce4158b54ff2f2ce35d) | ERROR | ERROR | ERROR |
 
 | |ether|vlan|mpls|pbb|
-|:----------|---:|---:|---:|---:|
+|-----------|----|----|----|----|
 |[IP_DSCP (IPv4)](#ce97749e537c30572fe41bc5f97f525c) | OK | ERROR | ERROR | ERROR |
 |[IP_ECN (IPv4)](#441b26b3cc5d47e14221c29e67b7076f) | OK | ERROR | ERROR | ERROR |
 |[IP_PROTO (IPv4)](#b96b0ffa1914207a7ad1eb3a96b43b63) | ERROR | ERROR | ERROR | ERROR |
@@ -82,7 +82,7 @@ title: ovs_netdev
 # match(OUTPUT/Packet-in/Table-miss)
 
 | |IPv4|IPv6|ARP|
-|:----------|---:|---:|---:|
+|-----------|----|----|----|
 |[IN_PORT](#676630805778c633439bbf5baeeb1fc3) | OK / OK / OK | OK / OK / OK | OK / OK / OK |
 |[METADATA](#0dc0b3013fed3082c5fe85fedf717c56) | OK / OK / ERROR | OK / OK / ERROR | OK / OK / ERROR |
 |[METADATA (Mask)](#a2f35fb4c31f68b07ba0bbeb91463095) | OK / OK / ERROR | OK / OK / ERROR | OK / OK / ERROR |
@@ -103,7 +103,7 @@ title: ovs_netdev
 |[PBB_ISID (Mask)](#a0f136634ba501a112c0bb437349a478) | ERROR / ERROR / ERROR | ERROR / ERROR / ERROR | ERROR / ERROR / ERROR |
 
 | |ether|vlan|mpls|pbb|
-|:----------|---:|---:|---:|---:|
+|-----------|----|----|----|----|
 |[IP_DSCP (IPv4)](#0445f4506456f0406f5f718b15173da7) | OK / OK / OK | ERROR / ERROR / OK | ERROR / ERROR / ERROR | ERROR / ERROR / OK |
 |[IP_ECN (IPv4)](#ccd612d79452abeda8e01ec1ae8e41b0) | OK / OK / OK | ERROR / ERROR / OK | ERROR / ERROR / ERROR | ERROR / ERROR / OK |
 |[IP_PROTO (IPv4)](#f3327379b91290e99b0e2dccd289d8e0) | OK / OK / OK | ERROR / ERROR / OK | ERROR / ERROR / ERROR | ERROR / ERROR / OK |
