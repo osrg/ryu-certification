@@ -736,7 +736,7 @@ title: ovs
 >     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_dscp=8,actions=output:2'                                        ERROR
 >         Failed to initialize flow tables: barrier request timeout.
 > --- Test terminated ---
-> bash: line 1: 14779 Terminated              ryu-manager ryu/tests/switch/tester.py
+> bash: line 1: 28702 Terminated              ryu-manager ryu/tests/switch/tester.py
 > + /bin/true
 > + TITLE=ovs
 > + DIR=openvswitch
@@ -752,12 +752,12 @@ title: ovs
 > + cd /home/ruikubo/jenkins
 > + git clone git@github.com:osrg/ryu-certification.git
 > Cloning into 'ryu-certification'...
-> +++ grep -n 'action: 00_OUTPUT' /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/453/log
+> +++ grep -n 'action: 00_OUTPUT' /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/454/log
 > +++ head -n1
 > +++ cut -f1 -d:
 > +++ echo /var/lib/jenkins/jobs/tester_ovs/workspace
-> ++ CMD_PUSH_RESULT='set -x; cd /home/ruikubo/jenkins/ryu-certification; tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/453/log | python /home/jenkins/raw2markdown.py.20131212 > switch/ovs.md; sed -i '\''s/title: ovs/title: ovs ovs/g'\'' switch/ovs.md; git add .; git commit -m '\''ovs: e79a6c8 ofproto: Handle flow installation and eviction in upcall.'\''; git push;'
-> ++ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/usr/share/tomcat6/.ssh/known_host -i /home/jenkins/id_dsa 10.24.100.30 -l ruikubo 'set -x; cd /home/ruikubo/jenkins/ryu-certification; tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/453/log | python /home/jenkins/raw2markdown.py.20131212 > switch/ovs.md; sed -i '\''s/title: ovs/title: ovs ovs/g'\'' switch/ovs.md; git add .; git commit -m '\''ovs: e79a6c8 ofproto: Handle flow installation and eviction in upcall.'\''; git push;'
+> ++ CMD_PUSH_RESULT='set -x; cd /home/ruikubo/jenkins/ryu-certification; tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/454/log | python /home/jenkins/raw2markdown.py.20131212 > switch/ovs.md; sed -i '\''s/title: ovs/title: ovs ovs/g'\'' switch/ovs.md; git add .; git commit -m '\''ovs: e79a6c8 ofproto: Handle flow installation and eviction in upcall.'\''; git push;'
+> ++ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/usr/share/tomcat6/.ssh/known_host -i /home/jenkins/id_dsa 10.24.100.30 -l ruikubo 'set -x; cd /home/ruikubo/jenkins/ryu-certification; tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/454/log | python /home/jenkins/raw2markdown.py.20131212 > switch/ovs.md; sed -i '\''s/title: ovs/title: ovs ovs/g'\'' switch/ovs.md; git add .; git commit -m '\''ovs: e79a6c8 ofproto: Handle flow installation and eviction in upcall.'\''; git push;'
 > + cd /home/ruikubo/jenkins/ryu-certification
-> + tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/453/log
+> + tail -n +5928 /var/lib/jenkins/jobs/tester_ovs/workspace/../builds/454/log
 > + python /home/jenkins/raw2markdown.py.20131212
