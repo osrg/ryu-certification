@@ -2,6 +2,14 @@
 layout: default
 title: ofsoftswitch13
 ---
+# summary
+| |OK|ERROR|
+|----------|---|---|
+|action|38|18|
+|set_field|57|109|
+|match|414|288|
+|total|509|415|
+
 # action
 
 | |IPv4|IPv6|ARP|
@@ -27,6 +35,7 @@ title: ofsoftswitch13
 |[DEC_NW_TTL (IPv4)](#f471c07fa8015a1122291b7856271775) | OK | OK | OK | ERROR |
 |[SET_NW_TTL (IPv6)](#e681feea42a220cf08b32c4a6cacbda5) | ERROR | ERROR | ERROR | ERROR |
 |[DEC_NW_TTL (IPv6)](#c15841f43eee16c595166a5766716919) | ERROR | ERROR | ERROR | ERROR |
+
 # set_field
 
 | |IPv4|IPv6|ARP|
@@ -78,6 +87,7 @@ title: ofsoftswitch13
 |[ARP_TPA](#cef72d4ba1780a3c9b67b48a33eed3a7) | OK | OK | OK | ERROR |
 |[ARP_SHA](#b81664d2c1b70f417d5a1d0a03ea0a1c) | OK | OK | OK | ERROR |
 |[ARP_THA](#3beb3ec8b1d89859be81d27af03f58a7) | OK | OK | OK | ERROR |
+
 # match(OUTPUT/Packet-in/Table-miss)
 
 | |IPv4|IPv6|ARP|
@@ -148,6 +158,7 @@ title: ofsoftswitch13
 |[ARP_SHA (Mask)](#56613c1f76b6b71b413bfa085a5b83b8) | ERROR / ERROR / OK | ERROR / ERROR / OK | ERROR / ERROR / OK | ERROR / ERROR / OK |
 |[ARP_THA](#316b7ce7df18479f2b207aa95ff48a62) | OK / OK / OK | OK / OK / OK | OK / OK / OK | ERROR / ERROR / OK |
 |[ARP_THA (Mask)](#61b44fcb7c6b2798045626c8bc52f583) | ERROR / ERROR / OK | ERROR / ERROR / OK | ERROR / ERROR / OK | ERROR / ERROR / OK |
+
 # detailed log
 
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
@@ -1041,7 +1052,7 @@ title: ofsoftswitch13
 >     ethernet/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
 >     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
 >     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   ERROR
->         Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='d5:01:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+>         Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='cb:01:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
 >     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
 >     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
 >     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' OK
