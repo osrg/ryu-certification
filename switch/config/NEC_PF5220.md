@@ -5,8 +5,7 @@ title: NEC_PF5220 - config
 
 # OpenFlow related configuration
 <pre>
-# show configuration
-#Last modified by operator at Thu Dec 26 19:31:30 2013 with version V5.0.0.1
+#Last modified by operator at Sun Dec 29 13:28:29 2013 with version V5.0.0.1
 !
 clock timezone JST +9
 !
@@ -15,14 +14,22 @@ vlan 1
 !
 vlan 2
 !
+vlan 100
+!
+vlan 203
+!
 spanning-tree disable
 spanning-tree mode pvst
 !
 interface gigabitethernet 0/1
-  switchport mode access
+  switchport mode trunk
+  switchport trunk allowed vlan 100,203
+  switchport trunk native vlan 1
 !
 interface gigabitethernet 0/2
-  switchport mode access
+  switchport mode trunk
+  switchport trunk allowed vlan 100,203
+  switchport trunk native vlan 1
 !
 interface gigabitethernet 0/3
   switchport mode access
@@ -120,7 +127,7 @@ openflow openflow-id 1 real-switch
 # Version information
 <pre>
 # show version software
-Date 2013/12/27 01:26:35 JST
+Date 2013/12/29 13:59:45 JST
 S/W: OS-F3SL Ver. V5.0.0.1
 </pre>
 
