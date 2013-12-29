@@ -27,3 +27,13 @@ $ sudo /opt/netronome/bin/ns-sdn version
 Netronome SDN version 1.0-r2705:957b19f529f5.326:547b9cca7a97
 </pre>
 
+# Modified test scenario for switch restrictions
+<pre>
+$ find ryu/tests/switch/of13/ -name '*.json' -print0 | xargs -0 sed -i 's/\"port\":2/\"port\":22/g';
+$ find ryu/tests/switch/of13/ -name '*.json' -print0 | xargs -0 sed -i 's/output:2/output:22/g';
+$ sed -i 's/\"value\":1/\"value\":21/g' ryu/tests/switch/of13/match/00_IN_PORT.json;
+$ sed -i 's/in_port=1/in_port=21/g' ryu/tests/switch/of13/match/00_IN_PORT.json;
+$ sed -i 's/TARGET_SENDER_PORT = 2/TARGET_SENDER_PORT = 22/g' ryu/tests/switch/tester.py;
+$ sed -i 's/TARGET_RECEIVE_PORT = 1/TARGET_RECEIVE_PORT = 21/g' ryu/tests/switch/tester.py;
+</pre>
+

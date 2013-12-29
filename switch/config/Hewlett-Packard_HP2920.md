@@ -63,7 +63,7 @@ Image stamp:
 Boot Image:     Primary
 </pre>
 
-# Modify test scenario for switch restrictions
+# Modified test scenario for switch restrictions
 <pre>
 $ find ryu/tests/switch/of13/ -name '*.json' -print0 | xargs -0 sed -i 's/\"table_id\":0/\"table_id\":102,\"priority\":1/g'
 $ sed -i 's/table_id=ofp.OFPTT_ALL/table_id=102/g' ryu/tests/switch/tester.py;
