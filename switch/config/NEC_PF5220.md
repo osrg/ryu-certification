@@ -5,6 +5,7 @@ title: NEC_PF5220 - config
 
 # OpenFlow related configuration
 <pre>
+# show configuration
 #Last modified by operator at Sun Dec 29 13:28:29 2013 with version V5.0.0.1
 !
 clock timezone JST +9
