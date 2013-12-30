@@ -6,84 +6,67 @@ title: ovs_netdev - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-1a773690-34df-4af1-9b19-b866860e0fd2
+91e56094-9c49-465d-93ec-b64e8cc4d6d4
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
-        Port "eth7"
-            Interface "eth7"
+        Port "eth8"
+            Interface "eth8"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth8"
-            Interface "eth8"
+        Port "eth7"
+            Interface "eth7"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 58d83675-42ac-45fb-baea-a820107aedf3
-controller          : [1bf0ee2d-4b22-4774-a42e-7f382f6a7997]
+_uuid               : 268a626d-3fd1-4cf3-901e-c5c05d6134d0
+controller          : [7dc8f7c2-5e92-4ae4-a297-ec8adf4288fc]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [19989046-2ba5-47fa-a071-0c4b54795732, cc13429b-c799-4b06-a0c9-5d5666865c42, ebe8d8e7-ed9b-4513-815f-71a1df4766a3]
+ports               : [50de4ab0-f1c3-43ce-b542-756bb56d874f, 998cabf0-6bb9-4cd7-a986-bba73a0f0a17, f857bdea-cbaf-4efc-ab20-2534f0aefe04]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 1bf0ee2d-4b22-4774-a42e-7f382f6a7997
+_uuid               : 7dc8f7c2-5e92-4ae4-a297-ec8adf4288fc
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="297", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="296", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 19989046-2ba5-47fa-a071-0c4b54795732
+_uuid               : 50de4ab0-f1c3-43ce-b542-756bb56d874f
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [61039c06-879e-4d9c-9e62-bb8dcd91d0e3]
-name                : "eth7"
-
-_uuid               : ebe8d8e7-ed9b-4513-815f-71a1df4766a3
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [667a1cb4-bf13-4c54-85b2-f291b5d6cc84]
+interfaces          : [bcd1f6e7-0100-4fc6-aa76-56b7b7918499]
 name                : "eth8"
 
-_uuid               : cc13429b-c799-4b06-a0c9-5d5666865c42
+_uuid               : 998cabf0-6bb9-4cd7-a986-bba73a0f0a17
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [5ebd8804-9c1a-4bc5-aafc-5e37c7f9c416]
+interfaces          : [3dd4a119-e871-496c-9eca-8a378861d434]
 name                : "br0"
 
-$ sudo ovs-vsctl list Interface
-_uuid               : 667a1cb4-bf13-4c54-85b2-f291b5d6cc84
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:4a:84:ec"
-mtu                 : 1550
-name                : "eth8"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=213760, tx_dropped=0, tx_errors=0, tx_packets=2310}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
-type                : ""
+_uuid               : f857bdea-cbaf-4efc-ab20-2534f0aefe04
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [9752c3f2-30f6-4422-923d-f48bb27b049a]
+name                : "eth7"
 
-_uuid               : 5ebd8804-9c1a-4bc5-aafc-5e37c7f9c416
+$ sudo ovs-vsctl list Interface
+_uuid               : 3dd4a119-e871-496c-9eca-8a378861d434
 admin_state         : up
 duplex              : full
-ifindex             : 49
+ifindex             : 53
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -97,7 +80,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 61039c06-879e-4d9c-9e62-bb8dcd91d0e3
+_uuid               : 9752c3f2-30f6-4422-923d-f48bb27b049a
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -110,7 +93,24 @@ mac_in_use          : "00:60:e0:4a:84:eb"
 mtu                 : 1550
 name                : "eth7"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=548215, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=5630, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=635669, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=6523, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
+type                : ""
+
+_uuid               : bcd1f6e7-0100-4fc6-aa76-56b7b7918499
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:4a:84:ec"
+mtu                 : 1550
+name                : "eth8"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=245290, tx_dropped=0, tx_errors=0, tx_packets=2651}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 </pre>
@@ -118,20 +118,14 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0cf3b0d0fd97c52822979fe7cf1e594be03324a9
-Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Fri Dec 20 15:12:58 2013 -0800
+commit e95f1d01087ad27a71f70d8baa5c95f4350ba5bc
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Thu Dec 5 09:21:14 2013 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Mon Dec 30 13:45:33 2013 -0800
+CommitDate: Mon Dec 30 14:15:39 2013 -0800
 
-    ofproto-dpif-monitor: Remove monitor_init().
+    connmgr: Log when a packet-in is dropped due to queue overflow.
     
-    Commit 881d47a9fa9 (monitor: Replace monitor_seq with periodic
-    wakeup.) removes the global "struct seq" in ofproto-dpif-monitor
-    module.  This change makes the monitor_init() no longer needed.
-    
-    This commit removes the monitor_init() from ofproto-dpif-monitor.c.
-    
-    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Reported-by: Anton Matsiuk &lt;anton.matsiuk@gmail.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>

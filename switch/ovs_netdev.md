@@ -165,6 +165,7 @@ title: ovs_netdev
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 >     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
 >     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
+> dpid=00c800c000f002e3 : Connect unknown SW.
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
@@ -327,7 +328,6 @@ title: ovs_netdev
 <a name="4aac2024fdbed94a15211163ccb7b2d0">action: set_field: 07_VLAN_PCP</a>
 >     ethernet/vlan(pcp=3)/ipv4/tcp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                  ERROR
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
-> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                  ERROR
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 >     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                       ERROR
@@ -369,6 +369,7 @@ title: ovs_netdev
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 
 <a name="441b26b3cc5d47e14221c29e67b7076f">action: set_field: 09_IP_ECN (IPv4)</a>
+> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          OK
 >     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     ERROR
 >         Received incorrect packet: ethernet(ethertype=2048)
