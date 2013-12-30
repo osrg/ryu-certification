@@ -165,6 +165,7 @@ title: ovs_netdev
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 >     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
 >     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
+> dpid=0002d4c9efb14440 : Connect unknown SW.
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
@@ -259,6 +260,7 @@ title: ovs_netdev
 
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
 >     ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         OK
+> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    ERROR
 >         Received incorrect packet: ethernet(ethertype=2048)
 >     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
@@ -417,7 +419,6 @@ title: ovs_netdev
 >     ethernet/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
 >     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      ERROR
 >         Received incorrect packet: ethernet(ethertype=2048)
-> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x0a]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
