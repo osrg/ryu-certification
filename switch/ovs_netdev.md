@@ -272,6 +272,7 @@ title: ovs_netdev
 >         Received incorrect packet: ethernet(ethertype=2048)
 >     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x0a]
+> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 
