@@ -165,7 +165,6 @@ title: ovs_netdev
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 >     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
 >     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
-> dpid=00c800c000f002e3 : Connect unknown SW.
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
@@ -286,6 +285,7 @@ title: ovs_netdev
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 
 <a name="c15841f43eee16c595166a5766716919">action: 24_DEC_NW_TTL (IPv6)</a>
+> dpid=0000001e08091fa2 : Connect unknown SW.
 >     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                      OK
 >     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                 ERROR
 >         Received incorrect packet: ethernet(ethertype=34525)
@@ -296,6 +296,7 @@ title: ovs_netdev
 
 <a name="054537c75c2343772badd2d72824d6d0">action: set_field: 03_ETH_DST</a>
 >     ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->eth_dst,output:2' OK
+> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->eth_dst,output:2' OK
 >     ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->eth_dst,output:2' OK
 
@@ -369,7 +370,6 @@ title: ovs_netdev
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 
 <a name="441b26b3cc5d47e14221c29e67b7076f">action: set_field: 09_IP_ECN (IPv4)</a>
-> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          OK
 >     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     ERROR
 >         Received incorrect packet: ethernet(ethertype=2048)
