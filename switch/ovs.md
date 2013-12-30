@@ -113,7 +113,9 @@ title: ovs
 
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 >     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
+> dpid=0002d4c9efb14440 : Connect unknown SW.
 >     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
+> dpid=0000000000000032 : Connect unknown SW.
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
@@ -154,7 +156,6 @@ title: ovs
 >     ethernet/vlan(vid=100)/arp-->'eth_type=0x0806,vlan_vid=0,actions=pop_vlan,output:2'                  OK
 
 <a name="069a36adbdd0739563365540be6e9b28">action: 11_COPY_TTL_OUT</a>
-> dpid=0000000000000032 : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'             ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'       ERROR
@@ -167,8 +168,6 @@ title: ovs
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
-> dpid=00c800c000f002e3 : Connect unknown SW.
-> dpid=0002d4c9efb14440 : Connect unknown SW.
 > dpid=0000001e08091fa2 : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
 >         Receiving timeout: no change in tx_packets on target.
@@ -180,7 +179,6 @@ title: ovs
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 >     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
 >         Receiving timeout: no change in tx_packets on target.
-> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
 >         Receiving timeout: no change in tx_packets on target.
 >     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          ERROR
