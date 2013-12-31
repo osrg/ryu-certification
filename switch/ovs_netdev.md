@@ -168,7 +168,6 @@ title: ovs_netdev
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
-> dpid=0002d4c9efb14440 : Connect unknown SW.
 >     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              ERROR
 >         Received incorrect packet: ethernet(ethertype=2048)
 >     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              ERROR
@@ -208,7 +207,6 @@ title: ovs_netdev
 >         Received incorrect packet-in: SW[dpid=0000000000000001]
 
 <a name="069a36adbdd0739563365540be6e9b28">action: 11_COPY_TTL_OUT</a>
-> dpid=0000000000000032 : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'             ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'       ERROR
@@ -227,6 +225,7 @@ title: ovs_netdev
 
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 >     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
+> dpid=0000001e08091fa2 : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
 >     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          OK
 
@@ -288,8 +287,6 @@ title: ovs_netdev
 
 <a name="c15841f43eee16c595166a5766716919">action: 24_DEC_NW_TTL (IPv6)</a>
 >     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                      OK
-> dpid=00007072cf9f761e : Connect unknown SW.
-> dpid=0000001e08091fa2 : Connect unknown SW.
 >     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                 ERROR
 >         Received incorrect packet: ethernet(ethertype=34525)
 >     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
