@@ -6,80 +6,64 @@ title: ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-8f126f49-53ac-4eb1-b4ec-6e6b529733b6
+e474f4e1-9246-4a0f-b1d9-75b646cbb292
     Bridge "br0"
         Controller "tcp:10.24.150.30"
-            is_connected: true
         fail_mode: secure
-        Port "br0"
-            Interface "br0"
-                type: internal
         Port "eth7"
             Interface "eth7"
         Port "eth8"
             Interface "eth8"
+        Port "br0"
+            Interface "br0"
+                type: internal
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 3df9532d-a164-4d32-989c-65482e1a7a06
-controller          : [508d5d71-03ec-4e7f-b269-310c94473c29]
+_uuid               : 32d49ddf-b713-4338-a45b-30cd38995ab9
+controller          : [afb8ede1-1abd-47e7-8f32-8c925a590859]
 datapath_id         : "0000000000000001"
 datapath_type       : ""
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [125fb5d6-68fa-4d6a-acd2-d9ac9026e460, 7c1988cf-8499-4bc1-9d68-30cf79c627a5, 9c362133-99c7-402d-991b-1f6249337bfc]
+ports               : [08d57093-5c39-463e-9453-5a8733b768f1, 6b3f59be-4d64-4e06-ad71-d609a5cab2e0, c48f0dde-7e82-4a2e-888b-ccc725a133c6]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 508d5d71-03ec-4e7f-b269-310c94473c29
-is_connected        : true
+_uuid               : afb8ede1-1abd-47e7-8f32-8c925a590859
+is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="126", sec_since_disconnect="128", state=ACTIVE}
+status              : {last_error="Connection refused", sec_since_connect="351", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 125fb5d6-68fa-4d6a-acd2-d9ac9026e460
+_uuid               : c48f0dde-7e82-4a2e-888b-ccc725a133c6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [77a368c0-50a1-4e73-a04e-6785fd135d77]
+interfaces          : [2d0b249f-31db-4bf1-a578-d1293fc0fb54]
 name                : "br0"
 
-_uuid               : 7c1988cf-8499-4bc1-9d68-30cf79c627a5
+_uuid               : 6b3f59be-4d64-4e06-ad71-d609a5cab2e0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ad59295a-bae8-419e-a905-3a0db4d3014a]
-name                : "eth7"
-
-_uuid               : 9c362133-99c7-402d-991b-1f6249337bfc
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [4bc98664-b16e-4c2c-a2d9-815d4ca33dad]
+interfaces          : [1efe9281-2c63-4bad-9bd4-311856af67ea]
 name                : "eth8"
 
-$ sudo ovs-vsctl list Interface
-_uuid               : 77a368c0-50a1-4e73-a04e-6785fd135d77
-admin_state         : up
-ifindex             : 65
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : up
-mac_in_use          : "00:60:e0:4a:84:eb"
-mtu                 : 1550
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
+_uuid               : 08d57093-5c39-463e-9453-5a8733b768f1
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [fb578b57-5da9-4e70-8e36-b5881c20123e]
+name                : "eth7"
 
-_uuid               : 4bc98664-b16e-4c2c-a2d9-815d4ca33dad
+$ sudo ovs-vsctl list Interface
+_uuid               : 1efe9281-2c63-4bad-9bd4-311856af67ea
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -92,11 +76,11 @@ mac_in_use          : "00:60:e0:4a:84:ec"
 mtu                 : 1550
 name                : "eth8"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=11222, tx_dropped=0, tx_errors=0, tx_packets=121}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 
-_uuid               : ad59295a-bae8-419e-a905-3a0db4d3014a
+_uuid               : fb578b57-5da9-4e70-8e36-b5881c20123e
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -109,25 +93,44 @@ mac_in_use          : "00:60:e0:4a:84:eb"
 mtu                 : 1550
 name                : "eth7"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=22189, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=233, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=660, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
+
+_uuid               : 2d0b249f-31db-4bf1-a578-d1293fc0fb54
+admin_state         : up
+ifindex             : 67
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : up
+mac_in_use          : "00:60:e0:4a:84:eb"
+mtu                 : 1550
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 758c456df570a1af1d9e913d50a3478785663e66
-Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Mon Dec 30 15:58:58 2013 -0800
-Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Mon Dec 30 16:52:43 2013 -0800
+commit 5054d6fd32d5dd3354c1aed1bfa9fb2b7979324e
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Tue Dec 31 11:32:16 2013 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Tue Dec 31 11:36:39 2013 -0800
 
-    dpif: Use explicit packet metadata.
+    odp-util: Avoid null dereference in parse_8021q_onward().
     
-    This helps reduce confusion about when a flow is a flow and when it is
-    just metadata.
+    For parsing a mask, this code in parse_8021q_onward() always read out
+    the OVS_KEY_ATTR_VLAN attribute without first checking whether it existed.
+    The correct behavior, implemented by this commit, appears to be treating
+    the VLAN as wildcarded and to continue parsing the flow.
     
-    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Bug #22312.
+    Reported-by: Krishna Miriyala &lt;miriyalak@vmware.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
