@@ -166,8 +166,10 @@ title: ovs
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
+> dpid=00c800c000f002e3 : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
 >         Receiving timeout: no change in tx_packets on target.
+> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
 >         Receiving timeout: no change in tx_packets on target.
 >     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      ERROR
