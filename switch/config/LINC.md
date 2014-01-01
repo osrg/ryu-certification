@@ -105,4 +105,28 @@ Commit:     Akos korosmezey &lt;akos.korosmezey@erlang-solutions.com&gt;
 CommitDate: Wed Dec 18 19:41:01 2013 +0100
 
     Fix incorrect github urls. Closes #271
+
+$ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
+commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
+Merge: 3bc8b2f 202a5af
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Tue Dec 31 05:16:34 2013 -0800
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Tue Dec 31 05:16:34 2013 -0800
+
+    Merge pull request #57 from yamt/oxm-4bytes
+    
+    make oxm on-wire length for ipv6_flabel and mpls_label 32-bit
+
+$ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
+commit 68f5b053e05e52055295cb317f9b64ffa5bc5d76
+Merge: 38e92c5 363333f
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Fri Nov 1 12:07:10 2013 -0700
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Fri Nov 1 12:07:10 2013 -0700
+
+    Merge pull request #10 from esl/issue111
+    
+    Fix handling SCTP packets
 </pre>
