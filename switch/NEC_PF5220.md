@@ -163,15 +163,11 @@ title: NEC_PF5220
 # detailed log
 
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
-> dpid=0000000000000032 : Connect unknown SW.
 >     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
-> dpid=0002d4c9efb14440 : Connect unknown SW.
 >     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
-> dpid=00c800c000f002e3 : Connect unknown SW.
 >     ethernet/arp-->'actions=output:2'                                                                    OK
 
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
-> dpid=0000001e08091fa2 : Connect unknown SW.
 >     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 >     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              ERROR
@@ -200,7 +196,6 @@ title: NEC_PF5220
 >         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 >     ethernet/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x88a8,output:2'                         ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
-> dpid=00007072cf9f761e : Connect unknown SW.
 >     ethernet/vlan/arp-->'eth_type=0x0806,actions=push_vlan:0x88a8,output:2'                              ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 
@@ -288,7 +283,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="e681feea42a220cf08b32c4a6cacbda5">action: 23_SET_NW_TTL (IPv6)</a>
 >     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'                   ERROR
@@ -306,7 +301,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="054537c75c2343772badd2d72824d6d0">action: set_field: 03_ETH_DST</a>
 >     ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->eth_dst,output:2' OK
@@ -385,7 +380,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="441b26b3cc5d47e14221c29e67b7076f">action: set_field: 09_IP_ECN (IPv4)</a>
 >     ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          ERROR
@@ -413,7 +408,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="875a5fc287f4e36f66af556bfd972bb9">action: set_field: 12_IPV4_DST</a>
 >     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' OK
@@ -421,7 +416,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="ddb5bc5be6b881ffba50cccc24eadd47">action: set_field: 13_TCP_SRC (IPv4)</a>
 >     ethernet/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'        OK
@@ -429,7 +424,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="1ef49893ff0104130d445cec69e9c6d4">action: set_field: 14_TCP_DST (IPv4)</a>
 >     ethernet/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
@@ -437,7 +432,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="59af7357f686a19a48e3ad696ede1897">action: set_field: 15_UDP_SRC (IPv4)</a>
 >     ethernet/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
@@ -501,7 +496,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="c2b5b54af8c6b31df2874ec89c2bf18a">action: set_field: 09_IP_ECN (IPv6)</a>
 >     ethernet/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                ERROR
@@ -529,7 +524,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="a6c439b995434737feccd7906f5524ec">action: set_field: 14_TCP_DST (IPv6)</a>
 >     ethernet/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
@@ -537,7 +532,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="ed0cfb16341890f5f314b8d760ebf83d">action: set_field: 15_UDP_SRC (IPv6)</a>
 >     ethernet/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
@@ -545,7 +540,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="1ccf7ab91d2295773428fa14168ae64b">action: set_field: 16_UDP_DST (IPv6)</a>
 >     ethernet/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'           OK
@@ -553,7 +548,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="2476412662f05c76d05abdd5f983e9bb">action: set_field: 17_SCTP_SRC (IPv6)</a>
 >     ethernet/ipv6/udp(sctp_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     ERROR
@@ -591,7 +586,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp--->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
->         Receiving timeout: no change in tx_packets on target.
+>         Receiving timeout: no change in rx_packets on tester.
 
 <a name="b4b9abcf11b5c7f81971ea4e452ccfd6">action: set_field: 28_IPV6_FLABEL</a>
 >     ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2'    OK
@@ -599,7 +594,7 @@ title: NEC_PF5220
 >     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
 >         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 >     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
->         Receiving timeout: no change in rx_packets on tester.
+>         Receiving timeout: no change in tx_packets on target.
 
 <a name="73a03bb41351355646920c1207233e73">action: set_field: 29_ICMPV6_TYPE</a>
 >     ethernet/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2'       ERROR
