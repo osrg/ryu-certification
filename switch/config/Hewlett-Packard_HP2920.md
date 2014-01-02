@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Hewlett-Packard_HP2920 - config
+title: Ryu Certification - Hewlett-Packard_HP2920 - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* Hewlett-Packard HP2920
 
 # OpenFlow related configuration
 <pre>
@@ -66,6 +68,7 @@ Boot Image:     Primary
 # Modified test scenario for switch restrictions
 <pre>
 $ find ryu/tests/switch/of13/ -name '*.json' -print0 | xargs -0 sed -i 's/\"table_id\":0/\"table_id\":102,\"priority\":1/g'
+$ find ryu/tests/switch/of13/match/ -name '*.json' -print0 | xargs -0 sed -i 's/  0$/  102/g'
 $ sed -i 's/table_id=ofp.OFPTT_ALL/table_id=102/g' ryu/tests/switch/tester.py;
 </pre>
 
