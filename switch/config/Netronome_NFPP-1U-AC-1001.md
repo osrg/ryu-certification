@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Netronome_NFPP-1U-AC-1001 - config
+title: Ryu Certification - Netronome NFPP-1U-AC-1001 - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* Netronome NFPP-1U-AC-1001
 
 # OpenFlow related configuration
 <pre>

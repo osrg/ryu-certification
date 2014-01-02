@@ -1,7 +1,9 @@
 ---
 layout: default
-title: NoviFlow_NoviKit200.md - config
+title: Ryu Certification - NoviFlow NoviKit200 - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* NoviFlow NoviKit200
 
 # OpenFlow related configuration
 <pre>

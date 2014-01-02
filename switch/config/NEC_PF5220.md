@@ -1,7 +1,9 @@
 ---
 layout: default
-title: NEC_PF5220 - config
+title: Ryu Certification - NEC PF5220 - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* NEC PF5220
 
 # OpenFlow related configuration
 <pre>
