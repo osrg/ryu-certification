@@ -1,89 +1,91 @@
 ---
 layout: default
-title: ovs_netdev - config
+title: Ryu Certification - ovs - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* ovs 
 
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-06f35bb5-dd61-4004-8610-ac550f0c4fe3
+596f0f12-a353-40d8-92a8-ac82bd803ed3
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
-        Port "eth8"
-            Interface "eth8"
         Port "eth7"
             Interface "eth7"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth8"
+            Interface "eth8"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 3fa7f798-71ae-4c3b-93eb-6e78a79ab99b
-controller          : [e2b5a3b2-664d-4026-8181-d01b58e4d42c]
+_uuid               : 46e37131-11d7-433d-ba55-050d6a1b3113
+controller          : [0cad78a4-c2eb-47c1-bccc-6597aad9fccd]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [0a35a96b-b5c7-4728-be32-57d7b49cd49f, abced7fb-edf9-40c9-91a3-d3ff0ffa5954, fdcbf304-cde7-4285-afe2-b3d4a27b37a0]
+ports               : [43190e07-bc26-43ae-bf59-c37e41e39732, 6e10149f-b451-47ac-8de3-e8b5546ad99d, c21b0ffa-0bd4-4088-9a1d-9ee179cff607]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : e2b5a3b2-664d-4026-8181-d01b58e4d42c
+_uuid               : 0cad78a4-c2eb-47c1-bccc-6597aad9fccd
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="301", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="296", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : fdcbf304-cde7-4285-afe2-b3d4a27b37a0
+_uuid               : c21b0ffa-0bd4-4088-9a1d-9ee179cff607
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7b30e4f5-f13d-4a19-a0a2-7ec8411e14eb]
-name                : "br0"
-
-_uuid               : abced7fb-edf9-40c9-91a3-d3ff0ffa5954
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [17d3f430-5090-4a53-95ea-7469e8047fa7]
-name                : "eth7"
-
-_uuid               : 0a35a96b-b5c7-4728-be32-57d7b49cd49f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [840dd21f-dcd0-41f7-833d-2b1108375e77]
+interfaces          : [2e77d4aa-c8d5-4e88-8be3-233265080b18]
 name                : "eth8"
 
+_uuid               : 6e10149f-b451-47ac-8de3-e8b5546ad99d
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c33809c7-5b6e-481a-b576-6442cf091248]
+name                : "br0"
+
+_uuid               : 43190e07-bc26-43ae-bf59-c37e41e39732
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [53bd156b-f9fa-453e-8019-e0a9eee33e2b]
+name                : "eth7"
+
 $ sudo ovs-vsctl list Interface
-_uuid               : 17d3f430-5090-4a53-95ea-7469e8047fa7
+_uuid               : 2e77d4aa-c8d5-4e88-8be3-233265080b18
 admin_state         : up
 duplex              : full
-ifindex             : 10
+ifindex             : 11
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:4a:84:eb"
+mac_in_use          : "00:60:e0:4a:84:ec"
 mtu                 : 1550
-name                : "eth7"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=1224356, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=12502, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : "eth8"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=503256, tx_dropped=0, tx_errors=0, tx_packets=5434}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 
-_uuid               : 7b30e4f5-f13d-4a19-a0a2-7ec8411e14eb
+_uuid               : c33809c7-5b6e-481a-b576-6442cf091248
 admin_state         : up
 duplex              : full
-ifindex             : 75
+ifindex             : 81
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -97,20 +99,20 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 840dd21f-dcd0-41f7-833d-2b1108375e77
+_uuid               : 53bd156b-f9fa-453e-8019-e0a9eee33e2b
 admin_state         : up
 duplex              : full
-ifindex             : 11
+ifindex             : 10
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:4a:84:ec"
+mac_in_use          : "00:60:e0:4a:84:eb"
 mtu                 : 1550
-name                : "eth8"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=441876, tx_dropped=0, tx_errors=0, tx_packets=4774}
+name                : "eth7"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=1420151, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=14482, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 </pre>
@@ -118,15 +120,14 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 21e70add7e5fc18c519ca3d46691230bf136b1e1
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Tue Dec 31 10:36:19 2013 -0800
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Dec 31 11:42:52 2013 -0800
+commit 004a624912175a696dc6dd447f267d01cf07ce1f
+Author:     Jesse Gross &lt;jesse@nicira.com&gt;
+AuthorDate: Fri Jan 3 09:31:38 2014 -0800
+Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
+CommitDate: Fri Jan 3 09:50:36 2014 -0800
 
-    odp-util: Simplify logic in odp_flow_key_to_flow__().
+    FAQ: Add entry on GRE module conflicts.
     
-    Simplify (a &amp;&amp; b) || (!a &amp;&amp; c) to just a ? b : c.
-    
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>

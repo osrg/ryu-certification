@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Ryu Certification - ovs_netdev
+title: Ryu Certification - ovs netdev
 ---
 
 # [Ryu Certification](http://osrg.github.io/ryu/certification.html)
-* ovs_netdev
+* ovs netdev
 * [Configuration](http://osrg.github.io/ryu-certification/switch/config/ovs_netdev.html)
 
 | |OK|ERROR|
