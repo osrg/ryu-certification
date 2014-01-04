@@ -8,84 +8,84 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-596f0f12-a353-40d8-92a8-ac82bd803ed3
+da854e96-d900-4026-b90d-31bc2b90629f
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
-        Port "eth7"
-            Interface "eth7"
+        Port "eth8"
+            Interface "eth8"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth8"
-            Interface "eth8"
+        Port "eth7"
+            Interface "eth7"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 46e37131-11d7-433d-ba55-050d6a1b3113
-controller          : [0cad78a4-c2eb-47c1-bccc-6597aad9fccd]
+_uuid               : ec847593-64c5-49ac-b2d5-8ed2d627d915
+controller          : [214ff765-a39d-4cc7-a790-af9e96ee4afc]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [43190e07-bc26-43ae-bf59-c37e41e39732, 6e10149f-b451-47ac-8de3-e8b5546ad99d, c21b0ffa-0bd4-4088-9a1d-9ee179cff607]
+ports               : [3b9ecda3-34dd-4db5-8f51-92dfb8b0ab98, 47bd6c97-4982-47ba-9eaa-9ce69921a713, a3d2d348-c7c7-4c8d-98dc-032fe9eee046]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 0cad78a4-c2eb-47c1-bccc-6597aad9fccd
+_uuid               : 214ff765-a39d-4cc7-a790-af9e96ee4afc
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="296", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="297", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : c21b0ffa-0bd4-4088-9a1d-9ee179cff607
+_uuid               : a3d2d348-c7c7-4c8d-98dc-032fe9eee046
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2e77d4aa-c8d5-4e88-8be3-233265080b18]
-name                : "eth8"
-
-_uuid               : 6e10149f-b451-47ac-8de3-e8b5546ad99d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c33809c7-5b6e-481a-b576-6442cf091248]
-name                : "br0"
-
-_uuid               : 43190e07-bc26-43ae-bf59-c37e41e39732
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [53bd156b-f9fa-453e-8019-e0a9eee33e2b]
+interfaces          : [6782c541-c30c-4d24-bef9-e45ca40785a6]
 name                : "eth7"
 
+_uuid               : 47bd6c97-4982-47ba-9eaa-9ce69921a713
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [ed1795f2-ee31-4b9b-a901-cce4f130451e]
+name                : "br0"
+
+_uuid               : 3b9ecda3-34dd-4db5-8f51-92dfb8b0ab98
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [d1e3d4c2-7ade-4182-8c36-3541acb73f01]
+name                : "eth8"
+
 $ sudo ovs-vsctl list Interface
-_uuid               : 2e77d4aa-c8d5-4e88-8be3-233265080b18
+_uuid               : 6782c541-c30c-4d24-bef9-e45ca40785a6
 admin_state         : up
 duplex              : full
-ifindex             : 11
+ifindex             : 10
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:4a:84:ec"
+mac_in_use          : "00:60:e0:4a:84:eb"
 mtu                 : 1550
-name                : "eth8"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=503256, tx_dropped=0, tx_errors=0, tx_packets=5434}
+name                : "eth7"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=1485416, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=15142, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 
-_uuid               : c33809c7-5b6e-481a-b576-6442cf091248
+_uuid               : ed1795f2-ee31-4b9b-a901-cce4f130451e
 admin_state         : up
 duplex              : full
-ifindex             : 81
+ifindex             : 83
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -99,20 +99,20 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 53bd156b-f9fa-453e-8019-e0a9eee33e2b
+_uuid               : d1e3d4c2-7ade-4182-8c36-3541acb73f01
 admin_state         : up
 duplex              : full
-ifindex             : 10
+ifindex             : 11
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:4a:84:eb"
+mac_in_use          : "00:60:e0:4a:84:ec"
 mtu                 : 1550
-name                : "eth7"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=1420151, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=14482, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : "eth8"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=523564, tx_dropped=0, tx_errors=0, tx_packets=5654}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 </pre>
@@ -120,14 +120,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 004a624912175a696dc6dd447f267d01cf07ce1f
+commit c4e976db1343aac88dec4b457bdf5d0277f247e6
 Author:     Jesse Gross &lt;jesse@nicira.com&gt;
-AuthorDate: Fri Jan 3 09:31:38 2014 -0800
+AuthorDate: Fri Jan 3 15:44:28 2014 -0800
 Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Fri Jan 3 09:50:36 2014 -0800
+CommitDate: Fri Jan 3 16:08:37 2014 -0800
 
-    FAQ: Add entry on GRE module conflicts.
+    datapath: Check for backported sctp_compute_cksum().
     
+    This is backported by RHEL7.
+    
+    Reported-by: Ashok Byahatti &lt;ashok.byahatti@embrane.com&gt;
     Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
-    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
+    Acked-by: Joe Stringer &lt;joestringer@nicira.com&gt;
 </pre>
