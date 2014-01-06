@@ -1,7 +1,9 @@
 ---
 layout: default
-title: ofsoftswitch13 - config
+title: Ryu Certification - ofsoftswitch13 - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* ofsoftswitch13
 
 # OpenFlow related configuration
 <pre>
