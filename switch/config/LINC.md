@@ -1,7 +1,9 @@
 ---
 layout: default
-title: LINC - config
+title: Ryu Certification - LINC - config
 ---
+# [Ryu Certification](http://osrg.github.io/ryu/certification.html)
+* LINC
 
 # OpenFlow related configuration
 <pre>
