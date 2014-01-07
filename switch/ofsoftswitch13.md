@@ -9,17 +9,17 @@ title: Ryu Certification - ofsoftswitch13
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|38|18|
+|[Action](#Action)|41|15|
 |[set_field](#set_field)|57|109|
 |[Match](#Match)|414|288|
-|Total|509|415|
+|Total|512|412|
 
 ## <a name ='Action'>Action</a>
 
 | |IPv4|IPv6|ARP|
 |-----------|----|----|----|
 |[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) |
-|[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
+|[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
 |[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json) | [OK](#84114b5397172ba5a314008b52c36388) | [OK](#84114b5397172ba5a314008b52c36388) | [OK](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json) | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) |
 |[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json) | [OK](#cdf28d261795cce41af2b316f024c762) | [OK](#cdf28d261795cce41af2b316f024c762) | [OK](#cdf28d261795cce41af2b316f024c762) |
@@ -172,12 +172,9 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
 <pre>
-    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              ERROR
-        Received incorrect packet: ethernet(ethertype=2048)
-    ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              ERROR
-        Received incorrect packet: ethernet(ethertype=34525)
-    ethernet/arp-->'eth_type=0x0806,actions=push_vlan:0x8100,output:2'                                   ERROR
-        Received incorrect packet: ethernet(ethertype=2054)
+    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              OK
+    ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              OK
+    ethernet/arp-->'eth_type=0x0806,actions=push_vlan:0x8100,output:2'                                   OK
 </pre>
 <a name="84114b5397172ba5a314008b52c36388">action: 19_PUSH_MPLS</a>
 <pre>
@@ -1143,7 +1140,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='6e:01:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='09:03:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' OK
