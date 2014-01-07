@@ -9,17 +9,17 @@ title: Ryu Certification - ovs
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|14|42|
+|[Action](#Action)|17|39|
 |[set_field](#set_field)|65|105|
 |[Match](#Match)|433|269|
-|Total|512|416|
+|Total|515|413|
 
 ## <a name ='Action'>Action</a>
 
 | |IPv4|IPv6|ARP|
 |-----------|----|----|----|
 |[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) |
-|[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
+|[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
 |[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) |
 |[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json) | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) |
@@ -173,12 +173,9 @@ title: Ryu Certification - ovs
 </pre>
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
 <pre>
-    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              ERROR
-        Received incorrect packet: ethernet(ethertype=2048)
-    ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              ERROR
-        Received incorrect packet: ethernet(ethertype=34525)
-    ethernet/arp-->'eth_type=0x0806,actions=push_vlan:0x8100,output:2'                                   ERROR
-        Received incorrect packet: ethernet(ethertype=2054)
+    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              OK
+    ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              OK
+    ethernet/arp-->'eth_type=0x0806,actions=push_vlan:0x8100,output:2'                                   OK
 </pre>
 <a name="84114b5397172ba5a314008b52c36388">action: 19_PUSH_MPLS</a>
 <pre>

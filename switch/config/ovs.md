@@ -8,66 +8,66 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-7bf1f699-a55e-4170-b2e4-aa2fe2cb3cee
+ef1726eb-0dfa-4e3e-a290-f2f732bf03ef
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
         Port "eth7"
             Interface "eth7"
+        Port "eth8"
+            Interface "eth8"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth8"
-            Interface "eth8"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 9dff821e-244c-43ff-977d-ea6e63d6c065
-controller          : [6f9691ce-406f-4d2e-9e88-014c673d9385]
+_uuid               : 320c86c2-97d2-41ef-b460-5d74ef8c6c09
+controller          : [24549227-3b8c-4c35-9307-de4bb5656c08]
 datapath_id         : "0000000000000001"
 datapath_type       : ""
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [5f92739b-3ec2-418b-a820-f39b5e4b97a0, 6252aa9e-fa4d-4635-b303-959e8aaacafe, 67dd777d-e34d-42a7-9646-8b14df6a6286]
+ports               : [01289dee-7ca2-4148-9a67-e71058c66b35, 578c5cd4-440d-4411-a6a9-e7efa47e451d, af3f37a9-0372-42a2-805e-1f35e464bf08]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 6f9691ce-406f-4d2e-9e88-014c673d9385
+_uuid               : 24549227-3b8c-4c35-9307-de4bb5656c08
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="356", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="352", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 67dd777d-e34d-42a7-9646-8b14df6a6286
+_uuid               : 578c5cd4-440d-4411-a6a9-e7efa47e451d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3db0734a-61ac-444f-a960-41e8111ea44a]
+interfaces          : [6d5335d9-d6bd-4d84-8f6c-e6419acec323]
 name                : "eth8"
 
-_uuid               : 6252aa9e-fa4d-4635-b303-959e8aaacafe
+_uuid               : af3f37a9-0372-42a2-805e-1f35e464bf08
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [812a66b0-d4a8-4a7d-826f-d8009521091b]
+interfaces          : [1cddd2ac-057c-40b1-a6f7-a84ea9365dfc]
 name                : "br0"
 
-_uuid               : 5f92739b-3ec2-418b-a820-f39b5e4b97a0
+_uuid               : 01289dee-7ca2-4148-9a67-e71058c66b35
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [fe9c7616-db38-4d84-8c7a-29e1b92ecdc6]
+interfaces          : [d9a9e375-5135-45b2-b2f2-0667ea1c1f16]
 name                : "eth7"
 
 $ sudo ovs-vsctl list Interface
-_uuid               : 812a66b0-d4a8-4a7d-826f-d8009521091b
+_uuid               : 1cddd2ac-057c-40b1-a6f7-a84ea9365dfc
 admin_state         : up
-ifindex             : 85
+ifindex             : 89
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -80,7 +80,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : fe9c7616-db38-4d84-8c7a-29e1b92ecdc6
+_uuid               : d9a9e375-5135-45b2-b2f2-0667ea1c1f16
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -97,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 
-_uuid               : 3db0734a-61ac-444f-a960-41e8111ea44a
+_uuid               : 6d5335d9-d6bd-4d84-8f6c-e6419acec323
 admin_state         : up
 duplex              : full
 ifindex             : 11
