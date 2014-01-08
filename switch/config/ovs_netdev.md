@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-e4886d8e-511d-466c-9564-6665a0cdff00
+f025972c-2413-4fee-8f02-bff13420bce3
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
@@ -21,54 +21,71 @@ e4886d8e-511d-466c-9564-6665a0cdff00
             Interface "eth8"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : 2a60ff87-bf75-4bcc-8d4f-a1298d98e75c
-controller          : [80b01e61-b1bc-4b6a-82ee-02515d0d623b]
+_uuid               : a5278475-35b4-4a87-b120-6ee820d90086
+controller          : [f29c50b7-fa54-4e65-8991-954cbe31b5a3]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [038dfc90-e162-4ecd-b675-b31ac892398f, b40d2c38-e6fa-469e-994f-a006ca0dc9e1, d9ec900f-fc32-4aa0-9d15-c691ffb73037]
+ports               : [30ba9b07-944c-42bb-9390-a89be4bfc1db, 5936636a-3f37-4506-9ebe-7d6ea0cbd6f2, 7889745e-5c42-42fa-99da-5acfe91012a2]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 80b01e61-b1bc-4b6a-82ee-02515d0d623b
+_uuid               : f29c50b7-fa54-4e65-8991-954cbe31b5a3
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_connect="297", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 038dfc90-e162-4ecd-b675-b31ac892398f
+_uuid               : 5936636a-3f37-4506-9ebe-7d6ea0cbd6f2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [257f68c5-e959-4a4a-a2df-782806262b7b]
-name                : "br0"
-
-_uuid               : b40d2c38-e6fa-469e-994f-a006ca0dc9e1
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a80027e6-aed6-4179-83b2-d8c82839b88a]
+interfaces          : [b69c7416-a24d-4934-84b9-90d5225a6f9c]
 name                : "eth7"
 
-_uuid               : d9ec900f-fc32-4aa0-9d15-c691ffb73037
+_uuid               : 7889745e-5c42-42fa-99da-5acfe91012a2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7f6983f7-fbc5-4fde-9853-69cc8e8e9729]
+interfaces          : [7b85c9d3-add4-40b2-85e7-d7b6056748f7]
 name                : "eth8"
 
+_uuid               : 30ba9b07-944c-42bb-9390-a89be4bfc1db
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [eefb5fab-dfd5-449c-8ed0-e1de297508fe]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface
-_uuid               : 257f68c5-e959-4a4a-a2df-782806262b7b
+_uuid               : b69c7416-a24d-4934-84b9-90d5225a6f9c
 admin_state         : up
 duplex              : full
-ifindex             : 97
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:4a:84:eb"
+mtu                 : 1550
+name                : "eth7"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=2072801, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=21082, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
+type                : ""
+
+_uuid               : eefb5fab-dfd5-449c-8ed0-e1de297508fe
+admin_state         : up
+duplex              : full
+ifindex             : 101
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -82,24 +99,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : a80027e6-aed6-4179-83b2-d8c82839b88a
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:4a:84:eb"
-mtu                 : 1550
-name                : "eth7"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=1942271, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=19762, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
-type                : ""
-
-_uuid               : 7f6983f7-fbc5-4fde-9853-69cc8e8e9729
+_uuid               : 7b85c9d3-add4-40b2-85e7-d7b6056748f7
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -112,7 +112,7 @@ mac_in_use          : "00:60:e0:4a:84:ec"
 mtu                 : 1550
 name                : "eth8"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=666632, tx_dropped=0, tx_errors=0, tx_packets=7194}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=707476, tx_dropped=0, tx_errors=0, tx_packets=7634}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 </pre>
@@ -120,17 +120,32 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit fe68c005871ec5b4b3f33c1b99593667cc83c234
-Author:     Simon Horman &lt;horms@verge.net.au&gt;
-AuthorDate: Tue Jan 7 14:33:37 2014 +0900
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Jan 7 14:53:25 2014 -0800
+commit d02c42bf4d8ecb0723ca5c6a3156c480949344a4
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Tue Jan 7 00:17:25 2014 -0800
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Tue Jan 7 20:18:10 2014 -0800
 
-    netdev: Update rx_recv documentation for NULL case
+    ofproto-dpif: Fix a vlan-splinter megaflow bug
     
-    Replace truncated description of when rx_recv() may be NULL
-    with text used for other fields of netdev_class.
+    When vlan-splinter is enabled, ovs receives non-vlan flows from the
+    kernel vlan ports, vlan tag is then added to the incoming flow before
+    xlating, so that they look like those received from a trunk port.
     
-    Signed-off-by: Simon Horman &lt;horms@verge.net.au&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    In case megaflow is enabled, xlating may set vlan masks during rule
+    processing as usual. If those vlan masks were serialized and downloaded
+    to the kernel (this bug), those mega flows will be rejected due to
+    unexpected vlan mask encapsulation, since the original kernel flows do
+    not have vlan tags. This bug does not break connectivity, but impacts
+    performance since all traffic received on vlan splinter ports will now
+    be handled by vswitchd, as no datapath flows can be successfully
+    installed.
+    
+    This fix is to make sure no vlan mask encapsulation is generated for
+    the datapath flow if its in_port was re-written by vlan-splinter
+    receiving logic.
+    
+    Bug #22567
+    
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
 </pre>
