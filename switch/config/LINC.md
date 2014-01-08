@@ -100,13 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 7eca7324fe6baf4e0474f6c9008741e1adc6c019
-Author:     Akos korosmezey &lt;akos.korosmezey@erlang-solutions.com&gt;
-AuthorDate: Wed Dec 18 19:41:01 2013 +0100
-Commit:     Akos korosmezey &lt;akos.korosmezey@erlang-solutions.com&gt;
-CommitDate: Wed Dec 18 19:41:01 2013 +0100
+commit e382830f16c83ceb9e39dff46fcdced02589d5e2
+Merge: 7eca732 83590dd
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Wed Jan 8 08:13:54 2014 -0800
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Wed Jan 8 08:13:54 2014 -0800
 
-    Fix incorrect github urls. Closes #271
+    Merge pull request #272 from yamt/fix-of-config-queue-min-max
+    
+    of-config: report queue min/max rates correctly
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
