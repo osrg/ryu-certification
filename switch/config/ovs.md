@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-96388529-e304-4602-993d-3f6ca759a597
+f767a99c-a57d-4ba5-b8c3-b01dfae3ed52
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
+        Port "eth7"
+            Interface "eth7"
         Port "eth8"
             Interface "eth8"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth7"
-            Interface "eth7"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : ed945438-9f37-4fa5-a844-aa53db49dae7
-controller          : [477e3195-6fbd-4862-83f3-248329175cba]
+_uuid               : 7abb25b8-452f-4909-919c-6fd585554668
+controller          : [6fc73ab7-87bd-471b-8913-d414e9430d01]
 datapath_id         : "0000000000000001"
 datapath_type       : ""
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [0d087f2a-0357-462f-822c-44e6b946a4c5, 5b2784f2-e33d-4322-9eda-1c8c944b03ca, bd706c6a-c167-4064-bffd-9fc704ee37b1]
+ports               : [24ce3a6d-4257-461e-b05a-f0497e50fb33, db90861d-5294-4eb7-a1a3-23b7e37e76a4, ea138b12-4272-4f29-ab9a-8f791c82b1ac]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : 477e3195-6fbd-4862-83f3-248329175cba
+_uuid               : 6fc73ab7-87bd-471b-8913-d414e9430d01
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="376", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="367", sec_since_disconnect="6", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 5b2784f2-e33d-4322-9eda-1c8c944b03ca
+_uuid               : db90861d-5294-4eb7-a1a3-23b7e37e76a4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [157e36d4-2f13-4685-b433-5ab4f830a357]
-name                : "br0"
-
-_uuid               : bd706c6a-c167-4064-bffd-9fc704ee37b1
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [38d90161-a406-483c-842d-4d9bb01b1128]
-name                : "eth7"
-
-_uuid               : 0d087f2a-0357-462f-822c-44e6b946a4c5
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [d9a5d018-5cb8-45b0-849b-14660abc17ce]
+interfaces          : [2c0b6add-1edb-474e-9fc9-1ab3b12dca5d]
 name                : "eth8"
 
+_uuid               : 24ce3a6d-4257-461e-b05a-f0497e50fb33
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [bfd7e2a2-af11-4cf3-8cbb-13a8a4df6f62]
+name                : "eth7"
+
+_uuid               : ea138b12-4272-4f29-ab9a-8f791c82b1ac
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [87137c41-35b2-41e0-9907-fcede35b5f0e]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface
-_uuid               : d9a5d018-5cb8-45b0-849b-14660abc17ce
+_uuid               : 2c0b6add-1edb-474e-9fc9-1ab3b12dca5d
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -82,9 +82,9 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 
-_uuid               : 157e36d4-2f13-4685-b433-5ab4f830a357
+_uuid               : 87137c41-35b2-41e0-9907-fcede35b5f0e
 admin_state         : up
-ifindex             : 103
+ifindex             : 105
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -97,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : 38d90161-a406-483c-842d-4d9bb01b1128
+_uuid               : bfd7e2a2-af11-4cf3-8cbb-13a8a4df6f62
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -118,32 +118,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d02c42bf4d8ecb0723ca5c6a3156c480949344a4
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Tue Jan 7 00:17:25 2014 -0800
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Tue Jan 7 20:18:10 2014 -0800
+commit 89e45da9c16fd9dbed78feb74b1a55b332ba95a7
+Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+AuthorDate: Wed Jan 8 15:07:30 2014 +0900
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Tue Jan 7 22:18:08 2014 -0800
 
-    ofproto-dpif: Fix a vlan-splinter megaflow bug
+    Fix !HAVE_NETLINK build
     
-    When vlan-splinter is enabled, ovs receives non-vlan flows from the
-    kernel vlan ports, vlan tag is then added to the incoming flow before
-    xlating, so that they look like those received from a trunk port.
+    Fix a regression introduced by commit 4b97b70d
+    ("ofproto-dpif: Enable NXAST_SAMPLE only if the datapath supports it.")
     
-    In case megaflow is enabled, xlating may set vlan masks during rule
-    processing as usual. If those vlan masks were serialized and downloaded
-    to the kernel (this bug), those mega flows will be rejected due to
-    unexpected vlan mask encapsulation, since the original kernel flows do
-    not have vlan tags. This bug does not break connectivity, but impacts
-    performance since all traffic received on vlan splinter ports will now
-    be handled by vswitchd, as no datapath flows can be successfully
-    installed.
-    
-    This fix is to make sure no vlan mask encapsulation is generated for
-    the datapath flow if its in_port was re-written by vlan-splinter
-    receiving logic.
-    
-    Bug #22567
-    
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
