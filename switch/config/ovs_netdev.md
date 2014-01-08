@@ -8,84 +8,67 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f025972c-2413-4fee-8f02-bff13420bce3
+8e1dda0f-6870-41d5-bded-d4c1ee919334
     Bridge "br0"
         Controller "tcp:10.24.150.30"
         fail_mode: secure
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth7"
-            Interface "eth7"
         Port "eth8"
             Interface "eth8"
+        Port "eth7"
+            Interface "eth7"
 
 $ sudo ovs-vsctl list Bridge
-_uuid               : a5278475-35b4-4a87-b120-6ee820d90086
-controller          : [f29c50b7-fa54-4e65-8991-954cbe31b5a3]
+_uuid               : 0118b94d-959b-4769-a458-679f63b0ecf2
+controller          : [f0aa3313-4bf7-4d1d-832b-68d804a3c08d]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 fail_mode           : secure
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [30ba9b07-944c-42bb-9390-a89be4bfc1db, 5936636a-3f37-4506-9ebe-7d6ea0cbd6f2, 7889745e-5c42-42fa-99da-5acfe91012a2]
+ports               : [218e9e5c-cbfc-4a21-b4b3-fc1252bf5af4, 8eaaba7d-f6b9-4260-91db-dd5481409fa7, f17933f4-be06-453d-bc0f-af36547c335f]
 protocols           : ["OpenFlow13"]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller
-_uuid               : f29c50b7-fa54-4e65-8991-954cbe31b5a3
+_uuid               : f0aa3313-4bf7-4d1d-832b-68d804a3c08d
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="297", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="322", sec_since_disconnect="4", state=BACKOFF}
 target              : "tcp:10.24.150.30"
 
 $ sudo ovs-vsctl list Port
-_uuid               : 5936636a-3f37-4506-9ebe-7d6ea0cbd6f2
+_uuid               : 218e9e5c-cbfc-4a21-b4b3-fc1252bf5af4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b69c7416-a24d-4934-84b9-90d5225a6f9c]
-name                : "eth7"
-
-_uuid               : 7889745e-5c42-42fa-99da-5acfe91012a2
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [7b85c9d3-add4-40b2-85e7-d7b6056748f7]
-name                : "eth8"
-
-_uuid               : 30ba9b07-944c-42bb-9390-a89be4bfc1db
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [eefb5fab-dfd5-449c-8ed0-e1de297508fe]
+interfaces          : [ff4bf7c8-1063-4021-b2d0-c983a18106db]
 name                : "br0"
 
-$ sudo ovs-vsctl list Interface
-_uuid               : b69c7416-a24d-4934-84b9-90d5225a6f9c
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:4a:84:eb"
-mtu                 : 1550
+_uuid               : f17933f4-be06-453d-bc0f-af36547c335f
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [aa2b752d-af85-4504-a16a-ac03ddc35a7f]
 name                : "eth7"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=2072801, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=21082, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
-type                : ""
 
-_uuid               : eefb5fab-dfd5-449c-8ed0-e1de297508fe
+_uuid               : 8eaaba7d-f6b9-4260-91db-dd5481409fa7
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [d2032825-efdd-4b25-85af-a43d87ddd7a3]
+name                : "eth8"
+
+$ sudo ovs-vsctl list Interface
+_uuid               : ff4bf7c8-1063-4021-b2d0-c983a18106db
 admin_state         : up
 duplex              : full
-ifindex             : 101
+ifindex             : 107
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -99,7 +82,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 7b85c9d3-add4-40b2-85e7-d7b6056748f7
+_uuid               : d2032825-efdd-4b25-85af-a43d87ddd7a3
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -112,7 +95,24 @@ mac_in_use          : "00:60:e0:4a:84:ec"
 mtu                 : 1550
 name                : "eth8"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=707476, tx_dropped=0, tx_errors=0, tx_packets=7634}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=768856, tx_dropped=0, tx_errors=0, tx_packets=8294}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
+type                : ""
+
+_uuid               : aa2b752d-af85-4504-a16a-ac03ddc35a7f
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:4a:84:eb"
+mtu                 : 1550
+name                : "eth7"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=2268596, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=23062, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="3.10-0"}
 type                : ""
 </pre>
@@ -120,32 +120,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d02c42bf4d8ecb0723ca5c6a3156c480949344a4
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Tue Jan 7 00:17:25 2014 -0800
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Tue Jan 7 20:18:10 2014 -0800
+commit 89e45da9c16fd9dbed78feb74b1a55b332ba95a7
+Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+AuthorDate: Wed Jan 8 15:07:30 2014 +0900
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Tue Jan 7 22:18:08 2014 -0800
 
-    ofproto-dpif: Fix a vlan-splinter megaflow bug
+    Fix !HAVE_NETLINK build
     
-    When vlan-splinter is enabled, ovs receives non-vlan flows from the
-    kernel vlan ports, vlan tag is then added to the incoming flow before
-    xlating, so that they look like those received from a trunk port.
+    Fix a regression introduced by commit 4b97b70d
+    ("ofproto-dpif: Enable NXAST_SAMPLE only if the datapath supports it.")
     
-    In case megaflow is enabled, xlating may set vlan masks during rule
-    processing as usual. If those vlan masks were serialized and downloaded
-    to the kernel (this bug), those mega flows will be rejected due to
-    unexpected vlan mask encapsulation, since the original kernel flows do
-    not have vlan tags. This bug does not break connectivity, but impacts
-    performance since all traffic received on vlan splinter ports will now
-    be handled by vswitchd, as no datapath flows can be successfully
-    installed.
-    
-    This fix is to make sure no vlan mask encapsulation is generated for
-    the datapath flow if its in_port was re-written by vlan-splinter
-    receiving logic.
-    
-    Bug #22567
-    
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
