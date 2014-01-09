@@ -10,9 +10,9 @@ title: Ryu Certification - ofsoftswitch13
 | |OK|ERROR|
 |----------|---|---|
 |[Action](#Action)|41|15|
-|[set_field](#set_field)|57|109|
+|[set_field](#set_field)|63|103|
 |[Match](#Match)|414|288|
-|Total|512|412|
+|Total|518|406|
 
 ## <a name ='Action'>Action</a>
 
@@ -64,7 +64,7 @@ title: Ryu Certification - ofsoftswitch13
 |[IPV4_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/12_IPV4_DST.json) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [ERROR](#875a5fc287f4e36f66af556bfd972bb9) |
 |[TCP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/13_TCP_SRC_IPv4.json) | [OK](#ddb5bc5be6b881ffba50cccc24eadd47) | [OK](#ddb5bc5be6b881ffba50cccc24eadd47) | [OK](#ddb5bc5be6b881ffba50cccc24eadd47) | [ERROR](#ddb5bc5be6b881ffba50cccc24eadd47) |
 |[TCP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/14_TCP_DST_IPv4.json) | [OK](#1ef49893ff0104130d445cec69e9c6d4) | [OK](#1ef49893ff0104130d445cec69e9c6d4) | [OK](#1ef49893ff0104130d445cec69e9c6d4) | [ERROR](#1ef49893ff0104130d445cec69e9c6d4) |
-|[UDP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/15_UDP_SRC_IPv4.json) | [ERROR](#59af7357f686a19a48e3ad696ede1897) | [ERROR](#59af7357f686a19a48e3ad696ede1897) | [ERROR](#59af7357f686a19a48e3ad696ede1897) | [ERROR](#59af7357f686a19a48e3ad696ede1897) |
+|[UDP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/15_UDP_SRC_IPv4.json) | [OK](#59af7357f686a19a48e3ad696ede1897) | [OK](#59af7357f686a19a48e3ad696ede1897) | [OK](#59af7357f686a19a48e3ad696ede1897) | [ERROR](#59af7357f686a19a48e3ad696ede1897) |
 |[UDP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/16_UDP_DST_IPv4.json) | [OK](#634ee71de7d5180bfb8742295b0b5745) | [OK](#634ee71de7d5180bfb8742295b0b5745) | [OK](#634ee71de7d5180bfb8742295b0b5745) | [ERROR](#634ee71de7d5180bfb8742295b0b5745) |
 |[SCTP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/17_SCTP_SRC_IPv4.json) | [ERROR](#803b0fcd7a244f192a4c6e304f14ae0c) | [ERROR](#803b0fcd7a244f192a4c6e304f14ae0c) | [ERROR](#803b0fcd7a244f192a4c6e304f14ae0c) | [ERROR](#803b0fcd7a244f192a4c6e304f14ae0c) |
 |[SCTP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/18_SCTP_DST_IPv4.json) | [ERROR](#2c8963178cda864114bce4dcceb3328a) | [ERROR](#2c8963178cda864114bce4dcceb3328a) | [ERROR](#2c8963178cda864114bce4dcceb3328a) | [ERROR](#2c8963178cda864114bce4dcceb3328a) |
@@ -74,7 +74,7 @@ title: Ryu Certification - ofsoftswitch13
 |[IP_ECN (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/09_IP_ECN_IPv6.json) | [ERROR](#c2b5b54af8c6b31df2874ec89c2bf18a) | [ERROR](#c2b5b54af8c6b31df2874ec89c2bf18a) | [ERROR](#c2b5b54af8c6b31df2874ec89c2bf18a) | [ERROR](#c2b5b54af8c6b31df2874ec89c2bf18a) |
 |[TCP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/13_TCP_SRC_IPv6.json) | [OK](#a7345fa316ee299c065fc2b8f663e733) | [OK](#a7345fa316ee299c065fc2b8f663e733) | [OK](#a7345fa316ee299c065fc2b8f663e733) | [ERROR](#a7345fa316ee299c065fc2b8f663e733) |
 |[TCP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/14_TCP_DST_IPv6.json) | [OK](#a6c439b995434737feccd7906f5524ec) | [OK](#a6c439b995434737feccd7906f5524ec) | [OK](#a6c439b995434737feccd7906f5524ec) | [ERROR](#a6c439b995434737feccd7906f5524ec) |
-|[UDP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/15_UDP_SRC_IPv6.json) | [ERROR](#ed0cfb16341890f5f314b8d760ebf83d) | [ERROR](#ed0cfb16341890f5f314b8d760ebf83d) | [ERROR](#ed0cfb16341890f5f314b8d760ebf83d) | [ERROR](#ed0cfb16341890f5f314b8d760ebf83d) |
+|[UDP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/15_UDP_SRC_IPv6.json) | [OK](#ed0cfb16341890f5f314b8d760ebf83d) | [OK](#ed0cfb16341890f5f314b8d760ebf83d) | [OK](#ed0cfb16341890f5f314b8d760ebf83d) | [ERROR](#ed0cfb16341890f5f314b8d760ebf83d) |
 |[UDP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/16_UDP_DST_IPv6.json) | [OK](#1ccf7ab91d2295773428fa14168ae64b) | [OK](#1ccf7ab91d2295773428fa14168ae64b) | [OK](#1ccf7ab91d2295773428fa14168ae64b) | [ERROR](#1ccf7ab91d2295773428fa14168ae64b) |
 |[SCTP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/17_SCTP_SRC_IPv6.json) | [ERROR](#2476412662f05c76d05abdd5f983e9bb) | [ERROR](#2476412662f05c76d05abdd5f983e9bb) | [ERROR](#2476412662f05c76d05abdd5f983e9bb) | [ERROR](#2476412662f05c76d05abdd5f983e9bb) |
 |[SCTP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/18_SCTP_DST_IPv6.json) | [ERROR](#18c493adb0cefd57638e8d9dadd2d622) | [ERROR](#18c493adb0cefd57638e8d9dadd2d622) | [ERROR](#18c493adb0cefd57638e8d9dadd2d622) | [ERROR](#18c493adb0cefd57638e8d9dadd2d622) |
@@ -428,12 +428,9 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="59af7357f686a19a48e3ad696ede1897">action: set_field: 15_UDP_SRC (IPv4)</a>
 <pre>
-    ethernet/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        ERROR
-        Received incorrect packet: udp(csum=928)
-    ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   ERROR
-        Received incorrect packet: udp(csum=928)
-    ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Received incorrect packet: udp(csum=928)
+    ethernet/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
+    ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
+    ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -529,12 +526,9 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="ed0cfb16341890f5f314b8d760ebf83d">action: set_field: 15_UDP_SRC (IPv6)</a>
 <pre>
-    ethernet/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        ERROR
-        Received incorrect packet: udp(csum=41647)
-    ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   ERROR
-        Received incorrect packet: udp(csum=41647)
-    ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Received incorrect packet: udp(csum=41647)
+    ethernet/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
+    ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
+    ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -1140,7 +1134,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='09:03:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='e7:02:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' OK

@@ -14,16 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.100.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit cc167ab6d8f6ccf49f921dbb96d76d1dd2590847
-Merge: 491a896 54d0013
+commit dcdefff896a22ecd6912acc17effb2a82cecee5f
+Merge: 5e725fd fccc658
 Author:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Fri Nov 22 04:29:40 2013 -0800
+AuthorDate: Thu Jan 9 09:00:22 2014 -0800
 Commit:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Fri Nov 22 04:29:40 2013 -0800
+CommitDate: Thu Jan 9 09:00:22 2014 -0800
 
-    Merge pull request #72 from mcanini/upstream
+    Merge pull request #79 from codeshredder/master
     
-    A couple of fixes.
+    some bugs
 </pre>
 
 # Modified test scenario for switch restrictions
