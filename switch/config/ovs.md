@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-bf03de22-b9cc-4705-9f6e-4387bf36db82
+00d1c4a5-33b1-4e35-bf2f-4bb497b7a7c8
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,51 +21,66 @@ bf03de22-b9cc-4705-9f6e-4387bf36db82
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2dfec863-d1ac-46ab-ac3e-0877e8984e5b
-controller          : [901a5083-6441-40a4-a005-5fbf984a778f]
+_uuid               : 8a0d946f-c8a1-4d19-9042-95ee60ad9f3d
+controller          : [a363614c-5f4a-4bee-99b7-f27bd6b075c4]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [867efff0-f814-4d85-bcb1-bd7cc746cd32, ebf82893-d1d8-4986-93e4-3adb99e6f6a4, f4ac5669-6d70-49ea-959d-37f2d642b035]
+ports               : [0070fb4d-2c80-4542-8512-021f46e74a4b, 2bb9f769-071c-4848-983d-0e30bf29b3ee, dcbe7c28-dc3d-4de5-83ea-1e20febaf697]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 901a5083-6441-40a4-a005-5fbf984a778f
+_uuid               : a363614c-5f4a-4bee-99b7-f27bd6b075c4
 is_connected        : false
 role                : other
 status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 867efff0-f814-4d85-bcb1-bd7cc746cd32
+_uuid               : dcbe7c28-dc3d-4de5-83ea-1e20febaf697
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [0ac92ed7-0c7d-429c-9b1a-31bdc309c896]
-name                : eth7
-
-_uuid               : f4ac5669-6d70-49ea-959d-37f2d642b035
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [9cc7a4d7-f02f-45dd-b1bd-7df86d30023c]
+interfaces          : [1a85d7f2-d62b-4df0-a74e-b3a13764b615]
 name                : br0
 
-_uuid               : ebf82893-d1d8-4986-93e4-3adb99e6f6a4
+_uuid               : 2bb9f769-071c-4848-983d-0e30bf29b3ee
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7d5cef60-5219-4724-8df1-cd778aef9e89]
+interfaces          : [92df2e6b-df66-404e-b4ee-77efa67c9c10]
 name                : eth8
 
+_uuid               : 0070fb4d-2c80-4542-8512-021f46e74a4b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4ae05273-fe29-447d-81fa-fa925c5fc004]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7d5cef60-5219-4724-8df1-cd778aef9e89
+_uuid               : 1a85d7f2-d62b-4df0-a74e-b3a13764b615
+admin_state         : up
+ifindex             : 37
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
+
+_uuid               : 92df2e6b-df66-404e-b4ee-77efa67c9c10
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -82,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 0ac92ed7-0c7d-429c-9b1a-31bdc309c896
+_uuid               : 4ae05273-fe29-447d-81fa-fa925c5fc004
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -98,60 +113,27 @@ ofport              : 1
 statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=660, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
-
-_uuid               : 9cc7a4d7-f02f-45dd-b1bd-7df86d30023c
-admin_state         : up
-ifindex             : 33
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b49c106ef00438b1c59876dad90d00e8d6e7b627
-Author:     Flavio Leitner &lt;fbl@redhat.com&gt;
-AuthorDate: Thu Jan 9 01:04:33 2014 -0200
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Thu Jan 9 10:57:08 2014 -0800
+commit deb64473f677e81f6a63db9c35de501c438e1342
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Tue Dec 31 14:23:34 2013 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Fri Jan 10 10:52:51 2014 -0800
 
-    fedora package: fix systemd ordering and deps.
+    Update build requirements.
     
-    There is a chicken and egg issue where common OVS
-    configuration uses a controller which is only accessible
-    via the network. So starting OVS before network.target
-    would break those configurations.
+    Libtool is now required as of commit 38b7a52b61 (openvswitch: Use libtool
+    and allow building shared libs).
     
-    However, the network doesn't come up after boot because
-    OVS isn't started until after the network scripts tries
-    to configure the ovs.
+    It seems that a build requirement for Python slipped in a while back, for
+    generating ovs-vswitchd.conf.db.5, and no one complained, so we might as
+    well make it official.  (That will let us simplify some bits of the build,
+    too, since they won't have to be conditional on Python anymore, so I'm all
+    in favor of this change.)
     
-    This is partially fixed by commits:
-       commit: 602453000e28ec1076c0482ce13c284765a84409
-       rhel: Automatically start openvswitch service before bringing an ovs interfa
-    
-       commit: 3214851c31538e8690e31f95702f8927a8c0838b
-       rhel: Add OVSREQUIRES to automatically bring up OpenFlow interface dependencies
-    
-    But still there is the dependency issue between network.target
-    and openvswitch which this patch fixes it.  It provides two systemd
-    service units. One to run at any time (openvswitch-nonetwork.service)
-    which runs 'ovs-ctl start' and the other one (openvswith.service) to
-    run after network.target which works as a frontend to the admin.
-    
-    The openvswitch-nonetwork.service is used internally by the
-    'ifup-ovs/ifdown-ovs' scripts when adding or removing ports to
-    the bridge or when the openvswitch.service is enabled by the admin.
-    
-    Signed-off-by: Flavio Leitner &lt;fbl@redhat.com&gt;
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
