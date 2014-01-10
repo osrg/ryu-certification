@@ -8,66 +8,66 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-3f0f118b-1ab6-4faa-a2b7-d0cc477674cb
+57e7045e-ebdb-4d19-bc13-57167ca176e4
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
         Port br0
             Interface br0
                 type: internal
-        Port eth8
-            Interface eth8
 
-$ sudo ovs-vsctl list Bridge
-_uuid               : 28735cfd-adea-4803-ad6c-548962e2e216
-controller          : [83a08c98-0aed-4a25-a332-0385c4fada8d]
+$ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
+_uuid               : 6b668057-e0f8-4638-be1c-39178311b582
+controller          : [5b2431f8-e381-4758-9913-60c3979632ef]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [85cf1f74-3b20-4eea-9a7a-c3bcfef85a8d, 9993f0e0-0569-4d88-ba69-dd3c5bb3542e, a251c399-a32b-4dd7-af92-a4bd54cf6ca8]
+ports               : [10d00985-ea04-473e-8405-cf76821ec1f9, 940c8336-df58-411a-ad12-5a23b4f6fb2a, e9de8fd8-e80f-4c33-a66e-55495a67ac52]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
-$ sudo ovs-vsctl list Controller
-_uuid               : 83a08c98-0aed-4a25-a332-0385c4fada8d
+$ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
+_uuid               : 5b2431f8-e381-4758-9913-60c3979632ef
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=347, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
-$ sudo ovs-vsctl list Port
-_uuid               : 9993f0e0-0569-4d88-ba69-dd3c5bb3542e
+$ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
+_uuid               : e9de8fd8-e80f-4c33-a66e-55495a67ac52
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [69e54e00-0cf4-4a36-9e6f-4b1ebe2e897c]
+interfaces          : [8711f5c0-4306-4746-91e3-cacb654e4f20]
 name                : br0
 
-_uuid               : 85cf1f74-3b20-4eea-9a7a-c3bcfef85a8d
+_uuid               : 10d00985-ea04-473e-8405-cf76821ec1f9
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [13b66602-08f8-4365-bf7d-fc6a1002ce7b]
+interfaces          : [c8e8be73-9d61-431c-bd75-9b41075b7288]
 name                : eth7
 
-_uuid               : a251c399-a32b-4dd7-af92-a4bd54cf6ca8
+_uuid               : 940c8336-df58-411a-ad12-5a23b4f6fb2a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [791e42cc-b839-4f3e-9bd7-9ddf57126bd1]
+interfaces          : [c3ac5e69-5e81-4c13-bcc3-c7ebf9f47481]
 name                : eth8
 
-$ sudo ovs-vsctl list Interface
-_uuid               : 69e54e00-0cf4-4a36-9e6f-4b1ebe2e897c
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 8711f5c0-4306-4746-91e3-cacb654e4f20
 admin_state         : up
-ifindex             : 149
+ifindex             : 153
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -80,7 +80,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : 791e42cc-b839-4f3e-9bd7-9ddf57126bd1
+_uuid               : c3ac5e69-5e81-4c13-bcc3-c7ebf9f47481
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -97,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 13b66602-08f8-4365-bf7d-fc6a1002ce7b
+_uuid               : c8e8be73-9d61-431c-bd75-9b41075b7288
 admin_state         : up
 duplex              : full
 ifindex             : 10
