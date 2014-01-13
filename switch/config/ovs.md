@@ -8,66 +8,66 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-0f7e3a0c-f542-409e-b121-a42fa3026707
+1c1440a6-a0ff-4428-8def-e25aec89c1d7
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth8
-            Interface eth8
         Port br0
             Interface br0
                 type: internal
+        Port eth8
+            Interface eth8
         Port eth7
             Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5cea9f14-3a26-4ee1-9604-69b7993d11d3
-controller          : [6449131d-0221-42fc-9912-e3a3111f500c]
+_uuid               : b657db32-a5fe-4b04-930a-c64d08b4263d
+controller          : [a331c100-7fde-428b-b43a-c7752203fdbe]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [00488347-308a-4ef6-952c-2e816c15ae48, 0847f1c5-f764-4c73-866c-83a117c35b24, c39ee6c4-d88c-4d93-8cfe-41bf6e3c245b]
+ports               : [3de6c9c7-f7b9-4f5a-b9e2-a2c3742c6a32, 49e84912-e550-4795-9c31-0bf63ca04e1b, cffcb124-4e92-42d8-8a0f-4594b2517815]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6449131d-0221-42fc-9912-e3a3111f500c
+_uuid               : a331c100-7fde-428b-b43a-c7752203fdbe
 is_connected        : false
 role                : other
 status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : c39ee6c4-d88c-4d93-8cfe-41bf6e3c245b
+_uuid               : cffcb124-4e92-42d8-8a0f-4594b2517815
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f82dd15b-5b14-4b0f-9a77-7c0494a672ca]
+interfaces          : [843f3c6d-d6b2-4540-9cfd-effd4d8b72b5]
 name                : eth7
 
-_uuid               : 0847f1c5-f764-4c73-866c-83a117c35b24
+_uuid               : 49e84912-e550-4795-9c31-0bf63ca04e1b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [60ea843d-7dc6-4492-9cf1-a1f154903fc0]
-name                : br0
-
-_uuid               : 00488347-308a-4ef6-952c-2e816c15ae48
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [abe1147e-2033-4c61-b2e3-9fc782f3e3c3]
+interfaces          : [11502e8b-a167-4d8c-aa64-0ee679ae7563]
 name                : eth8
 
+_uuid               : 3de6c9c7-f7b9-4f5a-b9e2-a2c3742c6a32
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [46182e89-aa62-47ee-97a9-b9fc7790f3ba]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 60ea843d-7dc6-4492-9cf1-a1f154903fc0
+_uuid               : 46182e89-aa62-47ee-97a9-b9fc7790f3ba
 admin_state         : up
-ifindex             : 49
+ifindex             : 55
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -80,24 +80,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : abe1147e-2033-4c61-b2e3-9fc782f3e3c3
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : f82dd15b-5b14-4b0f-9a77-7c0494a672ca
+_uuid               : 843f3c6d-d6b2-4540-9cfd-effd4d8b72b5
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -113,21 +96,40 @@ ofport              : 1
 statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=660, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : 11502e8b-a167-4d8c-aa64-0ee679ae7563
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7868fbc6c97c2a69ff2b9bb2c00f46675e9f721b
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Fri Jan 10 15:25:40 2014 -0800
+commit 2e275c0e00adced5dab256e5ccd1b4ae60ec127d
+Author:     Francesco Fusco &lt;ffusco@redhat.com&gt;
+AuthorDate: Thu Dec 19 18:16:24 2013 +0100
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Jan 10 15:25:40 2014 -0800
+CommitDate: Mon Jan 13 13:25:57 2014 -0800
 
-    ovsdbmonitor: Remove.
+    sFlow: clear the padding
     
-    ovsdbmonitor was poorly maintained and not widely used.
+    putString pads the string to the 4-byte boundary without
+    clearing the padded memory. This patch simply set the
+    padding to zero.
     
-    Acked-by: Flavio Leitner &lt;fbl@redhat.com&gt;
+    Signed-off-by: Francesco Fusco &lt;ffusco@redhat.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
