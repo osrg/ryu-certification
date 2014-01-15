@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-4ac15c12-bf5f-4ea2-abc5-83a0ac1027d8
+8486c4f2-db2e-49a8-af13-41bde7210bba
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth7
-            Interface eth7
         Port eth8
             Interface eth8
         Port br0
             Interface br0
                 type: internal
+        Port eth7
+            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 310f3d1a-7e9a-4dff-a5da-038c7d265936
-controller          : [b08e030e-9dec-4e47-9628-668ac606d7ec]
+_uuid               : 0e90c844-eed5-4052-8be9-11cbf7ca387a
+controller          : [0642616a-8adb-45f8-8d2c-ebbd9c1dd688]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [312d756f-2dd3-427e-9216-c9c9ac98fe8f, 8669a2a3-3ded-4cd2-9f94-b2db8fb2d32f, b6f9ecd1-e009-4966-a2d3-817960e07c27]
+ports               : [11f2b3bd-01e8-4c72-85b8-0e4056a2cd3b, 268dd4b7-3779-4f97-985d-2bd0968f31b1, cff71548-5dd7-47f9-8618-d471845b6b36]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b08e030e-9dec-4e47-9628-668ac606d7ec
+_uuid               : 0642616a-8adb-45f8-8d2c-ebbd9c1dd688
 is_connected        : false
 role                : other
 status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : b6f9ecd1-e009-4966-a2d3-817960e07c27
+_uuid               : cff71548-5dd7-47f9-8618-d471845b6b36
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [eb34012f-ce65-415f-860b-b548338f9a6f]
-name                : br0
-
-_uuid               : 312d756f-2dd3-427e-9216-c9c9ac98fe8f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3716f11d-ef8b-4379-be86-e7b5d7a4a471]
+interfaces          : [1efb7abc-d9fb-4d75-8b28-21883de1f21f]
 name                : eth7
 
-_uuid               : 8669a2a3-3ded-4cd2-9f94-b2db8fb2d32f
+_uuid               : 11f2b3bd-01e8-4c72-85b8-0e4056a2cd3b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [924fa1cf-4861-4284-9bfd-4bc0221e4dc0]
+interfaces          : [db3ab1cd-8285-4277-a854-67b73456f495]
 name                : eth8
 
+_uuid               : 268dd4b7-3779-4f97-985d-2bd0968f31b1
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [26ccb081-1f89-4c45-8374-1d991bdf7d61]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3716f11d-ef8b-4379-be86-e7b5d7a4a471
+_uuid               : 1efb7abc-d9fb-4d75-8b28-21883de1f21f
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -82,22 +82,7 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : eb34012f-ce65-415f-860b-b548338f9a6f
-admin_state         : up
-ifindex             : 69
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
-
-_uuid               : 924fa1cf-4861-4284-9bfd-4bc0221e4dc0
+_uuid               : db3ab1cd-8285-4277-a854-67b73456f495
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -113,24 +98,47 @@ ofport              : 2
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : 26ccb081-1f89-4c45-8374-1d991bdf7d61
+admin_state         : up
+ifindex             : 75
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 06f81620436881449cb9a2db4f875aa00803f28d
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Mon Jan 13 11:21:12 2014 -0800
+commit e491a67a00053471300dd7ef6466bb66ff68de3b
+Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+AuthorDate: Wed Jan 15 10:06:40 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Jan 14 14:45:10 2014 -0800
+CommitDate: Wed Jan 15 10:08:40 2014 -0800
 
-    classifier: Use fat_rwlock instead of ovs_rwlock.
+    ofproto-dpif-xlate: Avoid recursive acquisition of xlate_rwlock.
     
-    Jarno Rajahalme reported up to 40% performance gain on netperf TCP_CRR with
-    an earlier version of this patch in combination with a kernel NUMA patch,
-    together with a reduction in variance:
-        http://openvswitch.org/pipermail/dev/2014-January/035867.html
+    Currently xlate_rwlock is recursively acquired.
+    (xlate_send_packet -&gt; ofproto_dpif_execute_actions -&gt; xlate_actions)
+    Due to writer-preference in rwlock implementations, this causes
+    deadlock if another thread tries to acquire the lock exclusively
+    behind us.
     
+    This change avoids the problem by making xlate_send_packet drop
+    the lock before calling ofproto_dpif_execute_actions.  This is the
+    simplest fix but opens a race window against port reconfigurations.
+    Given the way xlate_send_packet is currently used, the race does not
+    seem a big problem.  An alternative would be passing down the
+    xlate_rwlock is held info to ofproto_dpif_execute_actions.
+    
+    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
