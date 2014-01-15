@@ -10,9 +10,9 @@ title: Ryu Certification - ofsoftswitch13
 | |OK|ERROR|
 |----------|---|---|
 |[Action](#Action)|41|15|
-|[set_field](#set_field)|63|103|
-|[Match](#Match)|414|288|
-|Total|518|406|
+|[set_field](#set_field)|69|97|
+|[Match](#Match)|419|283|
+|Total|529|395|
 
 ## <a name ='Action'>Action</a>
 
@@ -57,8 +57,8 @@ title: Ryu Certification - ofsoftswitch13
 
 | |ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|
-|[IP_DSCP (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/08_IP_DSCP_IPv4.json) | [ERROR](#ce97749e537c30572fe41bc5f97f525c) | [ERROR](#ce97749e537c30572fe41bc5f97f525c) | [ERROR](#ce97749e537c30572fe41bc5f97f525c) | [ERROR](#ce97749e537c30572fe41bc5f97f525c) |
-|[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/09_IP_ECN_IPv4.json) | [ERROR](#441b26b3cc5d47e14221c29e67b7076f) | [ERROR](#441b26b3cc5d47e14221c29e67b7076f) | [ERROR](#441b26b3cc5d47e14221c29e67b7076f) | [ERROR](#441b26b3cc5d47e14221c29e67b7076f) |
+|[IP_DSCP (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/08_IP_DSCP_IPv4.json) | [OK](#ce97749e537c30572fe41bc5f97f525c) | [OK](#ce97749e537c30572fe41bc5f97f525c) | [OK](#ce97749e537c30572fe41bc5f97f525c) | [ERROR](#ce97749e537c30572fe41bc5f97f525c) |
+|[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/09_IP_ECN_IPv4.json) | [OK](#441b26b3cc5d47e14221c29e67b7076f) | [OK](#441b26b3cc5d47e14221c29e67b7076f) | [OK](#441b26b3cc5d47e14221c29e67b7076f) | [ERROR](#441b26b3cc5d47e14221c29e67b7076f) |
 |[IP_PROTO (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/10_IP_PROTO_IPv4.json) | [ERROR](#b96b0ffa1914207a7ad1eb3a96b43b63) | [ERROR](#b96b0ffa1914207a7ad1eb3a96b43b63) | [ERROR](#b96b0ffa1914207a7ad1eb3a96b43b63) | [ERROR](#b96b0ffa1914207a7ad1eb3a96b43b63) |
 |[IPV4_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/11_IPV4_SRC.json) | [OK](#807bd1069798fcbf7b9ef3963e0bafc4) | [OK](#807bd1069798fcbf7b9ef3963e0bafc4) | [OK](#807bd1069798fcbf7b9ef3963e0bafc4) | [ERROR](#807bd1069798fcbf7b9ef3963e0bafc4) |
 |[IPV4_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/12_IPV4_DST.json) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [OK](#875a5fc287f4e36f66af556bfd972bb9) | [ERROR](#875a5fc287f4e36f66af556bfd972bb9) |
@@ -117,7 +117,7 @@ title: Ryu Certification - ofsoftswitch13
 
 | |ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|
-|[IP_DSCP (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv4.json) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) |
+|[IP_DSCP (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv4.json) | [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [OK](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) |
 |[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv4.json) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) |
 |[IP_PROTO (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv4.json) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) |
 |[IPV4_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC.json) | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [OK](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) |
@@ -363,23 +363,17 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="ce97749e537c30572fe41bc5f97f525c">action: set_field: 08_IP_DSCP (IPv4)</a>
 <pre>
-    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                       ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                  ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                       OK
+    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                  OK
+    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="441b26b3cc5d47e14221c29e67b7076f">action: set_field: 09_IP_ECN (IPv4)</a>
 <pre>
-    ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          ERROR
-        Received incorrect packet: ipv4(csum=55838)
-    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     ERROR
-        Received incorrect packet: ipv4(csum=55838)
-    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
-        Received incorrect packet: ipv4(csum=55838)
+    ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          OK
+    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     OK
+    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -988,20 +982,15 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="0445f4506456f0406f5f718b15173da7">match: 08_IP_DSCP (IPv4)</a>
 <pre>
-    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                             ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                                    ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                             OK
+    ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                                    OK
     ethernet/ipv4(tos=65)/tcp-->'ip_dscp=8,actions=output:2'                                             OK
-    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                        ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                        OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                               ERROR
-        Receiving timeout: no packet-in.
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='00:00:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_dscp=8,actions=output:2'                                        OK
-    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
+    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'              ERROR
         Receiving timeout: no change in tx_packets on target.
@@ -1134,7 +1123,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='e7:02:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='00:00:00:00:00:00',ethertype=8738)/str('\x11\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' OK
