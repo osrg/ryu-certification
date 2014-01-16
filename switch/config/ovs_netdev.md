@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-e84af8b8-d43a-4dcb-94fe-ed3aea04fc0d
+531d5e9c-f27d-42f7-a482-42adb46a6bd9
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
         Port br0
             Interface br0
                 type: internal
-        Port eth8
-            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 209dc832-6fdc-49ac-9178-a93102a0f685
-controller          : [3159f332-7e15-4335-9c8d-a3b1ae84d406]
+_uuid               : f22e55e5-1b3b-464b-9d6f-cf8da886309b
+controller          : [5d8b8a90-7b2e-4bef-8807-2bc399ddf813]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [28f44692-0d17-40ff-bf4f-0cecd1ed4432, 34443112-dc9e-43ab-aea9-065c279ecc1c, 7196e569-567b-468f-8234-e30a419ee4e5]
+ports               : [0cbb1d63-2443-4baa-857d-5877385e2059, 2585dbe0-f625-4ccd-a0b4-eefa6a9c4c2b, 2dd299a7-e2a6-4d6c-8dc9-7d31738621b8]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3159f332-7e15-4335-9c8d-a3b1ae84d406
+_uuid               : 5d8b8a90-7b2e-4bef-8807-2bc399ddf813
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=302, sec_since_disconnect=3, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=296, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7196e569-567b-468f-8234-e30a419ee4e5
+_uuid               : 2585dbe0-f625-4ccd-a0b4-eefa6a9c4c2b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [63c08038-fb89-40e4-9d01-bdef2bc2b93d]
+interfaces          : [e469fad1-69db-4389-bf6f-fcfa4666f448]
 name                : eth8
 
-_uuid               : 28f44692-0d17-40ff-bf4f-0cecd1ed4432
+_uuid               : 2dd299a7-e2a6-4d6c-8dc9-7d31738621b8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [96637526-ee62-4cde-bd35-089a32e3be6e]
-name                : eth7
-
-_uuid               : 34443112-dc9e-43ab-aea9-065c279ecc1c
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [e31c80ee-0010-4841-8e46-29a0f6464533]
+interfaces          : [8f65b58a-7c71-4bae-a08c-90c0d0cafdee]
 name                : br0
 
+_uuid               : 0cbb1d63-2443-4baa-857d-5877385e2059
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [39060a65-fb5e-492e-b79d-27f3f0e41dd3]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 63c08038-fb89-40e4-9d01-bdef2bc2b93d
+_uuid               : e469fad1-69db-4389-bf6f-fcfa4666f448
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -78,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=592124, tx_dropped=0, tx_errors=0, tx_packets=6380}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=632968, tx_dropped=0, tx_errors=0, tx_packets=6820}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 96637526-ee62-4cde-bd35-089a32e3be6e
+_uuid               : 39060a65-fb5e-492e-b79d-27f3f0e41dd3
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +95,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1892685, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=19140, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=2023215, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=20460, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : e31c80ee-0010-4841-8e46-29a0f6464533
+_uuid               : 8f65b58a-7c71-4bae-a08c-90c0d0cafdee
 admin_state         : up
 duplex              : full
-ifindex             : 85
+ifindex             : 89
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,16 +120,20 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 69555fc1014349e6044ecd67846a18140bd5b954
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Wed Jan 15 12:37:04 2014 -0800
+commit 6a62a162efeabe7ad54a82e34fe940f973792443
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Fri Jan 10 13:45:47 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Jan 16 12:48:42 2014 -0800
+CommitDate: Thu Jan 16 13:25:17 2014 -0800
 
-    ofproto-dpif-monitor: Change global rwlock into mutex.
+    tests: Fix path for distcleaning ovs-controller.8
     
-    Nothing ever took monitor_rwlock's read lock, so it might as well be a
-    mutex.
+    Fixes the following error on distcheck:-
     
+    ERROR: files left in build directory after distclean:
+    ./tests/test-controller.8
+    make[1]: *** [distcleancheck] Error 1
+    
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
