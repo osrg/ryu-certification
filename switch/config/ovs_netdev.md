@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-199c75a6-65c3-474e-8380-c596992b227e
+50300bd2-461c-49fa-913b-46be80b9ac25
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,51 +21,51 @@ $ sudo ovs-vsctl show
             Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 79090623-3dcf-416c-93ca-83f248f05b8b
-controller          : [db9e7d8a-4018-47c5-a50d-470ed885ba7f]
+_uuid               : dad60eb1-2a67-4118-a3d8-5aef12b87544
+controller          : [c5afe4fc-5f56-49f3-90ff-223a3fad8044]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [96dbe6c2-0683-46e9-b68a-5af89df55462, c042c1ce-0941-4528-95ee-731a54f0bd78, ce399e8a-830b-4f8d-a0c9-354c683d1e36]
+ports               : [6578535e-fcc8-4829-856b-c205aad9508d, 8fbd1826-ff82-4018-97ad-7bacece258ff, f5b3d52e-ad7e-4f98-9f2b-74d47b71aeb8]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : db9e7d8a-4018-47c5-a50d-470ed885ba7f
+_uuid               : c5afe4fc-5f56-49f3-90ff-223a3fad8044
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=296, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=297, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 96dbe6c2-0683-46e9-b68a-5af89df55462
+_uuid               : 6578535e-fcc8-4829-856b-c205aad9508d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bc413dc7-e5bf-49b8-9852-9247bd41acb7]
+interfaces          : [ef55f463-98b1-405d-80e8-cec179d97e37]
 name                : br0
 
-_uuid               : ce399e8a-830b-4f8d-a0c9-354c683d1e36
+_uuid               : 8fbd1826-ff82-4018-97ad-7bacece258ff
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1c7c9be9-f048-4454-a750-7935d3491435]
-name                : eth7
-
-_uuid               : c042c1ce-0941-4528-95ee-731a54f0bd78
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [e80263f4-190d-4681-8089-d20fdf11bf12]
+interfaces          : [baa75b90-2d8f-4647-9e98-fcec178b6b2e]
 name                : eth8
 
+_uuid               : f5b3d52e-ad7e-4f98-9f2b-74d47b71aeb8
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [6b697e1a-2e16-4a4a-80df-f621dbecedaa]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : e80263f4-190d-4681-8089-d20fdf11bf12
+_uuid               : baa75b90-2d8f-4647-9e98-fcec178b6b2e
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -78,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=510436, tx_dropped=0, tx_errors=0, tx_packets=5500}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=551280, tx_dropped=0, tx_errors=0, tx_packets=5940}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 1c7c9be9-f048-4454-a750-7935d3491435
+_uuid               : 6b697e1a-2e16-4a4a-80df-f621dbecedaa
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +95,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1631625, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16500, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1762155, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=17820, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : bc413dc7-e5bf-49b8-9852-9247bd41acb7
+_uuid               : ef55f463-98b1-405d-80e8-cec179d97e37
 admin_state         : up
 duplex              : full
-ifindex             : 77
+ifindex             : 81
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,24 +120,17 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit ef507cecc926a3f42bb59de1b2aff6f119838c6a
-Author:     Thomas Graf &lt;tgraf@suug.ch&gt;
-AuthorDate: Tue Jan 14 01:27:02 2014 -0800
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Tue Jan 14 01:27:02 2014 -0800
+commit 6a4d3ab53d53bc97ab9eee8709c5720dea1fb260
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Wed Jan 15 10:22:20 2014 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Thu Jan 16 12:27:03 2014 -0800
 
-    datapath: Pad OVS_PACKET_ATTR_PACKET if linear copy was performed
+    ofproto-dpif: Add more lock annotations.
     
-    While the zerocopy method is correctly omitted if user space
-    does not support unaligned Netlink messages. The attribute is
-    still not padded correctly as skb_zerocopy() will not ensure
-    padding and the attribute size is no longer pre calculated
-    though nla_reserve() which ensured padding previously.
+    This annotation would have caught the bug fixed by commit 491a67a0005347130
+    (ofproto-dpif-xlate: Avoid recursive acquisition of xlate_rwlock.).
     
-    This patch applies appropriate padding if a linear data copy
-    was performed in skb_zerocopy().
-    
-    Signed-off-by: Thomas Graf &lt;tgraf@suug.ch&gt;
-    Acked-by: Zoltan Kiss &lt;zoltan.kiss@citrix.com&gt;
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    CC: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
 </pre>
