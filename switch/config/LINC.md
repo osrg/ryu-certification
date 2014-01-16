@@ -7,7 +7,7 @@ title: Ryu Certification - LINC - config
 
 # OpenFlow related configuration
 <pre>
-$ cat rel/linc/releases/1.0/sys.config
+$ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
 [
  {linc,
   [
@@ -15,8 +15,8 @@ $ cat rel/linc/releases/1.0/sys.config
 
    {capable_switch_ports,
     [
-     {port, 1, [{interface, "eth1"}]},
-     {port, 2, [{interface, "eth2"}]}
+     {port, 1, [{interface, eth1}]},
+     {port, 2, [{interface, eth2}]}
     ]},
 
    {capable_switch_queues,
@@ -31,7 +31,7 @@ $ cat rel/linc/releases/1.0/sys.config
 
        {controllers,
         [
-         {"Switch0-DefaultController", "10.24.100.30", 6633, tcp}
+         {Switch0-DefaultController, 10.24.100.30, 6633, tcp}
 
         ]},
 
@@ -54,13 +54,13 @@ $ cat rel/linc/releases/1.0/sys.config
    {capabilities, [{base, {1, 0}},
                    {base, {1, 1}},
                    {startup, {1, 0}},
-                   {writable-running, {1, 0}}]},
+                   {'writable-running', {1, 0}}]},
    {callback_module, linc_ofconfig},
    {sshd_ip, any},
    {sshd_port, 1830},
    {sshd_user_passwords,
     [
-     {"linc", "linc"}
+     {linc, linc}
     ]}
   ]},
 
@@ -71,17 +71,17 @@ $ cat rel/linc/releases/1.0/sys.config
      {lager_console_backend, info},
      {lager_file_backend,
       [
-       {"log/error.log", error, 10485760, "$D0", 5},
-       {"log/console.log", info, 10485760, "$D0", 5}
+       {log/error.log, error, 10485760, , 5},
+       {log/console.log, info, 10485760, , 5}
       ]}
     ]}
   ]},
 
  {sasl,
   [
-   {sasl_error_logger, {file, "log/sasl-error.log"}},
+   {sasl_error_logger, {file, log/sasl-error.log}},
    {errlog_type, error},
-   {error_logger_mf_dir, "log/sasl"},      % Log directory
+   {error_logger_mf_dir, log/sasl},      % Log directory
    {error_logger_mf_maxbytes, 10485760},   % 10 MB max file size
    {error_logger_mf_maxfiles, 5}           % 5 files max
   ]},
@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit e382830f16c83ceb9e39dff46fcdced02589d5e2
-Merge: 7eca732 83590dd
+commit a03ccaee10f006443c8f713768aac6484371ad67
+Merge: e382830 cdbb889
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Jan 8 08:13:54 2014 -0800
+AuthorDate: Thu Jan 16 01:50:16 2014 -0800
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Jan 8 08:13:54 2014 -0800
+CommitDate: Thu Jan 16 01:50:16 2014 -0800
 
-    Merge pull request #272 from yamt/fix-of-config-queue-min-max
+    Merge pull request #280 from FlowForwarding/mininet_cleanup
     
-    of-config: report queue min/max rates correctly
+    Add deleting all copied releases to rel_copy script
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
