@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit a03ccaee10f006443c8f713768aac6484371ad67
-Merge: e382830 cdbb889
+commit 9696aeda24b98adb1a71c4576cb79b5d63917a45
+Merge: a03ccae 4aaecba
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Thu Jan 16 01:50:16 2014 -0800
+AuthorDate: Mon Jan 20 07:27:36 2014 -0800
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Thu Jan 16 01:50:16 2014 -0800
+CommitDate: Mon Jan 20 07:27:36 2014 -0800
 
-    Merge pull request #280 from FlowForwarding/mininet_cleanup
+    Merge pull request #284 from FlowForwarding/mininet_dpctl
     
-    Add deleting all copied releases to rel_copy script
+    Add documentation for dpctl command used in Mininet; add ToC
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
