@@ -8,81 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f0ef91a6-1a16-4a60-b077-c56d53272bd9
+d426e313-e18d-4425-b087-9153c3c67e21
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth7
             Interface eth7
         Port eth8
             Interface eth8
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 73cdedab-7ebd-47b9-ae78-b62758c397cf
-controller          : [1c54a3b8-f543-496e-8748-1bed3d2adbef]
+_uuid               : a5939511-bd5f-42e6-88fe-77640a6c744b
+controller          : [eebc0803-1635-4a3c-a391-83a67c3e5724]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [6daddd78-d6a7-40ec-8878-6e4ffcde7b8a, 8ea2036a-9645-41b0-8602-edd1edda0c76, d8073b79-284c-4352-83ba-a69fb85aca16]
+ports               : [70e7f293-5563-4a1f-adc2-c157e33578d7, b8da356f-0378-4f65-add5-f6824ac49a49, c193947d-dbbb-40bf-8d10-af0e5c3e4d0d]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1c54a3b8-f543-496e-8748-1bed3d2adbef
+_uuid               : eebc0803-1635-4a3c-a391-83a67c3e5724
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=301, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=301, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6daddd78-d6a7-40ec-8878-6e4ffcde7b8a
+_uuid               : c193947d-dbbb-40bf-8d10-af0e5c3e4d0d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [0b6387ea-b73f-479d-bb0d-e7f312139a28]
+interfaces          : [2b503fd9-9b97-478c-b73d-a8dd98e8b457]
 name                : br0
 
-_uuid               : d8073b79-284c-4352-83ba-a69fb85aca16
+_uuid               : 70e7f293-5563-4a1f-adc2-c157e33578d7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4e02d6bc-916f-468b-9137-2d9c4f4726cd]
-name                : eth8
-
-_uuid               : 8ea2036a-9645-41b0-8602-edd1edda0c76
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [637ff828-468b-4653-ac72-e1f1bfc05e39]
+interfaces          : [e69b0480-2047-4457-afb6-41799c64f531]
 name                : eth7
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4e02d6bc-916f-468b-9137-2d9c4f4726cd
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
+_uuid               : b8da356f-0378-4f65-add5-f6824ac49a49
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c195c1c8-a14a-4b4a-b52f-b1301735f529]
 name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=910148, tx_dropped=0, tx_errors=0, tx_packets=9788}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
 
-_uuid               : 637ff828-468b-4653-ac72-e1f1bfc05e39
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : e69b0480-2047-4457-afb6-41799c64f531
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +78,31 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=2871660, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=29040, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=2336045190, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1585722, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 0b6387ea-b73f-479d-bb0d-e7f312139a28
+_uuid               : c195c1c8-a14a-4b4a-b52f-b1301735f529
 admin_state         : up
 duplex              : full
-ifindex             : 115
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=952960, tx_dropped=0, tx_errors=0, tx_packets=10246}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 2b503fd9-9b97-478c-b73d-a8dd98e8b457
+admin_state         : up
+duplex              : full
+ifindex             : 119
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,20 +120,24 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4ca828d713451307fea449be5111272f47c0c5a7
-Author:     Linda Sun &lt;lsun@vmware.com&gt;
-AuthorDate: Thu Jan 9 16:26:12 2014 -0800
+commit c3b758f6fe8b7ae5e3e0204236f6aba48d714bc1
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Thu Dec 5 16:59:13 2013 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Jan 17 16:11:20 2014 -0800
+CommitDate: Tue Jan 21 09:55:30 2014 -0800
 
-    poll-loop: Port to Windows.
+    vlog: Avoid deadlock in vlog_init__() corner case.
     
-    Use WaitForMultipleObjects for polling on windows.  This works on all kinds
-    of objects, e.g. sockets, files, especially ioctl calls to the kernel.
-    poll_fd_wait_event() is used if events need to be passed to pollfds.  latch
-    is signaled with event, to be waited/polled by WaitForMultipleObjects() as
-    well.  Changed array of fds to hmap to check for duplicate fds.
+    Anything inside vlog_init__() that tried to log a message was going to
+    deadlock, since it would hit pthread_once() recursively and wait for the
+    previous call to complete.  Unfortunately, there was a VLOG_ERR call inside
+    vlog_init__(), only called in the corner case where the system's clock was
+    wrong.
     
-    Signed-off-by: Linda Sun &lt;lsun@vmware.com&gt;
+    This fixes the problem by rearranging code so that the logging isn't
+    inside the once-only region.
+    
+    Found by inspection.
+    
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
