@@ -100,16 +100,13 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 9696aeda24b98adb1a71c4576cb79b5d63917a45
-Merge: a03ccae 4aaecba
+commit 9ddbf52a5cfa3c8bd8db903d5faa63416554a2d6
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon Jan 20 07:27:36 2014 -0800
+AuthorDate: Wed Jan 22 18:33:52 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon Jan 20 07:27:36 2014 -0800
+CommitDate: Wed Jan 22 18:33:52 2014 +0100
 
-    Merge pull request #284 from FlowForwarding/mininet_dpctl
-    
-    Add documentation for dpctl command used in Mininet; add ToC
+    Fix a typo in mininet_integration.md
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
