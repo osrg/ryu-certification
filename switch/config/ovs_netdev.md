@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-a258396d-566c-40f5-a4ef-98489c33ab5d
+026acb5f-232c-452f-ab34-1c3152a6b209
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,88 +21,54 @@ a258396d-566c-40f5-a4ef-98489c33ab5d
             Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : b5b9dac6-ab4b-4f80-a9c7-a31d32021f18
-controller          : [e5cb2679-4b5d-4b50-b800-83e534534436]
+_uuid               : f5860bd4-aa01-45fc-8d1d-af705a475bf2
+controller          : [a8f29895-ff80-4b23-9f27-6708b32f1a1a]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [4a21064f-6646-4b48-952d-f4ada49be63c, a967f3ec-bfbd-4f92-bafa-db018db669dc, fda90f86-05bf-4927-8f24-82e86cffb02b]
+ports               : [0b1d98e3-8cb3-4bae-8b0e-5f2cd555a0b8, 45d2eaf7-a947-4742-85de-f6c79f47a05c, 72873e36-d82c-4b4a-835e-b0daf40393c0]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : e5cb2679-4b5d-4b50-b800-83e534534436
+_uuid               : a8f29895-ff80-4b23-9f27-6708b32f1a1a
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=297, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=312, sec_since_disconnect=4, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a967f3ec-bfbd-4f92-bafa-db018db669dc
+_uuid               : 72873e36-d82c-4b4a-835e-b0daf40393c0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [0a40b404-2e17-4d9f-bbad-3992109bc661]
-name                : eth8
-
-_uuid               : fda90f86-05bf-4927-8f24-82e86cffb02b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [bcda5ec0-7d4b-407f-b178-7a8c9f7f29b0]
+interfaces          : [55ba8dfa-3331-4b50-a487-2b8b0437299a]
 name                : eth7
 
-_uuid               : 4a21064f-6646-4b48-952d-f4ada49be63c
+_uuid               : 45d2eaf7-a947-4742-85de-f6c79f47a05c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b1c2171f-9f4c-4c1a-ae0a-3e9b22821990]
+interfaces          : [6850655b-8bb6-4fc1-868f-e018992b231e]
+name                : eth8
+
+_uuid               : 0b1d98e3-8cb3-4bae-8b0e-5f2cd555a0b8
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [7fc22dfd-c16f-42d8-a873-77e4e4b28a5c]
 name                : br0
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0a40b404-2e17-4d9f-bbad-3992109bc661
+_uuid               : 7fc22dfd-c16f-42d8-a873-77e4e4b28a5c
 admin_state         : up
 duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1038584, tx_dropped=0, tx_errors=0, tx_packets=11162}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : bcda5ec0-7d4b-407f-b178-7a8c9f7f29b0
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=2336306250, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1588362, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : b1c2171f-9f4c-4c1a-ae0a-3e9b22821990
-admin_state         : up
-duplex              : full
-ifindex             : 127
+ifindex             : 131
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -115,26 +81,59 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : 55ba8dfa-3331-4b50-a487-2b8b0437299a
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=2336436780, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1589682, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 6850655b-8bb6-4fc1-868f-e018992b231e
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1081396, tx_dropped=0, tx_errors=0, tx_packets=11620}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 64ca9472f0b0f40b94abe2adf5d397bdf3d5e7b3
-Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
-AuthorDate: Wed Jan 22 06:50:49 2014 +0000
-Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
-CommitDate: Tue Jan 21 15:39:31 2014 -0800
+commit 7849d3e4cab657eb42b513b0d9ad656fc38259bd
+Author:     Ansis Atteka &lt;aatteka@nicira.com&gt;
+AuthorDate: Mon Jan 20 17:16:39 2014 -0800
+Commit:     Ansis Atteka &lt;aatteka@nicira.com&gt;
+CommitDate: Tue Jan 21 17:12:16 2014 -0800
 
-    upcall: Cache the number of flows from the datapath.
+    ipsec: install iptables rules that set IPsec bit in skb mark
     
-    Fetching the number of flows in the datapath has been causing
-    unnecessary contention on the kernel ovs_lock in recent TCP CRR tests.
-    This patch caches this number for up to 100ms in the userspace to reduce
-    such kernel calls.
+    Without these two iptables rules (one for UDP encapsulated IPsec and
+    another for direct IPsec), ovs-vswitchd would incorrectly conclude
+    that GRE packet belonged to a plain GRE tunnel instead of IPsec GRE
+    tunnel.
     
-    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
-    Co-authored-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Signed-off--by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Reported-by: Aryan TaheriMonfared &lt;aryan.taherimonfared@uis.no&gt;
+    Reported-by: Daniel Hiltgen &lt;daniel@netkine.com&gt;
+    Signed-off-by: Ansis Atteka &lt;aatteka@nicira.com&gt;
 </pre>
