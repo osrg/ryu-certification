@@ -8,66 +8,66 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-97976b6d-dc79-4213-ac0c-6bfcd48c216d
+e01f8735-6fcf-41dc-bad2-600d5e3bb5a2
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth7
             Interface eth7
         Port eth8
             Interface eth8
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1901c9b7-3292-4829-91e8-b51c1f007f1c
-controller          : [c2e36805-0598-4f00-afc4-2c27a4ebe180]
+_uuid               : d11b1f3e-d4da-4a9f-9f9f-6e48077143f5
+controller          : [153bdfcd-8598-46e8-b0f1-09f1a9ef4c69]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [35c37cb0-fbf7-4ecd-8157-13db9797fd51, b665014e-6e81-48bc-a5d0-05da9bebb855, f0879760-9449-4fda-9af8-78178b146314]
+ports               : [94e1abfa-5eba-475e-bcb1-797bc2827923, 9a99e920-a22b-4481-b942-9fe94ae620c9, ad7b2d78-2674-4a21-9506-00a80575c9ee]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : c2e36805-0598-4f00-afc4-2c27a4ebe180
+_uuid               : 153bdfcd-8598-46e8-b0f1-09f1a9ef4c69
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=356, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=351, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 35c37cb0-fbf7-4ecd-8157-13db9797fd51
+_uuid               : ad7b2d78-2674-4a21-9506-00a80575c9ee
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b172ffa8-a9dd-4537-a3c6-b930b4d348a9]
+interfaces          : [2705ca4d-d1dd-43e6-9575-4a19b6435bb9]
 name                : br0
 
-_uuid               : f0879760-9449-4fda-9af8-78178b146314
+_uuid               : 9a99e920-a22b-4481-b942-9fe94ae620c9
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1939b0a5-0775-4c37-9fa3-afeddd0cfa56]
+interfaces          : [83f708af-23ff-4b01-a738-074343f6ac5e]
 name                : eth8
 
-_uuid               : b665014e-6e81-48bc-a5d0-05da9bebb855
+_uuid               : 94e1abfa-5eba-475e-bcb1-797bc2827923
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c7d2ec05-c084-45e5-9466-ea3ffbc45305]
+interfaces          : [f9bf1353-c406-4461-bca0-e68394d47387]
 name                : eth7
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : b172ffa8-a9dd-4537-a3c6-b930b4d348a9
+_uuid               : 2705ca4d-d1dd-43e6-9575-4a19b6435bb9
 admin_state         : up
-ifindex             : 133
+ifindex             : 37
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -80,7 +80,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : 1939b0a5-0775-4c37-9fa3-afeddd0cfa56
+_uuid               : 83f708af-23ff-4b01-a738-074343f6ac5e
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -97,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : c7d2ec05-c084-45e5-9466-ea3ffbc45305
+_uuid               : f9bf1353-c406-4461-bca0-e68394d47387
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -118,20 +118,17 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7849d3e4cab657eb42b513b0d9ad656fc38259bd
-Author:     Ansis Atteka &lt;aatteka@nicira.com&gt;
-AuthorDate: Mon Jan 20 17:16:39 2014 -0800
-Commit:     Ansis Atteka &lt;aatteka@nicira.com&gt;
-CommitDate: Tue Jan 21 17:12:16 2014 -0800
+commit 743f8109720433800a4f4a8fb5b87aee73011778
+Author:     Ethan Jackson &lt;ethan@nicira.com&gt;
+AuthorDate: Tue Jan 21 16:22:08 2014 -0800
+Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
+CommitDate: Wed Jan 22 10:40:28 2014 -0800
 
-    ipsec: install iptables rules that set IPsec bit in skb mark
+    configure: Enable silent rules.
     
-    Without these two iptables rules (one for UDP encapsulated IPsec and
-    another for direct IPsec), ovs-vswitchd would incorrectly conclude
-    that GRE packet belonged to a plain GRE tunnel instead of IPsec GRE
-    tunnel.
+    Configure has an option which supports quieter compilation.
     
-    Reported-by: Aryan TaheriMonfared &lt;aryan.taherimonfared@uis.no&gt;
-    Reported-by: Daniel Hiltgen &lt;daniel@netkine.com&gt;
-    Signed-off-by: Ansis Atteka &lt;aatteka@nicira.com&gt;
+    Signed-off-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Joe Stringer &lt;joestringer@nicira.com&gt;
 </pre>
