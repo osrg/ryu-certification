@@ -100,13 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 9ddbf52a5cfa3c8bd8db903d5faa63416554a2d6
+commit 05ca3fd5a1220d9d6e1f53643f44c041ab921aea
+Merge: 9ddbf52 a8572cc
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Jan 22 18:33:52 2014 +0100
+AuthorDate: Wed Jan 22 23:52:58 2014 -0800
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Jan 22 18:33:52 2014 +0100
+CommitDate: Wed Jan 22 23:52:58 2014 -0800
 
-    Fix a typo in mininet_integration.md
+    Merge pull request #286 from FlowForwarding/mininet_integration
+    
+    Update mininet_integration.md
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
