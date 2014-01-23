@@ -9,16 +9,16 @@ title: Ryu Certification - ivs
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|14|42|
+|[Action](#Action)|17|39|
 |[set_field](#set_field)|46|124|
 |[Match](#Match)|362|340|
-|Total|422|506|
+|Total|425|503|
 
 ## <a name ='Action'>Action</a>
 
 | |IPv4|IPv6|ARP|
 |-----------|----|----|----|
-|[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json) | [ERROR](#7a352e3512f38379b485f134027ab25c) | [ERROR](#7a352e3512f38379b485f134027ab25c) | [ERROR](#7a352e3512f38379b485f134027ab25c) |
+|[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) |
 |[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
 |[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) |
@@ -167,16 +167,9 @@ title: Ryu Certification - ivs
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 <pre>
-dpid=0000000000000001 : Join target SW.
-    ethernet/ipv4/tcp-->'actions=output:2'                                                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionPushVlan(ethertype=33024,len=8,type=17), OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=32,type=4)],match=OFPMatch(oxm_fields={'eth_type': 2054}))
-dpid=0000000000000001 : Join target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/ipv6/tcp-->'actions=output:2'                                                               ERROR
-        Failed to request port stats from target: OFPErrorMsg[type=0x00, code=0x00]
-dpid=0000000000000001 : Join target SW.
-    ethernet/arp-->'actions=output:2'                                                                    ERROR
-        Added incorrect flows:
+    ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
+    ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
+    ethernet/arp-->'actions=output:2'                                                                    OK
 </pre>
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
 <pre>
