@@ -8,64 +8,81 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-debdc7e8-7242-4163-bce0-9eb270ce98bd
+d0a4c18b-d128-4e28-a185-8266e67a6696
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth7
             Interface eth7
         Port eth8
             Interface eth8
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 17024f0a-8488-43fa-8e88-0ef67534dbb1
-controller          : [c06092ff-053e-47ec-9d6b-f361d3e2d297]
+_uuid               : 762d7481-9d7e-46bd-b2fb-30166d2eb067
+controller          : [db72a5fc-1092-4114-95f0-0324f5dca635]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [bd865500-33d1-40e6-b9d3-cf3a54a5a276, bd944264-4e33-493d-9b8f-14e247ae9e07, dc39e313-20d9-4ca6-a9c8-b4d49ce3d8aa]
+ports               : [1d5ed311-9939-4caa-b549-9458e596ee64, 68636cc4-86bb-4b22-9545-b2d95f392970, d2c221d1-c74c-452b-bcd4-eb94b18bc1b7]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : c06092ff-053e-47ec-9d6b-f361d3e2d297
+_uuid               : db72a5fc-1092-4114-95f0-0324f5dca635
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=242, sec_since_disconnect=3, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=237, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : bd865500-33d1-40e6-b9d3-cf3a54a5a276
+_uuid               : 68636cc4-86bb-4b22-9545-b2d95f392970
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f4d73919-6c2e-4b9a-b515-0bd70a81dcf1]
-name                : br0
-
-_uuid               : bd944264-4e33-493d-9b8f-14e247ae9e07
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [750aac15-f9de-4549-90db-6ebb232c61d3]
-name                : eth7
-
-_uuid               : dc39e313-20d9-4ca6-a9c8-b4d49ce3d8aa
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [397bea72-2bde-4bdf-b29a-86f352c3994d]
+interfaces          : [c60256c8-38b2-4efe-8ee3-9bbc6c66b565]
 name                : eth8
 
+_uuid               : 1d5ed311-9939-4caa-b549-9458e596ee64
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8482479c-b867-4306-97c5-ca00d4d18f20]
+name                : eth7
+
+_uuid               : d2c221d1-c74c-452b-bcd4-eb94b18bc1b7
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [338129e9-c8fe-458b-b6c3-50dbc1792b1e]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 750aac15-f9de-4549-90db-6ebb232c61d3
+_uuid               : c60256c8-38b2-4efe-8ee3-9bbc6c66b565
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 8482479c-b867-4306-97c5-ca00d4d18f20
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -82,9 +99,9 @@ statistics          : {collisions=0, rx_bytes=15951, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : f4d73919-6c2e-4b9a-b515-0bd70a81dcf1
+_uuid               : 338129e9-c8fe-458b-b6c3-50dbc1792b1e
 admin_state         : up
-ifindex             : 44
+ifindex             : 46
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -96,40 +113,22 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=openvswitch}
 type                : internal
-
-_uuid               : 397bea72-2bde-4bdf-b29a-86f352c3994d
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d15ae707727d8766f3bfa58f3923330ed078a636
-Author:     Daniele Di Proietto &lt;daniele.di.proietto@gmail.com&gt;
-AuthorDate: Thu Jan 23 17:19:29 2014 +0100
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Thu Jan 23 10:42:41 2014 -0800
+commit 9c8ad495ec332a29b4e101c00b0b0341631a4d20
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Tue Jan 21 11:29:26 2014 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Thu Jan 23 11:31:06 2014 -0800
 
-    datapath: use const in some local vars and casts
+    netlink: Rename 'dump-&gt;seq' to 'dump-&gt;nl_seq'
     
-    In few functions, const formal parameters are assigned or cast to
-    non-const.
-    These changes suppress warnings if compiled with -Wcast-qual.
+    An upcoming patch will introduce another, completely unrelated seq to
+    'struct nl_dump'. Giving this one a better name should reduce confusion.
     
-    Signed-off-by: Daniele Di Proietto &lt;daniele.di.proietto@gmail.com&gt;
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
