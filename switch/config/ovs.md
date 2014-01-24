@@ -8,96 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-671f84cd-d69f-4f8e-941f-79960ae2c907
+4145023e-0160-4a9b-9fd4-2ce8049b7a63
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port br0
             Interface br0
                 type: internal
-        Port eth8
-            Interface eth8
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 500c9e7c-aa2d-479b-a3bd-5b3c39388a0c
-controller          : [921308dc-111b-4c11-bff4-ee2c1aac89fd]
+_uuid               : f992d3a6-2e25-4540-b340-0e7173f5528c
+controller          : [4cd49d66-95db-44b2-8810-5eb95eb15a6f]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [8ebbac8c-0c59-4a42-a367-c24f0c4a25a4, cdbe6a3b-ef5d-4b5a-94a5-04ee2936ee77, cebbe07a-274c-4350-96ff-a31e585840d8]
+ports               : [22971a48-95fb-42aa-9f87-97c3b036f83b, 29b5d1da-5570-46d2-abc7-c9b1ddae97fb, a7c928ec-831f-4e74-af12-cc82de8efe4c]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 921308dc-111b-4c11-bff4-ee2c1aac89fd
+_uuid               : 4cd49d66-95db-44b2-8810-5eb95eb15a6f
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=356, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8ebbac8c-0c59-4a42-a367-c24f0c4a25a4
+_uuid               : a7c928ec-831f-4e74-af12-cc82de8efe4c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [75603443-f230-48a1-ba5c-7684a539b746]
-name                : br0
-
-_uuid               : cebbe07a-274c-4350-96ff-a31e585840d8
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [bd7d7eb6-f3ad-401d-89ed-418e43f206d0]
-name                : eth7
-
-_uuid               : cdbe6a3b-ef5d-4b5a-94a5-04ee2936ee77
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [0cc5d857-5750-48bb-b89e-43dd658d415c]
+interfaces          : [44f1fca4-d277-4b43-92f9-42b148a7abf2]
 name                : eth8
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : bd7d7eb6-f3ad-401d-89ed-418e43f206d0
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=660, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : 75603443-f230-48a1-ba5c-7684a539b746
-admin_state         : up
-ifindex             : 52
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
+_uuid               : 22971a48-95fb-42aa-9f87-97c3b036f83b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c59a5365-34af-4e82-80f0-f55147742812]
 name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
 
-_uuid               : 0cc5d857-5750-48bb-b89e-43dd658d415c
+_uuid               : 29b5d1da-5570-46d2-abc7-c9b1ddae97fb
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [45fdd7a3-737e-4a53-ae55-380573801f4c]
+name                : eth7
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 44f1fca4-d277-4b43-92f9-42b148a7abf2
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -113,27 +81,60 @@ ofport              : 2
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : c59a5365-34af-4e82-80f0-f55147742812
+admin_state         : up
+ifindex             : 63
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
+
+_uuid               : 45fdd7a3-737e-4a53-ae55-380573801f4c
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=660, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 631486bd29dc6cfe2dc7cf65495d308f4c7fca56
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Wed Dec 18 13:55:25 2013 -0800
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Thu Jan 23 16:08:53 2014 -0800
+commit 5a6af13f9645865b21c144a5a46aed79f8d8f2e5
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Mon Jan 6 13:54:21 2014 -0800
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Fri Jan 24 07:59:02 2014 -0800
 
-    netdev-dummy: Add support for active stream
+    syslog: Provide stub functions for openlog and syslog.
     
-    The dummy ports thus far only support passive connections. It can
-    listen for multiple incoming connection requests but not make active
-    connections. This patch adds support of active stream, so that a
-    dummy port can be configured with either passive or active connections.
+    One option to implement openlog and syslog functionality in Windows
+    is to use windows event logger. But it looks like it involves changing
+    registry settings and in general looks complicated.
     
-    The net result is that dummy ports can now connect to each other,
-    without being patch ports. This feature will be useful in adding test
-    cases of future commits.
+    For the time being, do nothing for syslog. All the information needed for
+    debugging will be present through the 'file' option anyways.
     
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    We can start OVS daemons on Windows with -vfile:info -vsyslog:off.
+    
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
