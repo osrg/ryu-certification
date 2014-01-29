@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-5af05fff-6a40-41c6-80c0-921690153b5f
+5083aae5-e61e-48bc-a3ce-b98dff8d5e9f
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,51 +21,51 @@ $ sudo ovs-vsctl show
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4a9bceca-c168-4eb5-83c1-8dc1b5ef9e82
-controller          : [b2154089-9f91-4501-abdd-29d81c727704]
+_uuid               : e9c3e999-9dde-42e8-b3ed-b4ca9dfdf5d8
+controller          : [81423c5d-ecb5-48eb-a475-7170c8d1d80f]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [8f63c1ef-94ad-4653-b73e-1eb3705a911e, f5ef40cb-84c5-45c3-b7c8-fc0dc6737cb8, fd3e3c4b-124e-4bd1-ae89-df305559f4ca]
+ports               : [843ce687-890e-4643-938c-65abffcab853, c1af0c5b-1373-417f-82c4-c46e3ce5ea65, db1fff61-0e52-456f-bc0b-796ce6d0ef14]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b2154089-9f91-4501-abdd-29d81c727704
+_uuid               : 81423c5d-ecb5-48eb-a475-7170c8d1d80f
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=351, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=347, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f5ef40cb-84c5-45c3-b7c8-fc0dc6737cb8
+_uuid               : db1fff61-0e52-456f-bc0b-796ce6d0ef14
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [91897674-8b1b-4acc-bdef-856fafaaac8a]
-name                : eth7
-
-_uuid               : 8f63c1ef-94ad-4653-b73e-1eb3705a911e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [b6b0e3b7-a81b-4f3a-b594-6e5fd5cc904f]
-name                : eth8
-
-_uuid               : fd3e3c4b-124e-4bd1-ae89-df305559f4ca
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [849a8257-ccc2-4e75-87d1-6f694d6ae682]
+interfaces          : [e7145f43-6968-414e-b41e-59c55be5bd1c]
 name                : br0
 
+_uuid               : 843ce687-890e-4643-938c-65abffcab853
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [d91be2c3-1dec-41bb-935d-4bedb41617c8]
+name                : eth8
+
+_uuid               : c1af0c5b-1373-417f-82c4-c46e3ce5ea65
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [27ec6255-abf0-4598-8a1c-34f875618ef7]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 91897674-8b1b-4acc-bdef-856fafaaac8a
+_uuid               : 27ec6255-abf0-4598-8a1c-34f875618ef7
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -82,9 +82,9 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 849a8257-ccc2-4e75-87d1-6f694d6ae682
+_uuid               : e7145f43-6968-414e-b41e-59c55be5bd1c
 admin_state         : up
-ifindex             : 85
+ifindex             : 89
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -97,7 +97,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : b6b0e3b7-a81b-4f3a-b594-6e5fd5cc904f
+_uuid               : d91be2c3-1dec-41bb-935d-4bedb41617c8
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -118,16 +118,14 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 06f14c92f666e03708ffa8731223611943bc28bd
-Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-AuthorDate: Thu Jan 16 13:49:38 2014 -0800
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Tue Jan 28 13:08:13 2014 -0800
+commit 08d74a962e302b752f53a9c367053a39068104ed
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Tue Jan 28 13:04:35 2014 -0800
+Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
+CommitDate: Tue Jan 28 16:07:29 2014 -0800
 
-    util: A generic function to convert error to string for windows.
+    upcall: Avoid divide-by-zero calculating flow limit
     
-    More users will be added in an upcoming commit.
-    
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
