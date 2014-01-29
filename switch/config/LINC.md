@@ -100,16 +100,18 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 05ca3fd5a1220d9d6e1f53643f44c041ab921aea
-Merge: 9ddbf52 a8572cc
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Jan 22 23:52:58 2014 -0800
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Jan 22 23:52:58 2014 -0800
+commit 0c20d6ddad644f70e6509de0ef4542c068b5ef21
+Merge: 05ca3fd 1ea7b29
+Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+AuthorDate: Wed Jan 29 06:42:20 2014 -0800
+Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+CommitDate: Wed Jan 29 06:42:20 2014 -0800
 
-    Merge pull request #286 from FlowForwarding/mininet_integration
+    Merge pull request #287 from khetzl/issue5
     
-    Update mininet_integration.md
+    Sync routing
+    
+    This closes FlowForwarding/LINC-Switch#5.
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
