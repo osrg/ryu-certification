@@ -372,20 +372,20 @@ title: Ryu Certification - NEC PF5220
 <a name="206060d03aae06223b957a9540c9bfe4">action: set_field: 34_MPLS_LABEL</a>
 <pre>
     ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'           ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="a5dc6ce9e4c50889a73b16c89210662e">action: set_field: 35_MPLS_TC</a>
 <pre>
     ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="31c5b339b919852ded458ea547ef8696">action: set_field: 36_MPLS_BOS</a>
 <pre>
@@ -443,7 +443,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="875a5fc287f4e36f66af556bfd972bb9">action: set_field: 12_IPV4_DST</a>
 <pre>
@@ -452,7 +452,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="ddb5bc5be6b881ffba50cccc24eadd47">action: set_field: 13_TCP_SRC (IPv4)</a>
 <pre>
@@ -541,7 +541,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="c2b5b54af8c6b31df2874ec89c2bf18a">action: set_field: 09_IP_ECN (IPv6)</a>
 <pre>
@@ -590,7 +590,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="1ccf7ab91d2295773428fa14168ae64b">action: set_field: 16_UDP_DST (IPv6)</a>
 <pre>
@@ -599,7 +599,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="2476412662f05c76d05abdd5f983e9bb">action: set_field: 17_SCTP_SRC (IPv6)</a>
 <pre>
@@ -630,7 +630,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="b3d87765d9d8e73d5826b1966523f4f0">action: set_field: 27_IPV6_DST</a>
 <pre>
@@ -650,7 +650,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="73a03bb41351355646920c1207233e73">action: set_field: 29_ICMPV6_TYPE</a>
 <pre>
@@ -780,44 +780,44 @@ title: Ryu Certification - NEC PF5220
 <a name="0dc0b3013fed3082c5fe85fedf717c56">match: 02_METADATA</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id=1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
 </pre>
 <a name="a2f35fb4c31f68b07ba0bbeb91463095">match: 02_METADATA (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x03, code=0x03]
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
 </pre>
 <a name="fe864e7ac5b2d7b2aafc87bbd83da455">match: 03_ETH_DST</a>
 <pre>
@@ -990,65 +990,65 @@ title: Ryu Certification - NEC PF5220
 <a name="c1cf14c00edeb647eb396c65bac9b6b9">match: 34_MPLS_LABEL</a>
 <pre>
     ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=output:CONTROLLER'                       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=203)/ipv4/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=output:CONTROLLER'                       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=203)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:2'                                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:CONTROLLER'                            ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(label=203)/arp-->'mpls_label=100,actions=output:2'                                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="f3ff641757553b6eda3a52ade54d5e7d">match: 35_MPLS_TC</a>
 <pre>
     ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=output:CONTROLLER'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=5)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=output:CONTROLLER'                                ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=5)/ipv6/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:2'                                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:CONTROLLER'                                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(exp=5)/arp-->'mpls_tc=3,actions=output:2'                                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="1aecdbcd4d391560791f6f9ae2cb56ad">match: 36_MPLS_BOS</a>
 <pre>
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                                        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                            ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                                        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                            ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
