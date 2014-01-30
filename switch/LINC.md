@@ -222,14 +222,14 @@ dpid=0000e83935b2467c : Join target SW.
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'             ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'       ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packtes on target.
 </pre>
 <a name="4f5d77f1fc49b1b854e116048c24058d">action: 12_COPY_TTL_IN</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'              ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'        ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packtes on target.
 </pre>
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
 <pre>
@@ -882,19 +882,19 @@ dpid=0000e83935b2467c : Join target SW.
     ethernet/vlan(vid=100)/ipv4/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/vlan(vid=100)/ipv4/tcp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                 ERROR
-        Receiving timeout: no packet-in.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/vlan(vid=203)/ipv4/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
         Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/ipv6/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/vlan(vid=100)/ipv6/tcp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                 ERROR
-        Receiving timeout: no packet-in.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/vlan(vid=203)/ipv6/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
         Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/arp-->'vlan_vid=96(mask=0xf0),actions=output:2'                               ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/vlan(vid=100)/arp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                      ERROR
-        Receiving timeout: no packet-in.
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/vlan(vid=203)/arp-->'vlan_vid=96(mask=0xf0),actions=output:2'                               ERROR
         Table-miss error: no change in lookup_count.
 </pre>

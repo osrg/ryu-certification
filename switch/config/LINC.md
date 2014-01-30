@@ -100,18 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 0c20d6ddad644f70e6509de0ef4542c068b5ef21
-Merge: 05ca3fd 1ea7b29
+commit 146a1e4d09c141bf7dbe9e7b0449f395a0ba9239
+Merge: 0c20d6d bebbc74
 Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-AuthorDate: Wed Jan 29 06:42:20 2014 -0800
+AuthorDate: Thu Jan 30 05:58:41 2014 -0800
 Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-CommitDate: Wed Jan 29 06:42:20 2014 -0800
+CommitDate: Thu Jan 30 05:58:41 2014 -0800
 
-    Merge pull request #287 from khetzl/issue5
+    Merge pull request #289 from FlowForwarding/cache-sync-routing-setting
     
-    Sync routing
-    
-    This closes FlowForwarding/LINC-Switch#5.
+    Save sync routing setting in port state
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
