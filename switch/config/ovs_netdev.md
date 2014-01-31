@@ -8,101 +8,67 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-2b7da493-9d1d-4335-b0eb-bba6d43587ea
+f183ae5b-2d00-4d70-95fa-fd583496b6c6
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port br0
             Interface br0
                 type: internal
-        Port eth8
-            Interface eth8
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : ba875306-446f-453a-b4a5-6db20b74e905
-controller          : [22c911a5-5127-4caf-96ce-658d53de9054]
+_uuid               : 78467229-12a6-4221-a0f9-dbf4ff39fa14
+controller          : [e148e88f-fa31-4b89-95b9-62a6fcab9978]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [b6c5d183-0eda-43ae-8bfe-2eabe4ce5114, c242f259-a7bb-4787-be01-3300f9760ec3, e532c284-eedd-415c-852b-c85efde7abdd]
+ports               : [0bd3ba20-eef2-4ee8-a355-a37248d79082, 1c715b3e-9f1c-4a63-933e-8f25f9f89fd6, 546f61c9-ad0f-4acc-934b-bf32029960e6]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 22c911a5-5127-4caf-96ce-658d53de9054
+_uuid               : e148e88f-fa31-4b89-95b9-62a6fcab9978
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=297, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=301, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : e532c284-eedd-415c-852b-c85efde7abdd
+_uuid               : 0bd3ba20-eef2-4ee8-a355-a37248d79082
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [224a4930-47ca-4347-a662-f73405b74fda]
-name                : eth7
-
-_uuid               : c242f259-a7bb-4787-be01-3300f9760ec3
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [864aa24c-ef46-4398-a64e-c4a5baf0d9be]
-name                : eth8
-
-_uuid               : b6c5d183-0eda-43ae-8bfe-2eabe4ce5114
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [22cf8b12-7ac6-41bb-89d9-f0e1636a158e]
+interfaces          : [0f5bb79c-ed7b-4c87-b08a-6a6bf430449c]
 name                : br0
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 864aa24c-ef46-4398-a64e-c4a5baf0d9be
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
+_uuid               : 546f61c9-ad0f-4acc-934b-bf32029960e6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [caa2b6f9-3c4a-4d17-b139-cf0144eb0913]
 name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=497966, tx_dropped=0, tx_errors=0, tx_packets=5320}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
 
-_uuid               : 224a4930-47ca-4347-a662-f73405b74fda
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
+_uuid               : 1c715b3e-9f1c-4a63-933e-8f25f9f89fd6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3e72dc42-3220-42ca-a912-6c9cc8ac19f9]
 name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3052994525, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72531355, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
 
-_uuid               : 22cf8b12-7ac6-41bb-89d9-f0e1636a158e
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 0f5bb79c-ed7b-4c87-b08a-6a6bf430449c
 admin_state         : up
 duplex              : full
-ifindex             : 91
+ifindex             : 96
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -115,28 +81,64 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : caa2b6f9-3c4a-4d17-b139-cf0144eb0913
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=540778, tx_dropped=0, tx_errors=0, tx_packets=5778}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 3e72dc42-3220-42ca-a912-6c9cc8ac19f9
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3053125144, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72532676, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0a8763fcb31bfca0d8d854c235c531005088fcb9
-Author:     Ethan Jackson &lt;ethan@nicira.com&gt;
-AuthorDate: Mon Jan 27 16:40:27 2014 -0800
-Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
-CommitDate: Wed Jan 29 12:31:32 2014 -0800
+commit 59804c80a9821e3aca208012c1a496f3c26bfe9a
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Thu Jan 30 16:57:16 2014 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Thu Jan 30 16:57:16 2014 -0800
 
-    ofproto-dpif-upcall: Hardcode max_idle to 1500ms.
+    bridge: Set ofport column in every database transaction.
     
-    Before this patch, OVS tried to guess an optimal max idle time for
-    datapath flows based on the number of datapath flows relative to the
-    limit.  This caused instability because the limit was based on the
-    dump duration which was affected by the max idle time.  This patch
-    chooses instead to hardcode the max idle time to 1.5s except in
-    extreme case where the datapath flow limit is exceeded.  1.5s was
-    chosen to ensure pings occurring at once per second stay cached in the
-    datapath.
+    Database transactions can occasionally fail due to concurrent changes in
+    the database.  When that happens, the next transaction should repeat the
+    changes that ovs-vswitchd tried to make the first time (adjusted for the
+    changes to the database).
     
-    Signed-off-by: Ethan Jackson &lt;ethan@nicira.com&gt;
-    Acked-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    The code to report the OpenFlow port number in use didn't do that.  It set
+    the ofport field once when it created the port and never set it again, even
+    if the transaction to set it failed.  This commit fixes the problem.
+    
+    Bug #23047.
+    Reported-by: Suganya Ramachandran &lt;suganyar@vmware.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
