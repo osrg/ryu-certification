@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c59d45c5-b4e6-4468-89d3-016c7f1890cd
+f95d78b0-6f32-4894-ba99-6f2e79571657
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth8
-            Interface eth8
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
         Port br0
             Interface br0
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : b96fc7a8-cc45-4101-9a6e-6fcdb9e92730
-controller          : [0bd20a1b-1a49-48e4-b957-5a009cc81815]
+_uuid               : 47a5c642-b6fc-4be3-abf3-c4661b713239
+controller          : [df6b4d0a-3d43-4579-992c-28699de48684]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [647f968d-cb57-4999-9ea3-81143f4bfc41, e900cd4d-2792-429b-a663-dbc4859a0a99, f048532e-28ae-44ee-88e6-edc65ff9dd05]
+ports               : [473ad5ae-cd39-4e99-a183-dd6ad121c4ca, 54c16130-2759-4d21-98e3-915936abaa07, ab1eab45-1529-49f2-a6b6-88da9a7f5c0a]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0bd20a1b-1a49-48e4-b957-5a009cc81815
+_uuid               : df6b4d0a-3d43-4579-992c-28699de48684
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=301, sec_since_disconnect=3, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=296, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : e900cd4d-2792-429b-a663-dbc4859a0a99
+_uuid               : 54c16130-2759-4d21-98e3-915936abaa07
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [a770a938-047f-48d7-b66f-f59d2259faac]
-name                : eth7
-
-_uuid               : 647f968d-cb57-4999-9ea3-81143f4bfc41
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [cad53f40-75f4-4c41-8517-c9ce0e14f3b4]
+interfaces          : [a0812da5-9932-48f2-bc07-bb98be6836bc]
 name                : eth8
 
-_uuid               : f048532e-28ae-44ee-88e6-edc65ff9dd05
+_uuid               : ab1eab45-1529-49f2-a6b6-88da9a7f5c0a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [53b3b9a8-a50e-4484-87d3-ca1f190aa279]
+interfaces          : [32a15ae9-5632-47d7-bd9a-c8673960a1fa]
 name                : br0
 
+_uuid               : 473ad5ae-cd39-4e99-a183-dd6ad121c4ca
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [946c8aec-23b6-4c61-9fd9-c25d9fa93ad0]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : a770a938-047f-48d7-b66f-f59d2259faac
+_uuid               : 946c8aec-23b6-4c61-9fd9-c25d9fa93ad0
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -78,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3053516823, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72536637, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3053712618, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72538617, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : cad53f40-75f4-4c41-8517-c9ce0e14f3b4
+_uuid               : a0812da5-9932-48f2-bc07-bb98be6836bc
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -95,14 +95,14 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=669214, tx_dropped=0, tx_errors=0, tx_packets=7152}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=732562, tx_dropped=0, tx_errors=0, tx_packets=7830}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 53b3b9a8-a50e-4484-87d3-ca1f190aa279
+_uuid               : 32a15ae9-5632-47d7-bd9a-c8673960a1fa
 admin_state         : up
 duplex              : full
-ifindex             : 109
+ifindex             : 115
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,14 +120,18 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit cf06c2e944306a0bfa37813882d2b59dc6122b09
-Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-AuthorDate: Thu Jan 30 08:55:43 2014 -0800
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Fri Jan 31 07:58:23 2014 -0800
+commit f87d3302c4e01189c437fafa4f0639c604962b18
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Mon Dec 9 17:28:32 2013 -0800
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Fri Jan 31 11:31:24 2014 -0800
 
-    configure: Identify OpenSSL libraries in Windows.
+    socket-util: Remove unused functions.
     
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    A Windows porter mentioned to me that these functions caused special
+    trouble in the Windows port.  However, they are no longer used, so we
+    might as well remove them.
+    
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Andy Zhou &lt;azhou@nicira.com&gt;
 </pre>
