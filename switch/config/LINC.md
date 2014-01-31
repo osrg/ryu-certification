@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 146a1e4d09c141bf7dbe9e7b0449f395a0ba9239
-Merge: 0c20d6d bebbc74
-Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-AuthorDate: Thu Jan 30 05:58:41 2014 -0800
-Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-CommitDate: Thu Jan 30 05:58:41 2014 -0800
+commit 540786a0287f22be374a87987a2dc4e412db395c
+Merge: 146a1e4 e1863f7
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Thu Jan 30 06:19:24 2014 -0800
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Thu Jan 30 06:19:24 2014 -0800
 
-    Merge pull request #289 from FlowForwarding/cache-sync-routing-setting
+    Merge pull request #277 from yamt/fix-of-config-us3
     
-    Save sync routing setting in port state
+    OF-Config fixes for OF 1.2
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
