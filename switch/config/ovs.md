@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-42a26c3c-2450-4587-b88b-227331d98991
+bca1ad67-91ae-4e45-84fd-0b7fe0a84ce5
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,68 +21,66 @@ $ sudo ovs-vsctl show
             Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 9ecadfb0-99e9-4164-998a-8aedb5ded243
-controller          : [25b31607-ac64-4b7b-9e23-41c416361d79]
+_uuid               : d526fb25-1f2d-464e-bcbc-5a8c14063548
+controller          : [0f344206-d6c1-4193-aa35-de4668e5c299]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [7db7e048-d4ac-4d90-9875-fff74f937939, ab24dfdc-c949-40ac-aa5e-3d01dc77e46a, fa7294a6-2564-4eee-b427-92eaf3507a3f]
+ports               : [1c2ff5b0-2989-424d-9b64-1c15e75009d8, 4ceb3747-4a28-4f18-a844-030b3f9ed8c3, c78db1db-34d6-4017-94b5-78055a04179e]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 25b31607-ac64-4b7b-9e23-41c416361d79
+_uuid               : 0f344206-d6c1-4193-aa35-de4668e5c299
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=357, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7db7e048-d4ac-4d90-9875-fff74f937939
+_uuid               : 1c2ff5b0-2989-424d-9b64-1c15e75009d8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [9e5708e3-b9a3-4b73-9397-8d97a699f053]
+interfaces          : [9508dc1c-d247-42e0-84ac-7d8c6c53bf9a]
 name                : br0
 
-_uuid               : ab24dfdc-c949-40ac-aa5e-3d01dc77e46a
+_uuid               : c78db1db-34d6-4017-94b5-78055a04179e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d4341f4f-cdcc-4158-918f-70e3062d5792]
-name                : eth7
-
-_uuid               : fa7294a6-2564-4eee-b427-92eaf3507a3f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [4c473e3a-e353-47ec-9e18-0024b19b94d6]
+interfaces          : [8061b692-cd59-44df-b544-cb5b17d44fd7]
 name                : eth8
 
+_uuid               : 4ceb3747-4a28-4f18-a844-030b3f9ed8c3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [2d8400ed-fc5d-42ac-9df2-2b83d03c31d4]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4c473e3a-e353-47ec-9e18-0024b19b94d6
+_uuid               : 9508dc1c-d247-42e0-84ac-7d8c6c53bf9a
 admin_state         : up
-duplex              : full
-ifindex             : 11
+ifindex             : 120
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
-link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
+mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
 
-_uuid               : d4341f4f-cdcc-4158-918f-70e3062d5792
+_uuid               : 2d8400ed-fc5d-42ac-9df2-2b83d03c31d4
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -99,37 +97,42 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 9e5708e3-b9a3-4b73-9397-8d97a699f053
+_uuid               : 8061b692-cd59-44df-b544-cb5b17d44fd7
 admin_state         : up
-ifindex             : 113
+duplex              : full
+ifindex             : 11
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
+link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
+mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f87d3302c4e01189c437fafa4f0639c604962b18
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Mon Dec 9 17:28:32 2013 -0800
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Jan 31 11:31:24 2014 -0800
+commit a66034810666e84377e167ad88ea961caa8b4d17
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Fri Jan 31 15:47:58 2014 -0800
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Fri Jan 31 19:09:45 2014 -0800
 
-    socket-util: Remove unused functions.
+    datapth: Suppress error messages on megaflow updates
     
-    A Windows porter mentioned to me that these functions caused special
-    trouble in the Windows port.  However, they are no longer used, so we
-    might as well remove them.
+    With subfacets, we'd expect megaflow updates message to carry
+    the original micro flow. If not, EINVAL is returned and kernel
+    logs an error message.  Now that the user space subfacet layer is
+    removed, it is expected that flow updates can arrive with a
+    micro flow other than the original. Change the return code to
+    EEXIST and remove the kernel error log message.
     
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Reported-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
 </pre>
