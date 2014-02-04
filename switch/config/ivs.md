@@ -7,7 +7,7 @@ title: Ryu Certification - ivs - config
 
 # OpenFlow related configuration
 <pre>
-$ /usr/sbin/ivs --openflow-version 1.3 -c 10.24.150.30:6633 --dpid 0000000000000001 -i eth7 -i eth8
+$ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 0000000000000001 -i eth7 -i eth8
 </pre>
 
 # Version information
@@ -28,7 +28,7 @@ filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.1.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     50304025FF39B2E6A9E861E
+srcversion:     858676C83C1CE5704C0F523
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>

@@ -180,29 +180,29 @@ title: Ryu Certification - ivs
 <a name="84114b5397172ba5a314008b52c36388">action: 19_PUSH_MPLS</a>
 <pre>
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'eth_type=0x0806,actions=push_mpls:0x8847,output:2'                                   ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="5d818f5bd3c537066c61f0a9a71df0b3">action: 26_PUSH_PBB</a>
 <pre>
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_pbb:0x88e7,output:2'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_pbb:0x88e7,output:2'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'eth_type=0x0806,actions=push_pbb:0x88e7,output:2'                                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="cdf28d261795cce41af2b316f024c762">action: 17_PUSH_VLAN (multiple)</a>
 <pre>
     ethernet/vlan/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x88a8,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x88a8,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp-->'eth_type=0x0806,actions=push_vlan:0x88a8,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="9d7f35a26be3f1fd987a89d0d6ba67c9">action: 18_POP_VLAN</a>
 <pre>
@@ -213,77 +213,77 @@ title: Ryu Certification - ivs
 <a name="069a36adbdd0739563365540be6e9b28">action: 11_COPY_TTL_OUT</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="4f5d77f1fc49b1b854e116048c24058d">action: 12_COPY_TTL_IN</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="f08789a3180cac4973ffd9b67c942078">action: 19_PUSH_MPLS (multiple)</a>
 <pre>
     ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="9df48d86c13b11c4f384f69242ec75bb">action: 20_POP_MPLS</a>
 <pre>
     ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=pop_mpls:0x0800,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=pop_mpls:0x86dd,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp-->'eth_type=0x8847,actions=pop_mpls:0x0806,output:2'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="679a3a4770d632a7630e275449e964e3">action: 26_PUSH_PBB (multiple)</a>
 <pre>
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x0800,actions=push_pbb:0x88e7,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_pbb:0x88e7,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp-->'eth_type=0x0806,actions=push_pbb:0x88e7,output:2'     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="1dd12601d2ca1cc3425fed290f033b6d">action: 27_POP_PBB</a>
 <pre>
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
 <pre>
     ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         OK
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -292,7 +292,7 @@ title: Ryu Certification - ivs
     ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2'                            OK
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2'                       OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -301,7 +301,7 @@ title: Ryu Certification - ivs
     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'                   OK
     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'              OK
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -310,7 +310,7 @@ title: Ryu Certification - ivs
     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                      OK
     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                 OK
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -329,20 +329,20 @@ title: Ryu Certification - ivs
 <a name="ba60e9bfb8e4d339de7040f0f5e3d0c2">action: set_field: 05_ETH_TYPE</a>
 <pre>
     ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0800,actions=set_field:0x8848->eth_type,output:2'  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=set_field:0x8848->eth_type,output:2'  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet(ethertype=0x0806)/arp-->'eth_type=0x0806,actions=set_field:0x8848->eth_type,output:2'       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="21b7587a754c08356f3f60d3b4bb8a99">action: set_field: 38_TUNNEL_ID</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="cbb7ad4ba4f1c1f3dabc03ae2f07c663">action: set_field: 06_VLAN_VID</a>
 <pre>
@@ -359,45 +359,45 @@ title: Ryu Certification - ivs
 <a name="206060d03aae06223b957a9540c9bfe4">action: set_field: 34_MPLS_LABEL</a>
 <pre>
     ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'           ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="a5dc6ce9e4c50889a73b16c89210662e">action: set_field: 35_MPLS_TC</a>
 <pre>
     ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="31c5b339b919852ded458ea547ef8696">action: set_field: 36_MPLS_BOS</a>
 <pre>
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="9e9826295e4fcce4158b54ff2f2ce35d">action: set_field: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="ce97749e537c30572fe41bc5f97f525c">action: set_field: 08_IP_DSCP (IPv4)</a>
 <pre>
     ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                       OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                  OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -406,27 +406,27 @@ title: Ryu Certification - ivs
     ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="b96b0ffa1914207a7ad1eb3a96b43b63">action: set_field: 10_IP_PROTO (IPv4)</a>
 <pre>
     ethernet/ipv4(proto=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="807bd1069798fcbf7b9ef3963e0bafc4">action: set_field: 11_IPV4_SRC</a>
 <pre>
     ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -435,7 +435,7 @@ title: Ryu Certification - ivs
     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' OK
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' OK
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -444,7 +444,7 @@ title: Ryu Certification - ivs
     ethernet/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'        OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -453,7 +453,7 @@ title: Ryu Certification - ivs
     ethernet/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      OK
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -462,7 +462,7 @@ title: Ryu Certification - ivs
     ethernet/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
     ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -471,60 +471,60 @@ title: Ryu Certification - ivs
     ethernet/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'           OK
     ethernet/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="803b0fcd7a244f192a4c6e304f14ae0c">action: set_field: 17_SCTP_SRC (IPv4)</a>
 <pre>
     ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="2c8963178cda864114bce4dcceb3328a">action: set_field: 18_SCTP_DST (IPv4)</a>
 <pre>
     ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'   ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="25a7e26fb3289ad1d95bdf7111a47fd4">action: set_field: 19_ICMPV4_TYPE</a>
 <pre>
     ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2'               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2'          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="33f67638725a70db77c8b9b43a0c78c4">action: set_field: 20_ICMPV4_CODE</a>
 <pre>
     ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2'              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2'         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="fed52997c457a7f1f6f79fbb687ea1d4">action: set_field: 08_IP_DSCP (IPv6)</a>
 <pre>
     ethernet/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'             OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'        OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -533,27 +533,27 @@ title: Ryu Certification - ivs
     ethernet/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'           OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="1f126e28ca7ac69d5a6b7adb562b5243">action: set_field: 10_IP_PROTO (IPv6)</a>
 <pre>
     ethernet/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'                      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="a7345fa316ee299c065fc2b8f663e733">action: set_field: 13_TCP_SRC (IPv6)</a>
 <pre>
     ethernet/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'        OK
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -562,7 +562,7 @@ title: Ryu Certification - ivs
     ethernet/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
     ethernet/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      OK
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -571,7 +571,7 @@ title: Ryu Certification - ivs
     ethernet/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
     ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -580,38 +580,38 @@ title: Ryu Certification - ivs
     ethernet/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'           OK
     ethernet/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="2476412662f05c76d05abdd5f983e9bb">action: set_field: 17_SCTP_SRC (IPv6)</a>
 <pre>
     ethernet/ipv6/udp(sctp_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="18c493adb0cefd57638e8d9dadd2d622">action: set_field: 18_SCTP_DST (IPv6)</a>
 <pre>
     ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'   ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="3386037a7fb9bba0939901969d7443a8">action: set_field: 26_IPV6_SRC</a>
 <pre>
     ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2'      OK
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' OK
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -620,7 +620,7 @@ title: Ryu Certification - ivs
     ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2'      OK
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' OK
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp--->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -629,119 +629,119 @@ title: Ryu Certification - ivs
     ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2'    OK
     ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' OK
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="73a03bb41351355646920c1207233e73">action: set_field: 29_ICMPV6_TYPE</a>
 <pre>
     ethernet/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2'       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2'  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="c8cec92a3719c393e89864809237994c">action: set_field: 30_ICMPV6_CODE</a>
 <pre>
     ethernet/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="58bb5b87b10120375648d5dfa160d66d">action: set_field: 31_IPV6_ND_TARGET</a>
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="03e6c802327cd4456ae80d74286cc133">action: set_field: 32_IPV6_ND_SLL</a>
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:111:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="561be672f9ebbcd43130be6c6014f0f5">action: set_field: 33_IPV6_ND_TLL</a>
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:111:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="edeb0a1b010613250527e2a03c53b549">action: set_field: 21_ARP_OP</a>
 <pre>
     ethernet/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2'                             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2'                        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="191830a3949f9206a79ee85da5c0d7c3">action: set_field: 22_ARP_SPA</a>
 <pre>
     ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="cef72d4ba1780a3c9b67b48a33eed3a7">action: set_field: 23_ARP_TPA</a>
 <pre>
     ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="b81664d2c1b70f417d5a1d0a03ea0a1c">action: set_field: 24_ARP_SHA</a>
 <pre>
     ethernet/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="3beb3ec8b1d89859be81d27af03f58a7">action: set_field: 25_ARP_THA</a>
 <pre>
     ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=set_field:bb:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="676630805778c633439bbf5baeeb1fc3">match: 00_IN_PORT</a>
 <pre>
@@ -758,44 +758,44 @@ title: Ryu Certification - ivs
 <a name="0dc0b3013fed3082c5fe85fedf717c56">match: 02_METADATA</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id=1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="a2f35fb4c31f68b07ba0bbeb91463095">match: 02_METADATA (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="fe864e7ac5b2d7b2aafc87bbd83da455">match: 03_ETH_DST</a>
 <pre>
@@ -860,44 +860,44 @@ title: Ryu Certification - ivs
 <a name="e1ab734d1d27b48a8e3b37e574a0a68c">match: 38_TUNNEL_ID</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="8a0ae32e2588fe37ce98c87f0c1d55ec">match: 38_TUNNEL_ID (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv4/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/ipv6/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/arp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="6cb722939537192104e3dbc2bc225b9a">match: 06_VLAN_VID</a>
 <pre>
@@ -1037,11 +1037,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                               OK
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_dscp=8,actions=output:2'                                        OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'              ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'     ERROR
@@ -1057,11 +1057,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                                OK
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:2'               ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'      ERROR
@@ -1077,11 +1077,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'                             OK
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=17,actions=output:2'                                     OK
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=output:2'            ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'   ERROR
@@ -1097,11 +1097,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'     OK
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
@@ -1117,11 +1117,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
@@ -1137,11 +1137,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:CONTROLLER'     OK
     ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:2'                OK
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
@@ -1157,11 +1157,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
     ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
@@ -1177,11 +1177,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/tcp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1197,11 +1197,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:CONTROLLER'                     OK
     ethernet/vlan/ipv4/tcp(dst_port=6789)-->'tcp_dst=2222,actions=output:2'                              OK
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/tcp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:2'    ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1217,11 +1217,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv4/udp(src_port=12345)-->'udp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/udp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1237,11 +1237,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=output:CONTROLLER'                     OK
     ethernet/vlan/ipv4/udp(dst_port=6789)-->'udp_dst=2222,actions=output:2'                              OK
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/udp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=output:2'    ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1259,11 +1259,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                          ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1281,11 +1281,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                            ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/sctp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1301,11 +1301,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                          OK
     ethernet/vlan/ipv4/icmp(type=3)-->'icmpv4_type=8,actions=output:2'                                   OK
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(type=3)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'         ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER' ERROR
@@ -1321,11 +1321,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                          OK
     ethernet/vlan/ipv4/icmp(code=1)-->'icmpv4_code=0,actions=output:2'                                   OK
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv4/icmp(code=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'         ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER' ERROR
@@ -1341,11 +1341,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                     OK
     ethernet/vlan/ipv6(traffic_class=65)/tcp-->'ip_dscp=8,actions=output:2'                              OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:2'    ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER' ERROR
@@ -1361,11 +1361,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                      OK
     ethernet/vlan/ipv6(traffic_class=65)/tcp-->'ip_ecn=0,actions=output:2'                               OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:2'     ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER' ERROR
@@ -1381,11 +1381,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'                               OK
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=17,actions=output:2'                                       OK
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:2'              ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'     ERROR
@@ -1401,11 +1401,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv6/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1421,11 +1421,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:CONTROLLER'                     OK
     ethernet/vlan/ipv6/tcp(dst_port=6789)-->'tcp_dst=2222,actions=output:2'                              OK
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:2'    ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1441,11 +1441,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv6/udp(src_port=12345)-->'udp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/udp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1461,11 +1461,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=output:CONTROLLER'                     OK
     ethernet/vlan/ipv6/udp(dst_port=6789)-->'udp_dst=2222,actions=output:2'                              OK
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/udp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=output:2'    ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1483,11 +1483,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                          ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER' ERROR
@@ -1505,11 +1505,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                            ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/sctp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER' ERROR
@@ -1525,11 +1525,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::10,actions=output:2'                            OK
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:CONTROLLER' ERROR
@@ -1545,11 +1545,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
     ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
@@ -1565,11 +1565,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=20::20,actions=output:2'                            OK
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=output:2'  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
@@ -1585,11 +1585,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' OK
     ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
@@ -1607,11 +1607,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6(flow_label=203)/tcp-->'ipv6_flabel=100,actions=output:2'                          ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:CONTROLLER' ERROR
@@ -1627,11 +1627,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=output:CONTROLLER'                    OK
     ethernet/vlan/ipv6/icmpv6(type=135)-->'icmpv6_type=128,actions=output:2'                             OK
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(type=135)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=output:2'   ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=output:CONTROLLER' ERROR
@@ -1649,11 +1649,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/icmpv6(code=1)-->'icmpv6_code=0,actions=output:2'                                 ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(code=1)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=output:2'       ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=output:CONTROLLER' ERROR
@@ -1673,11 +1673,11 @@ title: Ryu Certification - ivs
         Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'ipv6_nd_target=20::20,actions=output:2' OK
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
@@ -1697,11 +1697,11 @@ title: Ryu Certification - ivs
         Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' OK
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
@@ -1721,11 +1721,11 @@ title: Ryu Certification - ivs
         Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' OK
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
@@ -1747,11 +1747,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                                           ERROR
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:2' ERROR
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
@@ -1774,11 +1774,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'                               ERROR
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
@@ -1795,11 +1795,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(opcode=1)-->'arp_op=1,actions=output:CONTROLLER'                                   OK
     ethernet/vlan/arp(opcode=2)-->'arp_op=1,actions=output:2'                                            OK
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(opcode=2)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(opcode=1)-->'arp_op=1,actions=output:2'                  ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(opcode=1)-->'arp_op=1,actions=output:CONTROLLER'         ERROR
@@ -1815,11 +1815,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:CONTROLLER'        OK
     ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                   OK
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
@@ -1835,11 +1835,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
     ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'   OK
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
@@ -1855,11 +1855,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:CONTROLLER'        OK
     ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.20.20,actions=output:2'                   OK
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
@@ -1875,11 +1875,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
     ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'   OK
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
@@ -1897,11 +1897,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=11:11:11:11:11:11,actions=output:2'        ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
@@ -1919,11 +1919,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
@@ -1941,11 +1941,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'arp_tha=22:22:22:22:22:22,actions=output:2'        ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
@@ -1963,11 +1963,11 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
         Table-miss error: increment in matched_count.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x04]
+        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
