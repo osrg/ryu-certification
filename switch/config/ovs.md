@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-55b7ab51-02fd-49f3-add0-240858799883
+b2f975c3-0abd-46dd-8ba4-fd298020fd5a
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth8
+            Interface eth8
+        Port eth7
+            Interface eth7
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
-        Port eth8
-            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : d249a232-c1e8-4d4f-b059-24d4895ed64e
-controller          : [039014a6-0fb8-4f51-83fe-de3851e05d74]
+_uuid               : 7aee7642-9988-4332-8b84-edc937821e68
+controller          : [77460adf-02fb-4168-8084-6e4b42b6acf9]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [13829750-bce8-4e83-aab4-298779834c40, 1caaba2a-0faf-4584-8a35-bffc9636034d, f28926e9-e9c7-40c1-b548-cd2cf721ba1d]
+ports               : [a494bf93-afef-4455-ae17-1e77c3397d36, cd6532b7-243e-4e60-aa2c-3ef03bd6468d, edfd84e1-d2fc-4bcd-a777-ace73f61ffd6]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 039014a6-0fb8-4f51-83fe-de3851e05d74
+_uuid               : 77460adf-02fb-4168-8084-6e4b42b6acf9
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=357, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 13829750-bce8-4e83-aab4-298779834c40
+_uuid               : edfd84e1-d2fc-4bcd-a777-ace73f61ffd6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [57bcf1f7-36b2-4ac6-b4de-7ee7d8311bba]
+interfaces          : [906312ba-968f-4c19-a933-8d1c56a59327]
 name                : br0
 
-_uuid               : f28926e9-e9c7-40c1-b548-cd2cf721ba1d
+_uuid               : a494bf93-afef-4455-ae17-1e77c3397d36
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d9b3fd2c-c79a-4d1b-9634-73f2a62d5d6c]
+interfaces          : [c7e85f41-b68a-4d28-86fb-5b71c450f0c8]
 name                : eth8
 
-_uuid               : 1caaba2a-0faf-4584-8a35-bffc9636034d
+_uuid               : cd6532b7-243e-4e60-aa2c-3ef03bd6468d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [09513532-55e0-4edc-9edb-bdd8fb14a04e]
+interfaces          : [d723f436-cd00-45e0-9f28-131b6a7cb2aa]
 name                : eth7
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : d9b3fd2c-c79a-4d1b-9634-73f2a62d5d6c
+_uuid               : c7e85f41-b68a-4d28-86fb-5b71c450f0c8
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -82,7 +82,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 09513532-55e0-4edc-9edb-bdd8fb14a04e
+_uuid               : d723f436-cd00-45e0-9f28-131b6a7cb2aa
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -99,9 +99,9 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 57bcf1f7-36b2-4ac6-b4de-7ee7d8311bba
+_uuid               : 906312ba-968f-4c19-a933-8d1c56a59327
 admin_state         : up
-ifindex             : 126
+ifindex             : 132
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -118,17 +118,14 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 29dd5cb732fe935246475811cdc9f2a3ac785435
+commit 7343d171c8320bbd5263e518d5ee24d7678488ff
 Author:     Daniele Di Proietto &lt;daniele.di.proietto@gmail.com&gt;
-AuthorDate: Thu Jan 23 23:26:42 2014 +0100
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Mon Feb 3 14:05:30 2014 -0800
+AuthorDate: Fri Jan 24 19:00:06 2014 +0100
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Mon Feb 3 15:43:27 2014 -0800
 
-    datapath: Added (unsigned long long) cast in printf
-    
-    This is necessary, since u64 is not unsigned long long
-    in all architectures: u64 could be also uint64_t.
+    dpif-linux: remove useless includes
     
     Signed-off-by: Daniele Di Proietto &lt;daniele.di.proietto@gmail.com&gt;
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
