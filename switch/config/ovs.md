@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-5ca56ee4-4338-494a-94f3-7a9f6ec4acf9
+6f53763f-ebef-4232-b902-9c5585ee2897
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth8
             Interface eth8
         Port eth7
             Interface eth7
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5f3e9a59-4e7e-4588-8718-c885eebcd34e
-controller          : [ce392031-bba8-484f-9f5b-bfd30ed4307f]
+_uuid               : a150a9f6-1a33-44a6-b083-7800e69f516e
+controller          : [155ac5f7-a69a-452d-97d6-f70913dcf7bb]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [02c94e85-aa65-435f-8df4-ea0f4b7682ad, b8e27629-4afa-4d40-9f14-5010bc6e0cd8, fef8b153-ea86-49d3-b7e8-bef5133efbf2]
+ports               : [92375ccb-7e25-4f99-b2d1-31a7ce808b9c, 98f5a361-b302-4dbe-8e0c-33a3b0642511, aee65415-6dd5-44f9-aa3d-10f4295174fc]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : ce392031-bba8-484f-9f5b-bfd30ed4307f
+_uuid               : 155ac5f7-a69a-452d-97d6-f70913dcf7bb
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=351, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=352, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 02c94e85-aa65-435f-8df4-ea0f4b7682ad
+_uuid               : aee65415-6dd5-44f9-aa3d-10f4295174fc
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [18761b9e-7319-48e9-9e15-d33f7b80d5b0]
+interfaces          : [039bfa18-66cf-4603-a940-9d742ef25518]
 name                : br0
 
-_uuid               : b8e27629-4afa-4d40-9f14-5010bc6e0cd8
+_uuid               : 98f5a361-b302-4dbe-8e0c-33a3b0642511
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4fb9ca65-01b1-4802-a37d-33868bc53e2c]
-name                : eth8
-
-_uuid               : fef8b153-ea86-49d3-b7e8-bef5133efbf2
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a2e90d5c-0313-401a-b4ac-ff50df48c565]
+interfaces          : [c9e0ca84-91b1-4861-8285-461dbcfbf659]
 name                : eth7
 
+_uuid               : 92375ccb-7e25-4f99-b2d1-31a7ce808b9c
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [7d8d1389-dc3f-48f4-90e6-3ac8c4a79292]
+name                : eth8
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : a2e90d5c-0313-401a-b4ac-ff50df48c565
+_uuid               : c9e0ca84-91b1-4861-8285-461dbcfbf659
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -82,7 +82,22 @@ statistics          : {collisions=0, rx_bytes=65265, rx_crc_err=0, rx_dropped=0,
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 4fb9ca65-01b1-4802-a37d-33868bc53e2c
+_uuid               : 039bfa18-66cf-4603-a940-9d742ef25518
+admin_state         : up
+ifindex             : 153
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
+
+_uuid               : 7d8d1389-dc3f-48f4-90e6-3ac8c4a79292
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -98,21 +113,6 @@ ofport              : 2
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=20536, tx_dropped=0, tx_errors=0, tx_packets=220}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
-
-_uuid               : 18761b9e-7319-48e9-9e15-d33f7b80d5b0
-admin_state         : up
-ifindex             : 149
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
 </pre>
 
 # Version information
