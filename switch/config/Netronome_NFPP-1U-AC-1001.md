@@ -26,7 +26,7 @@ SDN_OFCONFIG_PORT=11111
 $ uname -a
 Linux netronome 3.5.0-44-generic #67~precise1-Ubuntu SMP Wed Nov 13 16:16:57 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
 $ sudo /opt/netronome/bin/ns-sdn version
-Netronome SDN version 1.0-r2705:957b19f529f5.326:547b9cca7a97
+Netronome SDN version 1.0-r2947:53cb629564bd.379:ba8efba889a8
 </pre>
 
 # Modified test scenario for switch restrictions
@@ -37,5 +37,7 @@ $ sed -i 's/\"value\":1/\"value\":21/g' ryu/tests/switch/of13/match/00_IN_PORT.j
 $ sed -i 's/in_port=1/in_port=21/g' ryu/tests/switch/of13/match/00_IN_PORT.json;
 $ sed -i 's/TARGET_SENDER_PORT = 2/TARGET_SENDER_PORT = 22/g' ryu/tests/switch/tester.py;
 $ sed -i 's/TARGET_RECEIVE_PORT = 1/TARGET_RECEIVE_PORT = 21/g' ryu/tests/switch/tester.py;
+$ sed -i 's/INTERVAL = 1/INTERVAL = 5/g' ryu/tests/switch/tester.py; 
+$ sed -i 's/^        hub.sleep(0)/        hub.sleep(INTERVAL)/g' ryu/tests/switch/tester.py; 
 </pre>
 
