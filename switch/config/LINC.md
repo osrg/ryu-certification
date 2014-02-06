@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 540786a0287f22be374a87987a2dc4e412db395c
-Merge: 146a1e4 e1863f7
+commit 11cc088512e9b4a118c41438833179e84db2c731
+Merge: 540786a b65fe8d
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Thu Jan 30 06:19:24 2014 -0800
+AuthorDate: Thu Feb 6 15:46:43 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Thu Jan 30 06:19:24 2014 -0800
+CommitDate: Thu Feb 6 15:46:43 2014 +0100
 
-    Merge pull request #277 from yamt/fix-of-config-us3
+    Merge pull request #291 from FlowForwarding/mininet-platforms
     
-    OF-Config fixes for OF 1.2
+    Update mininet_integration.md document
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02

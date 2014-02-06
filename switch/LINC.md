@@ -11,8 +11,8 @@ title: Ryu Certification - LINC
 |----------|---|---|
 |[Action](#Action)|24|32|
 |[set_field](#set_field)|71|99|
-|[Match](#Match)|468|234|
-|Total|563|365|
+|[Match](#Match)|472|230|
+|Total|567|361|
 
 ## <a name ='Action'>Action</a>
 
@@ -98,8 +98,8 @@ title: Ryu Certification - LINC
 | |IPv4|IPv6|ARP|
 |-----------|----|----|----|
 |[IN_PORT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/00_IN_PORT.json) | [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) | [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) | [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) / [OK](#676630805778c633439bbf5baeeb1fc3) |
-|[METADATA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA.json) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) |
-|[METADATA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA_Mask.json) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) |
+|[METADATA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA.json) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) | [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) / [OK](#0dc0b3013fed3082c5fe85fedf717c56) |
+|[METADATA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA_Mask.json) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) | [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) / [OK](#a2f35fb4c31f68b07ba0bbeb91463095) |
 |[ETH_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST.json) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) |
 |[ETH_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST_Mask.json) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) |
 |[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC.json) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) |
@@ -751,23 +751,19 @@ dpid=0000e83935b2467c : Join target SW.
     ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' OK
-    ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
-        Table-miss error: increment in matched_count.
+    ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
 </pre>
 <a name="a2f35fb4c31f68b07ba0bbeb91463095">match: 02_METADATA (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Table-miss error: increment in matched_count.
+    ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Table-miss error: increment in matched_count.
+    ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
-        Table-miss error: increment in matched_count.
+    ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
 </pre>
 <a name="fe864e7ac5b2d7b2aafc87bbd83da455">match: 03_ETH_DST</a>
 <pre>
@@ -1639,26 +1635,26 @@ dpid=0000e83935b2467c : Join target SW.
 </pre>
 <a name="9ccda48c1d58edb983f32ff8b3eb1407">match: 39_IPV6_EXTHDR</a>
 <pre>
-    ethernet/ipv6(ext_hdrs=[hop_opts,auth]/tcp-->'ipv6_exthdr=64,actions=output:2'                       ERROR
+    ethernet/ipv6(ext_hdrs=[hop_opts,auth]/tcp-->'ipv6_exthdr=68,actions=output:2'                       ERROR
         Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER'             ERROR
+    ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'             ERROR
         Receiving timeout: no packet-in.
-    ethernet/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                                                OK
-    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:2'                 ERROR
+    ethernet/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                                OK
+    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:2'                 ERROR
         Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER'        ERROR
+    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'        ERROR
         Receiving timeout: no packet-in.
-    ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                                           OK
-    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' ERROR
+    ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                           OK
+    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-    ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' OK
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:2' ERROR
+    ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' OK
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                 OK
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                 OK
 </pre>
 <a name="8b620e80dc70eee35980ad992628cbb5">match: 39_IPV6_EXTHDR (Mask)</a>
 <pre>
