@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-87a9461d-2777-473d-90cb-4f96deeb77f1
+c9449444-4bc8-41c7-b5f3-d806a5f4d999
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,68 +21,51 @@ $ sudo ovs-vsctl show
             Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : e6d21636-a3bf-4b49-8763-02a2bd8e8c31
-controller          : [a44ba328-abe8-4ff2-8de7-6cd1fefea68b]
+_uuid               : b3520d59-c097-4476-b77b-7f901ebea722
+controller          : [33f74ec2-6d28-4cbe-8308-03d2e6161c11]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [0419eb59-8d4b-4652-aeab-312f08abd0f5, 5f91a808-7758-48ff-bea5-df06e7ee94fb, 7c47b46e-9d86-41ac-ac79-49efb3445010]
+ports               : [05f73aea-d982-49f1-b49a-8395e8d9d9d5, 37c09ad9-3822-498c-bd88-73e0dfb1a383, d0221cab-bece-4527-b669-061d1d0ab0d6]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : a44ba328-abe8-4ff2-8de7-6cd1fefea68b
+_uuid               : 33f74ec2-6d28-4cbe-8308-03d2e6161c11
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=297, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=311, sec_since_disconnect=4, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5f91a808-7758-48ff-bea5-df06e7ee94fb
+_uuid               : 37c09ad9-3822-498c-bd88-73e0dfb1a383
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7253765e-382a-4c09-93ca-8b9f582e0f09]
+interfaces          : [543cac58-4104-427f-a1c1-38c2f7ea9e13]
 name                : eth7
 
-_uuid               : 0419eb59-8d4b-4652-aeab-312f08abd0f5
+_uuid               : 05f73aea-d982-49f1-b49a-8395e8d9d9d5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [fdb98463-3de5-43e6-b731-058e4f128d98]
+interfaces          : [eeab9d5d-4068-4e38-9175-eed9503068a3]
 name                : br0
 
-_uuid               : 7c47b46e-9d86-41ac-ac79-49efb3445010
+_uuid               : d0221cab-bece-4527-b669-061d1d0ab0d6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [126c3816-b1df-4d6e-9724-042dc60057ae]
+interfaces          : [047f000b-9e5e-45f9-9c5b-55f23d02d9ce]
 name                : eth8
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 126c3816-b1df-4d6e-9724-042dc60057ae
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1287986, tx_dropped=0, tx_errors=0, tx_packets=13762}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : 7253765e-382a-4c09-93ca-8b9f582e0f09
+_uuid               : 543cac58-4104-427f-a1c1-38c2f7ea9e13
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +78,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3055380182, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72555459, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3055649626, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72558171, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : fdb98463-3de5-43e6-b731-058e4f128d98
+_uuid               : eeab9d5d-4068-4e38-9175-eed9503068a3
 admin_state         : up
 duplex              : full
-ifindex             : 178
+ifindex             : 196
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -115,19 +98,38 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : 047f000b-9e5e-45f9-9c5b-55f23d02d9ce
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1382538, tx_dropped=0, tx_errors=0, tx_packets=14772}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c78a9ead62ddd8179cf6fedd9bd92f6ec17885c0
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Thu Feb 6 21:30:42 2014 -0800
+commit a73fcd71115f3f17eacd07cad31e2cb055b0ba13
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Tue Feb 4 15:16:01 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Feb 6 21:30:42 2014 -0800
+CommitDate: Fri Feb 7 08:40:50 2014 -0800
 
-    FAQ: Describe the state of MPLS in Open vSwitch.
+    ofproto: Update documentation
     
+    'cls' is no longer a parameter to this function.
+    
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Simon Horman &lt;horms@verge.net.au&gt;
 </pre>
