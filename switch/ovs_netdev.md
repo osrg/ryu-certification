@@ -735,22 +735,22 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' OK
-    ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
+    ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' ERROR
         Table-miss error: no change in lookup_count.
 </pre>
 <a name="a2f35fb4c31f68b07ba0bbeb91463095">match: 02_METADATA (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/ipv4/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
+    ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
         Table-miss error: no change in lookup_count.
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
+    ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
         Table-miss error: no change in lookup_count.
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-    ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
+    ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' ERROR
         Table-miss error: no change in lookup_count.
 </pre>
 <a name="fe864e7ac5b2d7b2aafc87bbd83da455">match: 03_ETH_DST</a>
@@ -1639,29 +1639,29 @@ title: Ryu Certification - ovs netdev
 </pre>
 <a name="9ccda48c1d58edb983f32ff8b3eb1407">match: 39_IPV6_EXTHDR</a>
 <pre>
-    ethernet/ipv6(ext_hdrs=[hop_opts,auth]/tcp-->'ipv6_exthdr=64,actions=output:2'                       ERROR
+    ethernet/ipv6(ext_hdrs=[hop_opts,auth]/tcp-->'ipv6_exthdr=68,actions=output:2'                       ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER'             ERROR
+    ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'             ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                                                ERROR
+    ethernet/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                                ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:2'                 ERROR
+    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:2'                 ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER'        ERROR
+    ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'        ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                                           ERROR
+    ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                           ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' ERROR
+    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x0a]
-    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x0a]
-    ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64,actions=output:2' ERROR
+    ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x0a]
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:2' ERROR
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64,actions=output:CONTROLLER' ERROR
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'ipv6_exthdr=64,actions=output:2'                 ERROR
+    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                 ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
 </pre>
 <a name="8b620e80dc70eee35980ad992628cbb5">match: 39_IPV6_EXTHDR (Mask)</a>
