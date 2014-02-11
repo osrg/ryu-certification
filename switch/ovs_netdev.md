@@ -9,10 +9,10 @@ title: Ryu Certification - ovs netdev
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|24|32|
+|[Action](#Action)|27|29|
 |[set_field](#set_field)|71|99|
 |[Match](#Match)|433|269|
-|Total|528|400|
+|Total|531|397|
 
 ## <a name ='Action'>Action</a>
 
@@ -28,7 +28,7 @@ title: Ryu Certification - ovs netdev
 |[COPY_TTL_IN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/12_COPY_TTL_IN.json) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [](#4f5d77f1fc49b1b854e116048c24058d) |
 |[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json) | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) |
 |[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json) | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) |
-|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) |
+|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
 |[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) |
 |[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
@@ -237,12 +237,9 @@ title: Ryu Certification - ovs netdev
 </pre>
 <a name="f08789a3180cac4973ffd9b67c942078">action: 19_PUSH_MPLS (multiple)</a>
 <pre>
-    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Received incorrect packet: mpls(bsb=0,exp=3,label=0,ttl=64)
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Received incorrect packet: mpls(bsb=0,exp=3,label=0,ttl=64)
-    ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              ERROR
-        Received incorrect packet: mpls(bsb=0,exp=3,label=0,ttl=64)
+    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
+    ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              OK
 </pre>
 <a name="9df48d86c13b11c4f384f69242ec75bb">action: 20_POP_MPLS</a>
 <pre>
