@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-adf361b3-5d3b-42fb-84c6-5e3c9a154b10
+85fc3e4c-3636-4956-88ca-898adbc00432
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth8
-            Interface eth8
         Port br0
             Interface br0
                 type: internal
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : fa8db98b-bd92-4887-9b86-1702a9cd60c9
-controller          : [59237a5f-648f-46ff-812a-0ad3076ea6a7]
+_uuid               : ff204806-beb3-4c0f-9452-3508ab8dd59c
+controller          : [65f9985d-07d7-4eef-a284-fe0c2d54a7f2]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [2d560973-95b3-47ab-a9e6-2e7142680f8c, a6a37710-1cf5-4692-9b8c-009eef2af3d6, c3926230-fc42-4d11-94ea-3dc053ece0ea]
+ports               : [1b8e76ad-6358-4bf3-8c99-0d0b604beb7b, b8ee92ca-4582-48f1-9afa-a9393f06a753, fa226195-aac6-4702-99fe-afae2a78e64d]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 59237a5f-648f-46ff-812a-0ad3076ea6a7
+_uuid               : 65f9985d-07d7-4eef-a284-fe0c2d54a7f2
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=297, sec_since_disconnect=3, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=296, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a6a37710-1cf5-4692-9b8c-009eef2af3d6
+_uuid               : 1b8e76ad-6358-4bf3-8c99-0d0b604beb7b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [796ec8b6-d981-4547-b4ad-28feb500b52f]
+interfaces          : [c6574d43-12f1-4055-9d76-3d7c1fc0a7db]
 name                : br0
 
-_uuid               : c3926230-fc42-4d11-94ea-3dc053ece0ea
+_uuid               : fa226195-aac6-4702-99fe-afae2a78e64d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c0766114-8290-4c80-8c2b-70bebeed1ddb]
-name                : eth7
-
-_uuid               : 2d560973-95b3-47ab-a9e6-2e7142680f8c
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [776cc791-0a81-4999-9336-9ba40823d715]
+interfaces          : [e13007f3-682e-48d4-8987-df279847b5eb]
 name                : eth8
 
+_uuid               : b8ee92ca-4582-48f1-9afa-a9393f06a753
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b0aa8635-1d08-4d99-8d10-c3ebf4240756]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : c0766114-8290-4c80-8c2b-70bebeed1ddb
+_uuid               : b0aa8635-1d08-4d99-8d10-c3ebf4240756
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -78,31 +78,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3056453962, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72566276, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3056579005, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72567537, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 776cc791-0a81-4999-9336-9ba40823d715
+_uuid               : c6574d43-12f1-4055-9d76-3d7c1fc0a7db
 admin_state         : up
 duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1646274, tx_dropped=0, tx_errors=0, tx_packets=17585}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : 796ec8b6-d981-4547-b4ad-28feb500b52f
-admin_state         : up
-duplex              : full
-ifindex             : 220
+ifindex             : 224
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -115,23 +98,54 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : e13007f3-682e-48d4-8987-df279847b5eb
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1687016, tx_dropped=0, tx_errors=0, tx_packets=18020}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 276e2864c517a13f9a3ba33086b091743096d30c
+commit c56fac1b678101b189e16f0462556c992feeffdc
 Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Tue Feb 4 09:01:16 2014 -0800
+AuthorDate: Tue Feb 11 08:24:16 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Feb 11 07:55:38 2014 -0800
+CommitDate: Tue Feb 11 08:24:16 2014 -0800
 
-    pcap-file: Allow capturing TCP streams where the SYN is not seen.
+    ofproto-dpif-xlate: Make flows that match ICMP fields revalidate correctly.
     
-    Until now, the tcp_stream() code has ignored any TCP packets that don't
-    correspond to a stream that began with a TCP SYN.  This commit changes the
-    code so that any TCP packet that contains a payload starts a new stream.
+    ICMPv4 and ICMPv6 have 8-bit type and code fields.  struct flow
+    uses the low 8 bits of the 16-bit tp_src and tp_dst members to
+    represent these fields.  The datapath interface, on the other hand,
+    represents them with just 8 bits each.  This means that if the high 8
+    bits of the masks for these fields somehow become set (meaning to
+    match on the nonexistent high bits of these fields) during
+    translation, then they will get chopped off by a round trip through
+    the datapath, and revalidation will spot that as an inconsistency and
+    delete the flow.  This commit avoids the problem by making sure that
+    only the low 8 bits of either field can be unwildcarded for ICMP.
     
+    This seems like the minimal fix for this problem, appropriate for
+    backporting to earlier branches.  The root of the issue is that these high
+    bits can get set in the match at all.  I have some leads on that, but they
+    require more invasive changes elsewhere.
+    
+    Bug #23320.
+    Reported-by: Krishna Miriyala &lt;miriyalak@vmware.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Reported-by: Vasu Dasari &lt;vdasari@gmail.com&gt;
+    Acked-by: Andy Zhou &lt;azhou@nicira.com&gt;
 </pre>
