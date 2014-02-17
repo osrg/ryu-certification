@@ -14,16 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.100.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 78a676f723c8d1ad543ffb9ddcb8bda0d36d9064
-Merge: dcdefff 4a4e89a
+commit e81430858dcd25ed074f484dedf2763f3e3963a4
+Merge: 1d2d11a 519b1c6
 Author:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Wed Jan 15 09:37:24 2014 -0800
+AuthorDate: Mon Feb 17 14:28:24 2014 -0300
 Commit:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Wed Jan 15 09:37:24 2014 -0800
+CommitDate: Mon Feb 17 14:28:24 2014 -0300
 
-    Merge pull request #82 from cloudysunny14/myFix2
+    Merge pull request #83 from codeshredder/patch-1
     
-    Fix caluculate inccorect checksum when Action Set-Field DSCP value and r...
+    operation for cookie_mask error
 </pre>
 
 # Modified test scenario for switch restrictions
