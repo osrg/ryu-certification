@@ -26,7 +26,7 @@ SDN_OFCONFIG_PORT=11111
 $ uname -a
 Linux netronome 3.5.0-44-generic #67~precise1-Ubuntu SMP Wed Nov 13 16:16:57 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
 $ sudo /opt/netronome/bin/ns-sdn version
-Netronome SDN version 1.0-r2947:53cb629564bd.379:ba8efba889a8
+Netronome SDN version 1.0-r3037:c35f14a588b9.439:e38556dce89b
 </pre>
 
 # Modified test scenario for switch restrictions
