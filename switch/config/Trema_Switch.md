@@ -13,14 +13,11 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.10
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 54acd51efa7c1f6844b0b5ca8e8c309325971fb3
-Merge: 0638c3c e759b88
-Author:     sugyo &lt;sugyo.org@gmail.com&gt;
-AuthorDate: Mon Feb 17 14:23:30 2014 +0900
-Commit:     sugyo &lt;sugyo.org@gmail.com&gt;
-CommitDate: Mon Feb 17 14:23:30 2014 +0900
+commit cc9ac33cc8f7cce2ad4d0eb76a3672650c19f7e7
+Author:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
+AuthorDate: Wed Feb 19 13:00:11 2014 +0900
+Commit:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
+CommitDate: Wed Feb 19 13:00:11 2014 +0900
 
-    Merge pull request #106 from iHiroakiKawai/fixes
-    
-    various tiny fixes
+    fix warnings
 </pre>
