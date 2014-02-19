@@ -124,14 +124,14 @@ CommitDate: Tue Dec 31 05:16:34 2013 -0800
     make oxm on-wire length for ipv6_flabel and mpls_label 32-bit
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
-commit 68f5b053e05e52055295cb317f9b64ffa5bc5d76
-Merge: 38e92c5 363333f
+commit c4b46da3655cf4c47bb411e371da7d313dc37c1e
+Merge: 68f5b05 85fd13b
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Nov 1 12:07:10 2013 -0700
+AuthorDate: Wed Feb 19 16:44:31 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Nov 1 12:07:10 2013 -0700
+CommitDate: Wed Feb 19 16:44:31 2014 +0100
 
-    Merge pull request #10 from esl/issue111
+    Merge pull request #12 from esl/checksum_optimizations
     
-    Fix handling SCTP packets
+    Checksum optimization in UDP
 </pre>
