@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-97956481-7ac0-4d9e-a7aa-e9b9e90dc020
+596c5485-9c53-4e79-91bb-ddb00f141055
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
         Port eth8
             Interface eth8
+        Port eth7
+            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1edbce9c-0f1b-4a69-8590-ca5e5c48dc3e
-controller          : [492fa41c-9d2d-47bd-be16-6f78a112da18]
+_uuid               : 028d5a20-477f-43af-8a28-b54091e14fdf
+controller          : [63c6cd83-bc76-4a16-9bf1-3443661d3918]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [93b86af1-827d-4d9f-8150-c425016df2e9, beb39314-83fb-4fba-baca-5000770d5f46, ee6f70be-8745-4f26-a825-eafb41e76664]
+ports               : [4ec26bcd-6199-47d0-910b-d101a17684a7, 85486dbe-129d-4baf-9f04-62d983c49ee7, 91187fb8-94fa-40c2-94b4-979c5ff530f0]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 492fa41c-9d2d-47bd-be16-6f78a112da18
+_uuid               : 63c6cd83-bc76-4a16-9bf1-3443661d3918
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=376, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : beb39314-83fb-4fba-baca-5000770d5f46
+_uuid               : 91187fb8-94fa-40c2-94b4-979c5ff530f0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2a0c5eb0-3e5b-4c96-a287-1e135774f1a7]
+interfaces          : [67cfa7ef-d032-4da7-89b8-a056447d9575]
 name                : eth7
 
-_uuid               : 93b86af1-827d-4d9f-8150-c425016df2e9
+_uuid               : 4ec26bcd-6199-47d0-910b-d101a17684a7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [9c2436d9-1b63-4743-936b-d656c5f92476]
+interfaces          : [f1e21943-1e7b-4655-bb15-939c64b4baee]
 name                : br0
 
-_uuid               : ee6f70be-8745-4f26-a825-eafb41e76664
+_uuid               : 85486dbe-129d-4baf-9f04-62d983c49ee7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [873697bc-0e7d-4311-8921-30225a0aa99a]
+interfaces          : [6cb6fdbe-791c-45bf-a417-c6ef5df6693f]
 name                : eth8
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 873697bc-0e7d-4311-8921-30225a0aa99a
+_uuid               : 6cb6fdbe-791c-45bf-a417-c6ef5df6693f
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -78,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2465288, tx_dropped=0, tx_errors=0, tx_packets=26320}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2488554, tx_dropped=0, tx_errors=0, tx_packets=26568}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 2a0c5eb0-3e5b-4c96-a287-1e135774f1a7
+_uuid               : 67cfa7ef-d032-4da7-89b8-a056447d9575
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +95,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3058996377, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72591921, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3059077567, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72592747, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 9c2436d9-1b63-4743-936b-d656c5f92476
+_uuid               : f1e21943-1e7b-4655-bb15-939c64b4baee
 admin_state         : up
 duplex              : full
-ifindex             : 298
+ifindex             : 302
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,19 +120,21 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 17b9089a32e9edc01157989f536525a53635c2d2
-Author:     Simon Horman &lt;horms@verge.net.au&gt;
-AuthorDate: Thu Feb 20 13:48:10 2014 +0900
+commit bf062576fd748fc526903c428ffa847032a7b1d0
+Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+AuthorDate: Thu Feb 20 11:11:00 2014 +0900
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Feb 20 08:26:47 2014 -0800
+CommitDate: Thu Feb 20 08:29:50 2014 -0800
 
-    tests/run-ryu: Correct logfile reporting
+    ofp-util: Avoid gcc warning on NetBSD
     
-     is already prefixed by / and suffixed by .log
-    so do not duplicate this prefix and suffix combination when appending
-     to .
+    Avoid the following warning caused by the combination
+    of NetBSD's htons implementation and gcc bug.
+    Now --enable-Werror build succeeds on NetBSD-6.
     
-    Cc: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
-    Signed-off-by: Simon Horman &lt;horms@verge.net.au&gt;
+        lib/ofp-util.c: In function 'ofputil_match_from_ofp10_match':
+        lib/ofp-util.c:174:15: error: integer overflow in expression
+    
+    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
