@@ -271,11 +271,11 @@ title: Ryu Certification - ivs
 </pre>
 <a name="1dd12601d2ca1cc3425fed290f033b6d">action: 27_POP_PBB</a>
 <pre>
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
+    ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
+    ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
-    ethernet/svlan/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'             ERROR
+    ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
