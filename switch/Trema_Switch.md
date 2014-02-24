@@ -9,10 +9,10 @@ title: Ryu Certification - Trema Switch
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|46|10|
+|[Action](#Action)|49|7|
 |[set_field](#set_field)|129|41|
 |[Match](#Match)|612|90|
-|Total|787|141|
+|Total|790|138|
 
 ## <a name ='Action'>Action</a>
 
@@ -31,7 +31,7 @@ title: Ryu Certification - Trema Switch
 |[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
 |[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json) | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) |
-|[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
+|[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json) | [OK](#1dd12601d2ca1cc3425fed290f033b6d) | [OK](#1dd12601d2ca1cc3425fed290f033b6d) | [OK](#1dd12601d2ca1cc3425fed290f033b6d) |
 
 | |ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|
@@ -246,12 +246,9 @@ title: Ryu Certification - Trema Switch
 </pre>
 <a name="1dd12601d2ca1cc3425fed290f033b6d">action: 27_POP_PBB</a>
 <pre>
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
-        Received incorrect packet: svlan(ethertype=34984)
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
-        Received incorrect packet: svlan(ethertype=34984)
-    ethernet/svlan/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'             ERROR
-        Received incorrect packet: svlan(ethertype=34984)
+    ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              OK
+    ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              OK
+    ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   OK
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
 <pre>
@@ -1114,7 +1111,7 @@ title: Ryu Certification - Trema Switch
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:2'    ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=65)/tcp-->'ip_dscp=8,actions=output:2'    OK
@@ -1284,7 +1281,7 @@ title: Ryu Certification - Trema Switch
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
@@ -1522,7 +1519,7 @@ title: Ryu Certification - Trema Switch
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' OK
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' OK
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.20.20,actions=output:2' OK
