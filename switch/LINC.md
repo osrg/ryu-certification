@@ -274,15 +274,15 @@ dpid=0000e83935b2467c : Join target SW.
 <pre>
 dpid=0000e83935b2467c : Leave target SW.
 dpid=0000e83935b2467c : Join target SW.
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
+    ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: barrier request timeout.
 dpid=0000e83935b2467c : Leave target SW.
 dpid=0000e83935b2467c : Join target SW.
-    ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'        ERROR
+    ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: barrier request timeout.
 dpid=0000e83935b2467c : Leave target SW.
 dpid=0000e83935b2467c : Join target SW.
-    ethernet/svlan/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'             ERROR
+    ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   ERROR
         Failed to add flows: barrier request timeout.
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
