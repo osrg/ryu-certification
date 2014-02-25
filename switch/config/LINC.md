@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 05f4584c097d9e23d695d6076c38a7eee0a0fe61
-Merge: 03208d1 2c3f3d9
+commit eb2b865a7f099ec81dd09943944583d8942e476c
+Merge: 05f4584 c9c6d64
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Feb 25 12:16:15 2014 +0100
+AuthorDate: Tue Feb 25 14:06:18 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Feb 25 12:16:15 2014 +0100
+CommitDate: Tue Feb 25 14:06:18 2014 +0100
 
-    Merge pull request #299 from FlowForwarding/pkt_udp_refactoring
+    Merge pull request #274 from legoscia/test-with-r16
     
-    Modify tests covering modification of UDP packets
+    Test with R16B02
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
