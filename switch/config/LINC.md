@@ -100,16 +100,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 03208d1c8b3ae82aa94e96575b92f29345a05ab1
-Merge: 763d550 4bfadf2
+commit 05f4584c097d9e23d695d6076c38a7eee0a0fe61
+Merge: 03208d1 2c3f3d9
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon Feb 24 10:40:33 2014 +0100
+AuthorDate: Tue Feb 25 12:16:15 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon Feb 24 10:40:33 2014 +0100
+CommitDate: Tue Feb 25 12:16:15 2014 +0100
 
-    Merge pull request #296 from FlowForwarding/controlling_libpcap
+    Merge pull request #299 from FlowForwarding/pkt_udp_refactoring
     
-    Fix rebar.config so that master branch for epcap is used
+    Modify tests covering modification of UDP packets
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
