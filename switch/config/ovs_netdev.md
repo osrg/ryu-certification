@@ -8,81 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-939b569b-4795-4f14-8af9-916097374223
+4085631d-3649-4110-aac6-be4ff0687407
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth8
             Interface eth8
-        Port eth7
-            Interface eth7
         Port br0
             Interface br0
                 type: internal
+        Port eth7
+            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3ef0e1e2-b689-451b-9c81-4713e9cd9482
-controller          : [1beba0a9-e744-4c0d-bcca-ae474f176720]
+_uuid               : 99c57c1b-c224-4104-b8eb-c21309178191
+controller          : [a3ade6fd-0553-4247-bb6a-4dbaa609150e]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [4d944451-7140-45e6-9b40-dceb823780b0, 5b118b5b-be84-4453-bdde-b13f2b9bc357, c308a64b-70d1-4bbb-8028-e6e91b41481c]
+ports               : [3476799a-81d0-4cd2-8715-010343188267, 79fab504-41c0-49cf-a20b-7d7c667fb45a, a9b17e78-a5cd-4fb9-bb98-7d43f97e58bd]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1beba0a9-e744-4c0d-bcca-ae474f176720
+_uuid               : a3ade6fd-0553-4247-bb6a-4dbaa609150e
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=372, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4d944451-7140-45e6-9b40-dceb823780b0
+_uuid               : 79fab504-41c0-49cf-a20b-7d7c667fb45a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f0db3f9d-b9d4-45a5-8574-c0cff611a824]
-name                : eth8
+interfaces          : [43d4a2af-dd59-4ca8-98c3-6dd732c728c2]
+name                : br0
 
-_uuid               : 5b118b5b-be84-4453-bdde-b13f2b9bc357
+_uuid               : a9b17e78-a5cd-4fb9-bb98-7d43f97e58bd
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [627ae56e-dd31-4ebe-917f-344bd1b54f40]
+interfaces          : [c79061ca-10ed-4616-a626-8a0e4c272805]
 name                : eth7
 
-_uuid               : c308a64b-70d1-4bbb-8028-e6e91b41481c
+_uuid               : 3476799a-81d0-4cd2-8715-010343188267
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7677dcf0-440c-476e-9a04-ce0831303bfe]
-name                : br0
+interfaces          : [f2fe8b42-cd76-4075-bc0b-aa2d5641273e]
+name                : eth8
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7677dcf0-440c-476e-9a04-ce0831303bfe
-admin_state         : up
-duplex              : full
-ifindex             : 375
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 2
-link_speed          : 10000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : f0db3f9d-b9d4-45a5-8574-c0cff611a824
+_uuid               : f2fe8b42-cd76-4075-bc0b-aa2d5641273e
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -95,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2945164, tx_dropped=0, tx_errors=0, tx_packets=31433}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2968160, tx_dropped=0, tx_errors=0, tx_packets=31678}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 627ae56e-dd31-4ebe-917f-344bd1b54f40
+_uuid               : c79061ca-10ed-4616-a626-8a0e4c272805
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -112,39 +95,46 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3060652367, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72608750, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3060733081, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72609571, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : 43d4a2af-dd59-4ca8-98c3-6dd732c728c2
+admin_state         : up
+duplex              : full
+ifindex             : 377
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 2
+link_speed          : 10000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1500
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 5ed512094a2f5534b031d2b3873262f870dc4083
-Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
-AuthorDate: Wed Feb 26 13:22:35 2014 -0800
-Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Wed Feb 26 13:23:10 2014 -0800
+commit 691e47554dd03dd6492e00bab5bd6d215f5cbd4f
+Author:     Flavio Leitner &lt;fbl@redhat.com&gt;
+AuthorDate: Thu Feb 27 09:16:34 2014 -0300
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Thu Feb 27 07:41:54 2014 -0800
 
-    dpif-linux: Lookup netdev to get netdev type string.
+    ovs-lib: allow non-root users to check service status
     
-    When creating tap ports in dpif-linux, the tap type is treated the
-    same as system, and the type is discarded. When dumping datapath
-    port types, this would cause tap type to be reported as a system
-    type.
+    It tries to log the status operation, so although non-root
+    users can see the current status, the lack of permission
+    to write to the log results in an error message.
     
-    Each time we see a port of the wrong type in bridge_reconfigure(), we
-    remove it and add a port with the correct configuration. This would
-    always occur for tap ports, causing deletion and re-creation of all tap
-    ports each time the bridge was reconfigured.
+    This changes to log only if the user has the permission to
+    write to the log file.
     
-    This patch makes dpif-linux use netdev to look up port types if the
-    datapath reports that they are of type OVS_VPORT_TYPE_NETDEV.
-    
-    Bug #1196289.
-    
-    Reported-by: James Schmidt &lt;jschmidt@vmware.com&gt;
-    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
-    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Flavio Leitner &lt;fbl@redhat.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
 </pre>
