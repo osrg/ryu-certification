@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-eb37675f-e17a-4ab4-afeb-80c5a6ef00f0
+c16898a8-3110-48f4-8e9f-92dd9dd5c05c
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,88 +21,54 @@ eb37675f-e17a-4ab4-afeb-80c5a6ef00f0
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6e66cb66-9e8f-4565-b3c3-53739f7552aa
-controller          : [ad63ef55-f40e-492d-9451-c8c3e50c1a1c]
+_uuid               : 125cc18b-3153-4e39-824b-9b8726e9c3b4
+controller          : [b7b50b24-add8-481a-b7c9-6cad57c9dcd9]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [e693d226-0ea0-4ac2-844f-23f28be62029, e8ff91ef-e1dc-4178-a743-2b3e3189d5dd, fbf4add6-30dd-47f7-b824-12faae817716]
+ports               : [887ea29d-ca09-4643-bcee-21010243cd01, 99ca84a4-6c2f-49fb-b5fa-111020d5c3a7, c62d6ff1-84b0-499c-b020-e8a629aad56b]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : ad63ef55-f40e-492d-9451-c8c3e50c1a1c
+_uuid               : b7b50b24-add8-481a-b7c9-6cad57c9dcd9
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : fbf4add6-30dd-47f7-b824-12faae817716
+_uuid               : 99ca84a4-6c2f-49fb-b5fa-111020d5c3a7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [60c004c3-d53b-4ec0-b846-eb64bb9c85fd]
+interfaces          : [c95b57a7-b8bb-4836-a9ed-032dbedd3a68]
+name                : eth8
+
+_uuid               : c62d6ff1-84b0-499c-b020-e8a629aad56b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [5b8fdd4c-6052-4fbc-af93-a8cbeaac08a6]
 name                : br0
 
-_uuid               : e693d226-0ea0-4ac2-844f-23f28be62029
+_uuid               : 887ea29d-ca09-4643-bcee-21010243cd01
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ddabcaa6-270f-4c5d-90f2-7649dbbf3436]
+interfaces          : [f5cca7be-80cd-4bc7-bd85-be8c89e12d21]
 name                : eth7
-
-_uuid               : e8ff91ef-e1dc-4178-a743-2b3e3189d5dd
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [54320dc5-bf2f-4ee0-aa48-10305b95b8d3]
-name                : eth8
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 54320dc5-bf2f-4ee0-aa48-10305b95b8d3
+_uuid               : 5b8fdd4c-6052-4fbc-af93-a8cbeaac08a6
 admin_state         : up
 duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3039038, tx_dropped=0, tx_errors=0, tx_packets=32434}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : ddabcaa6-270f-4c5d-90f2-7649dbbf3436
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3060978300, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72612067, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : 60c004c3-d53b-4ec0-b846-eb64bb9c85fd
-admin_state         : up
-duplex              : full
-ifindex             : 413
+ifindex             : 417
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -115,35 +81,62 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : f5cca7be-80cd-4bc7-bd85-be8c89e12d21
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3061059490, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72612893, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : c95b57a7-b8bb-4836-a9ed-032dbedd3a68
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3062304, tx_dropped=0, tx_errors=0, tx_packets=32682}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 77587e0fef5818b5a873932c573781a14eb9edfb
+commit 87972a8fcd0f339c7229a014edd4c75fd9c1356c
 Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Fri Feb 28 16:20:17 2014 -0800
+AuthorDate: Sat Mar 1 17:15:00 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Feb 28 18:15:02 2014 -0800
+CommitDate: Sat Mar 1 17:38:09 2014 -0800
 
-    vconn: Fix vconn_get_status() return value when connection in progress.
+    tunnel: Do not set padding bits in tunnel mask.
     
-    When a connection takes a few rounds of the state machine to complete,
-    'error' gets filled with EAGAIN until that completes.  This didn't match
-    the vconn_get_status() documentation, which says that it only returns a
-    positive errno value if there was an error.  One could fix the problem
-    by updating the documentation (and the callers) or by updating the
-    implementation.  I decided that the latter was the way to go because
-    the distinction between the TCP connection being in progress or complete
-    isn't visible to the client; what is visible to the client is the OpenFlow
-    negotiation being complete.
+    On most architectures other than 32-bit x86, struct flow_tnl ends with 4
+    padding bytes.  Until now, tnl_xlate_init() set those bytes to nonzero
+    values in the wildcard mask.  When the wildcard mask passed through Netlink
+    attributes and back to userspace, the padding bytes of course became zero
+    again, which caused a wildcard mask mismatch and premature deletion of the
+    flow in revalidation.  This commit fixes the problem.
     
-    This problem is difficult to find in the unit tests because TCP connections
-    to localhost complete immediately.
-    
-    Bug introduced by commit accaecc419cc57d (rconn: Discover errors in
-    rconn_run() even if rconn_recv() is never called.)
-    
-    Reported-by: Anuprem Chalvadi &lt;achalvadi@vmware.com&gt;
+    Bug #1192516.
+    Reported-by: Krishna Miriyala &lt;miriyalak@vmware.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
