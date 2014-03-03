@@ -100,16 +100,13 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit eb2b865a7f099ec81dd09943944583d8942e476c
-Merge: 05f4584 c9c6d64
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Feb 25 14:06:18 2014 +0100
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Feb 25 14:06:18 2014 +0100
+commit fa4439129407c7a239126978a1933ac109a12ec3
+Author:     shivarammysore &lt;shivaram.mysore@gmail.com&gt;
+AuthorDate: Sun Mar 2 18:06:34 2014 -0800
+Commit:     shivarammysore &lt;shivaram.mysore@gmail.com&gt;
+CommitDate: Sun Mar 2 18:06:34 2014 -0800
 
-    Merge pull request #274 from legoscia/test-with-r16
-    
-    Test with R16B02
+    Draft version of Quick start guide
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
