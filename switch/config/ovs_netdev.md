@@ -8,98 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c16898a8-3110-48f4-8e9f-92dd9dd5c05c
+a9941b33-4e13-4f66-b470-d195682673e4
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth7
             Interface eth7
-        Port eth8
-            Interface eth8
         Port br0
             Interface br0
                 type: internal
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 125cc18b-3153-4e39-824b-9b8726e9c3b4
-controller          : [b7b50b24-add8-481a-b7c9-6cad57c9dcd9]
+_uuid               : e41afab9-c2b1-4b68-afab-912aa623bde8
+controller          : [07572d8a-2b54-4097-b55b-ba572d67c08b]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [887ea29d-ca09-4643-bcee-21010243cd01, 99ca84a4-6c2f-49fb-b5fa-111020d5c3a7, c62d6ff1-84b0-499c-b020-e8a629aad56b]
+ports               : [20444cda-73b7-431b-83c6-aad5effbecda, 5a92ad85-c1bc-46cc-87f4-77c24c3412d5, d2e9de1b-9421-4767-9032-7092ce1cd14b]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b7b50b24-add8-481a-b7c9-6cad57c9dcd9
+_uuid               : 07572d8a-2b54-4097-b55b-ba572d67c08b
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=372, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 99ca84a4-6c2f-49fb-b5fa-111020d5c3a7
+_uuid               : 5a92ad85-c1bc-46cc-87f4-77c24c3412d5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c95b57a7-b8bb-4836-a9ed-032dbedd3a68]
+interfaces          : [6d869ce5-3322-40cf-b5b3-fe87061dca75]
+name                : br0
+
+_uuid               : 20444cda-73b7-431b-83c6-aad5effbecda
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [945da058-bf66-4c5a-940b-700537a9eced]
+name                : eth7
+
+_uuid               : d2e9de1b-9421-4767-9032-7092ce1cd14b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [80c6d788-c413-4cf1-8cc8-7286db98f229]
 name                : eth8
 
-_uuid               : c62d6ff1-84b0-499c-b020-e8a629aad56b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [5b8fdd4c-6052-4fbc-af93-a8cbeaac08a6]
-name                : br0
-
-_uuid               : 887ea29d-ca09-4643-bcee-21010243cd01
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [f5cca7be-80cd-4bc7-bd85-be8c89e12d21]
-name                : eth7
-
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5b8fdd4c-6052-4fbc-af93-a8cbeaac08a6
-admin_state         : up
-duplex              : full
-ifindex             : 417
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 2
-link_speed          : 10000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : f5cca7be-80cd-4bc7-bd85-be8c89e12d21
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3061059490, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72612893, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : c95b57a7-b8bb-4836-a9ed-032dbedd3a68
+_uuid               : 80c6d788-c413-4cf1-8cc8-7286db98f229
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -112,31 +78,56 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3062304, tx_dropped=0, tx_errors=0, tx_packets=32682}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3104608, tx_dropped=0, tx_errors=0, tx_packets=33132}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : 945da058-bf66-4c5a-940b-700537a9eced
+admin_state         : up
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3061197608, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72614289, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 6d869ce5-3322-40cf-b5b3-fe87061dca75
+admin_state         : up
+duplex              : full
+ifindex             : 422
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 2
+link_speed          : 10000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1500
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 87972a8fcd0f339c7229a014edd4c75fd9c1356c
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Sat Mar 1 17:15:00 2014 -0800
+commit f0e4e85d192f41b4b47f6381c078a1c5a5493bb4
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Tue Mar 4 13:15:41 2014 -0800
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Sat Mar 1 17:38:09 2014 -0800
+CommitDate: Tue Mar 4 13:37:11 2014 -0800
 
-    tunnel: Do not set padding bits in tunnel mask.
+    ovs-thread: Add xpthread_barrier_*() wrappers.
     
-    On most architectures other than 32-bit x86, struct flow_tnl ends with 4
-    padding bytes.  Until now, tnl_xlate_init() set those bytes to nonzero
-    values in the wildcard mask.  When the wildcard mask passed through Netlink
-    attributes and back to userspace, the padding bytes of course became zero
-    again, which caused a wildcard mask mismatch and premature deletion of the
-    flow in revalidation.  This commit fixes the problem.
-    
-    Bug #1192516.
-    Reported-by: Krishna Miriyala &lt;miriyalak@vmware.com&gt;
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
