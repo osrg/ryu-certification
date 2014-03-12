@@ -13,14 +13,14 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.10
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c0b6f02a3f1b730c5a159ea2aaee673487d8d716
-Merge: cc9ac33 edba47e
-Author:     sugyo &lt;sugyo.org@gmail.com&gt;
-AuthorDate: Mon Feb 24 17:28:46 2014 +0900
-Commit:     sugyo &lt;sugyo.org@gmail.com&gt;
-CommitDate: Mon Feb 24 17:28:46 2014 +0900
+commit b7dceacdedef6865cbbd076c2526c68e486fed50
+Merge: c0b6f02 3785f23
+Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+AuthorDate: Wed Mar 12 13:11:04 2014 +0900
+Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+CommitDate: Wed Mar 12 13:11:04 2014 +0900
 
-    Merge pull request #109 from iHiroakiKawai/fixes2
+    Merge pull request #110 from ejima/develop
     
-    fix typo
+    Add support for ruby 2.1
 </pre>
