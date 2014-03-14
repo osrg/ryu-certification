@@ -13,14 +13,12 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.10
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b7dceacdedef6865cbbd076c2526c68e486fed50
-Merge: c0b6f02 3785f23
-Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-AuthorDate: Wed Mar 12 13:11:04 2014 +0900
-Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-CommitDate: Wed Mar 12 13:11:04 2014 +0900
+commit 54d40d7b74a5162b30ec102c9bc517c16abdec1f
+Merge: 08caf91 4a759b1
+Author:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
+AuthorDate: Fri Mar 14 18:01:25 2014 +0900
+Commit:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
+CommitDate: Fri Mar 14 18:01:25 2014 +0900
 
-    Merge pull request #110 from ejima/develop
-    
-    Add support for ruby 2.1
+    Merge branch 'develop' of github.com:trema/trema-edge into develop
 </pre>
