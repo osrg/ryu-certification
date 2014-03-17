@@ -8,67 +8,67 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-1f09b1f1-4646-4727-b34a-e56ecb3d14ff
+8b6d9fca-0911-4f5d-92f1-02fd93347501
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth7
             Interface eth7
         Port eth8
             Interface eth8
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 79c39fd7-8729-490a-be2d-690d5b023814
-controller          : [ea99c699-59e0-4c40-a746-f1a77007605b]
+_uuid               : ff679390-0ea9-4ffa-a8fa-09e996af4ac8
+controller          : [7e16cba6-fb24-4c2e-a633-c42c33d2086d]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [3ac6d829-ff9d-4f44-90c5-edf37ff58282, a1293c28-42a6-4559-89c4-9a9a4bbbaaee, efa21e79-0a1b-4db8-ac02-80be98999589]
+ports               : [66515fa7-9ba0-4f83-bdb5-4639a840bd75, 97708d5c-86a2-4c50-9ba9-95a787206871, aa711c66-4aea-4dfb-9a23-acb64ef4a58e]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : ea99c699-59e0-4c40-a746-f1a77007605b
+_uuid               : 7e16cba6-fb24-4c2e-a633-c42c33d2086d
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=372, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=377, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a1293c28-42a6-4559-89c4-9a9a4bbbaaee
+_uuid               : 97708d5c-86a2-4c50-9ba9-95a787206871
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [52926aaa-8323-4b51-b725-5d0ac45badaf]
-name                : eth7
-
-_uuid               : 3ac6d829-ff9d-4f44-90c5-edf37ff58282
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [5abf3169-6ebf-4e5d-8410-87763a4409ca]
-name                : br0
-
-_uuid               : efa21e79-0a1b-4db8-ac02-80be98999589
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [f2564e7f-985a-4021-bdfa-e178f64966b5]
+interfaces          : [8706c53e-cb48-483b-978b-cd35138b981d]
 name                : eth8
 
+_uuid               : aa711c66-4aea-4dfb-9a23-acb64ef4a58e
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [778aa66c-966a-406f-bc29-f272079e0b14]
+name                : br0
+
+_uuid               : 66515fa7-9ba0-4f83-bdb5-4639a840bd75
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [2e28cc50-c2d9-4b96-afee-455009df069a]
+name                : eth7
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5abf3169-6ebf-4e5d-8410-87763a4409ca
+_uuid               : 778aa66c-966a-406f-bc29-f272079e0b14
 admin_state         : up
 duplex              : full
-ifindex             : 555
+ifindex             : 561
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -82,7 +82,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 52926aaa-8323-4b51-b725-5d0ac45badaf
+_uuid               : 2e28cc50-c2d9-4b96-afee-455009df069a
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,11 +95,11 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3064935038, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72652191, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3065096942, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72653838, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : f2564e7f-985a-4021-bdfa-e178f64966b5
+_uuid               : 8706c53e-cb48-483b-978b-cd35138b981d
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -112,7 +112,7 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4209296, tx_dropped=0, tx_errors=0, tx_packets=44892}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4255558, tx_dropped=0, tx_errors=0, tx_packets=45385}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,18 +120,16 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d0b99d38edaba6e744a5787b990e7b989684e179
+commit 1a65ba854469c6746f944b2e784100e4175e0bea
 Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Thu Mar 13 15:28:54 2014 -0700
+AuthorDate: Mon Mar 17 22:10:53 2014 -0700
 Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Mon Mar 17 22:51:17 2014 -0700
+CommitDate: Tue Mar 18 00:40:10 2014 -0700
 
-    backtrace: Add log_backtrace()
+    dpif-netdev: init atomic flag dp-&gt;destroyed
     
-    log_backtrace() and log_backtrace_msg() logs the back trace into
-    the log file. It may be most useful when debugging unit tests.
-    backtrace.h documents the usage. It is not being called directly
-    in the code, but rather as a handy tool available when needed.
+    It is better to explicitly initialize the dp-&gt;destroy than to rely
+    on xzalloc().
     
     Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
     Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
