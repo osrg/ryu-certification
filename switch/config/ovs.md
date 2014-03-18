@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-835b77b2-a912-40d4-81af-18145bd49205
+32154458-d0fb-4d5d-b8b4-4337bfaa5577
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
@@ -21,51 +21,51 @@ $ sudo ovs-vsctl show
             Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0324677e-04b9-4807-bbc9-102d784f4b11
-controller          : [b2881855-9eba-40f4-8c36-dfdb69a9899b]
+_uuid               : 1a74a648-a259-46a0-bbca-084bcf72425d
+controller          : [48a1b5cc-5d20-4e61-a4bd-c85b0e529864]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [026323fa-559a-4d3e-aeb1-5e8ee54d1529, bdb2f4b9-5262-44de-8aa3-bc8f50096701, d5793171-251f-440d-ab6f-51502168b3ed]
+ports               : [4223e4b6-81f0-4baa-bc74-48cbea2f22a2, 7cfe5d67-caff-4d98-99b7-71a94f2dcf56, f4e965b6-c588-4821-bd0d-9bb7ea81e1b9]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b2881855-9eba-40f4-8c36-dfdb69a9899b
+_uuid               : 48a1b5cc-5d20-4e61-a4bd-c85b0e529864
 is_connected        : false
 role                : other
 status              : {last_error=Connection refused, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : bdb2f4b9-5262-44de-8aa3-bc8f50096701
+_uuid               : f4e965b6-c588-4821-bd0d-9bb7ea81e1b9
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3387a3f0-9419-425f-8436-d9e2dd2aff3a]
-name                : eth8
-
-_uuid               : d5793171-251f-440d-ab6f-51502168b3ed
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3d2519b4-940b-4456-8e1a-70508dd6033e]
+interfaces          : [4b97bc7e-e490-45b9-a7ce-15191b0eb83c]
 name                : eth7
 
-_uuid               : 026323fa-559a-4d3e-aeb1-5e8ee54d1529
+_uuid               : 4223e4b6-81f0-4baa-bc74-48cbea2f22a2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7b5f25d3-39d0-4c9e-82b5-33a0753b9821]
+interfaces          : [fbd7ba23-0b10-42ed-96ff-6461e8c56948]
 name                : br0
 
+_uuid               : 7cfe5d67-caff-4d98-99b7-71a94f2dcf56
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [012a89d1-9671-400f-8bec-c7d9123aa7e0]
+name                : eth8
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3387a3f0-9419-425f-8436-d9e2dd2aff3a
+_uuid               : 012a89d1-9671-400f-8bec-c7d9123aa7e0
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -82,7 +82,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 3d2519b4-940b-4456-8e1a-70508dd6033e
+_uuid               : 4b97bc7e-e490-45b9-a7ce-15191b0eb83c
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -99,9 +99,9 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 7b5f25d3-39d0-4c9e-82b5-33a0753b9821
+_uuid               : fbd7ba23-0b10-42ed-96ff-6461e8c56948
 admin_state         : up
-ifindex             : 584
+ifindex             : 590
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -118,23 +118,13 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 26e1fdc46c820354fe1345cb0c56b6fb77b04492
-Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-AuthorDate: Mon Mar 17 09:28:07 2014 -0700
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Tue Mar 18 13:18:58 2014 -0700
+commit 06f64d032ab82237b4ff7d92f6d6328869d70931
+Author:     Justin Pettit &lt;jpettit@nicira.com&gt;
+AuthorDate: Tue Mar 18 14:29:17 2014 -0700
+Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
+CommitDate: Tue Mar 18 14:29:17 2014 -0700
 
-    stream: Call WSAStartup() before calling any winsock functions.
+    tests: Fix small typo in OpenFlow in ofproto tests.
     
-    The WSAStartup function initiates use of the Winsock DLL by a process.
-    The function should be called before any winsock related functions
-    are called.
-    
-    Since, we use stream-fd-windows through pstream_open or stream_open
-    add the WSAStartup() call there.
-    
-    The current version of the Windows Sockets specification is version 2.2
-    
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
