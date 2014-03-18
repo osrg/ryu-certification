@@ -8,81 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ec597de2-5617-47c1-8868-4ace204366d1
+f8be2cbb-4a37-46ca-995e-61309f4c5e24
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth7
+            Interface eth7
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
         Port eth8
             Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 41ddc813-81c3-4a4f-be08-881cf06a8809
-controller          : [c5dd7312-84de-4474-b1c9-27b362ab1274]
+_uuid               : 57c08982-b656-43f2-b09e-992d7d2a5476
+controller          : [89c7c01b-cd95-41f3-b174-aad7bfed5582]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [c4749e9f-79a5-4559-8623-556cbb86b9ce, dcf12877-fd5c-4fac-a17f-983fd7211ff1, e19c5997-e270-4a87-b315-efa26f75955b]
+ports               : [2357a8ac-36ab-4fe4-aa2e-3e98f3139a13, 680b9c9c-2fdf-469d-90fd-270fd8cf7cd2, 92d4afb1-e5db-45a2-8ab3-e964415d497e]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : c5dd7312-84de-4474-b1c9-27b362ab1274
+_uuid               : 89c7c01b-cd95-41f3-b174-aad7bfed5582
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : dcf12877-fd5c-4fac-a17f-983fd7211ff1
+_uuid               : 680b9c9c-2fdf-469d-90fd-270fd8cf7cd2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [321cb8f9-cfb3-4766-b92a-4ae5dca63ef4]
-name                : eth7
-
-_uuid               : e19c5997-e270-4a87-b315-efa26f75955b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [092f93cf-791e-4820-a0a8-9f15e4d6c906]
-name                : eth8
-
-_uuid               : c4749e9f-79a5-4559-8623-556cbb86b9ce
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a1fad3ff-38ca-4b89-8484-d5bcb39668d1]
+interfaces          : [88beedf1-4b7a-4f79-84f5-9a6d64b9fa9e]
 name                : br0
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 321cb8f9-cfb3-4766-b92a-4ae5dca63ef4
-admin_state         : up
-duplex              : full
-ifindex             : 10
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1550
+_uuid               : 2357a8ac-36ab-4fe4-aa2e-3e98f3139a13
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4eb0e0e4-e961-4712-9b25-2a3ea68eebcb]
 name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
 
-_uuid               : 092f93cf-791e-4820-a0a8-9f15e4d6c906
+_uuid               : 92d4afb1-e5db-45a2-8ab3-e964415d497e
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [58cc8ed8-5ab4-4b40-9a96-75644c21c412]
+name                : eth8
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 58cc8ed8-5ab4-4b40-9a96-75644c21c412
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -99,9 +82,26 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : a1fad3ff-38ca-4b89-8484-d5bcb39668d1
+_uuid               : 4eb0e0e4-e961-4712-9b25-2a3ea68eebcb
 admin_state         : up
-ifindex             : 577
+duplex              : full
+ifindex             : 10
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1550
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 88beedf1-4b7a-4f79-84f5-9a6d64b9fa9e
+admin_state         : up
+ifindex             : 581
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -118,16 +118,14 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit e935fc32fa0d346b0205dcd4e97859c76caab3d0
-Author:     Arun Sharma &lt;arun.sharma@calsoftinc.com&gt;
-AuthorDate: Tue Mar 18 17:44:42 2014 +0530
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Mar 18 08:24:22 2014 -0700
+commit fc48c3ba3085648ecf4d6c6b0863930bba47728d
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Mon Mar 17 09:19:24 2014 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Tue Mar 18 10:45:35 2014 -0700
 
-    Man ovs-ofctl: Typo in arp_spa &amp; arp_tpa
+    socket-util: Fix dscp error check for Windows.
     
-    It seems there is a typo in definition of arp_spa &amp; arp_tpa
-    
-    Signed-off-by: Arun Sharma &lt;arun.sharma@calsoftinc.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
