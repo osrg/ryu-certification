@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-6e11fbc1-c362-4766-924f-84e79b3899bb
+9e61da2a-9ebf-406e-a82a-3a5a9a5ed563
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth7
+            Interface eth7
+        Port eth8
+            Interface eth8
         Port br0
             Interface br0
                 type: internal
-        Port eth8
-            Interface eth8
-        Port eth7
-            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 72689d54-8956-412b-845f-949cce8db6d8
-controller          : [33108115-1cee-4def-943a-690a2bfa2bc3]
+_uuid               : 81d4f925-97a1-44da-a55b-01daf4da6063
+controller          : [c3736224-49fa-4714-8863-224900d09e07]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [41efc9ad-2ff2-4178-a18e-bf878902bc47, ddce5e67-ee57-4984-9d4e-e1e997dd6a07, ff308d7f-8c37-4b86-b625-31d5fd1664cc]
+ports               : [224087f9-c352-45db-a590-e4e46e1606c3, 5fad0948-73c3-49b4-84f5-0419dd08c381, f738b903-7210-46fe-8de9-cad161231718]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 33108115-1cee-4def-943a-690a2bfa2bc3
+_uuid               : c3736224-49fa-4714-8863-224900d09e07
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=376, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=382, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 41efc9ad-2ff2-4178-a18e-bf878902bc47
+_uuid               : 5fad0948-73c3-49b4-84f5-0419dd08c381
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ba06da8b-f284-4c21-840b-37f234b60496]
-name                : br0
-
-_uuid               : ff308d7f-8c37-4b86-b625-31d5fd1664cc
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [2294729a-92cb-4760-b2cb-1e16a5f46b73]
-name                : eth7
-
-_uuid               : ddce5e67-ee57-4984-9d4e-e1e997dd6a07
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [6b379023-e0bc-45df-8725-54dfb8ac617c]
+interfaces          : [6229486a-4c39-4625-9a8c-550c3377996c]
 name                : eth8
 
+_uuid               : 224087f9-c352-45db-a590-e4e46e1606c3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [1f87b7e9-875d-4c8c-b0a0-3359736ba311]
+name                : eth7
+
+_uuid               : f738b903-7210-46fe-8de9-cad161231718
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c4159bd7-89b3-432a-99ba-967da391d2e0]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2294729a-92cb-4760-b2cb-1e16a5f46b73
+_uuid               : 1f87b7e9-875d-4c8c-b0a0-3359736ba311
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -78,28 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3066758004, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72670690, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3067001098, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72673163, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : ba06da8b-f284-4c21-840b-37f234b60496
-admin_state         : up
-duplex              : full
-ifindex             : 640
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 2
-link_speed          : 10000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : 6b379023-e0bc-45df-8725-54dfb8ac617c
+_uuid               : 6229486a-4c39-4625-9a8c-550c3377996c
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -112,25 +95,59 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4744158, tx_dropped=0, tx_errors=0, tx_packets=50587}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4813686, tx_dropped=0, tx_errors=0, tx_packets=51328}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
+
+_uuid               : c4159bd7-89b3-432a-99ba-967da391d2e0
+admin_state         : up
+duplex              : full
+ifindex             : 650
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 2
+link_speed          : 10000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:eb
+mtu                 : 1500
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 6723e8af39e40001f5c141b5ad9a8dfe65459c40
-Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
-AuthorDate: Thu Mar 20 15:00:14 2014 +0900
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Mar 20 09:30:03 2014 -0700
+commit 63be20bee256f305801c0674b29e5773355d2379
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Wed Feb 26 10:07:38 2014 -0800
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Thu Mar 20 10:27:20 2014 -0700
 
-    socket-util: Fix an inverted use of LINUX
+    dpif-netdev: Implement the API functions to allow multiple handler
+    threads read upcall.
     
-    Fix a regression introduced by commit fce314cd.
-    (socket-util: Fix definition of LINUX.)
+    This commit implements the API functions to allow multiple handler
+    threads read upcall.
     
-    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Also, this commit removes the handling priority of DPIF_UC_MISS
+    over DPIF_UC_ACTION.  So, both misses will be put to the same
+    queue.  The decision is based on the fact that a lot has changed
+    since the age when flow setup rate is most treasured and starving
+    all actions in the presence of any flow misses doesn't seem like
+    a sound balancing solution.
+    
+    Thusly the current implementation will be put in testing and
+    investigation for better balancing solution will continue if
+    there is an issue.
+    
+    Also note, the introduction and use of flow_hash_5tuple() will
+    put missed ICMP packets from same source but with different
+    type/code to different handler queues.  This may cause reordering
+    of these packets.  For now, we do not count this as a problem.
+    
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
