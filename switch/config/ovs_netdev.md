@@ -8,84 +8,84 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-a0c7f28b-e2a1-476b-b979-17fb625973dd
+f1e172fc-a7ef-453a-9f9a-febd24d7208d
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth8
+            Interface eth8
+        Port eth7
+            Interface eth7
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
-        Port eth8
-            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : d5ff6171-8577-4f31-9171-b3d20e3e6332
-controller          : [86de1189-2aa3-4275-ae92-4b6bae8bf0c0]
+_uuid               : d563ed16-1393-4d8b-8205-2d3aa7e39eb7
+controller          : [a576ee3e-54f5-4cd8-bb32-1aac03f3d7b9]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [302ce183-944f-4b02-9300-c01b91716c2a, 90028ec0-41eb-48d2-acfd-5d1316acb454, a59b1ecc-1eba-4998-98d1-7e00901486a2]
+ports               : [14ddad18-0f14-474d-889c-e7b3bc9b675d, 18b7492d-9208-4ff1-aad6-a937a42b12f5, ebcc613e-2841-44ca-960d-26b1538ad5f1]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 86de1189-2aa3-4275-ae92-4b6bae8bf0c0
+_uuid               : a576ee3e-54f5-4cd8-bb32-1aac03f3d7b9
 is_connected        : false
 role                : other
-status              : {last_error=Connection timed out, sec_since_disconnect=2, state=CONNECTING}
+status              : {last_error=Connection refused, sec_since_connect=382, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a59b1ecc-1eba-4998-98d1-7e00901486a2
+_uuid               : 14ddad18-0f14-474d-889c-e7b3bc9b675d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d9a5094b-4768-4b88-894b-f027e04e0f7e]
+interfaces          : [f12fbf20-414c-41bc-ae8a-6a7b09f20b8e]
 name                : eth8
 
-_uuid               : 90028ec0-41eb-48d2-acfd-5d1316acb454
+_uuid               : 18b7492d-9208-4ff1-aad6-a937a42b12f5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f8dead8d-4eab-4100-a99c-04b5a36fd025]
+interfaces          : [451524b1-18e4-4e13-a3bd-7e501e9169ba]
 name                : eth7
 
-_uuid               : 302ce183-944f-4b02-9300-c01b91716c2a
+_uuid               : ebcc613e-2841-44ca-960d-26b1538ad5f1
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3183c6b5-7e4a-4f58-b39b-fc486ff80b40]
+interfaces          : [51ce33ad-9c8b-4b0c-99c7-59f433e54ec0]
 name                : br0
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : f8dead8d-4eab-4100-a99c-04b5a36fd025
+_uuid               : f12fbf20-414c-41bc-ae8a-6a7b09f20b8e
 admin_state         : up
 duplex              : full
-ifindex             : 10
+ifindex             : 11
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
+mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3068005664, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72683364, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5161272, tx_dropped=0, tx_errors=0, tx_packets=55030}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 3183c6b5-7e4a-4f58-b39b-fc486ff80b40
+_uuid               : 51ce33ad-9c8b-4b0c-99c7-59f433e54ec0
 admin_state         : up
 duplex              : full
-ifindex             : 688
+ifindex             : 695
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -99,20 +99,20 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : d9a5094b-4768-4b88-894b-f027e04e0f7e
+_uuid               : 451524b1-18e4-4e13-a3bd-7e501e9169ba
 admin_state         : up
 duplex              : full
-ifindex             : 11
+ifindex             : 10
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
+mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5106358, tx_dropped=0, tx_errors=0, tx_packets=54445}
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3068184106, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72685183, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,17 +120,22 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 9ae5ab3c359d7fda63da1a80725a7f83670189df
-Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Tue Mar 18 16:32:45 2014 -0700
-Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Mon Mar 24 09:52:03 2014 -0700
+commit fc3431c6a09e625343dd39b57b86839af90a08fd
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Fri Mar 21 10:36:52 2014 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Mon Mar 24 10:56:31 2014 -0700
 
-    datapath: Use TCP flags in the flow key for stats.
+    packets: packet metadata from flow function instead of macro.
     
-    We already extract the TCP flags for the key, might as well use that
-    for stats.
+    Commit 03fbdf8d9c80a (lib/flow: Retain ODPP_NONE on flow_extract())
+    replaced packet metadata initialization function by a macro.
+    Visual studio does not like nested structure initialization that
+    is done in that macro.
     
-    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
+    This commit replaces the macro by a function.
+    
+    CC: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
 </pre>
