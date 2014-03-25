@@ -8,84 +8,84 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-dc511533-fd16-41b3-944f-e7b560f50aae
+bbdb0d43-436b-4ad7-973d-4ecd15d1d13d
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
         Port eth8
             Interface eth8
+        Port eth7
+            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 00b9edbd-05cd-497a-a071-fd4d60ecc61e
-controller          : [fa56bcd2-7a2e-4893-9a76-708b56952d4a]
+_uuid               : 6953110f-7af2-423e-bab1-3db789c96019
+controller          : [a9981d57-4c25-45fe-9e17-5cf77e1331bc]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [37bea3fb-cb60-463b-9982-e0cd91cde881, b566028a-ce4a-4ec4-a0df-bf32b011471f, bf76dc6a-d537-4747-9252-42b7104d3fdf]
+ports               : [99176134-cf99-499c-b535-b453ad4a6f29, c1e43f82-a98a-4c52-ae5c-ddc7dcb669d4, e80fb504-4b33-4b76-9812-5235bd7bd840]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : fa56bcd2-7a2e-4893-9a76-708b56952d4a
+_uuid               : a9981d57-4c25-45fe-9e17-5cf77e1331bc
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=372, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=382, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : bf76dc6a-d537-4747-9252-42b7104d3fdf
+_uuid               : 99176134-cf99-499c-b535-b453ad4a6f29
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c2c50525-8edb-4d7c-aaef-a06e5fb65400]
-name                : eth8
-
-_uuid               : b566028a-ce4a-4ec4-a0df-bf32b011471f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [82803157-7086-46c9-91fe-a74b1b68cc6c]
-name                : eth7
-
-_uuid               : 37bea3fb-cb60-463b-9982-e0cd91cde881
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a4991dda-0672-4c43-b8b8-b8fc5c135c8a]
+interfaces          : [9126e773-0631-469e-85f6-7e2abb37bf25]
 name                : br0
 
+_uuid               : e80fb504-4b33-4b76-9812-5235bd7bd840
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [7297d99c-0180-458b-823e-2a866fef40e6]
+name                : eth7
+
+_uuid               : c1e43f82-a98a-4c52-ae5c-ddc7dcb669d4
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4a1c70f7-42c7-413b-8a45-68cb0dea439c]
+name                : eth8
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : c2c50525-8edb-4d7c-aaef-a06e5fb65400
+_uuid               : 7297d99c-0180-458b-823e-2a866fef40e6
 admin_state         : up
 duplex              : full
-ifindex             : 11
+ifindex             : 10
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
+mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5310668, tx_dropped=0, tx_errors=0, tx_packets=56619}
+name                : eth7
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3068840602, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72691834, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : a4991dda-0672-4c43-b8b8-b8fc5c135c8a
+_uuid               : 9126e773-0631-469e-85f6-7e2abb37bf25
 admin_state         : up
 duplex              : full
-ifindex             : 708
+ifindex             : 716
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -99,20 +99,20 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 82803157-7086-46c9-91fe-a74b1b68cc6c
+_uuid               : 4a1c70f7-42c7-413b-8a45-68cb0dea439c
 admin_state         : up
 duplex              : full
-ifindex             : 10
+ifindex             : 11
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:4a:84:eb
+mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
-name                : eth7
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3068678222, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72690182, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5357200, tx_dropped=0, tx_errors=0, tx_packets=57115}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,16 +120,24 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 8617affff4f6570ef9ebeafe471e7f14a2c630e3
-Author:     Pravin &lt;pshelar@nicira.com&gt;
-AuthorDate: Thu Mar 20 22:07:44 2014 -0700
-Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-CommitDate: Fri Mar 21 11:48:28 2014 -0700
+commit b8da6cce47501f003c9791054a59a5a6632e4c2c
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Mon Mar 24 21:10:39 2014 -0700
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Mon Mar 24 23:00:56 2014 -0700
 
-    netdev-dpdk: Use multiple core for dpdk IO.
+    dpif-netdev: Fix a compilation warning
     
-    DPDK need to set _lcore_id for using multiple core.
+    Building OVS tree without DPDK produced the following warning message:
+        lib/dpif-netdev.c:1868:5: error: statement with no effect
     
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
-    Acked-by: Thomas Graf &lt;tgraf@redhat.com&gt;
+    This error message is complaining the return value of the following
+    macro not being used.
+    	#define pmd_thread_setaffinity_cpu(c) (0)
+    
+    The patch fixed this warnning by making the stub functions
+    as inline funtions.
+    
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
 </pre>
