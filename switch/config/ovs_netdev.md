@@ -8,64 +8,64 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-4b04777a-1527-48c0-8a6b-2e9acf153109
+2a870b99-174b-4a3e-9a85-753ef5bc9245
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth7
             Interface eth7
-        Port eth8
-            Interface eth8
         Port br0
             Interface br0
                 type: internal
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : a1b27091-e1cd-4fff-9cdd-e1c7da0613b5
-controller          : [a3d63c48-983c-4f5e-92d1-ddef10dd52fd]
+_uuid               : 38289c5c-bde5-43b2-9109-a7f89ba6105e
+controller          : [a5433390-d32d-4c9d-9e44-0f529d77cbfd]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [7484a12e-2779-42e4-b294-16e967d5923e, c1549bed-ac4b-41a0-9f64-0143d942fb21, de316b1d-d91e-4066-891a-cac1b3a8e33c]
+ports               : [5b00c20a-a940-471b-956c-94bcb2a4cc57, 7aa3e648-07f0-4565-8ec0-af3921ec3a0c, a09e31e5-66f8-453b-9ba2-b6bd09f7d5f8]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : a3d63c48-983c-4f5e-92d1-ddef10dd52fd
+_uuid               : a5433390-d32d-4c9d-9e44-0f529d77cbfd
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=312, sec_since_disconnect=3, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=311, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : de316b1d-d91e-4066-891a-cac1b3a8e33c
+_uuid               : 7aa3e648-07f0-4565-8ec0-af3921ec3a0c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [9778734a-e90a-402d-b963-c069a2780889]
+interfaces          : [437e8f8e-0def-4e06-92e4-9770ce6a61e0]
 name                : br0
 
-_uuid               : c1549bed-ac4b-41a0-9f64-0143d942fb21
+_uuid               : a09e31e5-66f8-453b-9ba2-b6bd09f7d5f8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [16c1f2e9-0799-4587-b2b2-22c4aa54a36f]
+interfaces          : [2aec50a4-3139-43a3-97f4-4567e40d063c]
 name                : eth8
 
-_uuid               : 7484a12e-2779-42e4-b294-16e967d5923e
+_uuid               : 5b00c20a-a940-471b-956c-94bcb2a4cc57
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c6e6fbe6-e862-48b6-a8b3-9fbbe1d91c47]
+interfaces          : [c55c6d62-d3c9-483b-b1c8-5cd6b016f6c9]
 name                : eth7
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 16c1f2e9-0799-4587-b2b2-22c4aa54a36f
+_uuid               : 2aec50a4-3139-43a3-97f4-4567e40d063c
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -78,11 +78,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5744310, tx_dropped=0, tx_errors=0, tx_packets=61235}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5899176, tx_dropped=0, tx_errors=0, tx_packets=62884}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : c6e6fbe6-e862-48b6-a8b3-9fbbe1d91c47
+_uuid               : c55c6d62-d3c9-483b-b1c8-5cd6b016f6c9
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,14 +95,14 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3070132898, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72704926, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3070653798, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72710209, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 9778734a-e90a-402d-b963-c069a2780889
+_uuid               : 437e8f8e-0def-4e06-92e4-9770ce6a61e0
 admin_state         : up
 duplex              : full
-ifindex             : 755
+ifindex             : 771
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -120,16 +120,34 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b6c4da210dccd802d775a58af1b6eac2e866d011
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Thu Mar 27 10:04:55 2014 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Mar 27 10:05:36 2014 -0700
+commit 5878877a75a11d9e73f61cebfa18ff84dcdd64ba
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Tue Mar 25 13:57:25 2014 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Fri Mar 28 09:19:47 2014 -0700
 
-    stream-tcp: Fix error message for failed TCP_NODELAY setting on Windows.
+    ofproto-dpif-upcall: Fix a race.
     
-    Reported-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Kyle Mestery &lt;mestery@noironetworks.com&gt;
-    Acked-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Commit 61057e884ca9c(ofproto-dpif-upcall: Slightly simplify
+    udpif_upcall_handler().) restructured the main loop in
+    udpif_upcall_handler() and discarded the check for the
+    'exit_latch' after acquiring the mutex.  This makes it
+    possible for the following race:
+    
+    - main thread sets the 'exit_latch' after the handler thread
+      checking it.
+    - main thread acquires the handler thread mutex and signals the
+      condition variable of handler thread.
+    - main thread releases the mutex and 'join' the handler thread.
+    - handler thread acquires the mutex, finds that n_upcalls is 0
+      and waits on the signal of condition variable.
+    - then OVS will hang forever.
+    
+    This commit fixes the above issue by adding a check for the
+    'exit_latch' after acquiring the mutex.
+    
+    Bug #1217229
+    
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
