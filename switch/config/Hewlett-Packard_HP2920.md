@@ -9,14 +9,14 @@ title: Ryu Certification - Hewlett-Packard_HP2920 - config
 <pre>
 HP-2920-48G# show config
 
-Startup configuration: 26
+Startup configuration: 34
 
-; J9728A Configuration Editor; Created on release #WB.15.14.0002
-; Ver #05:08.f3.ff.35.0d:39
+; J9728A Configuration Editor; Created on release #WB.15.15.0006
+; Ver #05:18.f3.ff.35.0d:29
 
 hostname "HP-2920-48G"
 module 1 type j9728a
-logging ************
+logging 10.24.150.10
 logging facility local0
 timesync sntp
 sntp unicast
@@ -58,10 +58,10 @@ vlan 2
 <pre>
 HP-2920-48G# show version
 Image stamp:
- /ws/swbuildm/rel_memphis_qaoff/code/build/anm(swbuildm_rel_memphis_qaoff_rel_memphis)
-                Oct 13 2013 06:09:11
-                WB.15.14.0002
-                101
+ /ws/swbuildm/rel_nashville_qaoff/code/build/anm(swbuildm_rel_nashville_qaoff_rel_nashville)
+                Mar 15 2014 13:22:18
+                WB.15.15.0006
+                568
 Boot Image:     Primary
 </pre>
 
