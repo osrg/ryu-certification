@@ -16,7 +16,7 @@ Startup configuration: 34
 
 hostname "HP-2920-48G"
 module 1 type j9728a
-logging 10.24.150.10
+logging ************
 logging facility local0
 timesync sntp
 sntp unicast
