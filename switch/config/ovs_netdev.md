@@ -8,67 +8,84 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f60774e0-2290-4395-b9f9-eba241ed9526
+d25a34be-c4ff-4d9d-b62e-72a8c603ff70
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth7
-            Interface eth7
         Port eth8
             Interface eth8
         Port br0
             Interface br0
                 type: internal
+        Port eth7
+            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : c202f0e1-40e4-4f4a-abed-f4c7bad03124
-controller          : [17c0b453-df3b-4d50-aed7-615d6cf7d610]
+_uuid               : 111b536b-cb73-41eb-a921-a8cff3b50130
+controller          : [82286791-b395-44bd-8b71-9604a3f1b920]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [23fadf90-a275-4f9b-83cf-0ea4cce90189, 43d3f15d-7b2e-48f1-8572-cccd0a0c87d8, 93f6c0d5-03eb-49e0-90e2-f5c36aa83bcb]
+ports               : [75ba5485-9268-452d-abd3-abe05b90e0cb, 8be23206-4ee2-4e66-93b0-74a33cacfb5a, c5ebe9f2-72f5-4ba4-8fca-db2ebbf9ef44]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 17c0b453-df3b-4d50-aed7-615d6cf7d610
+_uuid               : 82286791-b395-44bd-8b71-9604a3f1b920
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=316, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=306, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 23fadf90-a275-4f9b-83cf-0ea4cce90189
+_uuid               : 75ba5485-9268-452d-abd3-abe05b90e0cb
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c6f98427-be76-4bda-bfc0-4d505f54c26a]
-name                : eth7
-
-_uuid               : 43d3f15d-7b2e-48f1-8572-cccd0a0c87d8
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [2860e117-b275-4193-ba11-65526f5bb8b0]
+interfaces          : [3172b69c-fea6-4cd1-8633-a81c3d47775b]
 name                : eth8
 
-_uuid               : 93f6c0d5-03eb-49e0-90e2-f5c36aa83bcb
+_uuid               : c5ebe9f2-72f5-4ba4-8fca-db2ebbf9ef44
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3970edf5-3000-4124-a80a-c40551356476]
+interfaces          : [4b88f5f6-132a-48c6-a202-4f805581a0e6]
+name                : eth7
+
+_uuid               : 8be23206-4ee2-4e66-93b0-74a33cacfb5a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [fd7bb7a9-7559-40e2-80e1-5843478fa9ea]
 name                : br0
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3970edf5-3000-4124-a80a-c40551356476
+_uuid               : 3172b69c-fea6-4cd1-8633-a81c3d47775b
 admin_state         : up
 duplex              : full
-ifindex             : 801
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6156667, tx_dropped=0, tx_errors=0, tx_packets=65629}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : fd7bb7a9-7559-40e2-80e1-5843478fa9ea
+admin_state         : up
+duplex              : full
+ifindex             : 803
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 2
@@ -82,24 +99,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 2860e117-b275-4193-ba11-65526f5bb8b0
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6133671, tx_dropped=0, tx_errors=0, tx_packets=65384}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : c6f98427-be76-4bda-bfc0-4d505f54c26a
+_uuid               : 4b88f5f6-132a-48c6-a202-4f805581a0e6
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -112,7 +112,7 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3071469623, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72718514, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3071550337, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72719335, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,21 +120,22 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0641a4fbd74d47648ae79208ab36ae3d35284a4d
+commit d81eef1b874c3c51669fa56f57e69ba5e77ad2c5
 Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Sat Mar 29 15:52:32 2014 -0700
+AuthorDate: Fri Mar 28 13:44:23 2014 -0700
 Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Sat Mar 29 15:52:32 2014 -0700
+CommitDate: Sat Mar 29 17:16:19 2014 -0700
 
-    datapath: Make flow mask removal symmetric.
+    datapath: Minimize dp and vport critical sections.
     
-    Masks are inserted when flows are inserted to the table, so it is
-    logical to correspondingly remove masks when flows are removed from
-    the table, in ovs_flow_table_remove().
+    Move most memory allocations away from the ovs_mutex critical
+    sections.  vport allocations still happen while the lock is taken, as
+    changing that would require major refactoring. Also, vports are
+    created very rarely so it should not matter.
     
-    This allows ovs_flow_free() to be called without locking, which will
-    be used by later patches.
+    Change ovs_dp_cmd_get() now only takes the rcu_read_lock(), rather
+    than ovs_lock(), as nothing need to be changed.  This was done by
+    ovs_vport_cmd_get() already.
     
     Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;Summary:
 </pre>
