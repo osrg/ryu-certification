@@ -14,11 +14,11 @@ title: Ryu Certification - ivs
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(39)|
 |[set_field](#set_field)|46|124|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(46)|&nbsp;&nbsp;&nbsp;&nbsp;(124)|
-|[Match](#Match)|359|343|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(105)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
+|[Match](#Match)|360|342|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(106)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(254)|&nbsp;&nbsp;&nbsp;&nbsp;(340)|
-|Total|422|506|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
+|Total|423|541|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(109)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(314)|&nbsp;&nbsp;&nbsp;&nbsp;(503)|
 
 ## <a name ='Action'>Action</a>
@@ -108,10 +108,10 @@ title: Ryu Certification - ivs
 |[METADATA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA.json)|- | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) |
 |[METADATA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA_Mask.json)|- | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) |
 |[ETH_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST.json)|x | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) |
-|[ETH_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST_Mask.json)|x | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [ERROR](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) |
-|[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC.json)|x | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [ERROR](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [ERROR](#53d2200d33a46dfb67a5beb2a7eb4735) |
-|[ETH_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC_Mask.json)|x | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) |
-|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/05_ETH_TYPE.json)|x | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) |
+|[ETH_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST_Mask.json)|x | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) |
+|[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC.json)|x | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) |
+|[ETH_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC_Mask.json)|x | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [ERROR](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) |
+|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/05_ETH_TYPE.json)|x | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [ERROR](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) |
 |[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/38_TUNNEL_ID.json)|- | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) |
 |[TUNNEL_ID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/38_TUNNEL_ID_Mask.json)|- | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) |
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID.json)|- | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) |
@@ -823,8 +823,7 @@ title: Ryu Certification - ivs
     ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
     ethernet(dst='bb:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
@@ -833,15 +832,13 @@ title: Ryu Certification - ivs
 <pre>
     ethernet(src='11:11:11:11:11:11')/ipv4/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/ipv4/tcp-->'eth_src=11:11:11:11:11:11,actions=output:CONTROLLER'   OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:CONTROLLER'   OK
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=11:11:11:11:11:11,actions=output:2'                 OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=11:11:11:11:11:11,actions=output:CONTROLLER'        OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=11:11:11:11:11:11,actions=output:2'                 ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=11:11:11:11:11:11,actions=output:2'                 OK
 </pre>
 <a name="f1bb7ed0d6f1c34334a73e3a23554482">match: 04_ETH_SRC (Mask)</a>
 <pre>
@@ -850,7 +847,8 @@ title: Ryu Certification - ivs
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' ERROR
+        Table-miss error: no change in lookup_count.
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
     ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
@@ -859,7 +857,8 @@ title: Ryu Certification - ivs
 <pre>
     ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0800,actions=output:2'                             OK
     ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0800,actions=output:CONTROLLER'                    OK
-    ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0806,actions=output:2'                             OK
+    ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0806,actions=output:2'                             ERROR
+        Table-miss error: no change in lookup_count.
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=output:2'                             OK
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=output:CONTROLLER'                    OK
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x0806,actions=output:2'                             OK
@@ -1795,6 +1794,90 @@ title: Ryu Certification - ivs
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'     ERROR
         Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+meter: 01_DROP_00_KBPS_00_1M
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 01_DROP_00_KBPS_01_10M
+    20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 01_DROP_00_KBPS_02_100M
+    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 01_DROP_01_PKTPS_00_100
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 01_DROP_01_PKTPS_01_1000
+    2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 01_DROP_01_PKTPS_02_10000
+    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_00_KBPS_00_1M
+    2Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_00_KBPS_01_10M
+    20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_00_KBPS_02_100M
+    200Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_01_PKTPS_00_100
+    200pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_01_PKTPS_01_1000
+    2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+meter: 02_DSCP_REMARK_01_PKTPS_02_10000
+    20000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
 </pre>
 <a name="e61b10fa7ca2060cec165bcfacdd8d20">match: 21_ARP_OP</a>
 <pre>
