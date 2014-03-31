@@ -17,9 +17,11 @@ title: Ryu Certification - LINC
 |[Match](#Match)|472|230|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(364)|&nbsp;&nbsp;&nbsp;&nbsp;(230)|
-|Total|567|361|
+|[Meter](#Meter)|2|22|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|&nbsp;&nbsp;&nbsp;&nbsp;(22)|
+|Total|569|383|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(456)|&nbsp;&nbsp;&nbsp;&nbsp;(361)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(458)|&nbsp;&nbsp;&nbsp;&nbsp;(383)|
 
 ## <a name ='Action'>Action</a>
 
@@ -170,6 +172,19 @@ title: Ryu Certification - LINC
 |[ARP_SHA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/24_ARP_SHA_Mask.json)|- | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) |
 |[ARP_THA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA.json)|- | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) |
 |[ARP_THA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA_Mask.json)|- | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) |
+
+## <a name ='Meter'>Meter</a>
+
+| |Required|IPv4|IPv6|ARP|
+|-----------|----|----|----|----|
+|[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) |
+|[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) |
+|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
+|[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) |
+|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
+|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) |
+|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [OK](#50fc5b625263a400208fee338d37d088) |
+|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) |
 
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
@@ -1856,4 +1871,98 @@ dpid=0000e83935b2467c : Join target SW.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
+</pre>
+<a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Received unexpected throughput: {'in_port': 2} 32.42kbps
+..........
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Received unexpected throughput: {'in_port': 2} 32.42kbps
+..........
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 ERROR
+        Received unexpected throughput: {'in_port': 2} 32.42kbps
+</pre>
+<a name="d622dfa2ed128286d03f44d2790591e7">meter: 01_DROP_00_KBPS_01_10M</a>
+<pre>
+..........
+    20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Received unexpected throughput: {'in_port': 2} 325.37kbps
+..........
+    20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Received unexpected throughput: {'in_port': 2} 255.46kbps
+..........
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
+        Received unexpected throughput: {'in_port': 2} 162.10kbps
+</pre>
+<a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
+<pre>
+..........
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00pktps
+..........
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 3.33pktps
+..........
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
+        Received unexpected throughput: {'in_port': 2} 3.33pktps
+</pre>
+<a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
+<pre>
+..........
+    2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Received unexpected throughput: {'in_port': 2} 33.33pktps
+..........
+    2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Received unexpected throughput: {'in_port': 2} 19.30pktps
+..........
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
+        Received unexpected throughput: {'in_port': 2} 27.60pktps
+</pre>
+<a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+..........
+    2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 1997.14kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+..........
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
+</pre>
+<a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
+<pre>
+..........
+    20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 16443.03kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+..........
+    20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 12693.09kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+..........
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
+        Received unexpected throughput: {'in_port': 2} 16096.06kbps
+</pre>
+<a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
+<pre>
+..........
+    200pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 194.12pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+..........
+    200pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 195.12pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+..........
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
+</pre>
+<a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
+<pre>
+..........
+    2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 1423.90pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+..........
+    2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 865.12pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+..........
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
+        Received unexpected throughput: {'in_port': 2} 1328.30pktps
 </pre>
