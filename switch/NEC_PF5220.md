@@ -17,9 +17,11 @@ title: Ryu Certification - NEC PF5220
 |[Match](#Match)|212|490|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(72)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(140)|&nbsp;&nbsp;&nbsp;&nbsp;(454)|
-|Total|256|672|
+|[Meter](#Meter)|0|36|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
+|Total|256|708|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(75)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(181)|&nbsp;&nbsp;&nbsp;&nbsp;(636)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(181)|&nbsp;&nbsp;&nbsp;&nbsp;(672)|
 
 ## <a name ='Action'>Action</a>
 
@@ -170,6 +172,23 @@ title: Ryu Certification - NEC PF5220
 |[ARP_SHA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/24_ARP_SHA_Mask.json)|- | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) |
 |[ARP_THA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA.json)|- | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) |
 |[ARP_THA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA_Mask.json)|- | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) |
+
+## <a name ='Meter'>Meter</a>
+
+| |Required|IPv4|IPv6|ARP|
+|-----------|----|----|----|----|
+|[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) |
+|[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) |
+|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) |
+|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
+|[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) |
+|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
+|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) |
+|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) |
+|[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
+|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) |
+|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) |
+|[DSCP_REMARK_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_02_10000.json)|- | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [ERROR](#638dd569a77001f62f3f1f9f267daea8) |
 
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
@@ -329,7 +348,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="054537c75c2343772badd2d72824d6d0">action: set_field: 03_ETH_DST</a>
 <pre>
@@ -419,7 +438,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="441b26b3cc5d47e14221c29e67b7076f">action: set_field: 09_IP_ECN (IPv4)</a>
 <pre>
@@ -459,7 +478,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="ddb5bc5be6b881ffba50cccc24eadd47">action: set_field: 13_TCP_SRC (IPv4)</a>
 <pre>
@@ -468,7 +487,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="1ef49893ff0104130d445cec69e9c6d4">action: set_field: 14_TCP_DST (IPv4)</a>
 <pre>
@@ -477,7 +496,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="59af7357f686a19a48e3ad696ede1897">action: set_field: 15_UDP_SRC (IPv4)</a>
 <pre>
@@ -548,7 +567,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
-        Receiving timeout: no change in rx_packets on tester.
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="c2b5b54af8c6b31df2874ec89c2bf18a">action: set_field: 09_IP_ECN (IPv6)</a>
 <pre>
@@ -579,7 +598,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="a6c439b995434737feccd7906f5524ec">action: set_field: 14_TCP_DST (IPv6)</a>
 <pre>
@@ -588,7 +607,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="ed0cfb16341890f5f314b8d760ebf83d">action: set_field: 15_UDP_SRC (IPv6)</a>
 <pre>
@@ -597,7 +616,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="1ccf7ab91d2295773428fa14168ae64b">action: set_field: 16_UDP_DST (IPv6)</a>
 <pre>
@@ -606,7 +625,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="2476412662f05c76d05abdd5f983e9bb">action: set_field: 17_SCTP_SRC (IPv6)</a>
 <pre>
@@ -648,7 +667,7 @@ title: Ryu Certification - NEC PF5220
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(dst='20::20')/tcp--->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Receiving timeout: no change in rx_packets on tester.
 </pre>
 <a name="b4b9abcf11b5c7f81971ea4e452ccfd6">action: set_field: 28_IPV6_FLABEL</a>
 <pre>
@@ -2149,4 +2168,112 @@ title: Ryu Certification - NEC PF5220
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/arp(dst_mac='bb:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
         Table-miss error: no change in lookup_count.
+</pre>
+<a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
+<pre>
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="d622dfa2ed128286d03f44d2790591e7">meter: 01_DROP_00_KBPS_01_10M</a>
+<pre>
+    20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="374de7cf3ba3cd6962f98683ef2d0ee5">meter: 01_DROP_00_KBPS_02_100M</a>
+<pre>
+    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
+<pre>
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
+<pre>
+    2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
+<pre>
+    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
+<pre>
+    2Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
+<pre>
+    20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="c915561eabc278589470d2187cb110f2">meter: 02_DSCP_REMARK_00_KBPS_02_100M</a>
+<pre>
+    200Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
+<pre>
+    200pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
+<pre>
+    2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+</pre>
+<a name="638dd569a77001f62f3f1f9f267daea8">meter: 02_DSCP_REMARK_01_PKTPS_02_10000</a>
+<pre>
+    20000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
+        Failed to add meters: OFPErrorMsg[type=0x01, code=0x01]
 </pre>
