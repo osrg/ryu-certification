@@ -14,14 +14,14 @@ title: Ryu Certification - ivs
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(39)|
 |[set_field](#set_field)|46|124|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(46)|&nbsp;&nbsp;&nbsp;&nbsp;(124)|
-|[Match](#Match)|358|344|
+|[Match](#Match)|359|343|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(105)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(253)|&nbsp;&nbsp;&nbsp;&nbsp;(341)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(254)|&nbsp;&nbsp;&nbsp;&nbsp;(340)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|421|543|
+|Total|422|542|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(313)|&nbsp;&nbsp;&nbsp;&nbsp;(540)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(314)|&nbsp;&nbsp;&nbsp;&nbsp;(539)|
 
 ## <a name ='Action'>Action</a>
 
@@ -110,15 +110,15 @@ title: Ryu Certification - ivs
 |[METADATA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA.json)|- | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) | [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) / [ERROR](#0dc0b3013fed3082c5fe85fedf717c56) |
 |[METADATA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/02_METADATA_Mask.json)|- | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) | [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) / [ERROR](#a2f35fb4c31f68b07ba0bbeb91463095) |
 |[ETH_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST.json)|x | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) | [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) / [OK](#fe864e7ac5b2d7b2aafc87bbd83da455) |
-|[ETH_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST_Mask.json)|x | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) |
-|[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC.json)|x | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [ERROR](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) |
-|[ETH_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC_Mask.json)|x | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [ERROR](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [ERROR](#f1bb7ed0d6f1c34334a73e3a23554482) |
-|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/05_ETH_TYPE.json)|x | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) |
+|[ETH_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/03_ETH_DST_Mask.json)|x | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [ERROR](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) | [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [OK](#5ed9ace27a5ca3fbb2c38d1b7d629927) / [ERROR](#5ed9ace27a5ca3fbb2c38d1b7d629927) |
+|[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC.json)|x | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) | [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) / [OK](#53d2200d33a46dfb67a5beb2a7eb4735) |
+|[ETH_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/04_ETH_SRC_Mask.json)|x | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) | [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) / [OK](#f1bb7ed0d6f1c34334a73e3a23554482) |
+|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/05_ETH_TYPE.json)|x | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) | [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [OK](#4f6c66821f05f92d7e67e9b89486b9df) / [ERROR](#4f6c66821f05f92d7e67e9b89486b9df) |
 |[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/38_TUNNEL_ID.json)|- | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) | [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) / [ERROR](#e1ab734d1d27b48a8e3b37e574a0a68c) |
 |[TUNNEL_ID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/38_TUNNEL_ID_Mask.json)|- | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) | [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) / [ERROR](#8a0ae32e2588fe37ce98c87f0c1d55ec) |
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID.json)|- | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) |
 |[VLAN_VID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID_Mask.json)|- | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) |
-|[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/07_VLAN_PCP.json)|- | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [ERROR](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) |
+|[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/07_VLAN_PCP.json)|- | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) |
 |[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) |
 |[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) |
 |[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) |
@@ -433,6 +433,7 @@ title: Ryu Certification - ivs
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+dpid=0000000000000008 : Disconnect unknown SW.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
@@ -839,13 +840,15 @@ title: Ryu Certification - ivs
 <pre>
     ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
+    ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' ERROR
+        Table-miss error: no change in lookup_count.
     ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
     ethernet(dst='bb:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
     ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='bb:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
+    ethernet(dst='bb:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="53d2200d33a46dfb67a5beb2a7eb4735">match: 04_ETH_SRC</a>
 <pre>
@@ -854,8 +857,7 @@ title: Ryu Certification - ivs
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:CONTROLLER'   OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=11:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=11:11:11:11:11:11,actions=output:2'                 OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=11:11:11:11:11:11,actions=output:CONTROLLER'        OK
     ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=11:11:11:11:11:11,actions=output:2'                 OK
@@ -864,15 +866,13 @@ title: Ryu Certification - ivs
 <pre>
     ethernet(src='11:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
     ethernet(src='11:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
 </pre>
 <a name="4f6c66821f05f92d7e67e9b89486b9df">match: 05_ETH_TYPE</a>
 <pre>
@@ -881,10 +881,12 @@ title: Ryu Certification - ivs
     ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0806,actions=output:2'                             OK
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=output:2'                             OK
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=output:CONTROLLER'                    OK
+dpid=00007072cf9f761e : Disconnect unknown SW.
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x0806,actions=output:2'                             OK
     ethernet(ethertype=0x0806)/arp-->'eth_type=0x0806,actions=output:2'                                  OK
     ethernet(ethertype=0x0806)/arp-->'eth_type=0x0806,actions=output:CONTROLLER'                         OK
-    ethernet(ethertype=0x0806)/arp-->'eth_type=0x0800,actions=output:2'                                  OK
+    ethernet(ethertype=0x0806)/arp-->'eth_type=0x0800,actions=output:2'                                  ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="e1ab734d1d27b48a8e3b37e574a0a68c">match: 38_TUNNEL_ID</a>
 <pre>
@@ -959,8 +961,7 @@ title: Ryu Certification - ivs
     ethernet/vlan(pcp=5)/ipv4/tcp-->'vlan_pcp=3,actions=output:2'                                        OK
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        OK
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=output:CONTROLLER'                               OK
-    ethernet/vlan(pcp=5)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet/vlan(pcp=5)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        OK
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:2'                                             OK
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:CONTROLLER'                                    OK
     ethernet/vlan(pcp=5)/arp-->'vlan_pcp=3,actions=output:2'                                             OK
@@ -1398,6 +1399,7 @@ title: Ryu Certification - ivs
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:2'     ERROR
         Receiving timeout: no change in tx_packets on target.
+dpid=0000000000005220 : Disconnect unknown SW.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/svlan/itag/ethernet/svlan/vlan/ipv6(traffic_class=65)/tcp-->'ip_ecn=0,actions=output:2'     OK
