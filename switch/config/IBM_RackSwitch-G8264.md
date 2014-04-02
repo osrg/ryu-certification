@@ -3,7 +3,7 @@ layout: default
 title: Ryu Certification - IBM_RackSwitch-G8264 - config
 ---
 # [Ryu Certification](http://osrg.github.io/ryu/certification.html)
-* IBM RackSwitch-G8264.md
+* IBM RackSwitch-G8264
 
 # OpenFlow related configuration
 <pre>
