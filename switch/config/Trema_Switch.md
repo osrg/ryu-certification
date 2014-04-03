@@ -13,12 +13,14 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.10
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 54d40d7b74a5162b30ec102c9bc517c16abdec1f
-Merge: 08caf91 4a759b1
-Author:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
-AuthorDate: Fri Mar 14 18:01:25 2014 +0900
-Commit:     SUGYO &lt;sugyo@pb.jp.nec.com&gt;
-CommitDate: Fri Mar 14 18:01:25 2014 +0900
+commit 06a6ab474319d5acb956c5d93f9f79376e1e1ee3
+Merge: 54d40d7 598c5f9
+Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+AuthorDate: Thu Apr 3 17:03:14 2014 +0900
+Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+CommitDate: Thu Apr 3 17:03:14 2014 +0900
 
-    Merge branch 'develop' of github.com:trema/trema-edge into develop
+    Merge pull request #117 from rascov/develop
+    
+    Change variable arp_op to arp_opcode to avoid name collision with netinet/ether.h
 </pre>
