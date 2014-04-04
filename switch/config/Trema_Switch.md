@@ -13,14 +13,14 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.10
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 06a6ab474319d5acb956c5d93f9f79376e1e1ee3
-Merge: 54d40d7 598c5f9
+commit 3a14bce8a78baa43f3321f3533972ff037594275
+Merge: 06a6ab4 63c72dc
 Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-AuthorDate: Thu Apr 3 17:03:14 2014 +0900
+AuthorDate: Fri Apr 4 17:08:51 2014 +0900
 Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-CommitDate: Thu Apr 3 17:03:14 2014 +0900
+CommitDate: Fri Apr 4 17:08:51 2014 +0900
 
-    Merge pull request #117 from rascov/develop
+    Merge pull request #118 from rascov/develop
     
-    Change variable arp_op to arp_opcode to avoid name collision with netinet/ether.h
+    Keep using the interface append_oxm_match_arp_op() and add an exception in oxm-helper.c
 </pre>
