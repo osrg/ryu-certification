@@ -8,67 +8,84 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f3e81be0-1c27-4004-9a11-d44a0e9896d9
+ebe3b0d6-ad1a-412c-a112-03a5d66835b0
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth8
             Interface eth8
+        Port eth7
+            Interface eth7
         Port br0
             Interface br0
                 type: internal
-        Port eth7
-            Interface eth7
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : a877a9b2-c050-4c38-ab2e-21e0184e9186
-controller          : [e4f739b2-dc8d-4cb7-8981-5dca8755d3d6]
+_uuid               : 3b0b76f4-ef45-4c0d-a766-f7b9f859bb7a
+controller          : [fb057667-c6e3-4192-9ad0-09ecb449ce62]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [1983f13a-e09a-4985-9052-77e8194b27e0, 7ac2ad58-0f76-4214-88ab-b72816f7e09d, ebecad7c-412e-489b-b1c2-cdaa440d8547]
+ports               : [06085fe3-cc3c-44a7-8dec-5e53c6b5aea2, 2a6454ec-da6e-4aba-8b96-d6a7394a14d3, f535b06c-7aa2-43fc-90f2-8aa6f790580b]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : e4f739b2-dc8d-4cb7-8981-5dca8755d3d6
+_uuid               : fb057667-c6e3-4192-9ad0-09ecb449ce62
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=927, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=937, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7ac2ad58-0f76-4214-88ab-b72816f7e09d
+_uuid               : f535b06c-7aa2-43fc-90f2-8aa6f790580b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8affddac-be10-4aa8-ae61-f0037ec7e101]
+interfaces          : [5a140287-89ff-41e2-9c0c-90e8eec8454c]
 name                : br0
 
-_uuid               : ebecad7c-412e-489b-b1c2-cdaa440d8547
+_uuid               : 2a6454ec-da6e-4aba-8b96-d6a7394a14d3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8df12643-e393-42cb-bd4f-51ad4cf9a1c9]
+interfaces          : [1ec1df7b-b65f-45ed-bdff-108d3be7ce59]
 name                : eth7
 
-_uuid               : 1983f13a-e09a-4985-9052-77e8194b27e0
+_uuid               : 06085fe3-cc3c-44a7-8dec-5e53c6b5aea2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8f5dc69f-6e36-4f9b-bd03-4e6f87aedf73]
+interfaces          : [efd929a8-5a11-4f1f-878b-f8f3f7d6ee45]
 name                : eth8
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8affddac-be10-4aa8-ae61-f0037ec7e101
+_uuid               : efd929a8-5a11-4f1f-878b-f8f3f7d6ee45
+admin_state         : up
+duplex              : full
+ifindex             : 11
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:4a:84:ec
+mtu                 : 1550
+name                : eth8
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=7119538, tx_dropped=0, tx_errors=0, tx_packets=75888}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
+type                : 
+
+_uuid               : 5a140287-89ff-41e2-9c0c-90e8eec8454c
 admin_state         : down
 duplex              : full
-ifindex             : 936
+ifindex             : 940
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -82,7 +99,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 8df12643-e393-42cb-bd4f-51ad4cf9a1c9
+_uuid               : 1ec1df7b-b65f-45ed-bdff-108d3be7ce59
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -95,24 +112,7 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3074682262, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72751121, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
-type                : 
-
-_uuid               : 8f5dc69f-6e36-4f9b-bd03-4e6f87aedf73
-admin_state         : up
-duplex              : full
-ifindex             : 11
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:4a:84:ec
-mtu                 : 1550
-name                : eth8
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=7095635, tx_dropped=0, tx_errors=0, tx_packets=75633}
+statistics          : {collisions=0, rx_bytes=3074764713, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72751961, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,28 +120,17 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 54ecb5a2331ca95264879252e413becaba130573
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Mon Apr 7 21:49:07 2014 -0700
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Tue Apr 8 20:08:42 2014 -0700
+commit 65a0903b26bdff3e42dc0fa78ef5b73a48448e80
+Author:     Thomas Graf &lt;tgraf@redhat.com&gt;
+AuthorDate: Wed Apr 9 17:19:17 2014 +0200
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Wed Apr 9 09:57:42 2014 -0700
 
-    dpif: Wildcard bond output port with recirculation
+    bridge: improve vlan mode related error messages when adding port
     
-    This patch took advantage of the recirculation infrastructure
-    introduced in commit adcf00ba35a0, allowing megaflows to be generated
-    when the flow output to bond ports.
+    Inform about fallback to trunk mode and convert errors to warnings
+    when we are not failing.
     
-    Without recirculation, it is necessary flows output to Bond ports
-    in balance_tcp mode to unmask all hash fields. With recirculation,
-    masking of hash fields is no longer required as kernel
-    now hashes each packet and redirects packets based on the hash value
-    using recirculation.
-    
-    This patch removes the masking requirements when recirculation is
-    in use. Datapaths do not support recirculation are still supported,
-    but without the benefits of megaflow.
-    
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Thomas Graf &lt;tgraf@redhat.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
