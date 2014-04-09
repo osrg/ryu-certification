@@ -1888,13 +1888,13 @@ dpid=0000e83935b2467c : Join target SW.
 <pre>
 ..........
     20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.37kbps
+        Received unexpected throughput: {'in_port': 2} 325.36kbps
 ..........
     20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 255.46kbps
+        Received unexpected throughput: {'in_port': 2} 23.04kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
-        Received unexpected throughput: {'in_port': 2} 162.10kbps
+        Received unexpected throughput: {'in_port': 2} 152.34kbps
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
@@ -1915,10 +1915,10 @@ dpid=0000e83935b2467c : Join target SW.
         Received unexpected throughput: {'in_port': 2} 33.33pktps
 ..........
     2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 19.30pktps
+        Received unexpected throughput: {'in_port': 2} 17.97pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
-        Received unexpected throughput: {'in_port': 2} 27.60pktps
+        Received unexpected throughput: {'in_port': 2} 33.33pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
@@ -1927,7 +1927,7 @@ dpid=0000e83935b2467c : Join target SW.
         Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 1997.14kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 1998.72kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
 </pre>
@@ -1935,13 +1935,13 @@ dpid=0000e83935b2467c : Join target SW.
 <pre>
 ..........
     20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 16443.03kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 16578.45kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
 ..........
     20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 12693.09kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 12777.81kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
-        Received unexpected throughput: {'in_port': 2} 16096.06kbps
+        Received unexpected throughput: {'in_port': 2} 15982.42kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1958,11 +1958,11 @@ dpid=0000e83935b2467c : Join target SW.
 <pre>
 ..........
     2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 1423.90pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 24} 1360.31pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
 ..........
     2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 865.12pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 24} 817.58pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
-        Received unexpected throughput: {'in_port': 2} 1328.30pktps
+        Received unexpected throughput: {'in_port': 2} 1328.23pktps
 </pre>

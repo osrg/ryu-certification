@@ -100,25 +100,28 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit fa4439129407c7a239126978a1933ac109a12ec3
-Author:     shivarammysore &lt;shivaram.mysore@gmail.com&gt;
-AuthorDate: Sun Mar 2 18:06:34 2014 -0800
-Commit:     shivarammysore &lt;shivaram.mysore@gmail.com&gt;
-CommitDate: Sun Mar 2 18:06:34 2014 -0800
+commit 06dee9746919c104c188dad2bdb6f7a780c022dd
+Merge: fa44391 0d06004
+Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+AuthorDate: Wed Apr 9 14:08:05 2014 +0100
+Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+CommitDate: Wed Apr 9 14:08:05 2014 +0100
 
-    Draft version of Quick start guide
+    Merge pull request #315 from FlowForwarding/v5
+    
+    OpenFlow 1.4
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 61e4c2f6c09fc2783fe8a494b84cd5d794f6bf02
-Merge: 3bc8b2f 202a5af
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Dec 31 05:16:34 2013 -0800
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Dec 31 05:16:34 2013 -0800
+commit 50169652f324bce7a145a67103f3b68d81ff180e
+Merge: 61e4c2f 6658826
+Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+AuthorDate: Wed Apr 9 14:07:39 2014 +0100
+Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+CommitDate: Wed Apr 9 14:07:39 2014 +0100
 
-    Merge pull request #57 from yamt/oxm-4bytes
+    Merge pull request #72 from FlowForwarding/v5
     
-    make oxm on-wire length for ipv6_flabel and mpls_label 32-bit
+    Openflow 1.4
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit c4b46da3655cf4c47bb411e371da7d313dc37c1e
