@@ -8,67 +8,67 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-efeb2368-4da2-4998-9660-36278e133177
+b609e3f1-4c90-4ddf-a4fc-397638470cb5
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth8
-            Interface eth8
         Port br0
             Interface br0
                 type: internal
         Port eth7
             Interface eth7
+        Port eth8
+            Interface eth8
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 688b2c7a-2f17-4a27-8683-09878fb043d2
-controller          : [09e8d585-0eb2-4819-8b07-3e6af3322794]
+_uuid               : 1429f7ff-ea3d-4dcd-8437-b2f68b9a97bc
+controller          : [b2d82d15-443c-42f2-a67f-cfe0d87d4558]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [493061ef-cca6-4c93-bfc9-8c2adc6d3ed2, 5089b6f7-d969-4332-80c7-a9ea54088e3b, 5ad39eef-68e9-4557-a0ef-9ad004072461]
+ports               : [37df5edc-cf60-4292-bd37-a5f20621e8ad, 7c57637a-e41c-4251-893b-0dc8744d491b, 99751e44-a84b-4d30-8a25-898a27d280c0]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 09e8d585-0eb2-4819-8b07-3e6af3322794
+_uuid               : b2d82d15-443c-42f2-a67f-cfe0d87d4558
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=532, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=537, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 493061ef-cca6-4c93-bfc9-8c2adc6d3ed2
+_uuid               : 37df5edc-cf60-4292-bd37-a5f20621e8ad
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [138cb3f6-30bb-49b9-985e-cec3d94a27b8]
-name                : eth8
-
-_uuid               : 5089b6f7-d969-4332-80c7-a9ea54088e3b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [89423ea2-deeb-43ef-8676-4ed0bfd29d50]
+interfaces          : [cb7d0b18-b9e9-473d-ad13-d107c7adef15]
 name                : br0
 
-_uuid               : 5ad39eef-68e9-4557-a0ef-9ad004072461
+_uuid               : 99751e44-a84b-4d30-8a25-898a27d280c0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7e74760e-2eef-47e8-8679-6e9b01537115]
+interfaces          : [b8f0fb0f-7442-4fdb-a4e4-dbe522236699]
+name                : eth8
+
+_uuid               : 7c57637a-e41c-4251-893b-0dc8744d491b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [096580e7-3615-457f-a4be-6a1a91ecda8b]
 name                : eth7
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 89423ea2-deeb-43ef-8676-4ed0bfd29d50
+_uuid               : cb7d0b18-b9e9-473d-ad13-d107c7adef15
 admin_state         : down
 duplex              : full
-ifindex             : 994
+ifindex             : 996
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -82,7 +82,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 138cb3f6-30bb-49b9-985e-cec3d94a27b8
+_uuid               : b8f0fb0f-7442-4fdb-a4e4-dbe522236699
 admin_state         : up
 duplex              : full
 ifindex             : 11
@@ -95,11 +95,11 @@ mac_in_use          : 00:60:e0:4a:84:ec
 mtu                 : 1550
 name                : eth8
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=7471811, tx_dropped=0, tx_errors=0, tx_packets=79646}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=7494807, tx_dropped=0, tx_errors=0, tx_packets=79891}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 
-_uuid               : 7e74760e-2eef-47e8-8679-6e9b01537115
+_uuid               : 096580e7-3615-457f-a4be-6a1a91ecda8b
 admin_state         : up
 duplex              : full
 ifindex             : 10
@@ -112,7 +112,7 @@ mac_in_use          : 00:60:e0:4a:84:eb
 mtu                 : 1550
 name                : eth7
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3075938329, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72764029, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3075999768, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=72764692, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=3.10-0}
 type                : 
 </pre>
@@ -120,20 +120,18 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit beb1c69a3a661dbc0232aeb9831c14788f84eb24
-Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Mon Apr 14 23:37:10 2014 -0700
-Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Mon Apr 14 23:47:37 2014 -0700
+commit eb7282ddfa7d9fe9ab89c7543456978e671f4335
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Wed Apr 16 08:04:23 2014 -0700
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Wed Apr 16 08:58:53 2014 -0700
 
-    datapath: Allow each vport to have an array of 'port_id's.
+    ofproto-dpif: xlate should not attribute stats to bond entry when using recirc
     
-    In order to allow handlers directly read upcalls from datapath,
-    we need to support per-handler netlink socket for each vport in
-    datapath.  This commit makes this happen.  Also, it is guaranteed
-    to be backward compatible with previous branch.
+    When recirculation is used to implement bond, the bond entry stats are
+    collected from the hidden post recirculation rules. This bug causes
+    double counting of stats to some strenuous bond entries.
     
-    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
-    Acked-by: Thomas Graf &lt;tgraf@redhat.com&gt;
-    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
 </pre>
