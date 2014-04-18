@@ -396,11 +396,11 @@ title: Ryu Certification - EdgeCore AS4600-54T
 <a name="4aac2024fdbed94a15211163ccb7b2d0">action: set_field: 07_VLAN_PCP</a>
 <pre>
     ethernet/vlan(pcp=3)/ipv4/tcp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                  ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(vlan_pcp=5), OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=40,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2048)
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                  ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(vlan_pcp=5), OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=40,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=34525)
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                       ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(vlan_pcp=5), OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=40,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2054)
 </pre>
 <a name="206060d03aae06223b957a9540c9bfe4">action: set_field: 34_MPLS_LABEL</a>
 <pre>
@@ -1021,23 +1021,23 @@ title: Ryu Certification - EdgeCore AS4600-54T
 <a name="6cb722939537192104e3dbc2bc225b9a">match: 06_VLAN_VID</a>
 <pre>
     ethernet/vlan(vid=100)/ipv4/tcp-->'vlan_vid=100,actions=output:2'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2048)
     ethernet/vlan(vid=100)/ipv4/tcp-->'vlan_vid=100,actions=output:CONTROLLER'                           ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(vid=203)/ipv4/tcp-->'vlan_vid=100,actions=output:2'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/ipv6/tcp-->'vlan_vid=100,actions=output:2'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=34525)
     ethernet/vlan(vid=100)/ipv6/tcp-->'vlan_vid=100,actions=output:CONTROLLER'                           ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(vid=203)/ipv6/tcp-->'vlan_vid=100,actions=output:2'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/arp-->'vlan_vid=100,actions=output:2'                                         ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2054)
     ethernet/vlan(vid=100)/arp-->'vlan_vid=100,actions=output:CONTROLLER'                                ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(vid=203)/arp-->'vlan_vid=100,actions=output:2'                                         ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="f984e51f48e954737fa86b294c96fdd0">match: 06_VLAN_VID (Mask)</a>
 <pre>
@@ -1063,23 +1063,23 @@ title: Ryu Certification - EdgeCore AS4600-54T
 <a name="1a4fe62fff1c9f89eb8ff9a3192add56">match: 07_VLAN_PCP</a>
 <pre>
     ethernet/vlan(pcp=3)/ipv4/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2048)
     ethernet/vlan(pcp=3)/ipv4/tcp-->'vlan_pcp=3,actions=output:CONTROLLER'                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(pcp=5)/ipv4/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=34525)
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=output:CONTROLLER'                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(pcp=5)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:2'                                             ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet: ethernet(ethertype=2054)
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:CONTROLLER'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(pcp=5)/arp-->'vlan_pcp=3,actions=output:2'                                             ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'vlan_pcp': 3, 'vlan_vid': (4196, 8191)}))
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="c1cf14c00edeb647eb396c65bac9b6b9">match: 34_MPLS_LABEL</a>
 <pre>
