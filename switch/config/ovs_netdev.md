@@ -8,91 +8,74 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-cbb5847a-4bd3-4cff-90e3-835fd034d273
+661e5530-45f5-4998-a97a-4c6071cd1839
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth22
-            Interface eth22
-        Port eth21
-            Interface eth21
         Port eth23
             Interface eth23
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
+        Port eth22
+            Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6df01dcd-20f7-4634-9d22-3469fed6817a
-controller          : [3742b645-1b8d-4487-9e44-99066f3935c5]
+_uuid               : 5f1d275f-619e-4c69-8057-224e3a036948
+controller          : [83ebe26c-49ab-42fa-8922-35111dbec611]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [002b6ba8-9215-45a1-8d4a-8ebd94751bec, 897b0967-ff7f-4996-b699-c13d33d43768, ad6e07f2-bdc5-4a88-bebb-10bdcee566c7, bdb11aa0-bbf6-4b6b-abe2-870838c0e418]
+ports               : [31be4712-feff-44ed-9e9f-35c83d7b0367, 49b1f89d-8fe7-4cc3-9d4c-9d5fcb027e5e, 8cc88cfb-f6d4-4663-819e-8f16533ec98a, bfdc919a-e9ec-4915-bbef-b030db66da8e]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3742b645-1b8d-4487-9e44-99066f3935c5
+_uuid               : 83ebe26c-49ab-42fa-8922-35111dbec611
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=572, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=572, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : bdb11aa0-bbf6-4b6b-abe2-870838c0e418
+_uuid               : 49b1f89d-8fe7-4cc3-9d4c-9d5fcb027e5e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [34f5ef47-8406-4988-a184-032a26c4e939]
-name                : br0
+interfaces          : [b009d56a-a3ef-479a-8c84-00cf4cddd1b6]
+name                : eth21
 
-_uuid               : 002b6ba8-9215-45a1-8d4a-8ebd94751bec
+_uuid               : 31be4712-feff-44ed-9e9f-35c83d7b0367
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [cb8a7ddb-82be-4883-b6ed-50eaadf75755]
-name                : eth22
-
-_uuid               : ad6e07f2-bdc5-4a88-bebb-10bdcee566c7
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [ec2eaeab-330f-4267-b952-785a96f747eb]
+interfaces          : [2b6dd2d3-6b96-42e6-b6d0-dc5579b4b72d]
 name                : eth23
 
-_uuid               : 897b0967-ff7f-4996-b699-c13d33d43768
+_uuid               : bfdc919a-e9ec-4915-bbef-b030db66da8e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ec93ea9c-8721-4626-83fa-e1fe5e2aaef5]
-name                : eth21
+interfaces          : [604402b5-d577-4fe0-b845-8859dc32e3bd]
+name                : eth22
+
+_uuid               : 8cc88cfb-f6d4-4663-819e-8f16533ec98a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [64590705-7d42-491f-a43e-2cb40c919c65]
+name                : br0
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : ec93ea9c-8721-4626-83fa-e1fe5e2aaef5
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1500
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=632374861, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=430973, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : cb8a7ddb-82be-4883-b6ed-50eaadf75755
+_uuid               : 604402b5-d577-4fe0-b845-8859dc32e3bd
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -105,14 +88,14 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1500
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=404625115, tx_dropped=0, tx_errors=0, tx_packets=273674}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=685136972, tx_dropped=0, tx_errors=0, tx_packets=461248}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 34f5ef47-8406-4988-a184-032a26c4e939
+_uuid               : 64590705-7d42-491f-a43e-2cb40c919c65
 admin_state         : down
 duplex              : full
-ifindex             : 1074
+ifindex             : 1081
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -126,7 +109,24 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : ec2eaeab-330f-4267-b952-785a96f747eb
+_uuid               : b009d56a-a3ef-479a-8c84-00cf4cddd1b6
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1500
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=1014215399, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=686741, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 2b6dd2d3-6b96-42e6-b6d0-dc5579b4b72d
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -139,7 +139,7 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1500
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=344173500, tx_dropped=0, tx_errors=0, tx_packets=229449}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=437761500, tx_dropped=0, tx_errors=0, tx_packets=291841}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -147,24 +147,20 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3aadc5bbb058d52bb350424cbfef80f2d0c50ecd
+commit 882470607bdbaec5a1252f34cf97f4b4ef000d21
 Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Mon Apr 21 20:05:08 2014 -0700
+AuthorDate: Tue Apr 15 11:32:26 2014 -0700
 Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Mon Apr 21 21:14:04 2014 -0700
+CommitDate: Tue Apr 22 11:13:03 2014 -0700
 
-    ofproto-dpif-upcall: Fix logic error in handler/revalidator threads
-    creation and deletion.
+    ovs-rcu: Name the ovsrcu_postpone_thread to 'urcu'.
     
-    Commit 1f8675481e &#40;ofproto-dpif-upcall: Fix ovs-vswitchd crash.&#41;
-    directly copied the udpif_set_threads&#40;&#41; logic to udpif_stop_threads&#40;&#41;
-    and udpif_start_threads&#40;&#41;.  In fact, this was erroneous and caused
-    unittest failures.
+    The ovs-rcu module adds a new thread for checking the grace period.
+    Since the thread name is not set, it will inherit the name of the
+    thread that creates it.  This makes the 'top' output quite confusing.
     
-    This commit fixes the above issue by correcting the checks in
-    udpif_stop_threads&#40;&#41; and udpif_start_threads&#40;&#41;, and adding necessary
-    checks in udpif_set_threads&#40;&#41;.
+    This commit names the thread to 'urcu' for clarity.
     
-    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
     Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
