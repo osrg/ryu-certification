@@ -8,74 +8,125 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-3555bfd2-2cc9-4dc1-8346-c33c1fd4f184
+6bd20fe8-dccd-403d-87c4-620d7f35c674
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth23
             Interface eth23
-        Port eth22
-            Interface eth22
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
-        Port eth21
-            Interface eth21
+        Port eth22
+            Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : a728dcee-8619-4f1e-b620-580e890d08bd
-controller          : [83e6d7f5-d3c2-4e76-b4f9-2ed6b533c856]
+_uuid               : 42049156-a6fb-41ff-8bae-46e5c1bb89cb
+controller          : [6e734fad-ace2-46d2-8f15-b71c3f040e2c]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [013c4ebe-6413-4fe6-9905-3e6d818fba6e, 329fef03-0912-42c1-888a-29a37b8237d1, 6b634d7e-de99-458d-8516-f3aa077f8aac, cba3ba0e-e8e9-43d5-a8e0-39c85fc1ee62]
+ports               : [40e226a6-c8d5-40f5-950e-fcd037488cf6, 99275ae1-c819-4266-9d55-8be6ad696239, d8dbc356-4c4c-4f87-9a4a-4c8d5f806fa4, e9c0de88-1dce-44e6-bbbc-86e4ce5f8546]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 83e6d7f5-d3c2-4e76-b4f9-2ed6b533c856
+_uuid               : 6e734fad-ace2-46d2-8f15-b71c3f040e2c
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=572, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=571, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6b634d7e-de99-458d-8516-f3aa077f8aac
+_uuid               : e9c0de88-1dce-44e6-bbbc-86e4ce5f8546
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6ab73e57-6f86-46e2-8904-978984ff46b0]
-name                : br0
-
-_uuid               : 013c4ebe-6413-4fe6-9905-3e6d818fba6e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [23d3fd24-3618-4c54-9c18-91ebe0a3e59d]
-name                : eth23
-
-_uuid               : cba3ba0e-e8e9-43d5-a8e0-39c85fc1ee62
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c028f6b8-6de0-4133-b7ce-f4fe4f6df68f]
-name                : eth21
-
-_uuid               : 329fef03-0912-42c1-888a-29a37b8237d1
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [0990288b-6c6d-4cfe-bf72-5d23a5d826bb]
+interfaces          : [c6eea931-286e-41c0-9b5f-b1f5131ea428]
 name                : eth22
 
+_uuid               : 99275ae1-c819-4266-9d55-8be6ad696239
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [dbb97549-61ef-4c2f-ac9a-ad4c1e5fb7f5]
+name                : eth21
+
+_uuid               : 40e226a6-c8d5-40f5-950e-fcd037488cf6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [188c2fbb-fde5-45ce-909d-b49a20eb8b6d]
+name                : eth23
+
+_uuid               : d8dbc356-4c4c-4f87-9a4a-4c8d5f806fa4
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [fbdcffa2-23a6-4418-9501-069c92c09baf]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 23d3fd24-3618-4c54-9c18-91ebe0a3e59d
+_uuid               : dbb97549-61ef-4c2f-ac9a-ad4c1e5fb7f5
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1500
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=421466764, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=285561, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : c6eea931-286e-41c0-9b5f-b1f5131ea428
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1500
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=272866442, tx_dropped=0, tx_errors=0, tx_packets=183614}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : fbdcffa2-23a6-4418-9501-069c92c09baf
+admin_state         : down
+duplex              : full
+ifindex             : 1062
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1500
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
+type                : internal
+
+_uuid               : 188c2fbb-fde5-45ce-909d-b49a20eb8b6d
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -91,72 +142,34 @@ ofport              : 3
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=218496000, tx_dropped=0, tx_errors=0, tx_packets=145664}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
-
-_uuid               : c028f6b8-6de0-4133-b7ce-f4fe4f6df68f
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1500
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=421405325, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=284898, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 6ab73e57-6f86-46e2-8904-978984ff46b0
-admin_state         : down
-duplex              : full
-ifindex             : 1060
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : 0990288b-6c6d-4cfe-bf72-5d23a5d826bb
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1500
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=272843974, tx_dropped=0, tx_errors=0, tx_packets=183375}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a605908001070c27aa8c755c92cd361a10b46beb
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Tue Apr 8 11:13:42 2014 +0000
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Mon Apr 21 11:06:55 2014 -0700
+commit 1f8675481e8cc976931bd0a85851d780f7cf2a33
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Mon Apr 21 17:31:11 2014 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Mon Apr 21 18:44:09 2014 -0700
 
-    datapath: add recirc action
+    ofproto-dpif-upcall: Fix ovs-vswitchd crash.
     
-    Recirculation implementation for Linux kernel data path.
+    On current master, caller of udpif_set_threads&#40;&#41; can pass 0 value
+    on n_handlers and n_revalidators to delete all handler and revalidator
+    threads.
     
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
-    Acked-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    After commit 9a159f748866 &#40;ofproto-dpif-upcall: Remove the dispatcher
+    thread.&#41;, udpif_set_threads&#40;&#41; also calls the dpif_handlers_set&#40;&#41; with
+    the 0 value 'n_handlers'.  Since dpif level always assume the 'n_handlers'
+    be non-zero, this causes warnings and even crash of ovs-vswitchd.
+    
+    This commit fixes the above issue by defining separate functions for
+    starting and stopping handler and revalidator threads.  So
+    udpif_set_threads&#40;&#41; will never be called with 0 value arguments.
+    
+    Reported-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Co-authored-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
