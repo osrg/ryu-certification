@@ -9,19 +9,19 @@ title: Ryu Certification - ovs
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|18|38|
+|[Action](#Action)|17|39|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(38)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(39)|
 |[set_field](#set_field)|65|105|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(65)|&nbsp;&nbsp;&nbsp;&nbsp;(105)|
-|[Match](#Match)|363|339|
+|[Match](#Match)|351|351|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(255)|&nbsp;&nbsp;&nbsp;&nbsp;(339)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(243)|&nbsp;&nbsp;&nbsp;&nbsp;(351)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|446|518|
+|Total|433|531|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(335)|&nbsp;&nbsp;&nbsp;&nbsp;(518)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(322)|&nbsp;&nbsp;&nbsp;&nbsp;(531)|
 
 ## <a name ='Action'>Action</a>
 
@@ -37,7 +37,7 @@ title: Ryu Certification - ovs
 |[COPY_TTL_IN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/12_COPY_TTL_IN.json)|- | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [](#4f5d77f1fc49b1b854e116048c24058d) |
 |[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json)|- | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) |
 |[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json)|- | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) |
-|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [OK](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) |
+|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) |
 |[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json)|- | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) |
 |[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json)|- | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
@@ -158,9 +158,9 @@ title: Ryu Certification - ovs
 |[IPV6_FLABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL.json)|- | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) |
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/29_ICMPV6_TYPE.json)|- | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/30_ICMPV6_CODE.json)|- | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) |
-|[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) |
-|[IPV6_ND_SLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/32_IPV6_ND_SLL.json)|- | [OK](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) | [OK](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) |
-|[IPV6_ND_TLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/33_IPV6_ND_TLL.json)|- | [OK](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) | [OK](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) |
+|[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) |
+|[IPV6_ND_SLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/32_IPV6_ND_SLL.json)|- | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [OK](#fc9f9265d57e9b522bd518e081d06d22) | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) | [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) / [ERROR](#fc9f9265d57e9b522bd518e081d06d22) |
+|[IPV6_ND_TLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/33_IPV6_ND_TLL.json)|- | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [OK](#63ed426f526cc8a7423992e29b8f7e94) | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) | [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) / [ERROR](#63ed426f526cc8a7423992e29b8f7e94) |
 |[IPV6_EXTHDR](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/39_IPV6_EXTHDR.json)|- | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) |
 |[IPV6_EXTHDR (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/39_IPV6_EXTHDR_Mask.json)|- | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) |
 |[ARP_OP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/21_ARP_OP.json)|- | [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) | [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) | [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) | [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) |
@@ -252,30 +252,45 @@ title: Ryu Certification - ovs
 </pre>
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
 <pre>
+dpid=0000000000000001 : Leave target SW.
     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Disconnected from switch
+waiting for switches connection...
+dpid=0000000000000001 : Join target SW.
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
         Receiving timeout: no change in tx_packets on target.
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 <pre>
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
         Receiving timeout: no change in tx_packets on target.
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
         Receiving timeout: no change in tx_packets on target.
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          ERROR
         Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="f08789a3180cac4973ffd9b67c942078">action: 19_PUSH_MPLS (multiple)</a>
 <pre>
-    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
 dpid=0000000000000001 : Leave target SW.
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: barrier request timeout.
-waiting for switches connection...
 dpid=0000000000000001 : Join target SW.
+    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
+        Receiving timeout: no change in tx_packets on target.
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
+        Receiving timeout: no change in tx_packets on target.
 dpid=0000000000000001 : Leave target SW.
 dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              ERROR
@@ -318,6 +333,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         OK
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4(ttl=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
@@ -338,6 +355,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'                   OK
     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'              OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(hop_limit=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
@@ -347,6 +366,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                      OK
     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=dec_nw_ttl,output:2'                 OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(hop_limit=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
@@ -443,6 +464,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                       OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                  OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
@@ -474,6 +497,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
@@ -494,6 +519,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'        OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
@@ -514,6 +541,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
     ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
@@ -523,6 +552,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'           OK
     ethernet/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
@@ -532,6 +563,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     OK
     ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
@@ -541,6 +574,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'        OK
     ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'   OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
@@ -572,6 +607,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'             OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'        OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
@@ -581,6 +618,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'           OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
@@ -601,6 +640,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'        OK
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
@@ -610,6 +651,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'           OK
     ethernet/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
@@ -619,6 +662,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'        OK
     ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
@@ -628,6 +673,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'           OK
     ethernet/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
@@ -637,6 +684,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6/udp(sctp_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     OK
     ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
@@ -657,6 +706,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2'      OK
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
@@ -666,6 +717,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2'      OK
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp--->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
@@ -741,6 +794,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2'                             OK
     ethernet/vlan/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2'                        OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
@@ -761,6 +816,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' OK
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
@@ -770,6 +827,8 @@ dpid=0000000000000001 : Join target SW.
 <pre>
     ethernet/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' OK
     ethernet/vlan/arp(src_mac='11:11:11:11:11:11')-->'arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' OK
+dpid=0000000000000001 : Leave target SW.
+dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/arp(src_mac='11:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=11:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
@@ -1139,10 +1198,9 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
 dpid=0000000000000001 : Leave target SW.
-    ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Disconnected from switch
-waiting for switches connection...
 dpid=0000000000000001 : Join target SW.
+    ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
+        Table-miss error: no change in lookup_count.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
@@ -1992,11 +2050,15 @@ dpid=0000000000000001 : Join target SW.
 </pre>
 <a name="927147b096027f4e78f58e0672cdb6e3">match: 31_IPV6_ND_TARGET</a>
 <pre>
-    ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:2'      OK
-    ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:CONTROLLER' OK
+    ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:2'      ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'ipv6_nd_target=20::20,actions=output:2'      OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:2' OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:2' ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'ipv6_nd_target=20::20,actions=output:2' OK
 dpid=0000000000000001 : Leave target SW.
 dpid=0000000000000001 : Join target SW.
@@ -2020,11 +2082,15 @@ dpid=0000000000000001 : Join target SW.
 </pre>
 <a name="fc9f9265d57e9b522bd518e081d06d22">match: 32_IPV6_ND_SLL</a>
 <pre>
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' OK
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=11:11:11:11:11:11,actions=output:2' OK
 dpid=0000000000000001 : Leave target SW.
 dpid=0000000000000001 : Join target SW.
@@ -2048,11 +2114,15 @@ dpid=0000000000000001 : Join target SW.
 </pre>
 <a name="63ed426f526cc8a7423992e29b8f7e94">match: 33_IPV6_ND_TLL</a>
 <pre>
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' OK
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' OK
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' ERROR
+        Receiving timeout: no change in tx_packets on target.
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='11:11:11:11:11:11')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:CONTROLLER' ERROR
+        Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_tll=11:11:11:11:11:11,actions=output:2' OK
 dpid=0000000000000001 : Leave target SW.
 dpid=0000000000000001 : Join target SW.
