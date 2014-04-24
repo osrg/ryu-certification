@@ -8,94 +8,77 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-308bca70-2930-43a0-96c4-39dd26ef8c52
+6b479a6d-5979-400b-a5e4-7d0f790de789
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth22
+            Interface eth22
+        Port eth23
+            Interface eth23
         Port br0
             Interface br0
                 type: internal
-        Port eth22
-            Interface eth22
         Port eth21
             Interface eth21
-        Port eth23
-            Interface eth23
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 259ee460-ca92-4a46-9f9f-a76cb2ab1826
-controller          : [b83cb47b-d38c-4c7c-b34f-f28e868cb38f]
+_uuid               : c3b6706c-5291-4fa6-aa50-ac4e5a68e34f
+controller          : [0d13dccc-c470-44d6-b718-8a3fc1c9f316]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [183246e6-a33b-4a85-bb27-25a1b075915d, 77acd78a-8189-4e7a-806b-f30c1bc74edb, 86429e3b-f69f-4721-b686-be598a2b243d, cdf6efe1-5894-49cc-a92a-f70b91d82ab3]
+ports               : [40583593-cf67-44d2-8086-36996f50b594, b35eb758-b494-477d-8972-be1dc67f6460, c9488c40-ae80-4690-bf7a-986bfc307ca1, c986e1a8-980a-4258-b680-d18d0f49c511]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b83cb47b-d38c-4c7c-b34f-f28e868cb38f
+_uuid               : 0d13dccc-c470-44d6-b718-8a3fc1c9f316
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=577, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=571, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : cdf6efe1-5894-49cc-a92a-f70b91d82ab3
+_uuid               : c986e1a8-980a-4258-b680-d18d0f49c511
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [36d76409-1dd9-42fc-ba3e-1089a9854468]
-name                : eth23
-
-_uuid               : 183246e6-a33b-4a85-bb27-25a1b075915d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [12a68e0d-d5ef-43fd-ae27-100a2d0a0f39]
-name                : br0
-
-_uuid               : 77acd78a-8189-4e7a-806b-f30c1bc74edb
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [d24e5cb8-a43e-43a8-9919-570195a42522]
-name                : eth22
-
-_uuid               : 86429e3b-f69f-4721-b686-be598a2b243d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [8735c39e-c3a3-456c-b419-b0b18bb421b1]
+interfaces          : [3b456935-5365-40f3-b0c4-6c18ddd6d403]
 name                : eth21
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : d24e5cb8-a43e-43a8-9919-570195a42522
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1500
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1535732298, tx_dropped=0, tx_errors=0, tx_packets=1029862}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
+_uuid               : c9488c40-ae80-4690-bf7a-986bfc307ca1
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [f1a65ed0-8bef-43eb-98c1-0bbe30a803c9]
+name                : br0
 
-_uuid               : 12a68e0d-d5ef-43fd-ae27-100a2d0a0f39
+_uuid               : b35eb758-b494-477d-8972-be1dc67f6460
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [95aab9ca-8fcb-491b-a84f-8e8e4cd143cf]
+name                : eth23
+
+_uuid               : 40583593-cf67-44d2-8086-36996f50b594
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [ca4f52d7-6f87-4717-911e-5cf9b6e5d4da]
+name                : eth22
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : f1a65ed0-8bef-43eb-98c1-0bbe30a803c9
 admin_state         : down
 duplex              : full
-ifindex             : 1121
+ifindex             : 1129
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -109,24 +92,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 36d76409-1dd9-42fc-ba3e-1089a9854468
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1500
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1293510000, tx_dropped=0, tx_errors=0, tx_packets=862340}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 8735c39e-c3a3-456c-b419-b0b18bb421b1
+_uuid               : 3b456935-5365-40f3-b0c4-6c18ddd6d403
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -139,7 +105,41 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1500
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=2557038787, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1719439, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=2744077452, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1844761, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 95aab9ca-8fcb-491b-a84f-8e8e4cd143cf
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1500
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1395684000, tx_dropped=0, tx_errors=0, tx_packets=930456}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : ca4f52d7-6f87-4717-911e-5cf9b6e5d4da
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1500
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1643950306, tx_dropped=0, tx_errors=0, tx_packets=1102237}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -147,37 +147,48 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 73a3c4757e596ff156d40f41496a0264373e5bc4
-Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
-AuthorDate: Wed Apr 23 15:31:17 2014 +1200
-Commit:     Joe Stringer &lt;joestringer@nicira.com&gt;
-CommitDate: Thu Apr 24 11:57:49 2014 +1200
+commit 96be8de5951502c4d23f80529f4b8785aaf94f04
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Wed Apr 23 18:33:36 2014 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Wed Apr 23 18:33:36 2014 -0700
 
-    revalidator: Prevent handling the same flow twice.
+    bridge: When ports disappear from a datapath, add them back.
     
-    When the datapath flow table is modified while a flow dump operation is
-    in progress, it is possible for the same flow to be dumped twice. In
-    such cases, revalidators may perform redundant work, or attempt to
-    delete the same flow twice.
+    Before commit 2a73b1d73d4bdb &#40;bridge: Reconfigure in single pass.&#41;, if a
+    port disappeared, for one reason or another, from a datapath, the next
+    bridge reconfiguration pass would notice and, if the port was still
+    configured in the database, add the port back to the datapath.  That
+    commit, however, removed the logic from bridge_refresh_ofp_port&#40;&#41; that
+    did that and failed to add the same logic to the replacement function
+    bridge_delete_or_reconfigure_ports&#40;&#41;.  This commit fixes the problem.
     
-    This was causing intermittent testsuite failures for test #670 -
-    &quot;ofproto-dpif, active-backup bonding&quot; where a flow &#40;that had not
-    previously been dumped&#41; was dumped, revalidated and deleted twice.
+    To see this problem on a Linux kernel system:
     
-    The logs show errors such as:
-    &quot;failed to flow_get &#40;No such file or directory&#41; skb_priority&#40;0&#41;,...&quot;
-    &quot;failed to flow_del &#40;No such file or directory&#41; skb_priority&#40;0&#41;,...&quot;
+    ovs-vsctl add-br br0                             # 1
+    tunctl -t tap                                    # 2
+    ovs-vsctl add-port br0 tap                       # 3
+    ovs-dpctl show                                   # 4
+    tunctl -d tap                                    # 5
+    ovs-dpctl show                                   # 6
+    tunctl -t tap                                    # 7
+    ovs-vsctl del-port tap -- add-port br0 tap       # 8
+    ovs-dpctl show                                   # 9
     
-    This patch adds a 'flow_exists' field to 'struct udpif_key' to track
-    whether the flow is &#40;in progress&#41; to be deleted. After doing a ukey
-    lookup, we check whether ukey-&gt;mark or ukey-&gt;flow indicates that the
-    flow has already been handled. If it has already been handled, we skip
-    handling the flow again.
+    Steps 1-4 create a bridge and a tap and add it to the bridge and
+    demonstrate that the tap is part of the datapath.  Step 5 and 6 delete
+    the tap and demonstrate that it has therefore disappeared from the
+    datapath.  Step 7 recreates a tap with the same name, and step 8
+    forces ovs-vswitchd to reconfigure.  Step 9 shows the effect of the
+    fix: without the fix, the new tap is not added back to the datapath;
+    with this fix, it is.
     
-    We also defer ukey cleanup for flows that fail revalidation, so that the
-    ukey will still exist if the same flow is dumped twice. This allows the
-    above logic to work in this case.
+    Special thanks to Gurucharan Shetty &lt;gshetty@nicira.com&gt; for finding a
+    simple reproduction case and then bisecting to find the commit that
+    introduced the problem.
     
-    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
-    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Bug #1238467.
+    Reported-by: Ronald Lee &lt;ronaldlee@vmware.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
