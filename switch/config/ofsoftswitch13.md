@@ -14,13 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.100.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit cea85b731e319feddf2744c59b9bacd996d4c2eb
-Author:     ederlf &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Tue Feb 18 17:23:40 2014 -0300
-Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Tue Feb 18 17:23:40 2014 -0300
+commit f8cc42f8837ec287c8975fe56a595687d76e6faa
+Author:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
+AuthorDate: Fri Apr 25 08:23:15 2014 -0300
+Commit:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
+CommitDate: Fri Apr 25 08:23:15 2014 -0300
 
-    Correct mask to print MPLS BOS match field
+    Change Netbee version to the most recent
+    
+    The most recent Netbee version should fix the compilation issues on most recent Ubuntu versions.
 </pre>
 
 # Modified test scenario for switch restrictions
