@@ -17,11 +17,11 @@ title: Ryu Certification - EdgeCore AS4600-54T
 |[Match](#Match)|15|687|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(93)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(594)|
-|[Meter](#Meter)|18|0|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|Total|36|910|
+|[Meter](#Meter)|15|3|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
+|Total|33|913|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(93)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(817)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(820)|
 
 ## <a name ='Action'>Action</a>
 
@@ -180,7 +180,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
 |[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) |
 |[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) |
 |[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
-|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
+|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
 |[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) |
 
@@ -400,7 +400,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
     ethernet/vlan(pcp=3)/ipv6/tcp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                  ERROR
         Received incorrect packet: ethernet(ethertype=34525)
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=set_field:5->vlan_pcp,output:2'                       ERROR
-        Received incorrect packet: ethernet(ethertype=2054)/str('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00k\xdf&\x84')
+        Received incorrect packet: ethernet(ethertype=2054)
 </pre>
 <a name="206060d03aae06223b957a9540c9bfe4">action: set_field: 34_MPLS_LABEL</a>
 <pre>
@@ -1033,7 +1033,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
     ethernet/vlan(vid=203)/ipv6/tcp-->'vlan_vid=100,actions=output:2'                                    ERROR
         Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/arp-->'vlan_vid=100,actions=output:2'                                         ERROR
-        Received incorrect packet: ethernet(ethertype=2054)/str('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00k\xdf&\x84')
+        Received incorrect packet: ethernet(ethertype=2054)
     ethernet/vlan(vid=100)/arp-->'vlan_vid=100,actions=output:CONTROLLER'                                ERROR
         Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(vid=203)/arp-->'vlan_vid=100,actions=output:2'                                         ERROR
@@ -1054,7 +1054,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
     ethernet/vlan(vid=203)/ipv6/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
         Table-miss error: no change in lookup_count.
     ethernet/vlan(vid=100)/arp-->'vlan_vid=96(mask=0xf0),actions=output:2'                               ERROR
-        Received incorrect packet: ethernet(ethertype=2054)/str('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00k\xdf&\x84')
+        Received incorrect packet: ethernet(ethertype=2054)
     ethernet/vlan(vid=100)/arp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                      ERROR
         Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(vid=203)/arp-->'vlan_vid=96(mask=0xf0),actions=output:2'                               ERROR
@@ -1075,7 +1075,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
     ethernet/vlan(pcp=5)/ipv6/tcp-->'vlan_pcp=3,actions=output:2'                                        ERROR
         Table-miss error: no change in lookup_count.
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:2'                                             ERROR
-        Received incorrect packet: ethernet(ethertype=2054)/str('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00k\xdf&\x84')
+        Received incorrect packet: ethernet(ethertype=2054)
     ethernet/vlan(pcp=3)/arp-->'vlan_pcp=3,actions=output:CONTROLLER'                                    ERROR
         Received incorrect packet-in: SW[dpid=0000000000000002]
     ethernet/vlan(pcp=5)/arp-->'vlan_pcp=3,actions=output:2'                                             ERROR
@@ -2431,11 +2431,14 @@ title: Ryu Certification - EdgeCore AS4600-54T
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
 ..........
-    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 120.26pktps
 ..........
-    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 121.13pktps
 ..........
-    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           OK
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
+        Received unexpected throughput: {'in_port': 2} 120.36pktps
 </pre>
 <a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
 <pre>
