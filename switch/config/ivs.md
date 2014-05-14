@@ -28,7 +28,7 @@ filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.2.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     6533927AB292ED8225F2F71
+srcversion:     C83D2CF3E042AC2E747B936
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
