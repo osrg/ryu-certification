@@ -8,111 +8,94 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-fb255a00-a19a-4a66-845b-9a4a042509d3
+f8145d88-a79e-4cb3-9686-1e396036441e
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth21
             Interface eth21
         Port eth23
             Interface eth23
+        Port br0
+            Interface br0
+                type: internal
         Port eth22
             Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4fb3a5e9-9337-4b48-b8ab-2334ed7ad45d
-controller          : [96f0bc6b-f8f2-4001-8a63-034017d17ea4]
+_uuid               : e0f78b40-530c-4f68-8c8c-a4c6cd4ce034
+controller          : [7a9a08d7-c179-4b95-92d8-831efe7b3d4b]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [04c3db3f-e6ac-4fa3-983e-91ed40336683, 6ab1f852-624a-493e-857d-c7747976a79f, 72e7ca0f-7093-48ba-86f5-910e95175ae8, c789ffaa-3748-4030-b7ee-a6694beb82b0]
+ports               : [02d617e6-25fd-4fd2-988c-d0a3bca66805, 2d6a9a3a-5043-4bc3-b1b7-2f35c54ff6a4, 3990365b-b90b-403e-a725-de1a5bd17f92, c3edcc55-0474-4aef-a7a2-c095c0f3b626]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 96f0bc6b-f8f2-4001-8a63-034017d17ea4
+_uuid               : 7a9a08d7-c179-4b95-92d8-831efe7b3d4b
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=547, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=557, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6ab1f852-624a-493e-857d-c7747976a79f
+_uuid               : c3edcc55-0474-4aef-a7a2-c095c0f3b626
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [50c4600c-fbef-49f4-aa8e-6a109b727a80]
-name                : eth21
-
-_uuid               : c789ffaa-3748-4030-b7ee-a6694beb82b0
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [bd82610d-f03d-40b4-aa21-1ac6bd3a339a]
+interfaces          : [164a5a23-2e2f-476c-830a-0a44d6e01ac2]
 name                : eth22
 
-_uuid               : 04c3db3f-e6ac-4fa3-983e-91ed40336683
+_uuid               : 02d617e6-25fd-4fd2-988c-d0a3bca66805
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [33abacfd-cfaa-4143-9a95-cd52959ca263]
-name                : br0
+interfaces          : [0affca19-207a-45a7-ac89-399667fd6b3f]
+name                : eth21
 
-_uuid               : 72e7ca0f-7093-48ba-86f5-910e95175ae8
+_uuid               : 2d6a9a3a-5043-4bc3-b1b7-2f35c54ff6a4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [533037b6-7440-4f4c-b3ee-89dc6c8b989a]
+interfaces          : [c17ce8d0-aa1c-4d3d-8cbc-3fdb73c1df38]
 name                : eth23
 
+_uuid               : 3990365b-b90b-403e-a725-de1a5bd17f92
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b09c33b0-b151-4f6b-8bcf-af05880fbaf1]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 50c4600c-fbef-49f4-aa8e-6a109b727a80
+_uuid               : c17ce8d0-aa1c-4d3d-8cbc-3fdb73c1df38
 admin_state         : up
 duplex              : full
-ifindex             : 23
+ifindex             : 25
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
+mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3515378089, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=2359425, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2694348000, tx_dropped=0, tx_errors=0, tx_packets=1796232}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : bd82610d-f03d-40b4-aa21-1ac6bd3a339a
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1435306210, tx_dropped=0, tx_errors=0, tx_packets=962709}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 33abacfd-cfaa-4143-9a95-cd52959ca263
+_uuid               : b09c33b0-b151-4f6b-8bcf-af05880fbaf1
 admin_state         : down
 duplex              : full
-ifindex             : 188
+ifindex             : 196
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -126,20 +109,37 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 533037b6-7440-4f4c-b3ee-89dc6c8b989a
+_uuid               : 0affca19-207a-45a7-ac89-399667fd6b3f
 admin_state         : up
 duplex              : full
-ifindex             : 25
+ifindex             : 23
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
+mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2399065500, tx_dropped=0, tx_errors=0, tx_packets=1599377}
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3889396155, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=2609397, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 164a5a23-2e2f-476c-830a-0a44d6e01ac2
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1560806552, tx_dropped=0, tx_errors=0, tx_packets=1046603}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -147,20 +147,13 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0b810ca89262d0ff270994a5074d29e3c0b0002a
-Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Wed May 14 19:53:51 2014 -0700
-Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Wed May 14 19:53:51 2014 -0700
+commit 2c7ea58953128e7a8692a9f28d388d0311dda84d
+Author:     Justin Pettit &lt;jpettit@nicira.com&gt;
+AuthorDate: Thu May 15 14:12:06 2014 -0700
+Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
+CommitDate: Thu May 15 14:12:06 2014 -0700
 
-    lib/classifier: Simpilify array ordering.
+    Prepare for post-2.3.0 &#40;2.3.90&#41;.
     
-    The terminology we used for subtable ordering &#40;'splice', 'right
-    before'&#41; was inherited from an earlier use of a linked list, and
-    turned out to be confusing when applied to an array.  Also, we only
-    ever move one subtable earlier or later within the array, so we can
-    simplify the code as well.
-    
-    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
