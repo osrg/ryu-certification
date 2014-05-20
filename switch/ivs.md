@@ -14,14 +14,14 @@ title: Ryu Certification - ivs
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(39)|
 |[set_field](#set_field)|46|124|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(46)|&nbsp;&nbsp;&nbsp;&nbsp;(124)|
-|[Match](#Match)|304|398|
+|[Match](#Match)|305|397|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(100)|&nbsp;&nbsp;&nbsp;&nbsp;(8)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(204)|&nbsp;&nbsp;&nbsp;&nbsp;(390)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(205)|&nbsp;&nbsp;&nbsp;&nbsp;(389)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|367|597|
+|Total|368|596|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(103)|&nbsp;&nbsp;&nbsp;&nbsp;(8)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(264)|&nbsp;&nbsp;&nbsp;&nbsp;(589)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(265)|&nbsp;&nbsp;&nbsp;&nbsp;(588)|
 
 ## <a name ='Action'>Action</a>
 
@@ -164,7 +164,7 @@ title: Ryu Certification - ivs
 |[IPV6_EXTHDR](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/39_IPV6_EXTHDR.json)|- | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) | [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) / [ERROR](#9ccda48c1d58edb983f32ff8b3eb1407) |
 |[IPV6_EXTHDR (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/39_IPV6_EXTHDR_Mask.json)|- | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) | [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) / [ERROR](#8b620e80dc70eee35980ad992628cbb5) |
 |[ARP_OP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/21_ARP_OP.json)|- | [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) | [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) / [OK](#e61b10fa7ca2060cec165bcfacdd8d20) | [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) | [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) / [ERROR](#e61b10fa7ca2060cec165bcfacdd8d20) |
-|[ARP_SPA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/22_ARP_SPA.json)|- | [OK](#95068212105324c776bc77ccc84937cf) / [OK](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) | [OK](#95068212105324c776bc77ccc84937cf) / [OK](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) | [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) | [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) |
+|[ARP_SPA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/22_ARP_SPA.json)|- | [OK](#95068212105324c776bc77ccc84937cf) / [OK](#95068212105324c776bc77ccc84937cf) / [OK](#95068212105324c776bc77ccc84937cf) | [OK](#95068212105324c776bc77ccc84937cf) / [OK](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) | [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) | [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) / [ERROR](#95068212105324c776bc77ccc84937cf) |
 |[ARP_SPA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/22_ARP_SPA_Mask.json)|- | [OK](#8b423ccb4a215a657c4b18d7087c3e9b) / [OK](#8b423ccb4a215a657c4b18d7087c3e9b) / [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) | [OK](#8b423ccb4a215a657c4b18d7087c3e9b) / [OK](#8b423ccb4a215a657c4b18d7087c3e9b) / [OK](#8b423ccb4a215a657c4b18d7087c3e9b) | [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) / [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) / [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) | [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) / [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) / [ERROR](#8b423ccb4a215a657c4b18d7087c3e9b) |
 |[ARP_TPA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/23_ARP_TPA.json)|- | [OK](#c41fa0016ba511a7001612efd1aaa4b9) / [OK](#c41fa0016ba511a7001612efd1aaa4b9) / [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) | [OK](#c41fa0016ba511a7001612efd1aaa4b9) / [OK](#c41fa0016ba511a7001612efd1aaa4b9) / [OK](#c41fa0016ba511a7001612efd1aaa4b9) | [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) / [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) / [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) | [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) / [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) / [ERROR](#c41fa0016ba511a7001612efd1aaa4b9) |
 |[ARP_TPA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/23_ARP_TPA_Mask.json)|- | [OK](#3ce87300b15914cf0b0b21f7852a241d) / [OK](#3ce87300b15914cf0b0b21f7852a241d) / [ERROR](#3ce87300b15914cf0b0b21f7852a241d) | [OK](#3ce87300b15914cf0b0b21f7852a241d) / [OK](#3ce87300b15914cf0b0b21f7852a241d) / [OK](#3ce87300b15914cf0b0b21f7852a241d) | [ERROR](#3ce87300b15914cf0b0b21f7852a241d) / [ERROR](#3ce87300b15914cf0b0b21f7852a241d) / [ERROR](#3ce87300b15914cf0b0b21f7852a241d) | [ERROR](#3ce87300b15914cf0b0b21f7852a241d) / [ERROR](#3ce87300b15914cf0b0b21f7852a241d) / [ERROR](#3ce87300b15914cf0b0b21f7852a241d) |
@@ -1881,8 +1881,7 @@ title: Ryu Certification - ivs
 <pre>
     ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                      OK
     ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:CONTROLLER'             OK
-    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                        ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                        OK
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                 OK
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=output:CONTROLLER'        OK
     ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.10,actions=output:2'                   ERROR
@@ -1975,7 +1974,7 @@ title: Ryu Certification - ivs
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=output:2'        OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' OK
     ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:11:11:11,actions=output:2'        ERROR
-        Table-miss error: no change in lookup_count.
+        Table-miss error: increment in matched_count.
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
@@ -2017,7 +2016,7 @@ title: Ryu Certification - ivs
     ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:2'             OK
     ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER'    OK
     ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:22:22:22:22,actions=output:2'             ERROR
-        Table-miss error: increment in matched_count.
+        Table-miss error: no change in lookup_count.
     ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:2'        OK
     ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' OK
     ethernet/vlan/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:22:22:22:22,actions=output:2'        ERROR
