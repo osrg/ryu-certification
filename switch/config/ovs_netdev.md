@@ -8,77 +8,94 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-8e5874c3-1286-463a-8477-f8b6f4bb3640
+42df0b12-3173-4e92-9bc3-0008a52bfdc1
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth22
-            Interface eth22
-        Port eth23
-            Interface eth23
         Port eth21
             Interface eth21
         Port br0
             Interface br0
                 type: internal
+        Port eth22
+            Interface eth22
+        Port eth23
+            Interface eth23
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : f09036ad-d7fd-4ffa-ad38-b9c1a0703bd6
-controller          : [8f46029b-4425-431e-ba71-59f5587d4dc1]
+_uuid               : b86ea861-f36e-43a7-84ea-bb58151a2299
+controller          : [974710a3-ed3a-4251-a3de-0075ce300c75]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [0a3f0082-a181-40ec-9732-3243dce43c6f, 15549ab8-9cc0-46a6-a351-cf03b657a66f, ac6d894e-ffea-495d-8815-663c4157d3a3, b7252a3c-b317-43fa-af4e-b46bcb3fa1ca]
+ports               : [28920335-e96c-4279-8b9c-f82489959fda, 29a01b13-ebfe-401c-b533-127be87d7074, 2b5cb153-fab8-47b6-9b8e-9b756f3cfc9e, fb9b598a-59da-47f0-bb89-19574e44c4b6]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8f46029b-4425-431e-ba71-59f5587d4dc1
+_uuid               : 974710a3-ed3a-4251-a3de-0075ce300c75
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=562, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=567, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 15549ab8-9cc0-46a6-a351-cf03b657a66f
+_uuid               : 28920335-e96c-4279-8b9c-f82489959fda
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [a44b4a7b-ad37-4efd-adda-72d1cea00fe6]
-name                : eth23
-
-_uuid               : b7252a3c-b317-43fa-af4e-b46bcb3fa1ca
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [35bd2e59-bbde-416b-b1dc-9f2b625ae81c]
-name                : br0
-
-_uuid               : 0a3f0082-a181-40ec-9732-3243dce43c6f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [cd0c6fee-4254-4c08-9b56-bff4d307fcca]
-name                : eth22
-
-_uuid               : ac6d894e-ffea-495d-8815-663c4157d3a3
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [6acc7a72-3332-4f87-99df-ccef4dc7c213]
+interfaces          : [1a93b017-35c9-4680-9708-b8e24519e628]
 name                : eth21
 
+_uuid               : fb9b598a-59da-47f0-bb89-19574e44c4b6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3f8c657f-60bd-4cee-8570-b0aaa2a434d0]
+name                : eth23
+
+_uuid               : 2b5cb153-fab8-47b6-9b8e-9b756f3cfc9e
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [937e6ede-cdaf-4241-aecf-60a925fb0467]
+name                : eth22
+
+_uuid               : 29a01b13-ebfe-401c-b533-127be87d7074
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [2d4d8262-ef7e-4815-9976-ec0d203fc360]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 35bd2e59-bbde-416b-b1dc-9f2b625ae81c
+_uuid               : 937e6ede-cdaf-4241-aecf-60a925fb0467
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1311898804, tx_dropped=0, tx_errors=0, tx_packets=878126}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 2d4d8262-ef7e-4815-9976-ec0d203fc360
 admin_state         : down
 duplex              : full
-ifindex             : 107
+ifindex             : 117
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -92,41 +109,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : cd0c6fee-4254-4c08-9b56-bff4d307fcca
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1183665204, tx_dropped=0, tx_errors=0, tx_packets=792407}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 6acc7a72-3332-4f87-99df-ccef4dc7c213
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=2945144571, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=1972137, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : a44b4a7b-ad37-4efd-adda-72d1cea00fe6
+_uuid               : 3f8c657f-60bd-4cee-8570-b0aaa2a434d0
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -139,7 +122,24 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2041693500, tx_dropped=0, tx_errors=0, tx_packets=1361129}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2334118500, tx_dropped=0, tx_errors=0, tx_packets=1556079}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 1a93b017-35c9-4680-9708-b8e24519e628
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3319056488, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=2222042, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -147,31 +147,22 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit e262505ce4b908307441478a9b65e1bb22760e0c
-Author:     Simon Horman &lt;horms@verge.net.au&gt;
-AuthorDate: Wed May 21 08:31:47 2014 +0900
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Tue May 20 17:12:35 2014 -0700
+commit a0bab870f57d4a042cab2e0ed51ba929cb4013b8
+Author:     Ryan Wilson &lt;wryan@nicira.com&gt;
+AuthorDate: Tue May 20 21:50:19 2014 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Tue May 20 22:03:35 2014 -0700
 
-    datapath: 16bit inner_network_header field in struct ovs_gso_cb
+    ofproto: Remove per-flow miss hash table from upcall handler.
     
-    The motivation for this is to create a 16bit hole in struct ovs_gso_cb
-    which may be used for the inner_protocol field which is needed
-    for the proposed implementation of compatibility for MPLS GSO segmentation.
+    The upcall handler keeps a hash table which hashes flow to a list
+    of corresponding packets.  This used to be necessary as packets with
+    the same flow had similar actions and calculating actions used to be
+    a performance bottleneck.  Now that userspace action calculation
+    performance has improved, there is no need for this hash map.
     
-    This should be safe as inner_network_header is now an offset to
-    the inner_mac_header rather than skb-&gt;head.
+    This patch removes this hash map and each packet has its own upcall.
     
-    As pointed out by Thomas Graf simply making both inner offsets 16bis is not
-    safe as there have been cases of overflow with &quot;with collapsed TCP frames
-    on IB when the headroom grew beyond 64K. See commit 50bceae9bd tcp:
-    Reallocate headroom if it would overflow csum_start'' for additional
-    details.&quot;
-    
-    This patch is based on suggestions by Thomas Graf and Jesse Gross.
-    
-    Cc: Thomas Graf &lt;tgraf@suug.ch&gt;
-    Cc: Jesse Gross &lt;jesse@nicira.com&gt;
-    Signed-off-by: Simon Horman &lt;horms@verge.net.au&gt;
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Ryan Wilson &lt;wryan@nicira.com&gt;
+    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
