@@ -12,16 +12,19 @@ title: Ryu Certification - ovs netdev
 |[Action](#Action)|30|26|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|
-|[set_field](#set_field)|77|108|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(77)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|
+|[set_field](#set_field)|71|99|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(71)|&nbsp;&nbsp;&nbsp;&nbsp;(99)|
 |[Match](#Match)|431|271|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(323)|&nbsp;&nbsp;&nbsp;&nbsp;(271)|
+|[Group](#Group)|6|9|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
 |Total|538|441|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(427)|&nbsp;&nbsp;&nbsp;&nbsp;(441)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(424)|&nbsp;&nbsp;&nbsp;&nbsp;(441)|
 
 ## <a name ='Action'>Action</a>
 
@@ -56,7 +59,7 @@ title: Ryu Certification - ovs netdev
 |[ETH_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/03_ETH_DST.json)|- | [OK](#054537c75c2343772badd2d72824d6d0) | [OK](#054537c75c2343772badd2d72824d6d0) | [OK](#054537c75c2343772badd2d72824d6d0) |
 |[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/04_ETH_SRC.json)|- | [OK](#0c20b607710509d07df984934ea6e709) | [OK](#0c20b607710509d07df984934ea6e709) | [OK](#0c20b607710509d07df984934ea6e709) |
 |[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/05_ETH_TYPE.json)|- | [ERROR](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [ERROR](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [ERROR](#ba60e9bfb8e4d339de7040f0f5e3d0c2) |
-|[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/38_TUNNEL_ID.json)|- | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) | [ERROR](#21b7587a754c08356f3f60d3b4bb8a99) |
+|[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/38_TUNNEL_ID.json)|- | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) |
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/06_VLAN_VID.json)|- | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) |
 |[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/07_VLAN_PCP.json)|- | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) |
 |[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/34_MPLS_LABEL.json)|- | [OK](#206060d03aae06223b957a9540c9bfe4) | [OK](#206060d03aae06223b957a9540c9bfe4) | [OK](#206060d03aae06223b957a9540c9bfe4) |
@@ -172,6 +175,16 @@ title: Ryu Certification - ovs netdev
 |[ARP_SHA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/24_ARP_SHA_Mask.json)|- | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [OK](#56613c1f76b6b71b413bfa085a5b83b8) | [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) / [ERROR](#56613c1f76b6b71b413bfa085a5b83b8) |
 |[ARP_THA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA.json)|- | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) |
 |[ARP_THA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA_Mask.json)|- | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) |
+
+## <a name ='Group'>Group</a>
+
+| |Required|IPv4|IPv6|ARP|
+|-----------|----|----|----|----|
+|[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
+|[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
+|[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
 
 ## <a name ='Meter'>Meter</a>
 
@@ -353,50 +366,6 @@ title: Ryu Certification - ovs netdev
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' OK
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' OK
-group: 00_ALL
-..........
-    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
-..........
-    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
-..........
-    2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               OK
-group: 01_SELECT_Ether
-..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
-..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
-..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
-group: 01_SELECT_IP
-..........
-    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
-..........
-    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
-..........
-    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.20kbps
-group: 01_SELECT_Weight_Ether
-..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 518.34kbps, {'in_port': 3} 1502.66kbps
-..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 487.07kbps, {'in_port': 3} 1543.62kbps
-..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 515.99kbps, {'in_port': 3} 1503.82kbps
-group: 01_SELECT_Weight_IP
-..........
-    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
-..........
-    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
-..........
-    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.97kbps
 </pre>
 <a name="cbb7ad4ba4f1c1f3dabc03ae2f07c663">action: set_field: 06_VLAN_VID</a>
 <pre>
@@ -1936,6 +1905,60 @@ group: 01_SELECT_Weight_IP
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
+</pre>
+<a name="d6ac8fa11117c68ef8cfac688fe04d05">group: 00_ALL</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
+..........
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
+..........
+    2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               OK
+</pre>
+<a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
+<pre>
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+</pre>
+<a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
+..........
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
+..........
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.15kbps
+</pre>
+<a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
+<pre>
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 482.79kbps, {'in_port': 3} 1537.82kbps
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 507.40kbps, {'in_port': 3} 1523.37kbps
+..........
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 501.15kbps, {'in_port': 3} 1520.63kbps
+</pre>
+<a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
+..........
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.09kbps
+..........
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.98kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
