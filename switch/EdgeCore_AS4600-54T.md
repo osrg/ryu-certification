@@ -17,11 +17,14 @@ title: Ryu Certification - EdgeCore AS4600-54T
 |[Match](#Match)|15|687|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(93)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(594)|
-|[Meter](#Meter)|15|3|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|Total|33|913|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(93)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|&nbsp;&nbsp;&nbsp;&nbsp;(820)|
+|[Group](#Group)|0|15|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
+|[Meter](#Meter)|18|0|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|Total|36|925|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(96)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|&nbsp;&nbsp;&nbsp;&nbsp;(829)|
 
 ## <a name ='Action'>Action</a>
 
@@ -173,6 +176,16 @@ title: Ryu Certification - EdgeCore AS4600-54T
 |[ARP_THA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA.json)|- | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) | [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) / [ERROR](#316b7ce7df18479f2b207aa95ff48a62) |
 |[ARP_THA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA_Mask.json)|- | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) |
 
+## <a name ='Group'>Group</a>
+
+| |Required|IPv4|IPv6|ARP|
+|-----------|----|----|----|----|
+|[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
+|[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
+|[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
+
 ## <a name ='Meter'>Meter</a>
 
 | |Required|IPv4|IPv6|ARP|
@@ -180,7 +193,7 @@ title: Ryu Certification - EdgeCore AS4600-54T
 |[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) |
 |[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) |
 |[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
-|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
+|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
 |[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) |
 
@@ -2401,6 +2414,51 @@ title: Ryu Certification - EdgeCore AS4600-54T
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
+<a name="d6ac8fa11117c68ef8cfac688fe04d05">group: 00_ALL</a>
+<pre>
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+</pre>
+<a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
+<pre>
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+</pre>
+<a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
+<pre>
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+</pre>
+<a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
+<pre>
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+</pre>
+<a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
+<pre>
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
+        Failed to add groups: OFPErrorMsg[type=0x06, code=0x0a]
+</pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
 ..........
@@ -2431,14 +2489,11 @@ title: Ryu Certification - EdgeCore AS4600-54T
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
 ..........
-    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
-        Received unexpected throughput: {'in_port': 2} 120.26pktps
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
 ..........
-    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
-        Received unexpected throughput: {'in_port': 2} 121.13pktps
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
 ..........
-    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
-        Received unexpected throughput: {'in_port': 2} 120.36pktps
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           OK
 </pre>
 <a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
 <pre>
