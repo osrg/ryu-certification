@@ -7,7 +7,7 @@ title: Ryu Certification - Trema Switch - config
 
 # OpenFlow related configuration
 <pre>
-$ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.100.30 --server_port=6633 --switch_ports=eth1,eth2
+$ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.150.30 --server_port=6633 --switch_ports=eth21,eth22,eth23
 </pre>
 
 # Version information
