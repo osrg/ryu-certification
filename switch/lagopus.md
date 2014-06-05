@@ -5,7 +5,6 @@ title: Ryu Certification - Lagopus vswitch
 
 # [Ryu Certification](http://osrg.github.io/ryu/certification.html)
 * Lagopus vswitch
-* [Configuration](http://osrg.github.io/ryu-certification/switch/config/Lagopus vswitch.html)
 
 | |OK|ERROR|
 |----------|---|---|
