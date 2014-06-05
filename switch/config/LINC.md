@@ -97,41 +97,37 @@ $ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
 # Version information
 <pre>
 $ erl -version
-Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 5.10.4
+Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 06dee9746919c104c188dad2bdb6f7a780c022dd
-Merge: fa44391 0d06004
-Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-AuthorDate: Wed Apr 9 14:08:05 2014 +0100
-Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-CommitDate: Wed Apr 9 14:08:05 2014 +0100
+commit 6ed40cb649ab2288163c4a86c281d0990f9b7ac8
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Wed May 21 17:53:59 2014 +0200
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Wed May 21 17:53:59 2014 +0200
 
-    Merge pull request #315 from FlowForwarding/v5
+    Add script testing if a queue {min,max}-rate properties are set correctly
     
-    OpenFlow 1.4
+    (Motivated by #310).
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 50169652f324bce7a145a67103f3b68d81ff180e
-Merge: 61e4c2f 6658826
-Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-AuthorDate: Wed Apr 9 14:07:39 2014 +0100
-Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
-CommitDate: Wed Apr 9 14:07:39 2014 +0100
+commit 11256179e1e97022e1cfc24645e346a23a49daf8
+Author:     ruanpienaar &lt;ruan800@gmail.com&gt;
+AuthorDate: Fri May 30 14:02:15 2014 +0100
+Commit:     ruanpienaar &lt;ruan800@gmail.com&gt;
+CommitDate: Fri May 30 14:02:15 2014 +0100
 
-    Merge pull request #72 from FlowForwarding/v5
-    
-    Openflow 1.4
+    added Erlang 17
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
-commit c4b46da3655cf4c47bb411e371da7d313dc37c1e
-Merge: 68f5b05 85fd13b
+commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
+Merge: c4b46da 6f0c45f
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Feb 19 16:44:31 2014 +0100
+AuthorDate: Thu May 15 10:30:07 2014 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Feb 19 16:44:31 2014 +0100
+CommitDate: Thu May 15 10:30:07 2014 +0200
 
-    Merge pull request #12 from esl/checksum_optimizations
+    Merge pull request #13 from esl/checksum_optimizations_tcp
     
-    Checksum optimization in UDP
+    Checksum optimizations for TCP
 </pre>
