@@ -9,19 +9,22 @@ title: Ryu Certification - ofsoftswitch13
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|46|10|
+|[Action](#Action)|40|16|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(43)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(37)|&nbsp;&nbsp;&nbsp;&nbsp;(16)|
 |[set_field](#set_field)|92|74|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(92)|&nbsp;&nbsp;&nbsp;&nbsp;(74)|
 |[Match](#Match)|487|215|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(88)|&nbsp;&nbsp;&nbsp;&nbsp;(20)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(399)|&nbsp;&nbsp;&nbsp;&nbsp;(195)|
-|[Meter](#Meter)|14|22|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(22)|
-|Total|639|321|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(91)|&nbsp;&nbsp;&nbsp;&nbsp;(20)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(548)|&nbsp;&nbsp;&nbsp;&nbsp;(301)|
+|[Group](#Group)|15|0|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|[Meter](#Meter)|19|17|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(19)|&nbsp;&nbsp;&nbsp;&nbsp;(17)|
+|Total|653|322|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(94)|&nbsp;&nbsp;&nbsp;&nbsp;(20)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(559)|&nbsp;&nbsp;&nbsp;&nbsp;(302)|
 
 ## <a name ='Action'>Action</a>
 
@@ -31,7 +34,7 @@ title: Ryu Certification - ofsoftswitch13
 |[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json)|- | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
 |[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json)|- | [OK](#84114b5397172ba5a314008b52c36388) | [OK](#84114b5397172ba5a314008b52c36388) | [OK](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json)|- | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) | [OK](#5d818f5bd3c537066c61f0a9a71df0b3) |
-|[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json)|- | [OK](#cdf28d261795cce41af2b316f024c762) | [OK](#cdf28d261795cce41af2b316f024c762) | [OK](#cdf28d261795cce41af2b316f024c762) |
+|[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json)|- | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) |
 |[POP_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/18_POP_VLAN.json)|- | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) |
 |[COPY_TTL_OUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/11_COPY_TTL_OUT.json)|- | [OK](#069a36adbdd0739563365540be6e9b28) | [ERROR](#069a36adbdd0739563365540be6e9b28) | [](#069a36adbdd0739563365540be6e9b28) |
 |[COPY_TTL_IN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/12_COPY_TTL_IN.json)|- | [OK](#4f5d77f1fc49b1b854e116048c24058d) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [](#4f5d77f1fc49b1b854e116048c24058d) |
@@ -40,7 +43,7 @@ title: Ryu Certification - ofsoftswitch13
 |[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
 |[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json)|- | [OK](#679a3a4770d632a7630e275449e964e3) | [OK](#679a3a4770d632a7630e275449e964e3) | [OK](#679a3a4770d632a7630e275449e964e3) |
-|[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json)|- | [OK](#1dd12601d2ca1cc3425fed290f033b6d) | [OK](#1dd12601d2ca1cc3425fed290f033b6d) | [OK](#1dd12601d2ca1cc3425fed290f033b6d) |
+|[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json)|- | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
 
 | |Required|ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|----|
@@ -172,16 +175,26 @@ title: Ryu Certification - ofsoftswitch13
 |[ARP_THA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA.json)|- | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) | [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) / [OK](#316b7ce7df18479f2b207aa95ff48a62) |
 |[ARP_THA (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/25_ARP_THA_Mask.json)|- | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) | [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [ERROR](#61b44fcb7c6b2798045626c8bc52f583) / [OK](#61b44fcb7c6b2798045626c8bc52f583) |
 
+## <a name ='Group'>Group</a>
+
+| |Required|IPv4|IPv6|ARP|
+|-----------|----|----|----|----|
+|[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [OK](#890f325c255a32a6aace26e08a960250) | [OK](#890f325c255a32a6aace26e08a960250) | [OK](#890f325c255a32a6aace26e08a960250) |
+|[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) |
+|[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [OK](#d52d0a95caf9ce38f77620354812c83c) | [OK](#d52d0a95caf9ce38f77620354812c83c) | [OK](#d52d0a95caf9ce38f77620354812c83c) |
+
 ## <a name ='Meter'>Meter</a>
 
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
 |[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) |
 |[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) |
-|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) |
+|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
 |[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
-|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
+|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) |
 |[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) |
 |[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) |
 |[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
@@ -216,9 +229,12 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="cdf28d261795cce41af2b316f024c762">action: 17_PUSH_VLAN (multiple)</a>
 <pre>
-    ethernet/vlan/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x88a8,output:2'                         OK
-    ethernet/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x88a8,output:2'                         OK
-    ethernet/vlan/arp-->'eth_type=0x0806,actions=push_vlan:0x88a8,output:2'                              OK
+    ethernet/vlan/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x88a8,output:2'                         ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
+    ethernet/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x88a8,output:2'                         ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
+    ethernet/vlan/arp-->'eth_type=0x0806,actions=push_vlan:0x88a8,output:2'                              ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
 </pre>
 <a name="9d7f35a26be3f1fd987a89d0d6ba67c9">action: 18_POP_VLAN</a>
 <pre>
@@ -270,9 +286,12 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="1dd12601d2ca1cc3425fed290f033b6d">action: 27_POP_PBB</a>
 <pre>
-    ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              OK
-    ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              OK
-    ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   OK
+    ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024,pcp=0,vid=10)
+    ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024,pcp=0,vid=10)
+    ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   ERROR
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024,pcp=0,vid=10)
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
 <pre>
@@ -989,7 +1008,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                              OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                                ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='7a:eb:48:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='ff:ff:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' OK
@@ -1005,7 +1024,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4(proto=6)/tcp-->'ip_proto=17,actions=output:2'                                          OK
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=output:2'                                      OK
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'                             ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='00:00:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='ff:ff:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=17,actions=output:2'                                     OK
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:2' OK
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' OK
@@ -1021,7 +1040,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                     OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'              OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'     ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='e7:b3:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='fd:1d:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' OK
@@ -1099,7 +1118,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='ff:ff:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='00:00:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' OK
@@ -1115,7 +1134,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4/tcp(dst_port=6789)-->'tcp_dst=2222,actions=output:2'                                   OK
     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:2'                              OK
     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=output:CONTROLLER'                     ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='e7:b3:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='00:00:00:00:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4/tcp(dst_port=6789)-->'tcp_dst=2222,actions=output:2'                              OK
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' OK
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' OK
@@ -1559,7 +1578,7 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='7a:eb:48:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='10:e7:bd:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' OK
@@ -1788,6 +1807,51 @@ title: Ryu Certification - ofsoftswitch13
         Receiving timeout: no packet-in.
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
 </pre>
+<a name="d6ac8fa11117c68ef8cfac688fe04d05">group: 00_ALL</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
+..........
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
+..........
+    2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               OK
+</pre>
+<a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
+<pre>
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+</pre>
+<a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+..........
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+</pre>
+<a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
+<pre>
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+..........
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+</pre>
+<a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
+<pre>
+..........
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+..........
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+..........
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
+</pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
 ..........
@@ -1811,11 +1875,9 @@ title: Ryu Certification - ofsoftswitch13
 ..........
     200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
 ..........
-    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 79921.43kbps
+    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
 ..........
-    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
-        Received unexpected throughput: {'in_port': 2} 66073.72kbps
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             OK
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
@@ -1838,14 +1900,11 @@ title: Ryu Certification - ofsoftswitch13
 <a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
 <pre>
 ..........
-    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 6886.32pktps
+    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
 ..........
-    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 7010.82pktps
+    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
 ..........
-    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
-        Received unexpected throughput: {'in_port': 2} 5736.42pktps
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       OK
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
