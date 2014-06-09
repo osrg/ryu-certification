@@ -7,68 +7,542 @@ title: Ryu Certification - NoviFlow NoviKit200 - config
 
 # OpenFlow related configuration
 <pre>
-[root@EZsysNP4 ~]# cat noviware_build/novi_hw_conf.xml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+prompt&gt; show config controller
+        Controller [0] --&gt; 10.24.150.30:6633
+prompt&gt; show config switch all
+        Device name: eth
+        IP address: 10.24.44.1
+        Subnet Mask: 255.0.0.0
+        -
+        Device name: eth
+        Destination     Gateway         Mask
+        169.254.0.0     0.0.0.0         255.255.0.0
+        -
+        -
+        Dhcp status: off
+        -
+        Miss send length: 128
+        -
+        Datapath id: 0x044
+        -
+        Mon Jun 9 6:52:8 2014 UTC+9:00
+        -
+        Switch to Controller Echo Interval : 15
+prompt&gt; show config table tableid all
+--------Table id: 0
+        Match Fields (11):
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          7             : OFPXMT_OFB_VLAN_PCP
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_0
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-&lt;novi_hw_conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hw_conf.xsd" &gt;
-        &lt;hw_tables&gt;
-                &lt;hw_table size="4096" &gt;&lt;/hw_table&gt;
-                &lt;hw_table size="4096" &gt;&lt;/hw_table&gt;
-                &lt;hw_table size="4096" &gt;&lt;/hw_table&gt;
-        &lt;/hw_tables&gt;
+--------Table id: 1
+        Match Fields (5):
+          0             : OFPXMT_OFB_IN_PORT
+          1             : OFPXMT_OFB_IN_PHY_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          26            : OFPXMT_OFB_IPV6_SRC
+          27            : OFPXMT_OFB_IPV6_DST
+        Name: novi_table_1
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-        &lt;hw_group_table size="4096" /&gt;
-&lt;/novi_hw_conf&gt;
+--------Table id: 2
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_2
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-[root@EZsysNP4 ~]# cat noviware_build/noviswitch.xml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+--------Table id: 3
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_3
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
+--------Table id: 4
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_4
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
+--------Table id: 5
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_5
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-&lt;noviswitch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="noviswitch.xsd"
-switch_id="1"  miss_send_len ="128"  &gt;
-        &lt;ports&gt;
-                &lt;port port_id="1" name="novi_port_1" hw_port_no="0" &gt;&lt;/port&gt;
-                &lt;port port_id="2" name="novi_port_2" hw_port_no="1" &gt;&lt;/port&gt;
-                &lt;port port_id="3" name="novi_port_3" hw_port_no="2" &gt;&lt;/port&gt;
-                &lt;port port_id="4" name="novi_port_4" hw_port_no="3" &gt;&lt;/port&gt;
-                &lt;port port_id="5" name="novi_port_5" hw_port_no="4" &gt;&lt;/port&gt;
-                &lt;port port_id="6" name="novi_port_6" hw_port_no="5" &gt;&lt;/port&gt;
-                &lt;port port_id="7" name="novi_port_7" hw_port_no="6" &gt;&lt;/port&gt;
-                &lt;port port_id="8" name="novi_port_8" hw_port_no="7" &gt;&lt;/port&gt;
-                &lt;port port_id="9" name="novi_port_9" hw_port_no="8" &gt;&lt;/port&gt;
-                &lt;port port_id="10" name="novi_port_10" hw_port_no="9" &gt;&lt;/port&gt;
-                &lt;port port_id="11" name="novi_port_11" hw_port_no="10" &gt;&lt;/port&gt;
-                &lt;port port_id="12" name="novi_port_12" hw_port_no="11" &gt;&lt;/port&gt;
-                &lt;port port_id="13" name="novi_port_13" hw_port_no="12" &gt;&lt;/port&gt;
-                &lt;port port_id="14" name="novi_port_14" hw_port_no="13" &gt;&lt;/port&gt;
-                &lt;port port_id="15" name="novi_port_15" hw_port_no="14" &gt;&lt;/port&gt;
-                &lt;port port_id="16" name="novi_port_16" hw_port_no="15" &gt;&lt;/port&gt;
-                &lt;port port_id="17" name="novi_port_17" hw_port_no="16" &gt;&lt;/port&gt;
-                &lt;port port_id="18" name="novi_port_18" hw_port_no="17" &gt;&lt;/port&gt;
-                &lt;port port_id="19" name="novi_port_19" hw_port_no="18" &gt;&lt;/port&gt;
-                &lt;port port_id="20" name="novi_port_20" hw_port_no="19" &gt;&lt;/port&gt;
-                &lt;port port_id="21" name="novi_port_21" hw_port_no="20" &gt;&lt;/port&gt;
-                &lt;port port_id="22" name="novi_port_22" hw_port_no="21" &gt;&lt;/port&gt;
-                &lt;port port_id="23" name="novi_port_23" hw_port_no="22" &gt;&lt;/port&gt;
-                &lt;port port_id="24" name="novi_port_24" hw_port_no="23" &gt;&lt;/port&gt;
-                &lt;port port_id="25" name="novi_port_25" hw_port_no="24" &gt;&lt;/port&gt;
-                &lt;port port_id="26" name="novi_port_26" hw_port_no="25" &gt;&lt;/port&gt;
-                &lt;port port_id="27" name="novi_port_27" hw_port_no="26" &gt;&lt;/port&gt;
-                &lt;port port_id="28" name="novi_port_28" hw_port_no="27" &gt;&lt;/port&gt;
+--------Table id: 6
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_6
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-        &lt;/ports&gt;
+--------Table id: 7
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_7
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
 
-        &lt;group_table max_group_buckets="15" /&gt;
-&lt;/noviswitch&gt;
+--------Table id: 8
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_8
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 8191
+
+--------Table id: 9
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_9
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 8191
+
+--------Table id: 10
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_10
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 11
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_11
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 12
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_12
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 13
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_13
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 14
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_14
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 15
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_15
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 8191
+
+--------Table id: 16
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_16
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 8191
+
+--------Table id: 17
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_17
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 18
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_18
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 19
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_19
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 20
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_20
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 21
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_21
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 22
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_22
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 23
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_23
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 4095
+
+--------Table id: 24
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_24
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 1023
+
+--------Table id: 25
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_25
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 1023
+
+--------Table id: 26
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_26
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 1023
+
+--------Table id: 27
+        Match Fields (11):
+          2             : OFPXMT_OFB_METADATA
+          0             : OFPXMT_OFB_IN_PORT
+          3             : OFPXMT_OFB_ETH_DST
+          4             : OFPXMT_OFB_ETH_SRC
+          5             : OFPXMT_OFB_ETH_TYPE
+          6             : OFPXMT_OFB_VLAN_VID
+          10            : OFPXMT_OFB_IP_PROTO
+          11            : OFPXMT_OFB_IPV4_SRC
+          12            : OFPXMT_OFB_IPV4_DST
+          13, 15, 17    : OFPXMT_OFB_TCP/UDP/SCTP_SRC
+          14, 16, 18    : OFPXMT_OFB_TCP/UDP/SCTP_DST
+        Name: novi_table_27
+        Metadata_match: 0x00000000ffffffff
+        Metadata_write: 0x00000000ffffffff
+        Max_entries: 1023
+prompt&gt;
 </pre>
 
 # Version information
 <pre>
-[root@EZsysNP4 ~]# cat noviware_build/VERSION
-NOVISWITCH: NW200
-NOVIENGINE:1.1.0
-NOVICORE:1.1.0
-DRIVER:8.46a
-PPE:1.0.1
+prompt&gt; show status switch
+        -- latest -- (current)
+        NoviWare-OPE version: 250.0.6   bfc9aea9d9a9ce7ce0f40874b3ae7a39300f34a8
+        NoviWare-PPE version: 250.0.6   34b144dcba0561748b1e5ab60e2ad7da951adc2a
+        EZDriver version: 8.46a
+        -- previous --
+        NoviWare-OPE version: 250.0.5   9b44f913ed738cc5a2605e133e2b408057a92881
+        NoviWare-PPE version: 250.0.5   34b144dcba0561748b1e5ab60e2ad7da951adc2a
+        EZDriver version: 8.46a
+        -- default --
+        NoviWare-OPE version: 250.0.5   4f492a897bdd714add9b2c7aa95832034b875d05
+        NoviWare-PPE version: 250.0.5   9801e19958c3028c7b1e28bd2d5dec7a7c9721f5
+        EZDriver version: 8.46a
+prompt&gt;
 </pre>
