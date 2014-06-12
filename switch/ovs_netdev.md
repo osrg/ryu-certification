@@ -1922,19 +1922,19 @@ title: Ryu Certification - ovs netdev
         Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.20kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.98kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 505.44kbps, {'in_port': 3} 1515.16kbps
+        Received unexpected throughput: {'in_port': 2} 525.76kbps, {'in_port': 3} 1493.29kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 489.43kbps, {'in_port': 3} 1541.33kbps
+        Received unexpected throughput: {'in_port': 2} 500.37kbps, {'in_port': 3} 1530.39kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 496.07kbps, {'in_port': 3} 1524.53kbps
+        Received unexpected throughput: {'in_port': 2} 484.34kbps, {'in_port': 3} 1533.88kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
@@ -1943,10 +1943,10 @@ title: Ryu Certification - ovs netdev
         Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.65kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.72kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.21kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.19kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
