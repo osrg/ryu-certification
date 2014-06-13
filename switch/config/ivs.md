@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 82fd879042aee25d4b0ff876c324afde4d35f8c4
-Merge: 12c4103 0589090
+commit bc393e2666c5db56330ff40fd082878fe50fba2b
+Merge: 82fd879 07602e2
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Jun 12 17:39:29 2014 -0700
+AuthorDate: Fri Jun 13 13:35:14 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Jun 12 17:39:29 2014 -0700
+CommitDate: Fri Jun 13 13:35:14 2014 -0700
 
-    Merge into master from pull request #168:
-    update submodules (https://github.com/floodlight/ivs/pull/168)
+    Merge into master from pull request #165:
+    Move standard OpenFlow forwarding to pipeline_standard (https://github.com/floodlight/ivs/pull/165)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     8A5F19655DF5E9BD6A3DBFE
+srcversion:     5E11CF567A61626DAAFFCFD
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
