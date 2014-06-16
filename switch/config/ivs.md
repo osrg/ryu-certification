@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4655c7a4ef9e32105b99ad921debc180f7442f77
-Merge: 8b245d4 9261c8c
+commit eff697d39771eca6c06cbc9298eef07f1af0f94d
+Merge: 4655c7a 46b6021
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Jun 16 14:45:34 2014 -0700
+AuthorDate: Mon Jun 16 15:28:37 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Jun 16 14:45:34 2014 -0700
+CommitDate: Mon Jun 16 15:28:37 2014 -0700
 
-    Merge into master from pull request #172:
-    update submodules (https://github.com/floodlight/ivs/pull/172)
+    Merge into master from pull request #171:
+    move CFR into pipeline_standard (https://github.com/floodlight/ivs/pull/171)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
