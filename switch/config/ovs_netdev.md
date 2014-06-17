@@ -8,128 +8,77 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f9c0c3f0-e466-4711-95d5-e8f5fe3934d2
+71158af9-d5dc-4ad0-aa5d-5e8bc78384bc
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth21
             Interface eth21
-        Port br0
-            Interface br0
-                type: internal
         Port eth22
             Interface eth22
         Port eth23
             Interface eth23
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 677acb91-a04a-46e1-9f48-1b810e201fa1
-controller          : [b2b3cba7-3b56-4ecc-8a2e-5731cb703291]
+_uuid               : c3436ed4-2351-45bc-8070-2721e27f6b7d
+controller          : [bbd60a53-5187-4b80-8945-b4bd7cd3e5ff]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [0f22ee54-8c72-491c-a4c7-a2b16d805d66, 1dd6a7f3-27b6-412a-8f61-2f10c55048b8, 6a83283d-caa4-4a7b-aa0b-8f31f1fc767e, 6b62d693-5b88-4a75-ba42-2f33994fac62]
+ports               : [0ac37b50-a292-4b08-a1d5-df9817444ff1, 65a9295c-70b5-48be-a472-6f2b16470c04, 90aea10b-00da-4ad2-a1ee-f9ac9d575bf5, bb60fde4-bf06-41d7-a4d8-179afcf990b6]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b2b3cba7-3b56-4ecc-8a2e-5731cb703291
+_uuid               : bbd60a53-5187-4b80-8945-b4bd7cd3e5ff
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=967, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=967, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0f22ee54-8c72-491c-a4c7-a2b16d805d66
+_uuid               : 0ac37b50-a292-4b08-a1d5-df9817444ff1
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6bae322e-f2b9-473a-a2c4-cd62c8a5fe56]
+interfaces          : [32ff6fef-3876-4ee0-9e7a-893da602eac3]
 name                : eth21
 
-_uuid               : 6a83283d-caa4-4a7b-aa0b-8f31f1fc767e
+_uuid               : bb60fde4-bf06-41d7-a4d8-179afcf990b6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [399eb99d-3afb-4036-bd9f-892e443556f8]
-name                : eth22
-
-_uuid               : 6b62d693-5b88-4a75-ba42-2f33994fac62
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [ab47b92d-9dfa-4f70-ba04-249c798bdee7]
-name                : eth23
-
-_uuid               : 1dd6a7f3-27b6-412a-8f61-2f10c55048b8
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [ff5e7363-2fd7-462b-b40c-b1dc14faeb6e]
+interfaces          : [6b741d61-4daf-40be-bf28-d109f0d73187]
 name                : br0
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 399eb99d-3afb-4036-bd9f-892e443556f8
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
+_uuid               : 65a9295c-70b5-48be-a472-6f2b16470c04
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [df0a735e-59a4-4e56-9a0e-b0f2437cbae7]
 name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2669118816, tx_dropped=0, tx_errors=0, tx_packets=13263422}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
 
-_uuid               : ab47b92d-9dfa-4f70-ba04-249c798bdee7
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
+_uuid               : 90aea10b-00da-4ad2-a1ee-f9ac9d575bf5
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [9f7242cd-bc77-4be9-8d58-23ef496bdc82]
 name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3886766908, tx_dropped=0, tx_errors=0, tx_packets=8317801}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
 
-_uuid               : 6bae322e-f2b9-473a-a2c4-cd62c8a5fe56
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=3716707367, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=28330096, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : ff5e7363-2fd7-462b-b40c-b1dc14faeb6e
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 6b741d61-4daf-40be-bf28-d109f0d73187
 admin_state         : down
 duplex              : full
-ifindex             : 512
+ifindex             : 529
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -142,31 +91,70 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
+
+_uuid               : 9f7242cd-bc77-4be9-8d58-23ef496bdc82
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4206455876, tx_dropped=0, tx_errors=0, tx_packets=8531611}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : df0a735e-59a4-4e56-9a0e-b0f2437cbae7
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2879588965, tx_dropped=0, tx_errors=0, tx_packets=13406601}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 32ff6fef-3876-4ee0-9e7a-893da602eac3
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=4184529072, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=28646088, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 15c9fbd8f28f907776db0f594a25ea94bf890978
-Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Fri May 30 10:19:26 2014 -0700
-Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Fri Jun 13 17:47:32 2014 -0700
+commit cccc12cc3a6ae94b9cce89802fe68bc8d03f28b8
+Author:     Thomas Graf &lt;tgraf@noironetworks.com&gt;
+AuthorDate: Tue Jun 17 22:58:02 2014 +0000
+Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
+CommitDate: Tue Jun 17 09:15:47 2014 -0700
 
-    bridge: Make ovs-vswitchd run again if status_txn commit fails.
+    ovs-vsctl: Fix OF protocol name capitalization in manual page
     
-    This commit adds logic that checks the return value of status_txn
-    transaction and runs the update again if the transaction fails
-    &#40;transaction status is not 'TXN_SUCCESS', 'TXN_UNCHANGED', or
-    'TXN_INCOMPLETE'&#41;.
-    
-    To keep the code simple, the re-run of update on transaction failure
-    will extracts the status from all interfaces, rather than just those
-    that have status change.  Since the transaction failure is considered
-    to be very rare, such overhead is deemed to be affordable.
-    
-    VMware-BZ: 1256577
-    
-    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Thomas Graf &lt;tgraf@noironetworks.com&gt;
+    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
