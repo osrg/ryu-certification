@@ -24,8 +24,3 @@ CommitDate: Fri Apr 4 17:08:51 2014 +0900
     
     Keep using the interface append_oxm_match_arp_op() and add an exception in oxm-helper.c
 </pre>
-
-# Modified test scenario for switch restrictions
-<pre>
-$ sed -i 's/group_id=ofp.OFPG_ALL/group_id=0/g' ryu/tests/switch/tester.py;
-</pre>
