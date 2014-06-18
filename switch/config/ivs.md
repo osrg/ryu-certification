@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 25d4a12c23b241acaed86693f45d2d2b91a1b9f5
-Merge: eff697d 9c4763d
+commit f3fc2a7bc065509fd3a133d0fac11649b543a1ab
+Merge: 25d4a12 ba10413
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Jun 17 15:33:25 2014 -0700
+AuthorDate: Tue Jun 17 16:54:15 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Jun 17 15:33:25 2014 -0700
+CommitDate: Tue Jun 17 16:54:15 2014 -0700
 
-    Merge into master from pull request #173:
-    print tcp flags attribute (https://github.com/floodlight/ivs/pull/173)
+    Merge into master from pull request #174:
+    update submodules (https://github.com/floodlight/ivs/pull/174)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
