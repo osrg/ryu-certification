@@ -8,77 +8,111 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-cf72fd0d-f69d-4d43-a0b1-d4952863894b
+48d9edac-d552-420f-9838-71baa201a984
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
         Port eth23
             Interface eth23
-        Port br0
-            Interface br0
-                type: internal
         Port eth21
             Interface eth21
         Port eth22
             Interface eth22
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0b62d5e1-1ea2-47c9-8985-68e21c134dad
-controller          : [83d9f59a-448c-47df-9696-69900a1a3531]
+_uuid               : 867c8a32-1138-4276-b732-23e3af2cefaf
+controller          : [94fa52ea-bdd2-4a3a-b8c1-8149db34e670]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [035d6c3a-3233-46df-9c3f-3832e0a621b8, 3d646f06-647a-41c0-afb6-11134aa50d3d, d5cfe211-c7d3-4b75-8507-5c55909f9191, d72e34f9-f15c-4fe6-9c95-b5c0a76a9a09]
+ports               : [3d7ddb93-d8aa-4588-9afc-fb3c4167ed37, 5e68022f-9470-4f40-b87d-2662f44ee955, 6470e8cc-5047-4aad-b040-3ff0335d8fb9, c10e4e7d-9d31-4a6a-b605-44f5f1471f8d]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 83d9f59a-448c-47df-9696-69900a1a3531
+_uuid               : 94fa52ea-bdd2-4a3a-b8c1-8149db34e670
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=972, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=977, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : d72e34f9-f15c-4fe6-9c95-b5c0a76a9a09
+_uuid               : 6470e8cc-5047-4aad-b040-3ff0335d8fb9
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b442c0f6-b8df-4b09-b6f9-a06796a69f26]
+interfaces          : [2c304b71-252c-4d20-b3e6-0d911dc05ef1]
 name                : eth22
 
-_uuid               : d5cfe211-c7d3-4b75-8507-5c55909f9191
+_uuid               : c10e4e7d-9d31-4a6a-b605-44f5f1471f8d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3c41551b-a7f6-4c83-a9e9-faa1405cde6d]
-name                : eth21
-
-_uuid               : 3d646f06-647a-41c0-afb6-11134aa50d3d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [8be68c60-88d7-4fe4-b0d6-b02a2c5c2d10]
+interfaces          : [431fa25a-2671-4c13-853b-36b547b6524d]
 name                : br0
 
-_uuid               : 035d6c3a-3233-46df-9c3f-3832e0a621b8
+_uuid               : 3d7ddb93-d8aa-4588-9afc-fb3c4167ed37
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b8cbef9b-bfe5-42ea-bee9-2ef934ae72de]
+interfaces          : [cb258b45-c949-4d38-b2ed-433c95c27182]
 name                : eth23
 
+_uuid               : 5e68022f-9470-4f40-b87d-2662f44ee955
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [64a623d7-5ab7-42a5-9e11-9b8315482a76]
+name                : eth21
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8be68c60-88d7-4fe4-b0d6-b02a2c5c2d10
+_uuid               : cb258b45-c949-4d38-b2ed-433c95c27182
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=836561080, tx_dropped=0, tx_errors=0, tx_packets=9148326}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 2c304b71-252c-4d20-b3e6-0d911dc05ef1
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2132316441, tx_dropped=0, tx_errors=0, tx_packets=21502242}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 431fa25a-2671-4c13-853b-36b547b6524d
 admin_state         : down
 duplex              : full
-ifindex             : 551
+ifindex             : 557
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -92,41 +126,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : b442c0f6-b8df-4b09-b6f9-a06796a69f26
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2050708015, tx_dropped=0, tx_errors=0, tx_packets=21447370}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : b8cbef9b-bfe5-42ea-bee9-2ef934ae72de
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=637610080, tx_dropped=0, tx_errors=0, tx_packets=9015692}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 3c41551b-a7f6-4c83-a9e9-faa1405cde6d
+_uuid               : 64a623d7-5ab7-42a5-9e11-9b8315482a76
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -139,7 +139,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=203472472, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=43180326, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=437307315, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=43337481, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -147,13 +147,18 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 271e6bc7d27bf19c666a37beeaeeec8017850c44
+commit 2791461076c73d063b60ed1a3a56baeab38d354b
 Author:     Jesse Gross &lt;jesse@nicira.com&gt;
-AuthorDate: Fri Jun 20 17:23:33 2014 -0700
+AuthorDate: Fri Jun 20 17:41:45 2014 -0700
 Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Fri Jun 20 17:23:33 2014 -0700
+CommitDate: Fri Jun 20 17:41:45 2014 -0700
 
-    doc: Additional documentation updates for Geneve.
+    datapath: Check tunnel info before dereferencing on send.
+    
+    It's possible that the tunnel information may not have been set by
+    userspace before a packet is output to a tunnel port. Therefore, we
+    should ensure that we validate that the information is there before
+    attempting to use it.
     
     Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
 </pre>
