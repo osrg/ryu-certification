@@ -14,17 +14,17 @@ title: Ryu Certification - Centec V350
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(53)|
 |[set_field](#set_field)|8|162|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(8)|&nbsp;&nbsp;&nbsp;&nbsp;(162)|
-|[Match](#Match)|168|534|
+|[Match](#Match)|172|542|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(81)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(87)|&nbsp;&nbsp;&nbsp;&nbsp;(507)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(91)|&nbsp;&nbsp;&nbsp;&nbsp;(515)|
 |[Group](#Group)|4|11|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(1)|&nbsp;&nbsp;&nbsp;&nbsp;(11)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|183|796|
+|Total|187|804|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(87)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(96)|&nbsp;&nbsp;&nbsp;&nbsp;(769)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(100)|&nbsp;&nbsp;&nbsp;&nbsp;(777)|
 
 ## <a name ='Action'>Action</a>
 
@@ -159,6 +159,7 @@ title: Ryu Certification - Centec V350
 |[IPV6_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST.json)|x | [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) | [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) | [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) | [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) / [ERROR](#5f6f38ef2d6379737bbbbfbe7485849f) |
 |[IPV6_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST_Mask.json)|x | [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) | [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) | [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) | [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) / [ERROR](#c665e95a0a2e29b356d008fbae1c9a6a) |
 |[IPV6_FLABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL.json)|- | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) | [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) / [ERROR](#4d0f792bc907702cfb20f47709320f71) |
+|[IPV6_FLABEL (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL_Mask.json)|- | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) |
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/29_ICMPV6_TYPE.json)|- | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) | [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) / [ERROR](#cdd8e795bba586eaa11e89ba972af7a5) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/30_ICMPV6_CODE.json)|- | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) | [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) / [ERROR](#f2b820c0dbea85f4c95a2e83379c54fa) |
 |[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) | [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) / [ERROR](#927147b096027f4e78f58e0672cdb6e3) |
@@ -902,15 +903,15 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="5ed9ace27a5ca3fbb2c38d1b7d629927">match: 03_ETH_DST (Mask)</a>
 <pre>
-    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
 </pre>
 <a name="53d2200d33a46dfb67a5beb2a7eb4735">match: 04_ETH_SRC</a>
 <pre>
@@ -926,15 +927,15 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="f1bb7ed0d6f1c34334a73e3a23554482">match: 04_ETH_SRC (Mask)</a>
 <pre>
-    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
 </pre>
 <a name="4f6c66821f05f92d7e67e9b89486b9df">match: 05_ETH_TYPE</a>
 <pre>
@@ -1238,23 +1239,23 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="fd152ac5dc105cba865d2181e72ebbc9">match: 11_IPV4_SRC (Mask)</a>
 <pre>
-    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2'   OK
-    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2'     OK
-    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2'  OK
+    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="fa9569007b6a7d5bfc410b623ba7c85b">match: 12_IPV4_DST</a>
@@ -1280,23 +1281,23 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="73178bbfef71338f9e1819ceaa7b2542">match: 12_IPV4_DST (Mask)</a>
 <pre>
-    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2'   OK
-    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2'     OK
-    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2'  OK
+    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="7b14766f93cc3b890182cbcc302a049d">match: 13_TCP_SRC (IPv4)</a>
@@ -1751,29 +1752,29 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="2d311c3547bd5be21d19374ba63f2062">match: 26_IPV6_SRC (Mask)</a>
 <pre>
-    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
+    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
+    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="5f6f38ef2d6379737bbbbfbe7485849f">match: 27_IPV6_DST</a>
@@ -1805,29 +1806,29 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="c665e95a0a2e29b356d008fbae1c9a6a">match: 27_IPV6_DST (Mask)</a>
 <pre>
-    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
+    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
+    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="4d0f792bc907702cfb20f47709320f71">match: 28_IPV6_FLABEL</a>
@@ -1855,6 +1856,29 @@ title: Ryu Certification - Centec V350
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
+</pre>
+<a name="310fca49f5f48423d70d71be9df80b5f">match: 28_IPV6_FLABEL (Mask)</a>
+<pre>
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER'      OK
+    ethernet/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               ERROR
+        Table-miss error: increment in matched_count.
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          ERROR
+        Table-miss error: increment in matched_count.
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
+    ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
+    ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="cdd8e795bba586eaa11e89ba972af7a5">match: 29_ICMPV6_TYPE</a>
@@ -2090,23 +2114,23 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="8b423ccb4a215a657c4b18d7087c3e9b">match: 22_ARP_SPA (Mask)</a>
 <pre>
-    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'      OK
-    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'        OK
-    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'   OK
-    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2'   OK
+    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2'     OK
+    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="c41fa0016ba511a7001612efd1aaa4b9">match: 23_ARP_TPA</a>
@@ -2132,23 +2156,23 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="3ce87300b15914cf0b0b21f7852a241d">match: 23_ARP_TPA (Mask)</a>
 <pre>
-    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'      OK
-    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'        OK
-    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'   OK
-    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2'   OK
+    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2'     OK
+    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="d211b84ce9283a0410e3d536c1e6fab7">match: 24_ARP_SHA</a>
@@ -2180,29 +2204,29 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="56613c1f76b6b71b413bfa085a5b83b8">match: 24_ARP_SHA (Mask)</a>
 <pre>
-    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
+    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
+    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="316b7ce7df18479f2b207aa95ff48a62">match: 25_ARP_THA</a>
@@ -2234,29 +2258,29 @@ title: Ryu Certification - Centec V350
 </pre>
 <a name="61b44fcb7c6b2798045626c8bc52f583">match: 25_ARP_THA (Mask)</a>
 <pre>
-    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
+    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
+    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/vlan/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/vlan/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
+    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x03, code=0x01]
-    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' ERROR
+    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
-    ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' ERROR
+    ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
 <a name="d6ac8fa11117c68ef8cfac688fe04d05">group: 00_ALL</a>
@@ -2272,13 +2296,13 @@ title: Ryu Certification - Centec V350
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2024.51kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.34kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.76kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2020.60kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.33kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
@@ -2286,10 +2310,10 @@ title: Ryu Certification - Centec V350
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2029.19kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2029.97kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
