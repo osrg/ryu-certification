@@ -14,17 +14,17 @@ title: Ryu Certification - Trema Switch
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(47)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[set_field](#set_field)|159|11|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(159)|&nbsp;&nbsp;&nbsp;&nbsp;(11)|
-|[Match](#Match)|696|6|
+|[Match](#Match)|708|6|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(588)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(600)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[Group](#Group)|3|12|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|908|71|
+|Total|920|71|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(794)|&nbsp;&nbsp;&nbsp;&nbsp;(71)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(806)|&nbsp;&nbsp;&nbsp;&nbsp;(71)|
 
 ## <a name ='Action'>Action</a>
 
@@ -159,6 +159,7 @@ title: Ryu Certification - Trema Switch
 |[IPV6_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST.json)|x | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) |
 |[IPV6_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST_Mask.json)|x | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) |
 |[IPV6_FLABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL.json)|- | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) |
+|[IPV6_FLABEL (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL_Mask.json)|- | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) |
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/29_ICMPV6_TYPE.json)|- | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/30_ICMPV6_CODE.json)|- | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) |
 |[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) |
@@ -1293,6 +1294,21 @@ title: Ryu Certification - Trema Switch
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' OK
 </pre>
+<a name="310fca49f5f48423d70d71be9df80b5f">match: 28_IPV6_FLABEL (Mask)</a>
+<pre>
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER'      OK
+    ethernet/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+</pre>
 <a name="cdd8e795bba586eaa11e89ba972af7a5">match: 29_ICMPV6_TYPE</a>
 <pre>
     ethernet/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=output:2'                                  OK
@@ -1546,49 +1562,49 @@ title: Ryu Certification - Trema Switch
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2021.00kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.73kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2031.55kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2021.77kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2020.60kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2031.55kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.07kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2029.13kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2029.98kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2021.00kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.34kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2031.13kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2022.57kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2020.60kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2031.93kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.11kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2029.19kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2029.99kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
