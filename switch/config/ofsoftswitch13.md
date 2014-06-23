@@ -7,22 +7,22 @@ title: Ryu Certification - ofsoftswitch13 - config
 
 # OpenFlow related configuration
 <pre>
-$ /usr/local/bin/ofdatapath --datapath-id=000000000002 --interface=eth1,eth2 ptcp:3333
-$ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.100.30:6633
+$ /usr/local/bin/ofdatapath --datapath-id=000000000002 --interface=eth21,eth22,eth23 ptcp:3333
+$ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f8cc42f8837ec287c8975fe56a595687d76e6faa
+commit d174464dcc414510990e38426e2e274a25330902
 Author:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Fri Apr 25 08:23:15 2014 -0300
+AuthorDate: Sun May 4 11:03:43 2014 -0300
 Commit:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Fri Apr 25 08:23:15 2014 -0300
+CommitDate: Sun May 4 11:03:43 2014 -0300
 
-    Change Netbee version to the most recent
+    Update README.md
     
-    The most recent Netbee version should fix the compilation issues on most recent Ubuntu versions.
+    Update contact information.
 </pre>
 
 # Modified test scenario for switch restrictions
