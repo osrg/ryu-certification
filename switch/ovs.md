@@ -22,7 +22,7 @@ title: Ryu Certification - ovs
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|529|462|
+|Total|529|474|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(415)|&nbsp;&nbsp;&nbsp;&nbsp;(462)|
 
@@ -1736,8 +1736,6 @@ dpid=0000000000000001 : Join target SW.
     ethernet/vlan/ipv6/icmpv6(code=1)-->'icmpv6_code=0,actions=output:2'                                 OK
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(code=1)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' OK
@@ -2090,37 +2088,37 @@ dpid=0000000000000001 : Join target SW.
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2031.54kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.69kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.11kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.04kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.98kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.71kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 492.54kbps, {'in_port': 3} 1528.40kbps
+        Received unexpected throughput: {'in_port': 2} 507.79kbps, {'in_port': 3} 1512.04kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 494.12kbps, {'in_port': 3} 1537.42kbps
+        Received unexpected throughput: {'in_port': 2} 501.15kbps, {'in_port': 3} 1530.40kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 504.66kbps, {'in_port': 3} 1515.17kbps
+        Received unexpected throughput: {'in_port': 2} 514.82kbps, {'in_port': 3} 1506.18kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2031.54kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.69kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.07kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.98kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2030.76kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
