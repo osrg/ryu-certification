@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit ad86bb679f930f32e323da29bc7e5e4c87e3919c
-Merge: f3fc2a7 e6cf467
+commit 55bfd015467598dfcc232111961380d5db22ecec
+Merge: ad86bb6 46eaa22
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Jun 20 17:47:26 2014 -0700
+AuthorDate: Tue Jun 24 12:55:41 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Jun 20 17:47:26 2014 -0700
+CommitDate: Tue Jun 24 12:55:41 2014 -0700
 
-    Merge into master from pull request #175:
-    update submodules (https://github.com/floodlight/ivs/pull/175)
+    Merge into master from pull request #176:
+    initial support for bsn_vlan_counter (https://github.com/floodlight/ivs/pull/176)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
