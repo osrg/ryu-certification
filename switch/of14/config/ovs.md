@@ -8,74 +8,75 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-a74ecc2d-124a-4456-8277-d31b8a894f39
+6d422e9e-d54f-49d7-ac41-3296b92f92c2
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth21
+            Interface eth21
+        Port eth23
+            Interface eth23
         Port br0
             Interface br0
                 type: internal
-        Port eth21
-            Interface eth21
         Port eth22
             Interface eth22
-        Port eth23
-            Interface eth23
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : ade4b6f1-05a0-476b-a573-5bf0cdd9799d
-controller          : [af3f1a18-4ef4-4b28-a667-6b0d3f07adb8]
+_uuid               : c29368dd-2f3e-43c9-9533-12fa135935c5
+controller          : [b3b0418e-0d53-4c1c-b49d-76b687d812c0]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
+mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [3c468eb2-aeb2-434a-8577-840173ad146d, 518f6ac2-d55c-478b-8933-126eefcc582d, af4d7c9d-4ccf-429d-9a3b-b19af1d56ab8, e6260d4a-0845-4eac-88ab-b88de28b124b]
+ports               : [5ac1ff43-3603-4e92-8ea7-4b9168bdc46f, 5b25da81-f756-4098-ad31-72b584c69da2, 60da6450-b501-4f8a-8700-195258895ba6, cdd673c2-91d6-4e0c-a4ad-2edd770f9d8c]
 protocols           : [OpenFlow14]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : af3f1a18-4ef4-4b28-a667-6b0d3f07adb8
+_uuid               : b3b0418e-0d53-4c1c-b49d-76b687d812c0
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=25, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=977, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : af4d7c9d-4ccf-429d-9a3b-b19af1d56ab8
+_uuid               : 60da6450-b501-4f8a-8700-195258895ba6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d1edcaaf-03ee-419b-ab96-29ce3aab143b]
-name                : eth22
-
-_uuid               : 3c468eb2-aeb2-434a-8577-840173ad146d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [2adea0c9-8594-4f2d-a097-4b44d4d852f8]
+interfaces          : [a3b57d61-be93-4748-bbc3-7351d3a874c4]
 name                : br0
 
-_uuid               : 518f6ac2-d55c-478b-8933-126eefcc582d
+_uuid               : 5b25da81-f756-4098-ad31-72b584c69da2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [5cbfbfe9-1e65-4d28-917b-3afabe3bf337]
-name                : eth21
-
-_uuid               : e6260d4a-0845-4eac-88ab-b88de28b124b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [e03e833d-2877-4ec9-8ada-fa555808fbc3]
+interfaces          : [beab1ac0-d53f-4d67-8596-1156115456b3]
 name                : eth23
 
+_uuid               : cdd673c2-91d6-4e0c-a4ad-2edd770f9d8c
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [00da1786-c3af-4c63-a5ab-50c31497131d]
+name                : eth22
+
+_uuid               : 5ac1ff43-3603-4e92-8ea7-4b9168bdc46f
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [733485a3-36f4-41f0-a37d-080d90f135f7]
+name                : eth21
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : e03e833d-2877-4ec9-8ada-fa555808fbc3
+_uuid               : beab1ac0-d53f-4d67-8596-1156115456b3
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -88,13 +89,13 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=3166524580, tx_dropped=0, tx_errors=0, tx_packets=10701635}
+statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=4123473580, tx_dropped=0, tx_errors=0, tx_packets=11339601}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 2adea0c9-8594-4f2d-a097-4b44d4d852f8
+_uuid               : a3b57d61-be93-4748-bbc3-7351d3a874c4
 admin_state         : down
-ifindex             : 621
+ifindex             : 658
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -107,24 +108,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=openvswitch}
 type                : internal
 
-_uuid               : 5cbfbfe9-1e65-4d28-917b-3afabe3bf337
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=309937619, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=89085953, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : d1edcaaf-03ee-419b-ab96-29ce3aab143b
+_uuid               : 00da1786-c3af-4c63-a5ab-50c31497131d
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -137,7 +121,24 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1114180108, tx_dropped=0, tx_errors=0, tx_packets=35147592}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1524828198, tx_dropped=0, tx_errors=0, tx_packets=35423662}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 733485a3-36f4-41f0-a37d-080d90f135f7
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=1467321628, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=89863652, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -145,21 +146,23 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7b900689deb559599c535ef2c4cf72ff14bf54f9
+commit ccf4378615e93618e6ab8423fa1400b40876df91
 Author:     Simon Horman &lt;horms@verge.net.au&gt;
-AuthorDate: Mon Jun 16 11:29:29 2014 +0900
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Mon Jun 23 17:06:56 2014 -0700
+AuthorDate: Tue Jun 24 20:56:57 2014 +0900
+Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
+CommitDate: Tue Jun 24 16:02:02 2014 -0700
 
-    ofproto: Break out monitor deletion code
+    datapath: Add basic MPLS support to kernel
     
-    Break out monitor deletion code into a new function
-    flow_monitor_delete which is paramatised over the id of
-    the monitor to delete.
+    Allow datapath to recognize and extract MPLS labels into flow keys
+    and execute actions which push, pop, and set labels on packets.
     
-    This is in preparation for supporting OpenFlow1.4 flow monitor requests
-    with delete and modify commands.
+    Based heavily on work by Leo Alterman, Ravi K, Isaku Yamahata and Joe Stringer.
     
+    Cc: Ravi K &lt;rkerur@gmail.com&gt;
+    Cc: Leo Alterman &lt;lalterman@nicira.com&gt;
+    Cc: Isaku Yamahata &lt;yamahata@valinux.co.jp&gt;
+    Cc: Joe Stringer &lt;joe@wand.net.nz&gt;
     Signed-off-by: Simon Horman &lt;horms@verge.net.au&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
 </pre>
