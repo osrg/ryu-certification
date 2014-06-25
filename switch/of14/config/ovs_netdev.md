@@ -8,10 +8,12 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ab1d9736-cb02-4efe-9f8e-a55aa50b9cc7
+76c1c7dd-898a-4883-8446-d9c8b2c8e05d
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
@@ -19,98 +21,62 @@ ab1d9736-cb02-4efe-9f8e-a55aa50b9cc7
             Interface eth22
         Port eth23
             Interface eth23
-        Port eth21
-            Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 284fed94-6bd0-468b-b022-1c9df468a539
-controller          : [48a1d322-4ccd-4474-b129-5efe95a17eee]
+_uuid               : 286eee80-e4e1-4fbb-8211-abe772e9cd06
+controller          : [dd650501-1d6c-4c3e-8d70-5fa95d93912a]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [3c261ab5-64d4-4d08-87f6-719f5bab1b47, 635ff3c4-323d-44cb-8170-aabd859c0eff, f41514d4-58dc-4e00-9da9-33f7451f6700, f6e33ecd-a137-4a7e-912d-8f05162ea08c]
+ports               : [1fbcb327-8253-4b4a-9a8b-728ca5dbc201, 227a5ce3-65ac-45b7-9205-664b52ba1990, 5458797e-982e-4d98-8c7b-43d133fea0d5, f64b07e6-c8a0-49c7-a984-44527e912648]
 protocols           : [OpenFlow14]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 48a1d322-4ccd-4474-b129-5efe95a17eee
+_uuid               : dd650501-1d6c-4c3e-8d70-5fa95d93912a
 is_connected        : false
 role                : other
 status              : {last_error=Connection refused, sec_since_connect=977, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f41514d4-58dc-4e00-9da9-33f7451f6700
+_uuid               : 5458797e-982e-4d98-8c7b-43d133fea0d5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [71d0f6aa-1481-481a-9222-68018977427b]
-name                : eth23
-
-_uuid               : 635ff3c4-323d-44cb-8170-aabd859c0eff
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a121331c-5b79-47e2-90d3-9324ae819922]
+interfaces          : [239eb704-3706-4773-9e46-abf253c914c3]
 name                : eth22
 
-_uuid               : 3c261ab5-64d4-4d08-87f6-719f5bab1b47
+_uuid               : f64b07e6-c8a0-49c7-a984-44527e912648
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8318eb1e-d6c4-4186-bda1-c78d5ddfe6f5]
+interfaces          : [461d85d8-d5fa-47ae-8b2b-18dbf4428d96]
+name                : eth23
+
+_uuid               : 227a5ce3-65ac-45b7-9205-664b52ba1990
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c69bb716-414f-441e-b34e-a3bb40798e62]
 name                : br0
 
-_uuid               : f6e33ecd-a137-4a7e-912d-8f05162ea08c
+_uuid               : 1fbcb327-8253-4b4a-9a8b-728ca5dbc201
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [47b7b262-425c-4282-afbf-51fad0faf3a8]
+interfaces          : [ef0832b4-08e4-4856-9b8f-c5f2842d5ef3]
 name                : eth21
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : a121331c-5b79-47e2-90d3-9324ae819922
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2261115210, tx_dropped=0, tx_errors=0, tx_packets=35918692}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 71d0f6aa-1481-481a-9222-68018977427b
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=1616995284, tx_dropped=0, tx_errors=0, tx_packets=12531927}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 47b7b262-425c-4282-afbf-51fad0faf3a8
+_uuid               : ef0832b4-08e4-4856-9b8f-c5f2842d5ef3
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -123,14 +89,48 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3571662556, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=91277898, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=4039232540, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=91592134, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 8318eb1e-d6c4-4186-bda1-c78d5ddfe6f5
+_uuid               : 239eb704-3706-4773-9e46-abf253c914c3
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2424532546, tx_dropped=0, tx_errors=0, tx_packets=36028564}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 461d85d8-d5fa-47ae-8b2b-18dbf4428d96
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=2014570284, tx_dropped=0, tx_errors=0, tx_packets=12796977}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : c69bb716-414f-441e-b34e-a3bb40798e62
 admin_state         : down
 duplex              : full
-ifindex             : 694
+ifindex             : 702
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -148,18 +148,19 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit e381def9712019bfb667605c1f3dba5ce2266c44
-Author:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-AuthorDate: Tue Jun 24 13:00:52 2014 -0700
-Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-CommitDate: Wed Jun 25 09:28:42 2014 -0700
+commit 7b7c2a463d4a56c33bfb8466b8dc3b6de9494991
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Wed Jun 25 11:39:25 2014 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Wed Jun 25 11:39:25 2014 -0700
 
-    lib: Rename ofp to buf.
+    json: Fix parsing of strings that end with a backslash.
     
-    dpif-packet contains ofpbuf which points to packet data.  Here buf
-    is better name rather than ofp.
-    Following patch renames all remaining instances of ofp variable.
+    json_string_unescape&#40;&#41; flagged a backslash at the end of a string as an
+    error, but of course &quot;\&quot; is a valid string.  This fixes the problem.
     
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
-    Acked-by: Daniele Di Proietto &lt;ddiproietto@vmware.com&gt;
+    VMware-BZ: #1275208
+    Reported-by: Michael Hu &lt;mhu@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
