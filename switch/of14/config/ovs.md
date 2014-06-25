@@ -8,124 +8,75 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-7e8930aa-699d-41ac-a1fa-18358f978753
+2286c315-b882-46fb-8aa2-5e302a2d10ed
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth23
-            Interface eth23
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
+        Port eth23
+            Interface eth23
         Port eth22
             Interface eth22
-        Port eth21
-            Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 512a6a68-d380-4c6f-958e-d814d9f521e7
-controller          : [a40f243d-a16b-4153-a669-fcb0a1a847bd]
+_uuid               : 91798822-8797-4500-bcd0-e9f0712c481b
+controller          : [3f36d526-91d3-46e4-87a4-5b3d4bf9660f]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [05fc7bde-1fde-46eb-8e65-e18aebdebf1d, 2a43c965-189d-46c1-8b37-d74fa715f21b, 4f543ff9-0d81-4a6b-a985-26ba9836f428, f12d470d-f44a-4b64-a237-6240e3b7fd02]
+ports               : [2006320e-dbeb-47dd-9196-ffdf3e502927, 3ce1a65e-4221-4f55-a426-6ae8f7d868f5, 48e3cfb7-d063-40b2-8dff-0b1ecc9a9202, 9b0e9d21-bede-4076-9598-afc70d5791a3]
 protocols           : [OpenFlow14]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : a40f243d-a16b-4153-a669-fcb0a1a847bd
+_uuid               : 3f36d526-91d3-46e4-87a4-5b3d4bf9660f
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=977, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=977, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4f543ff9-0d81-4a6b-a985-26ba9836f428
+_uuid               : 9b0e9d21-bede-4076-9598-afc70d5791a3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [61b000bf-3046-4ce6-a35e-cd617bfe2ca6]
+interfaces          : [5885b5a5-e85e-4038-a1c7-437c5290a2e8]
 name                : eth22
 
-_uuid               : 2a43c965-189d-46c1-8b37-d74fa715f21b
+_uuid               : 3ce1a65e-4221-4f55-a426-6ae8f7d868f5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f45841de-b5cd-4f31-8a98-12443d403a48]
+interfaces          : [bcb35c35-4598-41e6-b9a1-200c6d20bb2c]
 name                : br0
 
-_uuid               : f12d470d-f44a-4b64-a237-6240e3b7fd02
+_uuid               : 2006320e-dbeb-47dd-9196-ffdf3e502927
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [35e7d293-1375-4a36-8a5f-86a2a0645285]
+interfaces          : [7b5cb863-408a-42fb-8f2e-41921bf569a7]
 name                : eth21
 
-_uuid               : 05fc7bde-1fde-46eb-8e65-e18aebdebf1d
+_uuid               : 48e3cfb7-d063-40b2-8dff-0b1ecc9a9202
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [51676af6-ca1c-4a05-8557-cc1316813b83]
+interfaces          : [f0cf18af-a319-4270-a203-25d17e11e8b6]
 name                : eth23
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 51676af6-ca1c-4a05-8557-cc1316813b83
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=225382284, tx_dropped=0, tx_errors=0, tx_packets=11604185}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : f45841de-b5cd-4f31-8a98-12443d403a48
-admin_state         : down
-ifindex             : 666
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_state          : down
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=openvswitch}
-type                : internal
-
-_uuid               : 35e7d293-1375-4a36-8a5f-86a2a0645285
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=1934918612, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=90177906, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 61b000bf-3046-4ce6-a35e-cd617bfe2ca6
+_uuid               : 5885b5a5-e85e-4038-a1c7-437c5290a2e8
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -138,7 +89,56 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1688983534, tx_dropped=0, tx_errors=0, tx_packets=35534026}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1852342370, tx_dropped=0, tx_errors=0, tx_packets=35643859}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : bcb35c35-4598-41e6-b9a1-200c6d20bb2c
+admin_state         : down
+ifindex             : 674
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_state          : down
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=openvswitch}
+type                : internal
+
+_uuid               : f0cf18af-a319-4270-a203-25d17e11e8b6
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=58500, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=39, tx_bytes=623090784, tx_dropped=0, tx_errors=0, tx_packets=11869324}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 7b5cb863-408a-42fb-8f2e-41921bf569a7
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=2402560596, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=90492190, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -146,22 +146,17 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 2b651e449bb0005403e7a0474d56be2752567f4f
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Tue Jun 24 16:39:33 2014 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Jun 24 17:12:22 2014 -0700
+commit 210ba964f5c6ed0a4696fd16344475a31c313823
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Mon Jun 23 05:33:56 2014 +0000
+Commit:     Joe Stringer &lt;joestringer@nicira.com&gt;
+CommitDate: Wed Jun 25 18:05:19 2014 +1200
 
-    dpif: When executing actions needs help, use &quot;set&quot; action to set tunnel.
+    tests: Remove extraneous parenthesis from test name.
     
-    Open vSwitch userspace is able to implement some actions that the kernel
-    doesn't support, such as modifying ARP fields.  When it does this for a
-    tunneled packet, it needs to supply the tunnel information with a &quot;set&quot;
-    action, because the Linux kernel datapath throws away tunnel information
-    supplied in the OVS_PACKET_CMD_EXECUTE metadata argument.
+    This could cause configuration failure on earlier versions of autoconf.
     
-    VMware-BZ: #1270110
-    Reported-by: Srinivas Neginhal &lt;sneginha@vmware.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Reported-by: Lin Shaopeng &lt;slin0209@gmail.com&gt;
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
