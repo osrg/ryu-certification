@@ -9,22 +9,22 @@ title: Ryu Certification - ovs
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|19|37|
+|[Action](#Action)|30|26|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(16)|&nbsp;&nbsp;&nbsp;&nbsp;(37)|
-|[set_field](#set_field)|65|105|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(65)|&nbsp;&nbsp;&nbsp;&nbsp;(105)|
-|[Match](#Match)|439|275|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|
+|[set_field](#set_field)|71|99|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(71)|&nbsp;&nbsp;&nbsp;&nbsp;(99)|
+|[Match](#Match)|450|264|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(331)|&nbsp;&nbsp;&nbsp;&nbsp;(275)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(342)|&nbsp;&nbsp;&nbsp;&nbsp;(264)|
 |[Group](#Group)|6|9|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|529|462|
+|Total|557|434|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(415)|&nbsp;&nbsp;&nbsp;&nbsp;(462)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(443)|&nbsp;&nbsp;&nbsp;&nbsp;(434)|
 
 ## <a name ='Action'>Action</a>
 
@@ -32,16 +32,16 @@ title: Ryu Certification - ovs
 |-----------|----|----|----|----|
 |[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json)|x | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) |
 |[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json)|- | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [OK](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
-|[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json)|- | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) |
+|[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json)|- | [OK](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json)|- | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) |
 |[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json)|- | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) |
 |[POP_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/18_POP_VLAN.json)|- | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) |
 |[COPY_TTL_OUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/11_COPY_TTL_OUT.json)|- | [ERROR](#069a36adbdd0739563365540be6e9b28) | [ERROR](#069a36adbdd0739563365540be6e9b28) | [](#069a36adbdd0739563365540be6e9b28) |
 |[COPY_TTL_IN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/12_COPY_TTL_IN.json)|- | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [](#4f5d77f1fc49b1b854e116048c24058d) |
-|[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json)|- | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) |
-|[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json)|- | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) |
-|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [OK](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
-|[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) |
+|[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json)|- | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) |
+|[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json)|- | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) |
+|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
+|[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json)|- | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) |
 |[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json)|- | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
 
@@ -62,8 +62,8 @@ title: Ryu Certification - ovs
 |[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/38_TUNNEL_ID.json)|- | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) |
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/06_VLAN_VID.json)|- | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) |
 |[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/07_VLAN_PCP.json)|- | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) |
-|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/34_MPLS_LABEL.json)|- | [ERROR](#206060d03aae06223b957a9540c9bfe4) | [ERROR](#206060d03aae06223b957a9540c9bfe4) | [ERROR](#206060d03aae06223b957a9540c9bfe4) |
-|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/35_MPLS_TC.json)|- | [ERROR](#a5dc6ce9e4c50889a73b16c89210662e) | [ERROR](#a5dc6ce9e4c50889a73b16c89210662e) | [ERROR](#a5dc6ce9e4c50889a73b16c89210662e) |
+|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/34_MPLS_LABEL.json)|- | [OK](#206060d03aae06223b957a9540c9bfe4) | [OK](#206060d03aae06223b957a9540c9bfe4) | [OK](#206060d03aae06223b957a9540c9bfe4) |
+|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/35_MPLS_TC.json)|- | [OK](#a5dc6ce9e4c50889a73b16c89210662e) | [OK](#a5dc6ce9e4c50889a73b16c89210662e) | [OK](#a5dc6ce9e4c50889a73b16c89210662e) |
 |[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/36_MPLS_BOS.json)|- | [ERROR](#31c5b339b919852ded458ea547ef8696) | [ERROR](#31c5b339b919852ded458ea547ef8696) | [ERROR](#31c5b339b919852ded458ea547ef8696) |
 |[PBB_ISID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/37_PBB_ISID.json)|- | [ERROR](#9e9826295e4fcce4158b54ff2f2ce35d) | [ERROR](#9e9826295e4fcce4158b54ff2f2ce35d) | [ERROR](#9e9826295e4fcce4158b54ff2f2ce35d) |
 
@@ -122,16 +122,16 @@ title: Ryu Certification - ovs
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID.json)|- | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) |
 |[VLAN_VID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID_Mask.json)|- | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) |
 |[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/07_VLAN_PCP.json)|- | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) |
-|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) |
-|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) |
-|[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) |
+|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) |
+|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) |
+|[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) |
 |[PBB_ISID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID.json)|- | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) |
 |[PBB_ISID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID_Mask.json)|- | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) |
 
 | |Required|ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|----|
 |[IP_DSCP (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv4.json)|- | [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [OK](#0445f4506456f0406f5f718b15173da7) | [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) / [ERROR](#0445f4506456f0406f5f718b15173da7) |
-|[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv4.json)|- | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) | [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) |
+|[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv4.json)|- | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) | [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) |
 |[IP_PROTO (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv4.json)|x | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) |
 |[IPV4_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC.json)|x | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) |
 |[IPV4_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC_Mask.json)|x | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) | [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) | [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) |
@@ -146,7 +146,7 @@ title: Ryu Certification - ovs
 |[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) |
 |[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
 |[IP_DSCP (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv6.json)|- | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) |
-|[IP_ECN (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv6.json)|- | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) |
+|[IP_ECN (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv6.json)|- | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) |
 |[IP_PROTO (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv6.json)|x | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) |
 |[TCP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/13_TCP_SRC_IPv6.json)|x | [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) / [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) / [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) | [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) / [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) / [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) | [ERROR](#1b3c3881ff655ce6c0adabd22fd7d08d) / [ERROR](#1b3c3881ff655ce6c0adabd22fd7d08d) / [OK](#1b3c3881ff655ce6c0adabd22fd7d08d) | [ERROR](#1b3c3881ff655ce6c0adabd22fd7d08d) / [ERROR](#1b3c3881ff655ce6c0adabd22fd7d08d) / [ERROR](#1b3c3881ff655ce6c0adabd22fd7d08d) |
 |[TCP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/14_TCP_DST_IPv6.json)|x | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [ERROR](#76468208d68bf226618b837237d6a25d) / [ERROR](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [ERROR](#76468208d68bf226618b837237d6a25d) / [ERROR](#76468208d68bf226618b837237d6a25d) / [ERROR](#76468208d68bf226618b837237d6a25d) |
@@ -219,12 +219,11 @@ title: Ryu Certification - ovs
 </pre>
 <a name="84114b5397172ba5a314008b52c36388">action: 19_PUSH_MPLS</a>
 <pre>
-    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              OK
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_mpls:0x8847,output:2'                              ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: mpls(label=2)
     ethernet/arp-->'eth_type=0x0806,actions=push_mpls:0x8847,output:2'                                   ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: mpls(ttl=64)
 </pre>
 <a name="5d818f5bd3c537066c61f0a9a71df0b3">action: 26_PUSH_PBB</a>
 <pre>
@@ -266,44 +265,27 @@ title: Ryu Certification - ovs
 </pre>
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
 <pre>
-dpid=0000000000000001 : Leave target SW.
-    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Disconnected from switch
-waiting for switches connection...
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 OK
+    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 OK
+    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      OK
 </pre>
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 <pre>
-    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
+    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
+    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          OK
 </pre>
 <a name="f08789a3180cac4973ffd9b67c942078">action: 19_PUSH_MPLS (multiple)</a>
 <pre>
     ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
     ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              OK
 </pre>
 <a name="9df48d86c13b11c4f384f69242ec75bb">action: 20_POP_MPLS</a>
 <pre>
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=pop_mpls:0x0800,output:2'                          ERROR
-        Failed to add flows: barrier request timeout.
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=pop_mpls:0x86dd,output:2'                          ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/arp-->'eth_type=0x8847,actions=pop_mpls:0x0806,output:2'                               ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=pop_mpls:0x0800,output:2'                          OK
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=pop_mpls:0x86dd,output:2'                          OK
+    ethernet/mpls/arp-->'eth_type=0x8847,actions=pop_mpls:0x0806,output:2'                               OK
 </pre>
 <a name="679a3a4770d632a7630e275449e964e3">action: 26_PUSH_PBB (multiple)</a>
 <pre>
@@ -328,7 +310,7 @@ dpid=0000000000000001 : Join target SW.
     ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         OK
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: ipv4(ttl=64,csum=56094)
     ethernet/itag/ethernet/ipv4(ttl=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
@@ -346,7 +328,7 @@ dpid=0000000000000001 : Join target SW.
     ethernet/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'                   OK
     ethernet/vlan/ipv6(hop_limit=64)/tcp-->'eth_type=0x86dd,actions=set_nw_ttl:32,output:2'              OK
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: ipv6(hop_limit=64)
     ethernet/itag/ethernet/ipv6(hop_limit=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
@@ -400,21 +382,15 @@ dpid=0000000000000001 : Join target SW.
 </pre>
 <a name="206060d03aae06223b957a9540c9bfe4">action: set_field: 34_MPLS_LABEL</a>
 <pre>
-    ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'           ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      OK
+    ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'      OK
+    ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=set_field:203->mpls_label,output:2'           OK
 </pre>
 <a name="a5dc6ce9e4c50889a73b16c89210662e">action: set_field: 35_MPLS_TC</a>
 <pre>
-    ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                         ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    OK
+    ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                    OK
+    ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=set_field:5->mpls_tc,output:2'                         OK
 </pre>
 <a name="31c5b339b919852ded458ea547ef8696">action: set_field: 36_MPLS_BOS</a>
 <pre>
@@ -448,7 +424,7 @@ dpid=0000000000000001 : Join target SW.
     ethernet/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                          OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: ipv4(tos=32,csum=56094)
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
@@ -571,7 +547,7 @@ dpid=0000000000000001 : Join target SW.
     ethernet/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'           OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: ipv6(traffic_class=32)
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
 </pre>
@@ -928,84 +904,47 @@ dpid=0000000000000001 : Join target SW.
 <a name="c1cf14c00edeb647eb396c65bac9b6b9">match: 34_MPLS_LABEL</a>
 <pre>
     ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=output:2'                                OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=output:CONTROLLER'                       ERROR
-        Failed to add flows: barrier request timeout.
-    ethernet/mpls(label=203)/ipv4/tcp-->'mpls_label=100,actions=output:2'                                OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(label=100)/ipv4/tcp-->'mpls_label=100,actions=output:CONTROLLER'                       OK
+    ethernet/mpls(label=203)/ipv4/tcp-->'mpls_label=100,actions=output:2'                                ERROR
+        Table-miss error: no change in lookup_count.
+    ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                OK
     ethernet/mpls(label=100)/ipv6/tcp-->'mpls_label=100,actions=output:CONTROLLER'                       OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(label=203)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(label=203)/ipv6/tcp-->'mpls_label=100,actions=output:2'                                OK
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:2'                                     OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:CONTROLLER'                            ERROR
-        Failed to add flows: barrier request timeout.
-    ethernet/mpls(label=203)/arp-->'mpls_label=100,actions=output:2'                                     OK
+    ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:CONTROLLER'                            OK
+    ethernet/mpls(label=203)/arp-->'mpls_label=100,actions=output:2'                                     ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="f3ff641757553b6eda3a52ade54d5e7d">match: 35_MPLS_TC</a>
 <pre>
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         OK
     ethernet/mpls(exp=3)/ipv4/tcp-->'mpls_tc=3,actions=output:CONTROLLER'                                OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(exp=5)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(exp=5)/ipv4/tcp-->'mpls_tc=3,actions=output:2'                                         OK
     ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=output:2'                                         OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=output:CONTROLLER'                                ERROR
-        Failed to add flows: barrier request timeout.
-    ethernet/mpls(exp=5)/ipv6/tcp-->'mpls_tc=3,actions=output:2'                                         OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:2'                                              ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(exp=3)/ipv6/tcp-->'mpls_tc=3,actions=output:CONTROLLER'                                OK
+    ethernet/mpls(exp=5)/ipv6/tcp-->'mpls_tc=3,actions=output:2'                                         ERROR
+        Table-miss error: no change in lookup_count.
+    ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:2'                                              OK
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:CONTROLLER'                                     OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(exp=5)/arp-->'mpls_tc=3,actions=output:2'                                              ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(exp=5)/arp-->'mpls_tc=3,actions=output:2'                                              OK
 </pre>
 <a name="1aecdbcd4d391560791f6f9ae2cb56ad">match: 36_MPLS_BOS</a>
 <pre>
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                                        OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               OK
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                            OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                                        ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                                        OK
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                            ERROR
-        Failed to add flows: barrier request timeout.
+        Table-miss error: no change in lookup_count.
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                             OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
-    ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    ERROR
-        Failed to add flows: barrier request timeout.
+    ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    OK
     ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 OK
 </pre>
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
@@ -1057,10 +996,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(tos=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
@@ -1074,13 +1011,10 @@ dpid=0000000000000001 : Join target SW.
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                                OK
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
-    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Table-miss error: increment in matched_count.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
@@ -1101,10 +1035,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=17,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
@@ -1123,10 +1055,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
@@ -1145,10 +1075,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
@@ -1167,10 +1095,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
@@ -1189,10 +1115,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
@@ -1211,10 +1135,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/tcp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/tcp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
@@ -1233,10 +1155,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/tcp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/tcp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
@@ -1255,10 +1175,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/udp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/udp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
@@ -1277,10 +1195,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/udp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
@@ -1299,10 +1215,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/sctp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
@@ -1321,10 +1235,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/sctp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
@@ -1343,10 +1255,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/icmp(type=3)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/icmp(type=3)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
@@ -1365,10 +1275,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/icmp(code=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4/icmp(code=1)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
@@ -1387,10 +1295,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(traffic_class=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
@@ -1404,13 +1310,10 @@ dpid=0000000000000001 : Join target SW.
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:2'                               OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                      OK
     ethernet/vlan/ipv6(traffic_class=65)/tcp-->'ip_ecn=0,actions=output:2'                               OK
-    ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+    ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Table-miss error: increment in matched_count.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
@@ -1431,10 +1334,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=17,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
@@ -1453,10 +1354,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/tcp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
@@ -1475,10 +1374,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/tcp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
@@ -1497,10 +1394,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/udp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/udp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
@@ -1519,10 +1414,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/udp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
@@ -1541,10 +1434,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/sctp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
@@ -1563,10 +1454,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/sctp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
@@ -1585,10 +1474,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
@@ -1607,10 +1494,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
@@ -1629,10 +1514,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
@@ -1651,10 +1534,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
@@ -1673,10 +1554,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
@@ -1695,10 +1574,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
@@ -1717,10 +1594,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(type=135)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(type=128)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(type=128)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(type=135)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
@@ -1739,10 +1614,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(code=1)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(code=1)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
@@ -1761,10 +1634,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
@@ -1783,10 +1654,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' ERROR
@@ -1805,10 +1674,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' ERROR
@@ -1881,10 +1748,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(opcode=2)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(opcode=2)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
@@ -1903,10 +1768,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
@@ -1925,10 +1788,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
@@ -1947,10 +1808,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
@@ -1969,10 +1828,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
@@ -1991,10 +1848,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
@@ -2013,10 +1868,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
@@ -2035,10 +1888,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
@@ -2057,10 +1908,8 @@ dpid=0000000000000001 : Join target SW.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
-dpid=0000000000000001 : Leave target SW.
-dpid=0000000000000001 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
-        Failed to add flows: barrier request timeout.
+        Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
@@ -2091,22 +1940,22 @@ dpid=0000000000000001 : Join target SW.
         Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2031.54kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.90kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.99kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2029.98kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 496.06kbps, {'in_port': 3} 1524.88kbps
+        Received unexpected throughput: {'in_port': 2} 504.66kbps, {'in_port': 3} 1515.16kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 508.57kbps, {'in_port': 3} 1522.97kbps
+        Received unexpected throughput: {'in_port': 2} 522.63kbps, {'in_port': 3} 1508.91kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 509.34kbps, {'in_port': 3} 1511.23kbps
+        Received unexpected throughput: {'in_port': 2} 523.02kbps, {'in_port': 3} 1497.58kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
