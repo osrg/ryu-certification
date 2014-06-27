@@ -17,14 +17,14 @@ title: Ryu Certification - ivs
 |[Match](#Match)|323|391|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(215)|&nbsp;&nbsp;&nbsp;&nbsp;(391)|
-|[Group](#Group)|4|11|
+|[Group](#Group)|0|15|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(4)|&nbsp;&nbsp;&nbsp;&nbsp;(8)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|390|601|
+|Total|386|605|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(279)|&nbsp;&nbsp;&nbsp;&nbsp;(598)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(275)|&nbsp;&nbsp;&nbsp;&nbsp;(602)|
 
 ## <a name ='Action'>Action</a>
 
@@ -182,8 +182,8 @@ title: Ryu Certification - ivs
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
 |[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) |
-|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
-|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [OK](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
 |[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
 |[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
 
@@ -417,20 +417,20 @@ title: Ryu Certification - ivs
 <a name="31c5b339b919852ded458ea547ef8696">action: set_field: 36_MPLS_BOS</a>
 <pre>
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=set_field:0->mpls_bos,output:2'                       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
 </pre>
 <a name="9e9826295e4fcce4158b54ff2f2ce35d">action: set_field: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
+        Added incorrect flows:
 </pre>
 <a name="ce97749e537c30572fe41bc5f97f525c">action: set_field: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -1008,65 +1008,65 @@ title: Ryu Certification - ivs
 <a name="1aecdbcd4d391560791f6f9ae2cb56ad">match: 36_MPLS_BOS</a>
 <pre>
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv4/tcp-->'mpls_bos=1,actions=output:2'                            ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                                        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:CONTROLLER'                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                            ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                             ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
     ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34887}))
+        Added incorrect flows:
 </pre>
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:CONTROLLER'      ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
 </pre>
 <a name="a0f136634ba501a112c0bb437349a478">match: 37_PBB_ISID (Mask)</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 35047}))
+        Added incorrect flows:
 </pre>
 <a name="0445f4506456f0406f5f718b15173da7">match: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -1832,17 +1832,17 @@ title: Ryu Certification - ivs
 <a name="9ccda48c1d58edb983f32ff8b3eb1407">match: 39_IPV6_EXTHDR</a>
 <pre>
     ethernet/ipv6(ext_hdrs=[hop_opts,auth]/tcp-->'ipv6_exthdr=68,actions=output:2'                       ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'             ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                                ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:2'                 ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=68,actions=output:CONTROLLER'        ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                           ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
@@ -1859,17 +1859,17 @@ title: Ryu Certification - ivs
 <a name="8b620e80dc70eee35980ad992628cbb5">match: 39_IPV6_EXTHDR (Mask)</a>
 <pre>
     ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'          ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/ipv6/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'                                    ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'     ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'                               ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'eth_type': 34525}))
+        Added incorrect flows:
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x05, code=0x00]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
@@ -2084,57 +2084,61 @@ title: Ryu Certification - ivs
 <pre>
 ..........
     2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
-        Received unexpected throughput: {'in_port': 2} 1794.83kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1794.83kbps
 ..........
     2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.81kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1794.27kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1794.80kbps
+        Received unexpected throughput: {'in_port': 2} 1794.01kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
 <pre>
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 3} 897.61kbps
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 897.22kbps
 ..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 893.31kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
-    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 2} 887.46kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 895.27kbps, {'in_port': 3} 898.78kbps
+        Received unexpected throughput: {'in_port': 3} 883.55kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 3} 895.27kbps
+        Received unexpected throughput: {'in_port': 3} 885.89kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 930.03kbps, {'in_port': 3} 896.83kbps
+        Received unexpected throughput: {'in_port': 2} 924.95kbps, {'in_port': 3} 900.74kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 914.39kbps, {'in_port': 3} 911.26kbps
+        Received unexpected throughput: {'in_port': 2} 919.45kbps, {'in_port': 3} 906.17kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 885.89kbps, {'in_port': 3} 938.23kbps
+        Received unexpected throughput: {'in_port': 2} 910.50kbps, {'in_port': 3} 913.63kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 919.87kbps, {'in_port': 3} 906.59kbps
+        Received unexpected throughput: {'in_port': 2} 885.89kbps, {'in_port': 3} 908.16kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 900.73kbps, {'in_port': 3} 893.31kbps
+        Received unexpected throughput: {'in_port': 2} 872.61kbps, {'in_port': 3} 921.05kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 928.47kbps, {'in_port': 3} 898.00kbps
+        Received unexpected throughput: {'in_port': 2} 907.77kbps, {'in_port': 3} 887.06kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
