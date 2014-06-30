@@ -14,15 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d174464dcc414510990e38426e2e274a25330902
-Author:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Sun May 4 11:03:43 2014 -0300
-Commit:     Eder Leão Fernandes &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Sun May 4 11:03:43 2014 -0300
+commit b51dfc9a0b4cf8bc99362e9f22a1c7ec4cbf900e
+Merge: 53c70f9 a40a1c2
+Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
+AuthorDate: Sat Jun 28 00:32:13 2014 -0300
+Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
+CommitDate: Sat Jun 28 00:32:13 2014 -0300
 
-    Update README.md
+    Merge pull request #106 from cloudysunny14/fix_remark
     
-    Update contact information.
+    Conforms to the specifications of the OpenFlow 1.3.1
 </pre>
 
 # Modified test scenario for switch restrictions
