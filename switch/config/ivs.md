@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 73205fb4c836b10930ea7b23e1b5c0e8b3f59ef6
-Merge: 1981a30 a094fdc
+commit 7bd61bf42985bde78150a9af05ba03ab33c42679
+Merge: 73205fb fd5f943
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Jul 3 15:14:49 2014 -0700
+AuthorDate: Mon Jul 7 14:37:14 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Jul 3 15:14:49 2014 -0700
+CommitDate: Mon Jul 7 14:37:14 2014 -0700
 
-    Merge into master from pull request #183:
-    support port counters in ivs (https://github.com/floodlight/ivs/pull/183)
+    Merge into master from pull request #182:
+    Incremental action translation (https://github.com/floodlight/ivs/pull/182)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
