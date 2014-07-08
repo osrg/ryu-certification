@@ -1041,7 +1041,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                     OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'              OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'     ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='83:ab:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='41:af:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' OK
@@ -1602,7 +1602,7 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='c6:17:2c:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='7c:b1:2d:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' OK
