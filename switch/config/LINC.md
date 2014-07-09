@@ -69,16 +69,13 @@ CommitDate: Fri Jun 6 13:45:07 2014 +0200
     Use new ofp_client API for updating connection config via OF-Config
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 79254d0856ba87ac6f7b656fcd9404f7092905c4
-Merge: 1125617 44dc72c
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Jun 6 13:47:48 2014 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Jun 6 13:47:48 2014 +0200
+commit c9c0ee947cb76b12dec7dccf17b9ef43ecd6bf28
+Author:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
+AuthorDate: Wed Jul 9 17:31:29 2014 +0100
+Commit:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
+CommitDate: Wed Jul 9 17:31:29 2014 +0100
 
-    Merge pull request #74 from FlowForwarding/of-config-setup-controller
-    
-    Implement API for externally configuring connection to a contoller
+    version 17 support
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
