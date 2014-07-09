@@ -57,28 +57,22 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 94cd1b174734127a08852ae710e5595930bc32cb
-Merge: 6ed40cb 53b421b
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Jun 6 13:45:07 2014 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Jun 6 13:45:07 2014 +0200
+commit d97c2710a688b100c9d9c830054fbc1f45dcb7e5
+Author:     ruanpienaar &lt;ruan800@gmail.com&gt;
+AuthorDate: Wed Jul 9 18:14:02 2014 +0100
+Commit:     ruanpienaar &lt;ruan800@gmail.com&gt;
+CommitDate: Wed Jul 9 18:14:02 2014 +0100
 
-    Merge pull request #330 from FlowForwarding/of-config-setup-controller
-    
-    Use new ofp_client API for updating connection config via OF-Config
+    17 support
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 79254d0856ba87ac6f7b656fcd9404f7092905c4
-Merge: 1125617 44dc72c
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Jun 6 13:47:48 2014 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Jun 6 13:47:48 2014 +0200
+commit b890be5146ba32430b85f5915eb0bdd4f2cbb55d
+Author:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
+AuthorDate: Wed Jul 9 18:08:09 2014 +0100
+Commit:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
+CommitDate: Wed Jul 9 18:08:09 2014 +0100
 
-    Merge pull request #74 from FlowForwarding/of-config-setup-controller
-    
-    Implement API for externally configuring connection to a contoller
+    version 17 support
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
