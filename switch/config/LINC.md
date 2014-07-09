@@ -57,23 +57,20 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4
 
 $ git log -1 --pretty=fuller
-commit 94cd1b174734127a08852ae710e5595930bc32cb
-Merge: 6ed40cb 53b421b
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Jun 6 13:45:07 2014 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Jun 6 13:45:07 2014 +0200
+commit d97c2710a688b100c9d9c830054fbc1f45dcb7e5
+Author:     ruanpienaar &lt;ruan800@gmail.com&gt;
+AuthorDate: Wed Jul 9 18:14:02 2014 +0100
+Commit:     ruanpienaar &lt;ruan800@gmail.com&gt;
+CommitDate: Wed Jul 9 18:14:02 2014 +0100
 
-    Merge pull request #330 from FlowForwarding/of-config-setup-controller
-    
-    Use new ofp_client API for updating connection config via OF-Config
+    17 support
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit c9c0ee947cb76b12dec7dccf17b9ef43ecd6bf28
+commit b890be5146ba32430b85f5915eb0bdd4f2cbb55d
 Author:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-AuthorDate: Wed Jul 9 17:31:29 2014 +0100
+AuthorDate: Wed Jul 9 18:08:09 2014 +0100
 Commit:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-CommitDate: Wed Jul 9 17:31:29 2014 +0100
+CommitDate: Wed Jul 9 18:08:09 2014 +0100
 
     version 17 support
 
