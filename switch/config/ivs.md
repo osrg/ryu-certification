@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3a2b1e56207d77667368ad0cff84f832d9084bfa
-Merge: 7bd61bf 3061705
+commit 32970089818b3d38f3a0e2725ea82e7c24a89ece
+Merge: 3a2b1e5 f0115c5
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Jul 7 18:01:27 2014 -0700
+AuthorDate: Tue Jul 8 16:45:29 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Jul 7 18:01:27 2014 -0700
+CommitDate: Tue Jul 8 16:45:29 2014 -0700
 
-    Merge into master from pull request #185:
-    add support for unicast/multicast/broadcast port counters (https://github.com/floodlight/ivs/pull/185)
+    Merge into master from pull request #186:
+    Remove extra level of queueing for packet-ins (https://github.com/floodlight/ivs/pull/186)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
