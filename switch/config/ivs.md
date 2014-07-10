@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 32970089818b3d38f3a0e2725ea82e7c24a89ece
-Merge: 3a2b1e5 f0115c5
+commit af2daff994365e8a34bfac8ed35a3cf3b2635a88
+Merge: 3297008 a76ba84
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Jul 8 16:45:29 2014 -0700
+AuthorDate: Wed Jul 9 23:38:41 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Jul 8 16:45:29 2014 -0700
+CommitDate: Wed Jul 9 23:38:41 2014 -0700
 
-    Merge into master from pull request #186:
-    Remove extra level of queueing for packet-ins (https://github.com/floodlight/ivs/pull/186)
+    Merge into master from pull request #188:
+    bump IVS version to 0.5 (https://github.com/floodlight/ivs/pull/188)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
