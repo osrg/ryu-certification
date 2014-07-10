@@ -14,13 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b8e6a5592ce9d1dfb6dcab5168b8e159fc436828
+commit 2836522c1fdd2d5a0b759935c8b914abf41af441
 Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
-AuthorDate: Wed Feb 20 18:10:12 2013 -0800
+AuthorDate: Thu Mar 7 18:23:20 2013 -0800
 Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Mon Jul 7 23:57:02 2014 -0300
+CommitDate: Wed Jul 9 21:36:11 2014 -0300
 
-    EXT-258: Implement port liveness, as clarified by EXT-258
+    Validate table ids in feature requests and generate error.
 </pre>
 
 # Modified test scenario for switch restrictions
