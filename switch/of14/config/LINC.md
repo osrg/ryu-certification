@@ -66,13 +66,13 @@ CommitDate: Wed Jul 9 18:14:02 2014 +0100
     17 support
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit b890be5146ba32430b85f5915eb0bdd4f2cbb55d
+commit 2da25f4ebea75d44dda4cf98f5412b1b3cafc57d
 Author:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-AuthorDate: Wed Jul 9 18:08:09 2014 +0100
+AuthorDate: Fri Jul 11 14:20:16 2014 +0100
 Commit:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-CommitDate: Wed Jul 9 18:08:09 2014 +0100
+CommitDate: Fri Jul 11 14:20:16 2014 +0100
 
-    version 17 support
+    fixed parse transform issue
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
