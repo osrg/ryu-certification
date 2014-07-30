@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 2c458fb872ab1039dd42e347dfdb766452615922
-Merge: 6b091b7 f67a637
+commit fcbadfc322f8df56a684b58ceb536f179b63b5b4
+Merge: 820e959 f88a15c
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Jul 21 18:33:36 2014 -0700
+AuthorDate: Tue Jul 29 16:12:33 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Jul 21 18:33:36 2014 -0700
+CommitDate: Tue Jul 29 16:12:33 2014 -0700
 
-    Merge into master from pull request #190:
-    fix pipeline_standard memory leak and update OFTest lists (https://github.com/floodlight/ivs/pull/190)
+    Merge into master from pull request #193:
+    add IVS wrapper scripts for perf and massif (https://github.com/floodlight/ivs/pull/193)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
