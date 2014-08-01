@@ -14,13 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 2836522c1fdd2d5a0b759935c8b914abf41af441
-Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
-AuthorDate: Thu Mar 7 18:23:20 2013 -0800
+commit a54476ec91e929051c2a3789c8beb43264a0dfae
+Author:     ederlf &lt;ederlf@cpqd.com.br&gt;
+AuthorDate: Tue Jul 29 23:18:05 2014 -0300
 Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Wed Jul 9 21:36:11 2014 -0300
+CommitDate: Tue Jul 29 23:18:05 2014 -0300
 
-    Validate table ids in feature requests and generate error.
+    Fix lots of ugly warnings
 </pre>
 
 # Modified test scenario for switch restrictions
