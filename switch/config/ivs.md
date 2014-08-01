@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit fcbadfc322f8df56a684b58ceb536f179b63b5b4
-Merge: 820e959 f88a15c
+commit 995e52de920d54f1da48994bee05bdc3372369c1
+Merge: fcbadfc 204c308
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Jul 29 16:12:33 2014 -0700
+AuthorDate: Wed Jul 30 10:49:37 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Jul 29 16:12:33 2014 -0700
+CommitDate: Wed Jul 30 10:49:37 2014 -0700
 
-    Merge into master from pull request #193:
-    add IVS wrapper scripts for perf and massif (https://github.com/floodlight/ivs/pull/193)
+    Merge into master from pull request #194:
+    ivs-ctl: add dump-flows command (https://github.com/floodlight/ivs/pull/194)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
