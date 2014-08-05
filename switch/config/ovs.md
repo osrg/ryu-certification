@@ -8,92 +8,75 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-00a47f6b-41a7-49e1-a6af-73d0bdcb5bdb
+e46c6766-da36-4769-a1f3-ac83dfe3206f
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth22
-            Interface eth22
         Port eth23
             Interface eth23
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
-        Port eth21
-            Interface eth21
+        Port eth22
+            Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : c67f09e7-169f-4a70-a66e-ddf79077e215
-controller          : [5fe116e8-9ed3-482e-bf99-c4e8f6f115eb]
+_uuid               : 7af9b4d4-4108-45b3-bab4-9868c128a0dc
+controller          : [b6139016-94f4-460d-a4e7-8a4004e73f24]
 datapath_id         : 0000000000000001
 datapath_type       : 
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [1b628827-c831-4cb3-98ee-68a2134a1614, 30970bd5-7d21-4313-95ce-6fc06fdb3046, a696e0d1-1572-439b-88bb-b2d812d0964e, b973b075-396a-4d8e-a4d3-c68c43536c1c]
+ports               : [666c5190-3e16-47d8-9f59-aacea6ab4331, 780a2a2c-55a3-4aae-9466-d5df232e95e6, dc05fe81-b6c6-47fb-a33e-1e5c135546b1, e9a733b7-e855-41fd-ad21-13aeec8c89e1]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5fe116e8-9ed3-482e-bf99-c4e8f6f115eb
+_uuid               : b6139016-94f4-460d-a4e7-8a4004e73f24
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=662, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=812, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : b973b075-396a-4d8e-a4d3-c68c43536c1c
+_uuid               : 666c5190-3e16-47d8-9f59-aacea6ab4331
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4c14ac0a-6219-41f4-b303-93b1ef23e134]
-name                : eth21
-
-_uuid               : a696e0d1-1572-439b-88bb-b2d812d0964e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1fcefea2-4a7a-42c6-83c8-b405ec5cd86f]
-name                : br0
-
-_uuid               : 30970bd5-7d21-4313-95ce-6fc06fdb3046
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [830cc0b1-14f2-4919-9a60-0e7f740a3177]
+interfaces          : [5a5fd855-2040-498e-bd25-370707ec7232]
 name                : eth23
 
-_uuid               : 1b628827-c831-4cb3-98ee-68a2134a1614
+_uuid               : 780a2a2c-55a3-4aae-9466-d5df232e95e6
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [41c07f9a-1800-40a2-ad6a-2cdfe002d3cd]
+interfaces          : [00ed8489-5616-4d83-af58-c933d9ece401]
+name                : eth21
+
+_uuid               : dc05fe81-b6c6-47fb-a33e-1e5c135546b1
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8d9efdcb-3ac3-4e51-bf3a-50596fe86c85]
+name                : br0
+
+_uuid               : e9a733b7-e855-41fd-ad21-13aeec8c89e1
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b0364fc1-94a4-4668-b513-67031133e477]
 name                : eth22
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 830cc0b1-14f2-4919-9a60-0e7f740a3177
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=177229500, tx_dropped=0, tx_errors=0, tx_packets=118153}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 41c07f9a-1800-40a2-ad6a-2cdfe002d3cd
+_uuid               : b0364fc1-94a4-4668-b513-67031133e477
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -106,11 +89,28 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2942779720, tx_dropped=0, tx_errors=0, tx_packets=1962453}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=738637788, tx_dropped=0, tx_errors=0, tx_packets=49177626}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 4c14ac0a-6219-41f4-b303-93b1ef23e134
+_uuid               : 5a5fd855-2040-498e-bd25-370707ec7232
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1505524500, tx_dropped=0, tx_errors=0, tx_packets=1003683}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 00ed8489-5616-4d83-af58-c933d9ece401
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -123,13 +123,13 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1534235110, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=3887588, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=671621707, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=83504676, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 1fcefea2-4a7a-42c6-83c8-b405ec5cd86f
+_uuid               : 8d9efdcb-3ac3-4e51-bf3a-50596fe86c85
 admin_state         : down
-ifindex             : 30
+ifindex             : 53
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -146,16 +146,24 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 27f57736bf65cc3c6f974cd173a8404496d79902
-Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
-AuthorDate: Wed Jun 25 14:02:45 2014 +0000
-Commit:     Joe Stringer &lt;joestringer@nicira.com&gt;
-CommitDate: Mon Jun 30 12:23:36 2014 +1200
+commit 222820c67cea17ed76024364dcdd08778d1232fc
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Tue Jul 29 09:54:17 2014 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Mon Aug 4 14:32:55 2014 -0700
 
-    udpif: Add command to wait for revalidation.
+    tests: Turn off appctl poll_loop logging for long output.
     
-    This allows us to remove some of the sleeps from the testsuite.
+    One of the VMware internal autobuilder builds failed due to extraneous
+    logging in these tests of the form:
     
-    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+       2014-07-28T21:11:07Z|00001|poll_loop|INFO|wakeup due to [POLLIN] on fd 3
+       &#40;...&#41; at lib/stream-fd-unix.c:124 &#40;93% CPU usage&#41;
+    
+    I think this must be because these tests have tons of output and so on a
+    loaded machine it can take some CPU to pull it down.  We don't want to fail
+    for that reason, so disable this logging.
+    
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Ansis Atteka &lt;aatteka@nicira.com&gt;
 </pre>
