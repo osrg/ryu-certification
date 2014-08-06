@@ -14,17 +14,17 @@ title: Ryu Certification - ovs netdev
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(31)|&nbsp;&nbsp;&nbsp;&nbsp;(22)|
 |[set_field](#set_field)|96|74|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(96)|&nbsp;&nbsp;&nbsp;&nbsp;(74)|
-|[Match](#Match)|537|177|
+|[Match](#Match)|534|180|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(429)|&nbsp;&nbsp;&nbsp;&nbsp;(177)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(426)|&nbsp;&nbsp;&nbsp;&nbsp;(180)|
 |[Group](#Group)|6|9|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|673|330|
+|Total|670|333|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(559)|&nbsp;&nbsp;&nbsp;&nbsp;(318)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(556)|&nbsp;&nbsp;&nbsp;&nbsp;(321)|
 
 ## <a name ='Action'>Action</a>
 
@@ -122,9 +122,9 @@ title: Ryu Certification - ovs netdev
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID.json)|- | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) | [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) / [OK](#6cb722939537192104e3dbc2bc225b9a) |
 |[VLAN_VID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/06_VLAN_VID_Mask.json)|- | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) | [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) / [OK](#f984e51f48e954737fa86b294c96fdd0) |
 |[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/07_VLAN_PCP.json)|- | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) | [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) / [OK](#1a4fe62fff1c9f89eb8ff9a3192add56) |
-|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) |
-|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) |
-|[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) |
+|[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [ERROR](#c1cf14c00edeb647eb396c65bac9b6b9) |
+|[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [ERROR](#f3ff641757553b6eda3a52ade54d5e7d) |
+|[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [ERROR](#1aecdbcd4d391560791f6f9ae2cb56ad) |
 |[PBB_ISID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID.json)|- | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) |
 |[PBB_ISID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID_Mask.json)|- | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) |
 
@@ -883,7 +883,8 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:2'                                     OK
     ethernet/mpls(label=100)/arp-->'mpls_label=100,actions=output:CONTROLLER'                            OK
-    ethernet/mpls(label=203)/arp-->'mpls_label=100,actions=output:2'                                     OK
+    ethernet/mpls(label=203)/arp-->'mpls_label=100,actions=output:2'                                     ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="f3ff641757553b6eda3a52ade54d5e7d">match: 35_MPLS_TC</a>
 <pre>
@@ -896,7 +897,8 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:2'                                              OK
     ethernet/mpls(exp=3)/arp-->'mpls_tc=3,actions=output:CONTROLLER'                                     OK
-    ethernet/mpls(exp=5)/arp-->'mpls_tc=3,actions=output:2'                                              OK
+    ethernet/mpls(exp=5)/arp-->'mpls_tc=3,actions=output:2'                                              ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="1aecdbcd4d391560791f6f9ae2cb56ad">match: 36_MPLS_BOS</a>
 <pre>
@@ -909,7 +911,8 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                             OK
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    OK
-    ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 OK
+    ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 ERROR
+        Table-miss error: no change in lookup_count.
 </pre>
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
@@ -1824,34 +1827,34 @@ title: Ryu Certification - ovs netdev
         Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.88kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 497.62kbps, {'in_port': 3} 1521.37kbps
+        Received unexpected throughput: {'in_port': 2} 489.43kbps, {'in_port': 3} 1528.83kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 527.32kbps, {'in_port': 3} 1503.44kbps
+        Received unexpected throughput: {'in_port': 2} 513.24kbps, {'in_port': 3} 1517.45kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 510.91kbps, {'in_port': 3} 1508.91kbps
+        Received unexpected throughput: {'in_port': 2} 515.97kbps, {'in_port': 3} 1502.22kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.05kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.51kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.08kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.09kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 2000.29kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
@@ -1909,54 +1912,54 @@ title: Ryu Certification - ovs netdev
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
-    2Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
 </pre>
 <a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
 <pre>
-    20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
 </pre>
 <a name="c915561eabc278589470d2187cb110f2">meter: 02_DSCP_REMARK_00_KBPS_02_100M</a>
 <pre>
-    200Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    200Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
+    200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
-    200pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    200pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
 </pre>
 <a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
 <pre>
-    2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
 </pre>
 <a name="638dd569a77001f62f3f1f9f267daea8">meter: 02_DSCP_REMARK_01_PKTPS_02_10000</a>
 <pre>
-    20000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
-    20000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
+    20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
         Failed to add meters: OFPErrorMsg[type=0x0c, code=0x0a]
