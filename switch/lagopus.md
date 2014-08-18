@@ -14,17 +14,17 @@ title: Ryu Certification - lagopus
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(53)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[set_field](#set_field)|161|9|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(161)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
-|[Match](#Match)|702|0|
+|[Match](#Match)|714|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(594)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|[Group](#Group)|3|12|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(606)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
-|[Meter](#Meter)|29|6|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(29)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
-|Total|952|27|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|[Meter](#Meter)|7|29|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(7)|&nbsp;&nbsp;&nbsp;&nbsp;(29)|
+|Total|953|38|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(837)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(839)|&nbsp;&nbsp;&nbsp;&nbsp;(38)|
 
 ## <a name ='Action'>Action</a>
 
@@ -159,6 +159,7 @@ title: Ryu Certification - lagopus
 |[IPV6_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST.json)|x | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) |
 |[IPV6_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST_Mask.json)|x | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) |
 |[IPV6_FLABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL.json)|- | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) |
+|[IPV6_FLABEL (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL_Mask.json)|- | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) |
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/29_ICMPV6_TYPE.json)|- | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/30_ICMPV6_CODE.json)|- | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) |
 |[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) |
@@ -181,27 +182,27 @@ title: Ryu Certification - lagopus
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
 |[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) | [OK](#d6ac8fa11117c68ef8cfac688fe04d05) |
-|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) |
-|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
-|[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
-|[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [OK](#890f325c255a32a6aace26e08a960250) | [OK](#890f325c255a32a6aace26e08a960250) | [OK](#890f325c255a32a6aace26e08a960250) |
+|[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) | [OK](#1677965b6b2cffd3c4d47b52b7629ca0) |
+|[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [OK](#d52d0a95caf9ce38f77620354812c83c) | [OK](#d52d0a95caf9ce38f77620354812c83c) | [OK](#d52d0a95caf9ce38f77620354812c83c) |
 
 ## <a name ='Meter'>Meter</a>
 
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
-|[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) |
-|[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) |
-|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
-|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
-|[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
-|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) |
-|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
-|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
-|[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
-|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [OK](#50fc5b625263a400208fee338d37d088) | [OK](#50fc5b625263a400208fee338d37d088) | [OK](#50fc5b625263a400208fee338d37d088) |
-|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [OK](#a90e19ea457ae862fc5292fca16226bb) | [OK](#a90e19ea457ae862fc5292fca16226bb) | [OK](#a90e19ea457ae862fc5292fca16226bb) |
-|[DSCP_REMARK_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_02_10000.json)|- | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [ERROR](#638dd569a77001f62f3f1f9f267daea8) |
+|[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) | [ERROR](#9a2ce1d3a56a898592257439f05d22bf) |
+|[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) |
+|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) |
+|[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
+|[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) |
+|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
+|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
+|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
+|[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [OK](#c915561eabc278589470d2187cb110f2) |
+|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [OK](#50fc5b625263a400208fee338d37d088) |
+|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [OK](#a90e19ea457ae862fc5292fca16226bb) |
+|[DSCP_REMARK_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_02_10000.json)|- | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [ERROR](#638dd569a77001f62f3f1f9f267daea8) | [OK](#638dd569a77001f62f3f1f9f267daea8) |
 
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
@@ -678,15 +679,15 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="5ed9ace27a5ca3fbb2c38d1b7d629927">match: 03_ETH_DST (Mask)</a>
 <pre>
-    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
-    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:CONTROLLER' OK
-    ethernet(dst='ba:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=0xffffffffff00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv4/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/ipv6/tcp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
+    ethernet(dst='22:22:22:22:22:22')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:CONTROLLER' OK
+    ethernet(dst='ba:bb:bb:bb:bb:bb')/arp-->'eth_dst=22:22:22:22:22:00(mask=ff:ff:ff:ff:ff:00),actions=output:2' OK
 </pre>
 <a name="53d2200d33a46dfb67a5beb2a7eb4735">match: 04_ETH_SRC</a>
 <pre>
@@ -702,15 +703,15 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="f1bb7ed0d6f1c34334a73e3a23554482">match: 04_ETH_SRC (Mask)</a>
 <pre>
-    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
-    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:CONTROLLER' OK
-    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=0x00ffffffffff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+    ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet(src='aa:aa:aa:aa:aa:aa')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
 </pre>
 <a name="4f6c66821f05f92d7e67e9b89486b9df">match: 05_ETH_TYPE</a>
 <pre>
@@ -906,18 +907,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="fd152ac5dc105cba865d2181e72ebbc9">match: 11_IPV4_SRC (Mask)</a>
 <pre>
-    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2'   OK
-    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2'     OK
-    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=0xffffff00),actions=output:2' OK
+    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2'  OK
+    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
 </pre>
 <a name="fa9569007b6a7d5bfc410b623ba7c85b">match: 12_IPV4_DST</a>
 <pre>
@@ -936,18 +937,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="73178bbfef71338f9e1819ceaa7b2542">match: 12_IPV4_DST (Mask)</a>
 <pre>
-    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2'   OK
-    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2'     OK
-    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
+    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2'  OK
+    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
 </pre>
 <a name="7b14766f93cc3b890182cbcc302a049d">match: 13_TCP_SRC (IPv4)</a>
 <pre>
@@ -1221,18 +1222,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="2d311c3547bd5be21d19374ba63f2062">match: 26_IPV6_SRC (Mask)</a>
 <pre>
-    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
-    ethernet/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
-    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=0xffffffffffffffffffffffffffff0000),actions=output:2' OK
+    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' OK
+    ethernet/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
 </pre>
 <a name="5f6f38ef2d6379737bbbbfbe7485849f">match: 27_IPV6_DST</a>
 <pre>
@@ -1251,18 +1252,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="c665e95a0a2e29b356d008fbae1c9a6a">match: 27_IPV6_DST (Mask)</a>
 <pre>
-    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' OK
-    ethernet/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' OK
-    ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
-    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0x0000ffffffffffffffffffffffffffff),actions=output:2' OK
+    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' OK
+    ethernet/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6(dst='b0::b0')/tcp-->'ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
 </pre>
 <a name="4d0f792bc907702cfb20f47709320f71">match: 28_IPV6_FLABEL</a>
 <pre>
@@ -1278,6 +1279,21 @@ title: Ryu Certification - lagopus
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' OK
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' OK
+</pre>
+<a name="310fca49f5f48423d70d71be9df80b5f">match: 28_IPV6_FLABEL (Mask)</a>
+<pre>
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER'      OK
+    ethernet/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/vlan/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
 </pre>
 <a name="cdd8e795bba586eaa11e89ba972af7a5">match: 29_ICMPV6_TYPE</a>
 <pre>
@@ -1416,18 +1432,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="8b423ccb4a215a657c4b18d7087c3e9b">match: 22_ARP_SPA (Mask)</a>
 <pre>
-    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'      OK
-    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'        OK
-    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2'   OK
-    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
-    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=0xffffff00),actions=output:2' OK
+    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2'   OK
+    ethernet/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2'     OK
+    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(src_ip='10.10.10.10')-->'arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+    ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
 </pre>
 <a name="c41fa0016ba511a7001612efd1aaa4b9">match: 23_ARP_TPA</a>
 <pre>
@@ -1446,18 +1462,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="3ce87300b15914cf0b0b21f7852a241d">match: 23_ARP_TPA (Mask)</a>
 <pre>
-    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'      OK
-    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'        OK
-    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2'   OK
-    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=0xffff00ff),actions=output:2' OK
+    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2'   OK
+    ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2'     OK
+    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
+    ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
 </pre>
 <a name="d211b84ce9283a0410e3d536c1e6fab7">match: 24_ARP_SHA</a>
 <pre>
@@ -1476,18 +1492,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="56613c1f76b6b71b413bfa085a5b83b8">match: 24_ARP_SHA (Mask)</a>
 <pre>
-    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' OK
-    ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' OK
-    ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=0xffffff00ffff),actions=output:2' OK
+    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
+    ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
 </pre>
 <a name="316b7ce7df18479f2b207aa95ff48a62">match: 25_ARP_THA</a>
 <pre>
@@ -1506,18 +1522,18 @@ title: Ryu Certification - lagopus
 </pre>
 <a name="61b44fcb7c6b2798045626c8bc52f583">match: 25_ARP_THA (Mask)</a>
 <pre>
-    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' OK
-    ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' OK
-    ethernet/vlan/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' OK
-    ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
-    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:CONTROLLER' OK
-    ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=0xffff00ffffff),actions=output:2' OK
+    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/vlan/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
+    ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' OK
+    ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
 </pre>
 <a name="d6ac8fa11117c68ef8cfac688fe04d05">group: 00_ALL</a>
 <pre>
@@ -1531,162 +1547,173 @@ title: Ryu Certification - lagopus
 <a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
 <pre>
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1358.93kbps, {'in_port': 3} 678.10kbps
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1362.84kbps, {'in_port': 3} 681.22kbps
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1356.59kbps, {'in_port': 3} 678.49kbps
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
-    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1360.87kbps, {'in_port': 3} 680.44kbps
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
-    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1358.54kbps, {'in_port': 3} 679.27kbps
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
-    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1356.19kbps, {'in_port': 3} 677.71kbps
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1017.15kbps, {'in_port': 3} 1017.15kbps
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1016.36kbps, {'in_port': 3} 1015.58kbps
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 ..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1018.31kbps, {'in_port': 3} 1017.92kbps
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
-    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1016.61kbps, {'in_port': 3} 1015.44kbps
+    2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 ..........
-    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1021.02kbps, {'in_port': 3} 1020.63kbps
+    2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 ..........
-    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1020.26kbps, {'in_port': 3} 1019.48kbps
+    2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' OK
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            OK
 ..........
-    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            OK
+    2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
+        Received unexpected throughput: {'in_port': 2} 1129.63kbps
 ..........
-    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 OK
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 ERROR
+        Received unexpected throughput: {'in_port': 2} 1136.28kbps
 </pre>
 <a name="d622dfa2ed128286d03f44d2790591e7">meter: 01_DROP_00_KBPS_01_10M</a>
 <pre>
 ..........
-    20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          OK
+    20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Received unexpected throughput: {'in_port': 2} 16785.17kbps
 ..........
-    20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          OK
+    20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
+        Received unexpected throughput: {'in_port': 2} 17405.13kbps
 ..........
-    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               OK
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
+        Received unexpected throughput: {'in_port': 2} 18003.02kbps
 </pre>
 <a name="374de7cf3ba3cd6962f98683ef2d0ee5">meter: 01_DROP_00_KBPS_02_100M</a>
 <pre>
 ..........
-    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
-........
-    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
-........
-    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             OK
+    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Received unexpected throughput: {'in_port': 2} 192973.08kbps
+..........
+    200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Received unexpected throughput: {'in_port': 2} 192105.72kbps
+..........
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
+        Received unexpected throughput: {'in_port': 2} 191645.59kbps
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
 ..........
-    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
+    200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 154.36pktps
 ..........
-    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      OK
+    200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
+        Received unexpected throughput: {'in_port': 2} 159.33pktps
 ..........
-    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           OK
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
+        Received unexpected throughput: {'in_port': 2} 154.89pktps
 </pre>
 <a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
 <pre>
 ..........
-    2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    OK
+    2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Received unexpected throughput: {'in_port': 2} 1948.70pktps
 ..........
-    2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    OK
+    2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
+        Received unexpected throughput: {'in_port': 2} 1949.14pktps
 ..........
-    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         OK
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
+        Received unexpected throughput: {'in_port': 2} 1949.24pktps
 </pre>
 <a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
 <pre>
-........
-    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
-........
-    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
-........
-    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       OK
+..........
+    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Received unexpected throughput: {'in_port': 2} 18350.15pktps
+..........
+    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Received unexpected throughput: {'in_port': 2} 18518.00pktps
+..........
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
+        Received unexpected throughput: {'in_port': 2} 18701.75pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
 ..........
-    2Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' OK
+    2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 812.85kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1184.31kbps
 ..........
-    2Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=16),output:2' OK
+    2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 737.46kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1261.26kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
 </pre>
 <a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
 <pre>
 ..........
-    20Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' OK
+    20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 1250.33kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 18736.93kbps
 ..........
-    20Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=16),output:2' OK
+    20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 17323.66kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 2663.53kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
 <a name="c915561eabc278589470d2187cb110f2">meter: 02_DSCP_REMARK_00_KBPS_02_100M</a>
 <pre>
-........
-    200Mbps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 18466.56kbps
-........
-    200Mbps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 17975.96kbps
-........
-    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 112425.74kbps
+..........
+    200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 3755.33kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 187021.28kbps
+..........
+    200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 1279.63kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 190839.51kbps
+..........
+    200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         OK
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
 ..........
-    200pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' OK
+    200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 22.30pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 172.69pktps
 ..........
-    200pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=16),output:2' OK
+    200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 20.80pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 174.12pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
 </pre>
 <a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
 <pre>
 ..........
-    2000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' OK
+    2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1949.80pktps
 ..........
-    2000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=16),output:2' OK
+    2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1947.79pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
 <a name="638dd569a77001f62f3f1f9f267daea8">meter: 02_DSCP_REMARK_01_PKTPS_02_10000</a>
 <pre>
-........
-    20000pktps(ethernet/ipv4(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
-........
-    20000pktps(ethernet/ipv6(dscp=24)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=16),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 16} 0.00pktps
-........
-    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 9627.60pktps
+..........
+    20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 18622.91pktps
+..........
+    20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 18553.51pktps
+..........
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   OK
 </pre>
