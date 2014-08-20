@@ -8,78 +8,78 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ba551290-0977-4cfd-b5c9-055fe6abf29b
+9c282900-b54b-4717-ad30-a956c1a3adfd
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth23
-            Interface eth23
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
-        Port eth21
-            Interface eth21
+        Port eth23
+            Interface eth23
         Port eth22
             Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 98270b5d-c2dd-4fc6-addb-ccf93956fb20
-controller          : [9e928110-2a76-4ae0-9abc-8096bd50ecdc]
+_uuid               : 9fc9fa4d-bb83-482e-95f7-5480631a6784
+controller          : [1e620239-458d-43c2-baa3-ac6acaaf891a]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [2e151d61-1361-4b12-b6be-899887213b8c, 9d212a1a-d13f-4c3f-8469-ebdd53b3c139, a4535dfd-a40a-43ad-ac47-0427d32b2ad1, bc427272-9c6a-41fc-a3e2-157248eeb7ec]
+ports               : [0c2d4523-2204-4fae-b7d1-0649d6762182, 5502c26c-03ad-41dd-956a-e3382b54464a, 758bdd31-760e-49ca-b3ee-ac7986847ef8, e777c13f-ecb1-4d6a-b15a-0e028cc4d5e4]
 protocols           : [OpenFlow13]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 9e928110-2a76-4ae0-9abc-8096bd50ecdc
+_uuid               : 1e620239-458d-43c2-baa3-ac6acaaf891a
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=662, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=672, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a4535dfd-a40a-43ad-ac47-0427d32b2ad1
+_uuid               : 5502c26c-03ad-41dd-956a-e3382b54464a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1d01048f-ccf9-4dc2-b6dd-f43a38fe866f]
-name                : eth21
-
-_uuid               : 2e151d61-1361-4b12-b6be-899887213b8c
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [15102d3e-f513-43e2-b919-43d20e642b3b]
-name                : eth23
-
-_uuid               : 9d212a1a-d13f-4c3f-8469-ebdd53b3c139
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c85c5afd-ddb3-4ac9-8ded-12133d035b60]
+interfaces          : [70507b89-42f7-4f8b-a7a5-460ec29b31a1]
 name                : br0
 
-_uuid               : bc427272-9c6a-41fc-a3e2-157248eeb7ec
+_uuid               : 758bdd31-760e-49ca-b3ee-ac7986847ef8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b2f8a666-38a4-4f13-856d-a2ffaa9c8339]
+interfaces          : [3d5d4ad6-908f-494e-be77-e09d2114fcd1]
+name                : eth23
+
+_uuid               : e777c13f-ecb1-4d6a-b15a-0e028cc4d5e4
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8ac76d56-c6e7-40dc-8014-82757bf3da75]
 name                : eth22
 
+_uuid               : 0c2d4523-2204-4fae-b7d1-0649d6762182
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [fbe8ea1a-f31d-40ff-ae85-b872392619d2]
+name                : eth21
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : c85c5afd-ddb3-4ac9-8ded-12133d035b60
+_uuid               : 70507b89-42f7-4f8b-a7a5-460ec29b31a1
 admin_state         : down
 duplex              : full
-ifindex             : 33
+ifindex             : 41
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -93,41 +93,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 15102d3e-f513-43e2-b919-43d20e642b3b
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=325111500, tx_dropped=0, tx_errors=0, tx_packets=216741}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : b2f8a666-38a4-4f13-856d-a2ffaa9c8339
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=207895412, tx_dropped=0, tx_errors=0, tx_packets=139571}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 1d01048f-ccf9-4dc2-b6dd-f43a38fe866f
+_uuid               : fbe8ea1a-f31d-40ff-ae85-b872392619d2
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -140,7 +106,41 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=444211676, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=298204, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=911718508, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=612400, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 8ac76d56-c6e7-40dc-8014-82757bf3da75
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=371073552, tx_dropped=0, tx_errors=0, tx_packets=249528}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 3d5d4ad6-908f-494e-be77-e09d2114fcd1
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=722889000, tx_dropped=0, tx_errors=0, tx_packets=481926}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -148,26 +148,22 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 1ef49150ab78f1f859bd875ce3ce7fcec778554c
-Author:     Daniele Di Proietto &lt;ddiproietto@vmware.com&gt;
-AuthorDate: Mon Aug 18 12:57:42 2014 -0700
+commit 09e256031a62f8c3067563140d3f7cf30b0f1c85
+Author:     Terry Wilson &lt;twilson@redhat.com&gt;
+AuthorDate: Tue Aug 19 17:28:55 2014 -0600
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Mon Aug 18 13:17:34 2014 -0700
+CommitDate: Wed Aug 20 10:25:35 2014 -0700
 
-    fat-rwlock: fat_rwlock_tryrdlock&#40;&#41; should never block
+    ovsdb: Allow comparison on optional scalar types
     
-    fat_rwlock_tryrdlock&#40;&#41; used to call fat_rwlock_get_slot__&#40;&#41; which could block
-    in the &quot;slow path&quot; case. This commit adds fat_rwlock_try_get_slot__&#40;&#41; which
-    does not block, even in the &quot;slow path&quot; case.
+    This allows things like initiating a wait request on an interface
+    ofport being set.
     
-    This fixes a minor issue in dpif-netdev: when the datapath has no registered
-    upcall handler &#40;e.g. if it is created with dpctl commands&#41;, dp_netdev_input&#40;&#41;
-    hangs if it does not find a packet's flow in the classifier.  This is
-    because dpif-netdev uses its upcall_rwlock as a way to enable and disable
-    upcalls and thus holds the upcall_rwlock write lock as long as upcalls are
-    disabled.  Both holding the write lock and creating a slot require the
-    fat_rwlock's mutex, causing the hang.
+    When the optional field is empty and operation is != or excludes
+    then the result is true; otherwise it is false. If the field is
+    set then the field is compared normally for its type.
     
-    Signed-off-by: Daniele Di Proietto &lt;ddiproietto@vmware.com&gt;
+    Signed-off-by: Terry Wilson &lt;twilson@redhat.com&gt;
+    [blp@nicira.com updated ovsdb-server&#40;1&#41; and NEWS.]
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
