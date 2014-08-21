@@ -54,25 +54,31 @@ $ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
 # Version information
 <pre>
 $ erl -version
-Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4
+Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit d97c2710a688b100c9d9c830054fbc1f45dcb7e5
-Author:     ruanpienaar &lt;ruan800@gmail.com&gt;
-AuthorDate: Wed Jul 9 18:14:02 2014 +0100
-Commit:     ruanpienaar &lt;ruan800@gmail.com&gt;
-CommitDate: Wed Jul 9 18:14:02 2014 +0100
+commit 9f1ee10f0879c35fcd39b60b95b2046bbe421985
+Merge: d97c271 a4bbef9
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Tue Aug 19 14:13:00 2014 +0200
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Tue Aug 19 14:13:00 2014 +0200
 
-    17 support
+    Merge pull request #341 from FlowForwarding/ofp_match_for_vlan
+    
+    Add OFPVID_PRESENT bit to VLAN match field in packet-in message
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 2da25f4ebea75d44dda4cf98f5412b1b3cafc57d
-Author:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-AuthorDate: Fri Jul 11 14:20:16 2014 +0100
-Commit:     Ruan Pienaar &lt;ruan800@gmail.com&gt;
-CommitDate: Fri Jul 11 14:20:16 2014 +0100
+commit d09dcab6515a299cf6423d8ad5f8282b09168935
+Merge: 2da25f4 590d7d1
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Tue Aug 19 13:18:56 2014 +0200
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Tue Aug 19 13:18:56 2014 +0200
 
-    fixed parse transform issue
+    Merge pull request #76 from FlowForwarding/ofp_match_for_vlan
+    
+    Add macros for OFPVID_PRESENT and OFPVID_NONE values
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
