@@ -13,14 +13,11 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.15
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3a14bce8a78baa43f3321f3533972ff037594275
-Merge: 06a6ab4 63c72dc
-Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-AuthorDate: Fri Apr 4 17:08:51 2014 +0900
-Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
-CommitDate: Fri Apr 4 17:08:51 2014 +0900
+commit bdda57057921d41cf0e727cdbd0c5077e451622b
+Author:     Kazuya Suzuki &lt;kazuya@ax.jp.nec.com&gt;
+AuthorDate: Sat Aug 23 14:04:13 2014 +0900
+Commit:     Kazuya Suzuki &lt;kazuya@ax.jp.nec.com&gt;
+CommitDate: Sat Aug 23 14:04:13 2014 +0900
 
-    Merge pull request #118 from rascov/develop
-    
-    Keep using the interface append_oxm_match_arp_op() and add an exception in oxm-helper.c
+    Fix README in examples/packet_in.
 </pre>
