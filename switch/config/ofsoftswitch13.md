@@ -14,13 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a54476ec91e929051c2a3789c8beb43264a0dfae
-Author:     ederlf &lt;ederlf@cpqd.com.br&gt;
-AuthorDate: Tue Jul 29 23:18:05 2014 -0300
+commit 36738aeb3501f66fb382e7b59138c88e8843b19c
+Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
+AuthorDate: Mon Aug 25 17:00:13 2014 -0700
 Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Tue Jul 29 23:18:05 2014 -0300
+CommitDate: Thu Aug 28 23:50:51 2014 -0300
 
-    Fix lots of ugly warnings
+    Fix a few more warnings.
 </pre>
 
 # Modified test scenario for switch restrictions
