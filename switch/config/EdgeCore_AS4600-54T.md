@@ -131,4 +131,7 @@ Additional Packages............................ DCSS BGP-4
 # Modified test scenario for switch restrictions
 <pre>
 $ rm ryu/tests/switch/of13/meter/02_*.json
+
+# The switch requires 10 seconds for table miss count.
+$ perl -i '-pes/^(INTERVAL = )1/${1}10/' ryu/tests/switch/tester.py
 </pre>
