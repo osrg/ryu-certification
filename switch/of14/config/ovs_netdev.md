@@ -8,75 +8,75 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-1bd4a317-880b-4a78-9ad1-78bc7c7c3683
+b78000d7-fba5-469b-84ff-c373bb98558e
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth23
-            Interface eth23
         Port eth22
             Interface eth22
+        Port eth21
+            Interface eth21
+        Port eth23
+            Interface eth23
         Port br0
             Interface br0
                 type: internal
-        Port eth21
-            Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : bcf4ebff-824a-4275-9324-0eb00c2082eb
-controller          : [d69b8800-4ee0-4007-9dbc-487f455f4ea4]
+_uuid               : de9fa0c6-1157-4f40-a80b-db8113dd440a
+controller          : [6b74d825-2287-4d26-9eba-45c546c720ad]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [03eb43ae-1a94-4663-8ac0-c10d3d267921, 17d62413-2832-4c07-abeb-b8b31a4b8763, 39fc264f-b2ec-430a-bfe0-90cc7e404a7e, 7fa4950c-6d97-47e1-8ed4-2fd5e8540ea5]
+ports               : [25f299e1-190f-40f4-a680-1cce3a207545, 491a9255-d6fd-466c-a65d-f99bb3372248, d1ad7b2d-7c43-40ca-b719-58a433dcb440, ffddd3ff-8ee2-4367-95f5-0a69ab4347f6]
 protocols           : [OpenFlow14]
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : d69b8800-4ee0-4007-9dbc-487f455f4ea4
+_uuid               : 6b74d825-2287-4d26-9eba-45c546c720ad
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=677, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=661, sec_since_disconnect=6, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7fa4950c-6d97-47e1-8ed4-2fd5e8540ea5
+_uuid               : 25f299e1-190f-40f4-a680-1cce3a207545
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d646cf17-b438-481e-9038-3e3b4336e1cf]
-name                : eth21
-
-_uuid               : 03eb43ae-1a94-4663-8ac0-c10d3d267921
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [9dcc87dc-cb86-4321-bbb4-4169ddb89c60]
-name                : eth23
-
-_uuid               : 39fc264f-b2ec-430a-bfe0-90cc7e404a7e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [78f67120-572b-4759-9d4f-770171ab2c11]
-name                : br0
-
-_uuid               : 17d62413-2832-4c07-abeb-b8b31a4b8763
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [995a7584-ef4e-4dd2-9483-a3623ec23329]
+interfaces          : [e5d96480-14c4-4937-94ef-c37a888929a5]
 name                : eth22
 
+_uuid               : d1ad7b2d-7c43-40ca-b719-58a433dcb440
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [304c97ab-5b9c-417a-98e1-d778ebcb1581]
+name                : eth23
+
+_uuid               : 491a9255-d6fd-466c-a65d-f99bb3372248
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c706d23e-d3f5-4e74-86dd-7cded080f45b]
+name                : eth21
+
+_uuid               : ffddd3ff-8ee2-4367-95f5-0a69ab4347f6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3ee660f1-a7a1-43e8-8873-44612c7dd0f6]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 995a7584-ef4e-4dd2-9483-a3623ec23329
+_uuid               : e5d96480-14c4-4937-94ef-c37a888929a5
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -89,14 +89,14 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1321204080, tx_dropped=0, tx_errors=0, tx_packets=23798458}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1489127626, tx_dropped=0, tx_errors=0, tx_packets=23911186}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 78f67120-572b-4759-9d4f-770171ab2c11
+_uuid               : 3ee660f1-a7a1-43e8-8873-44612c7dd0f6
 admin_state         : down
 duplex              : full
-ifindex             : 94
+ifindex             : 99
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -110,24 +110,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 9dcc87dc-cb86-4321-bbb4-4169ddb89c60
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3431910000, tx_dropped=0, tx_errors=0, tx_packets=2287940}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : d646cf17-b438-481e-9038-3e3b4336e1cf
+_uuid               : c706d23e-d3f5-4e74-86dd-7cded080f45b
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -140,7 +123,24 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=2976657070, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=33505559, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=3315660616, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=33733224, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 304c97ab-5b9c-417a-98e1-d778ebcb1581
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3670753500, tx_dropped=0, tx_errors=0, tx_packets=2447169}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -148,33 +148,29 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 63520eeb2b1942a764f0668164d4c2df8c2f9741
-Author:     Nithin Raju &lt;nithin@vmware.com&gt;
-AuthorDate: Fri Aug 29 15:48:10 2014 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Thu Sep 4 12:40:48 2014 -0700
+commit b0e1bce5d6528d71605f0d75e47f5f14d4b04f0d
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Thu Aug 28 09:25:56 2014 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Thu Sep 4 18:38:26 2014 -0700
 
-    datapath-windows: add support for GET_DP command to dump datpaths
+    cccl: Ability to enable compiler optimization.
     
-    In this patch, we add support for the GET_DP netlink command to dump
-    the datpaaths. The userspace workflow to get this to work is the same
-    as on Linux. dpif-linux.c initiates a dump start by writing a netlink
-    message, and after that continues to read data from the kernel while
-    the kernel has data. The state is maintained in the kernel, and not in
-    userspace. This approach was taken since there was not great benefit
-    of maintaining state in userspace, and also to avoid userspace changes
-    specific to Windows.
+    MSVC has a '-O2' compiler optimization flag which makes code run
+    fast and is the recommended option for released code. For e.g.,
+    running &quot;./tests/ovstest.exe test-cmap benchmark 1000000 3 1&quot;
+    shows a 3x improvement for some cmap micro-benchmarks.
     
-    This hopefully serves as a template to base the other dump commands on.
+    In the Visual Studio world, there is a concept of &quot;release&quot; build
+    &#40;fast code, harder to debug&#41; and a &quot;debug&quot; build &#40;easier to debug&#41;.
+    The IDE provides this option and the IDE users expect something similar
+    for command line build.
     
-    validation:
-    - With a hacked up dpif-linux.c to work on Windows,
-      dpif_linux_enumerate&#40;&#41; successfully enumerated the datapaths in the
-      kernel.
+    So this commit, introduces a &quot;--with-debug&quot; configure option for Windows
+    and does not use '-O2' as a compiler option when specified. This can
+    be extended further if there are more compiler options that distinguish
+    a &quot;release&quot; build vs &quot;debug&quot; build.
     
-    Signed-off-by: Nithin Raju &lt;nithin@vmware.com&gt;
-    Signed-off-by: Ankur Sharma &lt;ankursharma@vmware.com&gt;
-    Acked-by: Ankur Sharma &lt;ankursharma@vmware.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
     Acked-by: Saurabh Shah &lt;ssaurabh@vmware.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
