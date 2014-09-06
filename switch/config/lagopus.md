@@ -8,14 +8,14 @@ title: Ryu Certification - lagopus - config
 # Version information
 <pre>
 git log -1 --pretty=fuller
-commit ee909f110cbc3a9c460fb65f97f37944f83aeb7e
-Merge: cb3ea05 1fbb095
+commit 5330506690802f25c665ae44aad3dfe540e485b1
+Merge: ee909f1 287df1a
 Author:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-AuthorDate: Fri Aug 8 10:45:18 2014 +0900
+AuthorDate: Sat Sep 6 02:17:21 2014 +0900
 Commit:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-CommitDate: Fri Aug 8 10:45:18 2014 +0900
+CommitDate: Sat Sep 6 02:17:21 2014 +0900
 
-    Merge pull request #5 from lagopus/hotfix-0.1.0-mk-2
+    Merge pull request #10 from cl4u2/master
     
-    mk: Fixed compile option macro of SSE4.2 instruction.
+    doc: fix some typos in QUICKSTART.md
 </pre>
