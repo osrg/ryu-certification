@@ -14,16 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 452a6c71e2d24a88a49e62d1f3e5f1f7c6d4f0b1
+commit 583e20b2388e43acddb96ab23f6a9059fbc49851
 Author:     oftutorial &lt;oftutorial@openflowvm.home&gt;
-AuthorDate: Fri Aug 29 22:16:30 2014 -0300
+AuthorDate: Sat Sep 6 23:14:54 2014 -0300
 Commit:     oftutorial &lt;oftutorial@openflowvm.home&gt;
-CommitDate: Fri Aug 29 22:16:30 2014 -0300
+CommitDate: Sat Sep 6 23:14:54 2014 -0300
 
-    Add the case of a following IPv6 header for copy ttl in and out action.
+    Add checks for bad wildcarded flows.
     
-    This commit adds the copy ttl out and in for the case of an IPv6
-    header following an MPLS header.
+    This commit add functions to check if a masked field is valid.
 </pre>
 
 # Modified test scenario for switch restrictions

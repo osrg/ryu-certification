@@ -1039,7 +1039,7 @@ title: Ryu Certification - ofsoftswitch13
     ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                     OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'              OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'     ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='82:c2:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='68:1a:ff:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x81\x00`d\x08\x00E \x00K\x00\x00\x00\x00@\x06\xdb\x1e\xc0\xa8\n\n\xc0\xa8\x14\x14+g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\xcbL\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17')
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' OK
@@ -1600,7 +1600,7 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
-        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='96:cc:2d:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
+        Received incorrect packet: ethernet(src='00:00:22:22:22:22',dst='c6:b6:34:7f:00:00',ethertype=8738)/str('\x12\x11\x11\x11\x11\x11\x86\xddb\x00\x00d\x00 :@\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x87\x00\x10\x9e\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 ')
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' OK
@@ -1944,7 +1944,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19989.16kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.10kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1952,13 +1952,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 70049.29kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 68332.74kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 172882.73kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 172378.62kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 177082.09kbps
+        Received unexpected throughput: {'in_port': 2} 175024.95kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1976,7 +1976,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.81pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.24pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1984,11 +1984,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6787.78pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6751.63pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16629.03pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16617.31pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 17026.07pktps
+        Received unexpected throughput: {'in_port': 2} 16785.75pktps
 </pre>
