@@ -14,17 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0b82d220fdd20f81849bf266aecea94108d95ad5
-Author:     oftutorial &lt;oftutorial@openflowvm.home&gt;
-AuthorDate: Sun Sep 7 09:23:19 2014 -0300
-Commit:     oftutorial &lt;oftutorial@openflowvm.home&gt;
-CommitDate: Sun Sep 7 09:23:19 2014 -0300
+commit 336502f3e8e14de678e8e3ee9fe8a833daadd3c6
+Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
+AuthorDate: Mon Sep 8 22:59:18 2014 -0300
+Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
+CommitDate: Mon Sep 8 22:59:18 2014 -0300
 
-    Implement SET_NW_TTL and DEC_NW_TTL for IPv6 packets
+    Fix OXM_OF_IPV6_ND_SLL and OXM_OF_IPV6_ND_TLL set_field action.
     
-    The implementation of SET_NW_TTL and DEC_NW_TTL was not
-    considering IPv6 packets. This commit fix this, setting and decrementing
-    the ipv6 hop_limit on respective action.
+    This commit fix set_field action of IPv6 Neighbor Discovery TLL and SLL,
+    correcting the value memcpy position and recalculating the ICMPv6 checksum.
 </pre>
 
 # Modified test scenario for switch restrictions

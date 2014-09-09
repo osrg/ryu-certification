@@ -12,8 +12,8 @@ title: Ryu Certification - ofsoftswitch13
 |[Action](#Action)|50|6|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(47)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
-|[set_field](#set_field)|92|74|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(92)|&nbsp;&nbsp;&nbsp;&nbsp;(74)|
+|[set_field](#set_field)|100|66|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(100)|&nbsp;&nbsp;&nbsp;&nbsp;(66)|
 |[Match](#Match)|577|137|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(469)|&nbsp;&nbsp;&nbsp;&nbsp;(137)|
@@ -22,9 +22,9 @@ title: Ryu Certification - ofsoftswitch13
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[Meter](#Meter)|26|10|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
-|Total|760|227|
+|Total|768|219|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(646)|&nbsp;&nbsp;&nbsp;&nbsp;(227)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(654)|&nbsp;&nbsp;&nbsp;&nbsp;(219)|
 
 ## <a name ='Action'>Action</a>
 
@@ -96,8 +96,8 @@ title: Ryu Certification - ofsoftswitch13
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/29_ICMPV6_TYPE.json)|- | [ERROR](#73a03bb41351355646920c1207233e73) | [ERROR](#73a03bb41351355646920c1207233e73) | [ERROR](#73a03bb41351355646920c1207233e73) | [ERROR](#73a03bb41351355646920c1207233e73) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/30_ICMPV6_CODE.json)|- | [ERROR](#c8cec92a3719c393e89864809237994c) | [ERROR](#c8cec92a3719c393e89864809237994c) | [ERROR](#c8cec92a3719c393e89864809237994c) | [ERROR](#c8cec92a3719c393e89864809237994c) |
 |[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/31_IPV6_ND_TARGET.json)|- | [ERROR](#58bb5b87b10120375648d5dfa160d66d) | [ERROR](#58bb5b87b10120375648d5dfa160d66d) | [ERROR](#58bb5b87b10120375648d5dfa160d66d) | [ERROR](#58bb5b87b10120375648d5dfa160d66d) |
-|[IPV6_ND_SLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/32_IPV6_ND_SLL.json)|- | [ERROR](#03e6c802327cd4456ae80d74286cc133) | [ERROR](#03e6c802327cd4456ae80d74286cc133) | [ERROR](#03e6c802327cd4456ae80d74286cc133) | [ERROR](#03e6c802327cd4456ae80d74286cc133) |
-|[IPV6_ND_TLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/33_IPV6_ND_TLL.json)|- | [ERROR](#561be672f9ebbcd43130be6c6014f0f5) | [ERROR](#561be672f9ebbcd43130be6c6014f0f5) | [ERROR](#561be672f9ebbcd43130be6c6014f0f5) | [ERROR](#561be672f9ebbcd43130be6c6014f0f5) |
+|[IPV6_ND_SLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/32_IPV6_ND_SLL.json)|- | [OK](#03e6c802327cd4456ae80d74286cc133) | [OK](#03e6c802327cd4456ae80d74286cc133) | [OK](#03e6c802327cd4456ae80d74286cc133) | [OK](#03e6c802327cd4456ae80d74286cc133) |
+|[IPV6_ND_TLL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/33_IPV6_ND_TLL.json)|- | [OK](#561be672f9ebbcd43130be6c6014f0f5) | [OK](#561be672f9ebbcd43130be6c6014f0f5) | [OK](#561be672f9ebbcd43130be6c6014f0f5) | [OK](#561be672f9ebbcd43130be6c6014f0f5) |
 |[ARP_OP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/21_ARP_OP.json)|- | [OK](#edeb0a1b010613250527e2a03c53b549) | [OK](#edeb0a1b010613250527e2a03c53b549) | [OK](#edeb0a1b010613250527e2a03c53b549) | [OK](#edeb0a1b010613250527e2a03c53b549) |
 |[ARP_SPA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/22_ARP_SPA.json)|- | [OK](#191830a3949f9206a79ee85da5c0d7c3) | [OK](#191830a3949f9206a79ee85da5c0d7c3) | [OK](#191830a3949f9206a79ee85da5c0d7c3) | [OK](#191830a3949f9206a79ee85da5c0d7c3) |
 |[ARP_TPA](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/23_ARP_TPA.json)|- | [OK](#cef72d4ba1780a3c9b67b48a33eed3a7) | [OK](#cef72d4ba1780a3c9b67b48a33eed3a7) | [OK](#cef72d4ba1780a3c9b67b48a33eed3a7) | [OK](#cef72d4ba1780a3c9b67b48a33eed3a7) |
@@ -403,13 +403,13 @@ title: Ryu Certification - ofsoftswitch13
 <a name="b96b0ffa1914207a7ad1eb3a96b43b63">action: set_field: 10_IP_PROTO (IPv4)</a>
 <pre>
     ethernet/ipv4(proto=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'                    ERROR
-        Received incorrect packet: ipv4(csum=56094)
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/vlan/ipv4(proto=6)/tcp-->'ip_proto=6,actions=set_field:17->ip_proto,output:2'               ERROR
-        Received incorrect packet: ipv4(csum=56094)
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Received incorrect packet: ipv4(csum=56094)
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
-        Received incorrect packet: ipv4(csum=56094)
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
 </pre>
 <a name="807bd1069798fcbf7b9ef3963e0bafc4">action: set_field: 11_IPV4_SRC</a>
 <pre>
@@ -637,25 +637,17 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="03e6c802327cd4456ae80d74286cc133">action: set_field: 32_IPV6_ND_SLL</a>
 <pre>
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=4254,data=nd_neighbor(dst='20::20',option=nd_option_sla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=12:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=4254,data=nd_neighbor(dst='20::20',option=nd_option_sla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=4254,data=nd_neighbor(dst='20::20',option=nd_option_sla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=4254,data=nd_neighbor(dst='20::20',option=nd_option_sla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' OK
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=12:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' OK
+    ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' OK
+    ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' OK
 </pre>
 <a name="561be672f9ebbcd43130be6c6014f0f5">action: set_field: 33_IPV6_ND_TLL</a>
 <pre>
-    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=3742,data=nd_neighbor(dst='20::20',option=nd_option_tla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=3742,data=nd_neighbor(dst='20::20',option=nd_option_tla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=3742,data=nd_neighbor(dst='20::20',option=nd_option_tla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
-    ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
-        Received incorrect packet: icmpv6(csum=3742,data=nd_neighbor(dst='20::20',option=nd_option_tla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
+    ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' OK
+    ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' OK
+    ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' OK
+    ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' OK
 </pre>
 <a name="edeb0a1b010613250527e2a03c53b549">action: set_field: 21_ARP_OP</a>
 <pre>
@@ -1840,7 +1832,7 @@ title: Ryu Certification - ofsoftswitch13
     2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1998.71kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1999.10kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
 </pre>
@@ -1850,7 +1842,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19987.18kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.83kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1858,13 +1850,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 71539.51kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 69053.46kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 174914.51kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 172736.47kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 178189.81kbps
+        Received unexpected throughput: {'in_port': 2} 177542.82kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1872,7 +1864,7 @@ title: Ryu Certification - ofsoftswitch13
     200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.99pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
 </pre>
@@ -1882,7 +1874,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.56pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.18pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1890,11 +1882,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 7183.64pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6718.51pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16732.90pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16617.90pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 17108.85pktps
+        Received unexpected throughput: {'in_port': 2} 16889.07pktps
 </pre>
