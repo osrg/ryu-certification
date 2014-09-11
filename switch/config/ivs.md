@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b92ad22d06cfd13f464ff1b0e27451dd1e273c4e
-Merge: 6e834f1 a733e4d
+commit 20baacd9f799327a8c68141ef4f952dcc1cf2782
+Merge: b92ad22 e55d6ea
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Sep 5 12:41:38 2014 -0700
+AuthorDate: Wed Sep 10 15:10:56 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Sep 5 12:41:38 2014 -0700
+CommitDate: Wed Sep 10 15:10:56 2014 -0700
 
-    Merge into master from pull request #200:
-    implement special pipeline handling for in-band management (https://github.com/floodlight/ivs/pull/200)
+    Merge into master from pull request #202:
+    remove switchlight-common dependency (https://github.com/floodlight/ivs/pull/202)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     2E29248C4E7ACDB1A72CC00
+srcversion:     0CE5EA9F2D9CD8557A23985
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
