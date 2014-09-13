@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 20baacd9f799327a8c68141ef4f952dcc1cf2782
-Merge: b92ad22 e55d6ea
+commit 0a0aed3e05aab4aacf35e81d0333cb567984e3c4
+Merge: 20baacd 1ad3cda
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Sep 10 15:10:56 2014 -0700
+AuthorDate: Fri Sep 12 17:36:34 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Sep 10 15:10:56 2014 -0700
+CommitDate: Fri Sep 12 17:36:34 2014 -0700
 
-    Merge into master from pull request #202:
-    remove switchlight-common dependency (https://github.com/floodlight/ivs/pull/202)
+    Merge into master from pull request #203:
+    downgrade or remove some INFO logs (https://github.com/floodlight/ivs/pull/203)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
