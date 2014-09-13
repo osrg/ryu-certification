@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0a0aed3e05aab4aacf35e81d0333cb567984e3c4
-Merge: 20baacd 1ad3cda
+commit d2744519693f607ee2b7db8325a2a80626482383
+Merge: 0a0aed3 227fc47
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Sep 12 17:36:34 2014 -0700
+AuthorDate: Fri Sep 12 19:21:22 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Sep 12 17:36:34 2014 -0700
+CommitDate: Fri Sep 12 19:21:22 2014 -0700
 
-    Merge into master from pull request #203:
-    downgrade or remove some INFO logs (https://github.com/floodlight/ivs/pull/203)
+    Merge into master from pull request #201:
+    initial support for building ivs rpm for centos7 (https://github.com/floodlight/ivs/pull/201)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
