@@ -8,79 +8,113 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-29395781-dd33-4c09-90be-baaba4caec88
+37796a84-0837-4b18-aab5-4b72f921bbc9
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth21
-            Interface eth21
-        Port eth23
-            Interface eth23
         Port br0
             Interface br0
                 type: internal
         Port eth22
             Interface eth22
+        Port eth23
+            Interface eth23
+        Port eth21
+            Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : dd6112ff-72da-4a0f-944c-1f3308bc5561
-controller          : [25e56acd-3baa-4eb6-845a-bc108cc38f23]
+_uuid               : 26b0efc9-ce84-47e1-8abb-8506c6bbb3f0
+controller          : [868cda09-45e0-415b-a680-de45e49f13a4]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [3de01e5c-bc44-4477-b91b-05f1a92eea12, 6b3f065f-60a2-4313-9198-13ddf237a023, 6f518bd4-de46-40fc-8535-4ff8dd2c7c16, d8aa65ca-1670-4b65-999a-f0c1bf60b276]
+ports               : [16d1c3e0-d20d-43d5-bee5-08303d6244b7, 9a068412-8b8d-46b5-9539-cd49aadade17, d373d13a-1216-4291-aa5d-b8347e8e538f, feaa6055-b4e3-4282-a843-4decf06fbe41]
 protocols           : [OpenFlow14]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 25e56acd-3baa-4eb6-845a-bc108cc38f23
+_uuid               : 868cda09-45e0-415b-a680-de45e49f13a4
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=671, sec_since_disconnect=6, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=697, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6f518bd4-de46-40fc-8535-4ff8dd2c7c16
+_uuid               : 16d1c3e0-d20d-43d5-bee5-08303d6244b7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [00d0d9b8-ee93-4f14-a3b3-6997c99f7833]
+interfaces          : [92e8911b-7077-4351-b373-5b4990ce88d5]
 name                : br0
 
-_uuid               : 3de01e5c-bc44-4477-b91b-05f1a92eea12
+_uuid               : feaa6055-b4e3-4282-a843-4decf06fbe41
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [46219a31-75e2-4772-b3e3-cb8b4a1c715f]
+interfaces          : [954d97a7-d0d9-488d-9164-d061ba85b567]
 name                : eth21
 
-_uuid               : d8aa65ca-1670-4b65-999a-f0c1bf60b276
+_uuid               : d373d13a-1216-4291-aa5d-b8347e8e538f
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [73de03ff-6aff-4bb1-9bf5-eec520b49ca8]
-name                : eth22
-
-_uuid               : 6b3f065f-60a2-4313-9198-13ddf237a023
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [47ae3762-61cb-485b-a166-4e83a8858449]
+interfaces          : [7621fa56-991f-4e71-9989-7adef59051de]
 name                : eth23
 
+_uuid               : 9a068412-8b8d-46b5-9539-cd49aadade17
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [e2f66ac5-f535-4bd4-b479-a8241f123b25]
+name                : eth22
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 00d0d9b8-ee93-4f14-a3b3-6997c99f7833
+_uuid               : e2f66ac5-f535-4bd4-b479-a8241f123b25
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3802925964, tx_dropped=0, tx_errors=0, tx_packets=45504103}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 7621fa56-991f-4e71-9989-7adef59051de
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1453161704, tx_dropped=0, tx_errors=0, tx_packets=3832086}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 92e8911b-7077-4351-b373-5b4990ce88d5
 admin_state         : down
 duplex              : full
-ifindex             : 138
+ifindex             : 142
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -94,7 +128,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 46219a31-75e2-4772-b3e3-cb8b4a1c715f
+_uuid               : 954d97a7-d0d9-488d-9164-d061ba85b567
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -107,41 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=3365626870, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=65277549, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 47ae3762-61cb-485b-a166-4e83a8858449
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1277592704, tx_dropped=0, tx_errors=0, tx_packets=3715040}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 73de03ff-6aff-4bb1-9bf5-eec520b49ca8
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3697979644, tx_dropped=0, tx_errors=0, tx_packets=45433553}
+statistics          : {collisions=0, rx_bytes=3599408786, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=65434666, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,41 +149,19 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 65f13b50c5aaa9afaef397ee8252647f1ef1688d
-Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Fri Sep 5 14:14:20 2014 -0700
-Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Mon Sep 15 11:43:49 2014 -0700
+commit 5e2a670201c936e0a1f8257f4540654f8b8bfed2
+Author:     YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+AuthorDate: Tue Sep 16 12:45:42 2014 +0900
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Tue Sep 16 08:11:31 2014 -0700
 
-    dpif-netdev: Create multiple pmd threads by default.
+    ofproto-dpif-xlate: Suppress some warnings on non-Linux OSes
     
-    With this commit, ovs by default will create one pmd thread
-    for each numa node and pin the pmd thread to available cpu
-    core on the numa node.
+    These warnings were introduced by
+    commit 7d031d7e511aeea8dd45348922fe8e3bbdd2956e
+    &#40;&quot;ofproto-dpif-xlate: Work around Linux netdev_max_backlog limit.&quot;&#41;
+    and found by --enable-Werror build on NetBSD.
     
-    NON_PMD_CORE_ID &#40;currently 0&#41; is used to reserve a particular
-    cpu core for the I/O of all non-pmd threads.  No pmd thread
-    can be pinned to this reserved core.
-    
-    As side-effects of this commit:
-    
-    -  pmd thread will not be created, if there is no dpdk interface
-       from the corresponding numa node added to ovs.
-    
-    - the exact-match cache for non-pmd threads is removed from
-      'struct dp_netdev'.  Instead, all non-pmd threads will use
-      the exact-match cache defined in the 'struct dp_netdev_pmd_thread'
-      for NON_PMD_CORE_ID.
-    
-    - the rx packet processing functions are refactored to use
-      'struct dp_netdev_pmd_thread' as input.
-    
-    - the 'netdev_send&#40;&#41;' function will be called with the proper
-      queue id.
-    
-    - both pmd and non-pmd threads can call the dpif_netdev_execute&#40;&#41;.
-      so, use a per-thread key to help recognize the calling thread.
-    
-    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
-    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
+    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@valinux.co.jp&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
