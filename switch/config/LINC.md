@@ -57,16 +57,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 9f1ee10f0879c35fcd39b60b95b2046bbe421985
-Merge: d97c271 a4bbef9
+commit 25e5e34d45cba7c211192baacf2fb36f4549f0a4
+Merge: 9f1ee10 e8743a7
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Aug 19 14:13:00 2014 +0200
+AuthorDate: Wed Sep 17 08:31:57 2014 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Aug 19 14:13:00 2014 +0200
+CommitDate: Wed Sep 17 08:31:57 2014 +0200
 
-    Merge pull request #341 from FlowForwarding/ofp_match_for_vlan
+    Merge pull request #342 from subh007/patch-1
     
-    Add OFPVID_PRESENT bit to VLAN match field in packet-in message
+    Update config_gen
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit d09dcab6515a299cf6423d8ad5f8282b09168935
