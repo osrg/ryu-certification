@@ -8,76 +8,93 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-33a97dfe-230e-4ff3-8053-d45c520ac8df
+78823d23-cc13-4dec-a9f5-89e0cb9211f1
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth21
-            Interface eth21
-        Port eth23
-            Interface eth23
+        Port eth22
+            Interface eth22
         Port br0
             Interface br0
                 type: internal
-        Port eth22
-            Interface eth22
+        Port eth23
+            Interface eth23
+        Port eth21
+            Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : eaf92cc2-0645-400c-9c55-aa8d09c6359d
-controller          : [67eb3734-0c25-4f65-810f-ca5e5cde9733]
+_uuid               : 8f7c4345-24af-48ac-8bee-363fa5bb6315
+controller          : [1cdbeddf-7150-40f8-808a-bf80d235a3cb]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [2d6556ad-8646-425c-b4a9-1656d413eb00, 2d9b5732-e20f-4616-b9dc-b65ef0ef76fc, 365b95de-db87-4031-98de-d1da7147f21e, f98f348e-80af-4cfa-bbb6-2a5d03f95d53]
+ports               : [6d4ad963-c596-4d12-bf69-99926ef783b8, b063900e-02b8-4552-84d0-e93f259bed0a, b2de8bd6-4e84-4df8-85f5-1bf5d8f47fb8, fa21b69f-484a-4ef6-a6f3-1303a197fe6f]
 protocols           : [OpenFlow13]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 67eb3734-0c25-4f65-810f-ca5e5cde9733
+_uuid               : 1cdbeddf-7150-40f8-808a-bf80d235a3cb
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=682, sec_since_disconnect=5, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=666, sec_since_disconnect=4, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2d6556ad-8646-425c-b4a9-1656d413eb00
+_uuid               : b2de8bd6-4e84-4df8-85f5-1bf5d8f47fb8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [a2689e7f-2041-4880-b725-e782c155af16]
-name                : eth21
-
-_uuid               : f98f348e-80af-4cfa-bbb6-2a5d03f95d53
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [5e6fdb93-c215-41c7-b5a9-4f404aa39bdc]
-name                : eth22
-
-_uuid               : 365b95de-db87-4031-98de-d1da7147f21e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [488c213a-c678-4032-af62-e331d45d572d]
-name                : br0
-
-_uuid               : 2d9b5732-e20f-4616-b9dc-b65ef0ef76fc
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [98e3a99d-a6da-47a7-ae8d-e23935476fe3]
+interfaces          : [974ab682-ba8d-411f-8597-930d5cb0f6c3]
 name                : eth23
 
+_uuid               : b063900e-02b8-4552-84d0-e93f259bed0a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [47300027-cfd5-4a58-b36f-4acbea6869e6]
+name                : br0
+
+_uuid               : 6d4ad963-c596-4d12-bf69-99926ef783b8
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8eadc07c-c084-499b-80cd-b3a649dc1f05]
+name                : eth22
+
+_uuid               : fa21b69f-484a-4ef6-a6f3-1303a197fe6f
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [dea79c87-a417-4e57-bc4c-6fab58016f97]
+name                : eth21
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 98e3a99d-a6da-47a7-ae8d-e23935476fe3
+_uuid               : 8eadc07c-c084-499b-80cd-b3a649dc1f05
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2728845362, tx_dropped=0, tx_errors=0, tx_packets=47657477}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 974ab682-ba8d-411f-8597-930d5cb0f6c3
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -90,14 +107,14 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3028199204, tx_dropped=0, tx_errors=0, tx_packets=4882111}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3203288204, tx_dropped=0, tx_errors=0, tx_packets=4998837}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 488c213a-c678-4032-af62-e331d45d572d
+_uuid               : 47300027-cfd5-4a58-b36f-4acbea6869e6
 admin_state         : down
 duplex              : full
-ifindex             : 176
+ifindex             : 180
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -111,24 +128,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 5e6fdb93-c215-41c7-b5a9-4f404aa39bdc
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2623417542, tx_dropped=0, tx_errors=0, tx_packets=47586606}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : a2689e7f-2041-4880-b725-e782c155af16
+_uuid               : dea79c87-a417-4e57-bc4c-6fab58016f97
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -141,7 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=958501149, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75139618, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1192289065, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75296739, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,29 +149,16 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 6db454dc00fa5d9693ebdf6c5e10c61030f8df8e
+commit bdcca6157dfca92a9f24da3223b87688c8f30d04
 Author:     Simon Horman &lt;simon.horman@netronome.com&gt;
-AuthorDate: Wed Sep 24 12:41:02 2014 +0000
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Wed Sep 24 14:00:15 2014 -0700
+AuthorDate: Wed Sep 24 13:43:19 2014 +0900
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Fri Sep 26 10:45:06 2014 -0700
 
-    ofproto-dpif-rid: correct logic error in rid_pool_alloc_id&#40;&#41;
+    ovs-ofctl: Correct help text for add-groups
     
-    When searching through the valid ids an id should
-    be used if is not found rather than if it is found.
-    
-    It appears to me that without this change duplicate recirculation
-    ids may used in cases where the last recirculation id has
-    been allocated; selection loops back to the beginning of the pool and;
-    reaches a recirculation id that is still in use.
-    
-    As the number of recirculation ids is currently RECIRC_ID_N_IDS = 1024 this
-    does not seem beyond the bounds of possibility.
-    
-    I have not verified that such a scenario can actually occur.  But it seems
-    that a likely consequence would be that some packets may be forwarded
-    incorrectly.
+    It is add-groups rather than add-group that takes FILE as an argument.
     
     Signed-off-by: Simon Horman &lt;simon.horman@netronome.com&gt;
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
