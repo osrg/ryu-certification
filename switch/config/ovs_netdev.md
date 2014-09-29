@@ -8,93 +8,76 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-78823d23-cc13-4dec-a9f5-89e0cb9211f1
+6a0b85d5-68da-4b3d-b6ba-2b1eac41651a
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
+        Port eth23
+            Interface eth23
         Port eth22
             Interface eth22
         Port br0
             Interface br0
                 type: internal
-        Port eth23
-            Interface eth23
         Port eth21
             Interface eth21
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8f7c4345-24af-48ac-8bee-363fa5bb6315
-controller          : [1cdbeddf-7150-40f8-808a-bf80d235a3cb]
+_uuid               : 02f5e20b-b196-47a1-9c60-2448d1f5ff20
+controller          : [cf170328-67e8-4e54-b875-60400139ba6b]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [6d4ad963-c596-4d12-bf69-99926ef783b8, b063900e-02b8-4552-84d0-e93f259bed0a, b2de8bd6-4e84-4df8-85f5-1bf5d8f47fb8, fa21b69f-484a-4ef6-a6f3-1303a197fe6f]
+ports               : [2089316f-ec9a-4347-ba19-3e454a9c9734, 74dcc91c-f072-472d-997a-d611226a3b88, 81e2be26-1863-413d-ac00-111a286e957b, d57662f1-639a-438d-bc3f-2cda9f3aaac8]
 protocols           : [OpenFlow13]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1cdbeddf-7150-40f8-808a-bf80d235a3cb
+_uuid               : cf170328-67e8-4e54-b875-60400139ba6b
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=666, sec_since_disconnect=4, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=681, sec_since_disconnect=5, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : b2de8bd6-4e84-4df8-85f5-1bf5d8f47fb8
+_uuid               : 74dcc91c-f072-472d-997a-d611226a3b88
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [974ab682-ba8d-411f-8597-930d5cb0f6c3]
-name                : eth23
-
-_uuid               : b063900e-02b8-4552-84d0-e93f259bed0a
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [47300027-cfd5-4a58-b36f-4acbea6869e6]
-name                : br0
-
-_uuid               : 6d4ad963-c596-4d12-bf69-99926ef783b8
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [8eadc07c-c084-499b-80cd-b3a649dc1f05]
+interfaces          : [e464e6a6-880c-4aac-9096-4195a7ecd59e]
 name                : eth22
 
-_uuid               : fa21b69f-484a-4ef6-a6f3-1303a197fe6f
+_uuid               : d57662f1-639a-438d-bc3f-2cda9f3aaac8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [dea79c87-a417-4e57-bc4c-6fab58016f97]
+interfaces          : [a3521e6f-4a0a-4d5b-b173-c13da40b3a86]
 name                : eth21
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8eadc07c-c084-499b-80cd-b3a649dc1f05
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2728845362, tx_dropped=0, tx_errors=0, tx_packets=47657477}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
+_uuid               : 81e2be26-1863-413d-ac00-111a286e957b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [0d5cb526-f446-4557-a9d9-9f88950b5f01]
+name                : br0
 
-_uuid               : 974ab682-ba8d-411f-8597-930d5cb0f6c3
+_uuid               : 2089316f-ec9a-4347-ba19-3e454a9c9734
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [15ad22cd-e2cc-4215-bad4-e50684e3a281]
+name                : eth23
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 15ad22cd-e2cc-4215-bad4-e50684e3a281
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -107,14 +90,31 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3203288204, tx_dropped=0, tx_errors=0, tx_packets=4998837}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3378498704, tx_dropped=0, tx_errors=0, tx_packets=5115644}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 47300027-cfd5-4a58-b36f-4acbea6869e6
+_uuid               : e464e6a6-880c-4aac-9096-4195a7ecd59e
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2834169682, tx_dropped=0, tx_errors=0, tx_packets=47728279}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 0d5cb526-f446-4557-a9d9-9f88950b5f01
 admin_state         : down
 duplex              : full
-ifindex             : 180
+ifindex             : 184
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -128,7 +128,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : dea79c87-a417-4e57-bc4c-6fab58016f97
+_uuid               : a3521e6f-4a0a-4d5b-b173-c13da40b3a86
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -141,7 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1192289065, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75296739, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1426084481, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75453865, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,16 +149,22 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bdcca6157dfca92a9f24da3223b87688c8f30d04
-Author:     Simon Horman &lt;simon.horman@netronome.com&gt;
-AuthorDate: Wed Sep 24 13:43:19 2014 +0900
+commit 09853482b9c3e067a838918b3ee3ecc23cf529f6
+Author:     Ankur Sharma &lt;ankursharma@vmware.com&gt;
+AuthorDate: Mon Sep 29 10:13:00 2014 -0700
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Sep 26 10:45:06 2014 -0700
+CommitDate: Mon Sep 29 11:11:21 2014 -0700
 
-    ovs-ofctl: Correct help text for add-groups
+    datapath-windows: Build fix.
     
-    It is add-groups rather than add-group that takes FILE as an argument.
+    Recently we changed the signature of NlAttrParse.
+    Function OvsGetVport was not updated accordingly.
     
-    Signed-off-by: Simon Horman &lt;simon.horman@netronome.com&gt;
+    Fixed the same.
+    
+    Signed-off-by: Ankur Sharma &lt;ankursharma@vmware.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Eitan Eliahu &lt;eliahue@vmware.com&gt;
+    Acked-by: Nithin Raju &lt;nithin@vmware.com&gt;
+    Acked-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
 </pre>
