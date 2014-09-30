@@ -8,76 +8,76 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-b11f1d36-f06e-4d8c-b1fb-d59229bf1e4e
+6d7c31a0-1e1b-4492-920a-fd895474d50a
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
         Port eth22
             Interface eth22
         Port eth21
             Interface eth21
         Port eth23
             Interface eth23
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 189dde9f-7756-4e3d-955a-3b4b6e35a03e
-controller          : [3791eecb-781e-44fd-913f-4aef0072cf41]
+_uuid               : f89155cf-2bc3-4610-a1e4-45ff60c7e31e
+controller          : [877cc52c-1747-4c2e-a3fb-2aec9e2a4720]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [b1a176fa-04fa-4e27-9862-5c4e5b067825, ce66cc24-f910-4748-b8d8-2470307a314b, dcba686b-5d5d-424a-837a-f2fb7f6c0379, e0c8dd80-d4cc-430b-820a-405743b7b332]
+ports               : [538a5fec-22ed-41d9-a6d0-a369c27e868e, 9af241a0-5e6c-4700-9d67-fc2fa5771c92, 9e1ab161-2789-4cda-b82c-2a80d6ca246a, f76a41cb-c6ad-4527-ae32-f3fce991cef3]
 protocols           : [OpenFlow14]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3791eecb-781e-44fd-913f-4aef0072cf41
+_uuid               : 877cc52c-1747-4c2e-a3fb-2aec9e2a4720
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=666, sec_since_disconnect=4, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=662, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : e0c8dd80-d4cc-430b-820a-405743b7b332
+_uuid               : 538a5fec-22ed-41d9-a6d0-a369c27e868e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [124fd0bb-96ac-4716-bf8b-8c8a2e9adb75]
-name                : eth23
-
-_uuid               : ce66cc24-f910-4748-b8d8-2470307a314b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [b4a148a3-45bd-408f-868e-5eb23e9b22bb]
+interfaces          : [52d7f53a-b2f2-45c9-9420-9a3cd73d1686]
 name                : eth22
 
-_uuid               : b1a176fa-04fa-4e27-9862-5c4e5b067825
+_uuid               : 9af241a0-5e6c-4700-9d67-fc2fa5771c92
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [233bf8a9-0140-4a4a-b490-6e147172ef87]
-name                : br0
-
-_uuid               : dcba686b-5d5d-424a-837a-f2fb7f6c0379
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [d4dd31a4-5e02-4205-8fa0-64b6d76a5cca]
+interfaces          : [e1bd7d10-5366-46a8-b640-0e55d09b7252]
 name                : eth21
 
+_uuid               : 9e1ab161-2789-4cda-b82c-2a80d6ca246a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [bf2c3082-036c-4cb8-a7a1-3cb6faa01405]
+name                : eth23
+
+_uuid               : f76a41cb-c6ad-4527-ae32-f3fce991cef3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [73cd3c36-d13f-4d76-a1c5-8404b483572f]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : d4dd31a4-5e02-4205-8fa0-64b6d76a5cca
+_uuid               : e1bd7d10-5366-46a8-b640-0e55d09b7252
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -90,14 +90,14 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1542983689, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75532429, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1776861605, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75689610, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 233bf8a9-0140-4a4a-b490-6e147172ef87
+_uuid               : 73cd3c36-d13f-4d76-a1c5-8404b483572f
 admin_state         : down
 duplex              : full
-ifindex             : 186
+ifindex             : 190
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -111,24 +111,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : b4a148a3-45bd-408f-868e-5eb23e9b22bb
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2886830342, tx_dropped=0, tx_errors=0, tx_packets=47763679}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 124fd0bb-96ac-4716-bf8b-8c8a2e9adb75
+_uuid               : bf2c3082-036c-4cb8-a7a1-3cb6faa01405
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -141,7 +124,24 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3466106204, tx_dropped=0, tx_errors=0, tx_packets=5174049}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3641054204, tx_dropped=0, tx_errors=0, tx_packets=5290681}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 52d7f53a-b2f2-45c9-9420-9a3cd73d1686
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2992483162, tx_dropped=0, tx_errors=0, tx_packets=47834700}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,16 +149,17 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit ddc3b06d348793ae3f858a832ce5c9053d7a621b
-Author:     Justin Pettit &lt;jpettit@nicira.com&gt;
-AuthorDate: Mon Sep 29 11:15:12 2014 -0700
-Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
-CommitDate: Mon Sep 29 12:57:58 2014 -0700
+commit ee8627fa801a23084f211d5c6523b9c46c6d13e7
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Fri Sep 26 15:05:40 2014 +0000
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Tue Sep 30 11:28:48 2014 -0700
 
-    FAQ: Replace reference to OVS 2.2 with 2.3.
+    INSTALL.DPDK: Update DPDK related documentation.
     
-    We never released 2.2.0, so references to it are confusing.
+    This commit updates the DPDK related documentation to reflect
+    the pmd thread multi-threading work.
     
-    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
-    Acked-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Acked-by: Daniele Di Proietto &lt;ddiproietto@vmware.com&gt;
 </pre>
