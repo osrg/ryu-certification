@@ -8,14 +8,14 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-d49e3fe4-11e4-4635-aa1d-81f4c5351038
+e4cb22d3-d5e3-4feb-8b56-d28a20cf149c
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth21
-            Interface eth21
         Port eth23
             Interface eth23
+        Port eth21
+            Interface eth21
         Port br0
             Interface br0
                 type: internal
@@ -23,81 +23,64 @@ d49e3fe4-11e4-4635-aa1d-81f4c5351038
             Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2de051aa-952b-465e-9c69-a899801440ca
-controller          : [4325554f-4794-46b4-a243-57036d477695]
+_uuid               : 8ea5acb0-2fab-42cf-a6a1-c3409f0aa1c9
+controller          : [96bb85a4-504b-4e52-a29d-596f68484253]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [5f6871ad-d4ef-49c6-bcd3-0f06a0cb2119, 949256dd-80e1-4571-adf6-7982e916c571, b004981d-c7f9-4ce4-a96c-3a0bd0fb4fae, d867a4b9-881b-44c2-8051-5889314d859f]
+ports               : [35ce0994-64c5-4b32-b26a-122936fc98f4, 5d842574-cfb4-404f-9d2b-27f89c63c6d8, a7158829-4efa-4ba0-9b1d-ecd0b1f87e48, b57c2666-d999-4fae-a32b-522d300095dd]
 protocols           : [OpenFlow13]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4325554f-4794-46b4-a243-57036d477695
+_uuid               : 96bb85a4-504b-4e52-a29d-596f68484253
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=692, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=677, sec_since_disconnect=1, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 949256dd-80e1-4571-adf6-7982e916c571
+_uuid               : 35ce0994-64c5-4b32-b26a-122936fc98f4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4a9da735-02f4-403c-9620-a57d11ae3a00]
+interfaces          : [c894a543-4d8e-41b1-8054-0d3cc7bd31b2]
 name                : eth23
 
-_uuid               : b004981d-c7f9-4ce4-a96c-3a0bd0fb4fae
+_uuid               : 5d842574-cfb4-404f-9d2b-27f89c63c6d8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1dd39444-a624-42ec-8c39-705146d236d8]
+interfaces          : [62b3d79b-c523-4cc9-93d0-d5854b5a080c]
+name                : eth21
+
+_uuid               : a7158829-4efa-4ba0-9b1d-ecd0b1f87e48
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [91e9b0a9-2c5b-49d8-91fc-3e4eb33d5b9f]
 name                : br0
 
-_uuid               : d867a4b9-881b-44c2-8051-5889314d859f
+_uuid               : b57c2666-d999-4fae-a32b-522d300095dd
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c35c2b95-f488-4bdf-89ce-15299d454981]
+interfaces          : [a54fa332-90ac-45c0-82b5-a676a4473335]
 name                : eth22
 
-_uuid               : 5f6871ad-d4ef-49c6-bcd3-0f06a0cb2119
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1de137b0-98e9-4b1b-96f8-23f063eb1867]
-name                : eth21
-
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1de137b0-98e9-4b1b-96f8-23f063eb1867
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=1893750313, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75768167, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 1dd39444-a624-42ec-8c39-705146d236d8
+_uuid               : 91e9b0a9-2c5b-49d8-91fc-3e4eb33d5b9f
 admin_state         : down
 duplex              : full
-ifindex             : 192
+ifindex             : 197
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -111,7 +94,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : c35c2b95-f488-4bdf-89ce-15299d454981
+_uuid               : a54fa332-90ac-45c0-82b5-a676a4473335
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -124,11 +107,11 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3044902322, tx_dropped=0, tx_errors=0, tx_packets=47869939}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3213358368, tx_dropped=0, tx_errors=0, tx_packets=47983022}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 4a9da735-02f4-403c-9620-a57d11ae3a00
+_uuid               : c894a543-4d8e-41b1-8054-0d3cc7bd31b2
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -141,7 +124,24 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3728880704, tx_dropped=0, tx_errors=0, tx_packets=5349232}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3967197704, tx_dropped=0, tx_errors=0, tx_packets=5508110}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 62b3d79b-c523-4cc9-93d0-d5854b5a080c
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=2232764359, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75995839, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,43 +149,27 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 538919d3a672eab8a561048acf9a8e1721cd559c
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Tue Sep 30 17:03:07 2014 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Wed Oct 1 08:46:06 2014 -0700
+commit 01420a2cddd7b5cf0a8ac59a4d60ce9d3b328d97
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Wed Oct 1 10:38:23 2014 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Thu Oct 2 09:18:30 2014 -0700
 
-    configure: Disable strict aliasing.
+    stream-tcp: Change the connection name for pwindows.
     
-    The C standard allows compilers to do type-based alias analysis, which
-    means that the compiler is allowed to assume that pointers to objects of
-    different types are pointers to different objects.  For example, a compiler
-    may assume that &quot;uint16_t *a&quot; and &quot;uint32_t *b&quot; point to different and
-    nonoverlapping locations because the pointed-to types are different.  This
-    can lead to surprising &quot;optimizations&quot; with compilers that by default do
-    this kind of analysis, which includes GCC and Clang.
+    As of now, when someone passes a punix:foo/bar as a connection type
+    in Windows, we create a TCP server using 127.0.0.1 and save the kernel
+    assigned port number in the file foo/bar. The connection name
+    as obtained through pstream_get_name&#40;&#41; would be ptcp:127.0.0.1:.
+    This was okay if pstream_get_name&#40;&#41; was only used for logging
+    purposes. But netdev-dummy uses it to close active connections when the
+    passed name and created name are different. This causes transient
+    connection teardowns while using patch ports in Windows unit tests
+    causing occasional packet loss.
     
-    The one escape clause that the C standard gives us is that character types
-    must be assumed to alias any other object.  We've always tried to use this
-    escape clause to avoid problems with type-based alias analysis in the past.
-    I think that we should continue to try to do this in the future.  It's hard
-    to tell what compiler we might want to use in the future, and one never
-    knows what kind of control that compiler allows over alias analysis.
+    This commit sets the connection name to be punix:foo/bar instead
+    of ptcp:127.0.0.1: for pwindows.
     
-    However, recently I helped another developer debug a nasty and confusing
-    issue, which turned out to be the result of a surprising compiler
-    optimization due to alias analysis.  I've seen enough of these that I don't
-    think it's worthwhile to risk more problems than we have to.  Thus, this
-    commit turns off type-based alias analysis in GCC and Clang.
-    
-    Linus Torvalds thinks that type-base alias analysis is not sane, at least
-    as GCC implements it: https://lkml.org/lkml/2003/2/26/158
-    
-    The GCC manual says that -Wstrict-aliasing is only effective without
-    -fno-strict-aliasing, otherwise I'd keep -Wstrict-aliasing also.
-    
-    Indications are that MSVC doesn't do type-based alias analysis by default.
-    
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
