@@ -8,110 +8,76 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-e4cb22d3-d5e3-4feb-8b56-d28a20cf149c
+2643171a-2100-460d-8976-cc721ffa5b9f
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth23
-            Interface eth23
         Port eth21
             Interface eth21
+        Port eth22
+            Interface eth22
         Port br0
             Interface br0
                 type: internal
-        Port eth22
-            Interface eth22
+        Port eth23
+            Interface eth23
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8ea5acb0-2fab-42cf-a6a1-c3409f0aa1c9
-controller          : [96bb85a4-504b-4e52-a29d-596f68484253]
+_uuid               : 2f049840-fa7c-49ad-85d0-f9288fa2722a
+controller          : [6d3d7aa2-9a44-42c7-ac78-6cc509544ae8]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [35ce0994-64c5-4b32-b26a-122936fc98f4, 5d842574-cfb4-404f-9d2b-27f89c63c6d8, a7158829-4efa-4ba0-9b1d-ecd0b1f87e48, b57c2666-d999-4fae-a32b-522d300095dd]
+ports               : [1d7ca50e-dc24-429b-b6c1-27ad83b05891, 7e9747eb-419f-434f-918a-c69d6fac65ca, b04fe7d4-7070-4838-8866-5ed5c4210c5e, e5d295b6-bca8-48b1-b760-ab4bfe16ee21]
 protocols           : [OpenFlow13]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 96bb85a4-504b-4e52-a29d-596f68484253
+_uuid               : 6d3d7aa2-9a44-42c7-ac78-6cc509544ae8
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=677, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=677, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 35ce0994-64c5-4b32-b26a-122936fc98f4
+_uuid               : b04fe7d4-7070-4838-8866-5ed5c4210c5e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c894a543-4d8e-41b1-8054-0d3cc7bd31b2]
-name                : eth23
-
-_uuid               : 5d842574-cfb4-404f-9d2b-27f89c63c6d8
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [62b3d79b-c523-4cc9-93d0-d5854b5a080c]
-name                : eth21
-
-_uuid               : a7158829-4efa-4ba0-9b1d-ecd0b1f87e48
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [91e9b0a9-2c5b-49d8-91fc-3e4eb33d5b9f]
+interfaces          : [584e39f6-61c1-4e8e-9ded-e2dbffe1a38e]
 name                : br0
 
-_uuid               : b57c2666-d999-4fae-a32b-522d300095dd
+_uuid               : 1d7ca50e-dc24-429b-b6c1-27ad83b05891
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [a54fa332-90ac-45c0-82b5-a676a4473335]
+interfaces          : [aa24e565-eade-478d-83bd-444682034bd0]
+name                : eth21
+
+_uuid               : e5d295b6-bca8-48b1-b760-ab4bfe16ee21
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [9c9fbed4-3a4b-4e6b-bce7-b8dc37f5304d]
+name                : eth23
+
+_uuid               : 7e9747eb-419f-434f-918a-c69d6fac65ca
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [902ffe69-dffb-4783-8091-5a294d0f1342]
 name                : eth22
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 91e9b0a9-2c5b-49d8-91fc-3e4eb33d5b9f
-admin_state         : down
-duplex              : full
-ifindex             : 197
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : a54fa332-90ac-45c0-82b5-a676a4473335
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3213358368, tx_dropped=0, tx_errors=0, tx_packets=47983022}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : c894a543-4d8e-41b1-8054-0d3cc7bd31b2
+_uuid               : 9c9fbed4-3a4b-4e6b-bce7-b8dc37f5304d
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -124,11 +90,28 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3967197704, tx_dropped=0, tx_errors=0, tx_packets=5508110}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4142921204, tx_dropped=0, tx_errors=0, tx_packets=5625259}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 62b3d79b-c523-4cc9-93d0-d5854b5a080c
+_uuid               : 902ffe69-dffb-4783-8091-5a294d0f1342
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3318166688, tx_dropped=0, tx_errors=0, tx_packets=48053480}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : aa24e565-eade-478d-83bd-444682034bd0
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -141,35 +124,62 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=2232764359, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=75995839, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=2466576275, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=76152976, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
+
+_uuid               : 584e39f6-61c1-4e8e-9ded-e2dbffe1a38e
+admin_state         : down
+duplex              : full
+ifindex             : 202
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1500
+name                : br0
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 01420a2cddd7b5cf0a8ac59a4d60ce9d3b328d97
-Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-AuthorDate: Wed Oct 1 10:38:23 2014 -0700
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Thu Oct 2 09:18:30 2014 -0700
+commit 5eca22a2a7fb1fe035316db45d86ee804ec88a55
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Wed Oct 1 21:59:16 2014 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Thu Oct 2 23:12:49 2014 -0700
 
-    stream-tcp: Change the connection name for pwindows.
+    bfd.at: Fix intermittent failure of test - flap_count.
     
-    As of now, when someone passes a punix:foo/bar as a connection type
-    in Windows, we create a TCP server using 127.0.0.1 and save the kernel
-    assigned port number in the file foo/bar. The connection name
-    as obtained through pstream_get_name&#40;&#41; would be ptcp:127.0.0.1:.
-    This was okay if pstream_get_name&#40;&#41; was only used for logging
-    purposes. But netdev-dummy uses it to close active connections when the
-    passed name and created name are different. This causes transient
-    connection teardowns while using patch ports in Windows unit tests
-    causing occasional packet loss.
+    ovs-vsctl commands like 'ovs-vsctl list Interface p1' use the
+    'monitor' RPC method, which causes ovsdb sending updates to
+    the command session when changes are committed to the monitored
+    table.  Since ovs-vsctl commands are short-lived, there is chance
+    that ovs-vsctl terminates the connection to ovsdb right before
+    ovsdb sends the update.  This race will cause the following
+    warning entries in ovsdb-server log:
     
-    This commit sets the connection name to be punix:foo/bar instead
-    of ptcp:127.0.0.1: for pwindows.
+      |jsonrpc|WARN|unix: receive error: Connection reset by peer
+      |reconnect|WARN|unix: connection dropped &#40;Connection reset by peer&#41;
+      |jsonrpc|WARN|unix: send error: Broken pipe
+      |reconnect|WARN|unix: connection dropped &#40;Broken pipe&#41;
     
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    The bfd:flap_count test is particularly prone to this race,
+    since the test aligns the statistics updates &#40;every 5 seconds&#41;
+    with the invocation of ovs-vsctl commands.
+    
+    In the short term, this commit fixes the intermittent failure
+    by disabling the ovs-vswitchd statistics updates using a huge
+    update interval.
+    
+    In the long run, we will research on making ovsdb not send
+    further updates to sessions like ovs-vsctl.
+    
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
