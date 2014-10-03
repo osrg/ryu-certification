@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a239e5f0d3c7647109f20393a0c54f5d0a12e55b
-Merge: 8333e31 55076d3
+commit 6878160b5c2036b339f060f6f3fc4711bb9fafbb
+Merge: a239e5f a8dfb75
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Oct 1 17:09:45 2014 -0700
+AuthorDate: Thu Oct 2 18:20:22 2014 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Oct 1 17:09:45 2014 -0700
+CommitDate: Thu Oct 2 18:20:22 2014 -0700
 
-    Merge into master from pull request #206:
-    update submodules (https://github.com/floodlight/ivs/pull/206)
+    Merge into master from pull request #207:
+    increase maximum number of file descriptors to 4096 (https://github.com/floodlight/ivs/pull/207)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
