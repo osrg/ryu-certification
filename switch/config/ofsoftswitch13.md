@@ -14,16 +14,18 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 336502f3e8e14de678e8e3ee9fe8a833daadd3c6
+commit 064980000fe57e5b502e554d36dc75d393a7cc1d
 Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Mon Sep 8 22:59:18 2014 -0300
+AuthorDate: Tue Oct 7 22:29:43 2014 -0300
 Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Mon Sep 8 22:59:18 2014 -0300
+CommitDate: Tue Oct 7 22:29:43 2014 -0300
 
-    Fix OXM_OF_IPV6_ND_SLL and OXM_OF_IPV6_ND_TLL set_field action.
+    Fix potential bug in handling metadata.
     
-    This commit fix set_field action of IPv6 Neighbor Discovery TLL and SLL,
-    correcting the value memcpy position and recalculating the ICMPv6 checksum.
+    In a OFPIT_WRITE_METADATA the value would be reset, as pointed
+    by Jean Tourrilhes.
+    This commit fix this behavior and also add tunnel metadata information
+    to the packet parsing.
 </pre>
 
 # Modified test scenario for switch restrictions
