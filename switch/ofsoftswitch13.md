@@ -1838,7 +1838,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19987.26kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.16kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1846,13 +1846,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 70930.23kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 69933.10kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 173279.34kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 172998.40kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 177592.22kbps
+        Received unexpected throughput: {'in_port': 2} 175394.12kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1860,7 +1860,7 @@ title: Ryu Certification - ofsoftswitch13
     200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.99pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
 </pre>
@@ -1870,7 +1870,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.50pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.56pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1878,11 +1878,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6795.03pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6666.94pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16515.77pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16444.62pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 16943.33pktps
+        Received unexpected throughput: {'in_port': 2} 16918.74pktps
 </pre>
