@@ -14,13 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f82ec65fb788e1e9b9dcb5fb2de4a98e8d978b10
+commit 7e8358b9fed472706bb4c4448ad5c1ce80ebc4b9
 Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Thu Oct 9 23:47:02 2014 -0300
+AuthorDate: Fri Oct 10 19:41:00 2014 -0300
 Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Thu Oct 9 23:47:02 2014 -0300
+CommitDate: Fri Oct 10 19:41:00 2014 -0300
 
-    Fix malloc being called twice on reply_port and reply_queue unpack messages
+    Change tunnel_id from network to host byte order.
+    
+    Without these changes, flows were being added incorrectly.
 </pre>
 
 # Modified test scenario for switch restrictions
