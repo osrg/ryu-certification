@@ -8,76 +8,93 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-24b52699-00bb-40b0-80ca-4e4804b40590
+57b773fb-e5fb-46d9-a54f-3fca611ae6ac
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port br0
-            Interface br0
-                type: internal
+        Port eth23
+            Interface eth23
         Port eth21
             Interface eth21
         Port eth22
             Interface eth22
-        Port eth23
-            Interface eth23
+        Port br0
+            Interface br0
+                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : cf5cb305-41d3-4c81-bc31-b5e95e9191ab
-controller          : [ef7dfc64-7cc9-46a1-bca0-119c4ab15fb8]
+_uuid               : 410f37ec-c58f-4095-8247-4aba5c9a66d3
+controller          : [d42826d5-4117-41d7-bdc9-f0a3bb1b76ac]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [3688e949-547d-4fca-9514-9b4265e86d9c, 4bae5089-ed72-4167-a811-f867f784280b, 868ab5d7-399d-4f71-9bb7-46b416446b59, 8cccc766-8653-47db-bd7e-00d2605bcdc0]
+ports               : [2261b3a7-24b1-4e25-b1e7-c586adf98ce3, 2a03dca5-5ef0-4b0b-b617-95080b9ad818, 3694ac8b-1b1e-4c4f-b838-4a3638656afd, ea5fe947-82ca-4d69-bf76-1423df555f18]
 protocols           : [OpenFlow14]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : ef7dfc64-7cc9-46a1-bca0-119c4ab15fb8
+_uuid               : d42826d5-4117-41d7-bdc9-f0a3bb1b76ac
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=742, sec_since_disconnect=2, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=672, sec_since_disconnect=3, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4bae5089-ed72-4167-a811-f867f784280b
+_uuid               : 2a03dca5-5ef0-4b0b-b617-95080b9ad818
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6e62bcd5-8741-4db1-b5eb-314d8338a217]
+interfaces          : [5797a22f-9d13-4a81-a237-6a0c1050f975]
 name                : eth21
 
-_uuid               : 3688e949-547d-4fca-9514-9b4265e86d9c
+_uuid               : ea5fe947-82ca-4d69-bf76-1423df555f18
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [610798d8-8e6e-4c42-abfe-f034b5c3fa54]
+interfaces          : [bf657266-4e9b-40d7-bcbf-08b962851b0e]
 name                : br0
 
-_uuid               : 8cccc766-8653-47db-bd7e-00d2605bcdc0
+_uuid               : 2261b3a7-24b1-4e25-b1e7-c586adf98ce3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f372fafc-e7c9-4f44-8682-17d32e2b2480]
+interfaces          : [6a9cc0a9-79f3-4fe5-b64d-e8120641b880]
 name                : eth23
 
-_uuid               : 868ab5d7-399d-4f71-9bb7-46b416446b59
+_uuid               : 3694ac8b-1b1e-4c4f-b838-4a3638656afd
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [e5d4e1f0-45d2-435b-a37e-0fbf92d46cbd]
+interfaces          : [4353cfe5-ef9f-470c-829d-8cabb453868c]
 name                : eth22
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : e5d4e1f0-45d2-435b-a37e-0fbf92d46cbd
+_uuid               : 6a9cc0a9-79f3-4fe5-b64d-e8120641b880
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5e
+mtu                 : 1550
+name                : eth23
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1537874908, tx_dropped=0, tx_errors=0, tx_packets=6751873}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 4353cfe5-ef9f-470c-829d-8cabb453868c
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -90,14 +107,14 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1772933604, tx_dropped=0, tx_errors=0, tx_packets=72798442}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3711653700, tx_dropped=0, tx_errors=0, tx_packets=88409111}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 610798d8-8e6e-4c42-abfe-f034b5c3fa54
+_uuid               : bf657266-4e9b-40d7-bcbf-08b962851b0e
 admin_state         : down
 duplex              : full
-ifindex             : 225
+ifindex             : 232
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -111,24 +128,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : f372fafc-e7c9-4f44-8682-17d32e2b2480
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
-mtu                 : 1550
-name                : eth23
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1128799408, tx_dropped=0, tx_errors=0, tx_packets=6479156}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 6e62bcd5-8741-4db1-b5eb-314d8338a217
+_uuid               : 5797a22f-9d13-4a81-a237-6a0c1050f975
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -141,7 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=642582155, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=123625739, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=349081297, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=146340292, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,15 +149,17 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 24adf5d6842b30006d35759b475fd15666670b5e
-Author:     Andy Zhou &lt;azhou@nicira.com&gt;
-AuthorDate: Wed Oct 8 17:15:42 2014 -0700
-Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
-CommitDate: Thu Oct 9 11:40:02 2014 -0700
+commit bd7fe4e925d73dff879a4a1ac19a4365365e0dd7
+Author:     Dmitry Krivenok &lt;krivenok.dmitry@gmail.com&gt;
+AuthorDate: Fri Oct 10 08:56:22 2014 +0400
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Thu Oct 9 23:15:54 2014 -0700
 
-    ovs-bugtool: Add fdb output for all bridges
+    configure: Also check for Python 2.x installed as python2.7.
     
-    Fdb entries can provide useful information. Collect them in bugtool.
+    On ArchLinux &quot;python&quot; points to 3.x version and the right
+    2.x python binary is &quot;python2.7&quot;.
     
-    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Signed-off-by: Dmitry V. Krivenok &lt;krivenok.dmitry@gmail.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
