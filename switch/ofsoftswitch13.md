@@ -341,11 +341,11 @@ title: Ryu Certification - ofsoftswitch13
 <a name="21b7587a754c08356f3f60d3b4bb8a99">action: set_field: 38_TUNNEL_ID</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
 </pre>
 <a name="cbb7ad4ba4f1c1f3dabc03ae2f07c663">action: set_field: 06_VLAN_VID</a>
 <pre>
@@ -783,44 +783,44 @@ title: Ryu Certification - ofsoftswitch13
 <a name="e1ab734d1d27b48a8e3b37e574a0a68c">match: 38_TUNNEL_ID</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv4/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/ipv6/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
     ethernet/arp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12345,actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': 4120793659044003840}))
 </pre>
 <a name="8a0ae32e2588fe37ce98c87f0c1d55ec">match: 38_TUNNEL_ID (Mask)</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/ipv4/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/ipv4/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/ipv6/tcp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/ipv6/tcp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/arp-->'actions=set_field:12345->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:CONTROLLER' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=3474808587493048320)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=12345)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65535,port=4294967293,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
     ethernet/arp-->'actions=set_field:6666->tunnel_id,goto_table:1','table_id:1,tunnel_id=12288(mask=0xff00),actions=output:2' ERROR
-        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=1876312194753232896)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1}))
+        Added incorrect flows: flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=0,instructions=[OFPInstructionActions(actions=[OFPActionSetField(tunnel_id=6666)],len=24,type=4), OFPInstructionGotoTable(len=8,table_id=1,type=1)],match=OFPMatch(oxm_fields={'in_port': 1})), flow_stats(cookie=0,priority=32768,hard_timeout=0,idle_timeout=0,table_id=1,instructions=[OFPInstructionActions(actions=[OFPActionOutput(len=16,max_len=65509,port=2,type=0)],len=24,type=4)],match=OFPMatch(oxm_fields={'tunnel_id': (13510798882111488, 71776119061217280)}))
 </pre>
 <a name="6cb722939537192104e3dbc2bc225b9a">match: 06_VLAN_VID</a>
 <pre>
@@ -1838,7 +1838,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.16kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19986.54kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1846,13 +1846,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 69933.10kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 68928.21kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 172998.40kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 171556.21kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 175394.12kbps
+        Received unexpected throughput: {'in_port': 2} 176312.92kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1860,7 +1860,7 @@ title: Ryu Certification - ofsoftswitch13
     200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.99pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
 </pre>
@@ -1870,7 +1870,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.56pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.89pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1878,11 +1878,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6666.94pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6778.46pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16444.62pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16536.92pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 16918.74pktps
+        Received unexpected throughput: {'in_port': 2} 17041.99pktps
 </pre>

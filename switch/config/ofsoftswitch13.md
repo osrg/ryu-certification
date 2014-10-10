@@ -14,13 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4c8f1ca4870c077b1ac97182cee8411ae87625bf
-Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
-AuthorDate: Wed Oct 8 15:39:06 2014 -0700
-Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Thu Oct 9 22:25:46 2014 -0300
+commit f82ec65fb788e1e9b9dcb5fb2de4a98e8d978b10
+Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
+AuthorDate: Thu Oct 9 23:47:02 2014 -0300
+Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
+CommitDate: Thu Oct 9 23:47:02 2014 -0300
 
-    Fix a double free in group of type all with new packet freeing strategy.
+    Fix malloc being called twice on reply_port and reply_queue unpack messages
 </pre>
 
 # Modified test scenario for switch restrictions
