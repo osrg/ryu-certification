@@ -14,15 +14,17 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7e8358b9fed472706bb4c4448ad5c1ce80ebc4b9
+commit 227ecaa4fb1319c9e3eff63abea9e2413f96f368
 Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Fri Oct 10 19:41:00 2014 -0300
+AuthorDate: Sat Oct 11 01:33:08 2014 -0300
 Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Fri Oct 10 19:41:00 2014 -0300
+CommitDate: Sat Oct 11 01:33:08 2014 -0300
 
-    Change tunnel_id from network to host byte order.
+    Change IPv6 flow label and traffic class parsing.
     
-    Without these changes, flows were being added incorrectly.
+    This commit changes the parsing specification of the fields:
+    version, traffic class and flow label. Now they are parsed as
+    only one field on customnetpdl.
 </pre>
 
 # Modified test scenario for switch restrictions
