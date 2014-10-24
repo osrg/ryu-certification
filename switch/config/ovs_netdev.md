@@ -8,93 +8,76 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-380ba6d8-520f-47a4-8cb5-60931f340373
+993461cb-62e6-40b8-aceb-208988e39eb1
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth23
-            Interface eth23
-        Port eth21
-            Interface eth21
+        Port eth22
+            Interface eth22
         Port br0
             Interface br0
                 type: internal
-        Port eth22
-            Interface eth22
+        Port eth21
+            Interface eth21
+        Port eth23
+            Interface eth23
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : d80f9572-364d-41e4-96fe-f5eb8a95ae74
-controller          : [46247820-93d6-49dc-bbf6-e26b0d864aea]
+_uuid               : 0978fda1-8dff-4960-bca8-c58e284c6665
+controller          : [25eb5cdc-2a79-4c4b-af78-fa7a18bec21c]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [17700372-f6f5-4700-95b7-370451673462, 179b6839-3a48-4fcb-a084-79dfd226d150, 590ffe8a-0012-48c7-adab-afa3f6bfb842, fb25200f-eed5-492c-b5e2-44825ccff091]
+ports               : [086050d6-3fad-47ed-a4fa-f8783db7820d, 4ec8beb0-29f8-4f5d-a919-47586d57571a, ba817c43-fb49-403d-9a69-41ca978bf111, d6cfdebb-bf35-4744-a81e-41b7d61f4d8b]
 protocols           : [OpenFlow13]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 46247820-93d6-49dc-bbf6-e26b0d864aea
+_uuid               : 25eb5cdc-2a79-4c4b-af78-fa7a18bec21c
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=821, sec_since_disconnect=0, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=691, sec_since_disconnect=0, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 179b6839-3a48-4fcb-a084-79dfd226d150
+_uuid               : 4ec8beb0-29f8-4f5d-a919-47586d57571a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d4d2deaa-3804-45be-83da-0a6eb4784287]
-name                : eth21
-
-_uuid               : 17700372-f6f5-4700-95b7-370451673462
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [918e88ad-45ca-48cd-8bde-ea53b0a9db31]
-name                : eth23
-
-_uuid               : 590ffe8a-0012-48c7-adab-afa3f6bfb842
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [29cfd436-1aa1-49a8-b0c5-84845db362bd]
+interfaces          : [3ff17d04-e51d-425a-b213-c82e06ced7ba]
 name                : br0
 
-_uuid               : fb25200f-eed5-492c-b5e2-44825ccff091
+_uuid               : 086050d6-3fad-47ed-a4fa-f8783db7820d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [0a733a74-b98f-409d-bde3-cda704252fe8]
+interfaces          : [413b342e-bfec-478b-91e0-20c30396e600]
 name                : eth22
+
+_uuid               : ba817c43-fb49-403d-9a69-41ca978bf111
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [eeb5e037-d61d-4a36-a484-cfdb189b4bf2]
+name                : eth21
+
+_uuid               : d6cfdebb-bf35-4744-a81e-41b7d61f4d8b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [f11e6ef4-8af7-4f10-a7a3-724e0d734994]
+name                : eth23
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0a733a74-b98f-409d-bde3-cda704252fe8
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
-mtu                 : 1550
-name                : eth22
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2518961532, tx_dropped=0, tx_errors=0, tx_packets=104801170}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : 918e88ad-45ca-48cd-8bde-ea53b0a9db31
+_uuid               : f11e6ef4-8af7-4f10-a7a3-724e0d734994
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -107,14 +90,14 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3651077908, tx_dropped=0, tx_errors=0, tx_packets=8160675}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=3826447408, tx_dropped=0, tx_errors=0, tx_packets=8277588}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 29cfd436-1aa1-49a8-b0c5-84845db362bd
+_uuid               : 3ff17d04-e51d-425a-b213-c82e06ced7ba
 admin_state         : down
 duplex              : full
-ifindex             : 277
+ifindex             : 281
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -128,7 +111,24 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : d4d2deaa-3804-45be-83da-0a6eb4784287
+_uuid               : 413b342e-bfec-478b-91e0-20c30396e600
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5d
+mtu                 : 1550
+name                : eth22
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2624104352, tx_dropped=0, tx_errors=0, tx_packets=104871851}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : eeb5e037-d61d-4a36-a484-cfdb189b4bf2
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -141,7 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5c
 mtu                 : 1550
 name                : eth21
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=2367939577, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=170608656, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=2601722993, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=170765774, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,30 +149,47 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b7cefbf7e52eb0262adb8447409d6ee52eb68a59
-Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-AuthorDate: Wed Oct 22 15:35:18 2014 -0700
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Thu Oct 23 11:07:32 2014 -0700
+commit 3a17f00f784b4b47917f336ca19bdc7078faade5
+Author:     Alin Serdean &lt;aserdean@cloudbasesolutions.com&gt;
+AuthorDate: Thu Oct 23 23:38:21 2014 +0000
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Fri Oct 24 08:58:57 2014 -0700
 
-    stream-tcp: Call setsockopt TCP_NODELAY after TCP is connected.
+    datapath-windows: Avoid BSOD when no event queue found.
     
-    On Windows platform, TCP_NODELAY can only be set when TCP is established.
-    &#40;This is an observed behavior and not written in any MSDN documentation.&#41;
-    The current code does not create any problems while running unit tests
-    &#40;because connections get established immediately&#41; but is reportedly
-    observed while connecting to a different machine.
+    kd&gt; ??instance
+    struct _OVS_OPEN_INSTANCE * 0xffffe00002c59f20 _FILE_OBJECT
+       +0x010 eventQueue       : &#40;null&#41;
+       +0x018 packetQueue      : 0xffffe00003ad83f0 - 0xffffe0002876eb18 fffff8012876eb20 fffff8012876eb80 fffff8012876f290 fffff8012876f2d0 fffff8012876f410 fffff8002876f5a0 fffff8002876f610 fffff8002876f660 fffff8002876f6b0 fffff8002876f840 fffff8012876f870 fffff8012876fa20 fffff8012876fa90 00000000010feef8 00000000010fef00 00000000010fefb0 00000000010ff000 00007ff8010ff540 00007ff8010ff5b0 000000002876f640
+       +0x000 cookie           : 0x3a9ae28
+       +0x004 dpNo             : 0
+    SYMBOL_STACK_INDEX:  6
     
-    commit 8b76839&#40;Move setsockopt TCP_NODELAY to when TCP is connected.&#41;
-    made changes to call setsockopt with TCP_NODELAY after TCP is connected
-    only in lib/stream-ssl.c. We need the same change for stream-tcp too and
-    this commit does that.
+    SYMBOL_NAME:  OVSExt!OvsWaitEventIoctl+116
     
-    Currently, a failure of setting TCP_NODELAY results in reporting
-    the error and then closing the socket. This commit changes that
-    behavior such that an error is reported if setting TCP_NODELAY
-    fails, but the connection itself is not torn down.
+    FOLLOWUP_NAME:  MachineOwner
     
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    MODULE_NAME: OVSExt
+    
+    IMAGE_NAME:  OVSExt.sys
+    
+    DEBUG_FLR_IMAGE_TIMESTAMP:  54498bc5
+    
+    BUCKET_ID_FUNC_OFFSET:  116
+    
+    FAILURE_BUCKET_ID:  AV_OVSExt!OvsWaitEventIoctl
+    
+    BUCKET_ID:  AV_OVSExt!OvsWaitEventIoctl
+    
+    ANALYSIS_SOURCE:  KM
+    
+    FAILURE_ID_HASH_STRING:  km:av_ovsext!ovswaiteventioctl
+    
+    FAILURE_ID_HASH:  {07550bfb-c3b5-0412-b95d-f89a5c4671a9}
+    
+    Signed-off-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
+    Acked-by: Eitan Eliahu &lt;eliahue@vmware.com&gt;
+    Acked-by: Sorin Vinturis &lt;svinturis@cloudbasesolutions.com&gt;
+    Acked-by: Nithin Raju &lt;nithin@vmware.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
