@@ -8,79 +8,96 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-0dcdaf86-5464-44d2-92b6-bf4e81179a3e
+285d0bd9-2685-4f7e-bd96-24fb869f0bbe
     Bridge br0
         Controller tcp:10.24.150.30
         fail_mode: secure
-        Port eth22
-            Interface eth22
+        Port br0
+            Interface br0
+                type: internal
         Port eth23
             Interface eth23
         Port eth21
             Interface eth21
-        Port br0
-            Interface br0
-                type: internal
+        Port eth22
+            Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 25552537-146a-4115-8758-239bee67a5f2
-controller          : [322bc807-a83a-4ad9-bd83-c17d0f667e4f]
+_uuid               : 2ee24ce8-3541-40af-819b-42042a6194ea
+controller          : [ae1a2b40-ae2f-4d4d-a12a-020734d0571f]
 datapath_id         : 0000000000000001
 datapath_type       : netdev
 fail_mode           : secure
 mcast_snooping_enable: false
 name                : br0
 other_config        : {datapath-id=0000000000000001}
-ports               : [09e5abe1-c985-49bc-9b68-7e098789c542, 3b1337b3-28d4-42f3-bf56-a4ab40fd63cf, 69b95654-68f1-4e53-90d8-16a76d3a2559, b67d0869-bcd7-484e-b9b3-904a9c2c4f01]
+ports               : [40ed6283-8479-469a-bcfc-7d2c5781218c, 7315139a-c094-497d-9cc2-ee56e0b36cea, 7ac2263a-4257-48da-b41c-7a74ad3f2637, b4b9a254-ab7a-4a9d-914c-6c1dafcbbccd]
 protocols           : [OpenFlow14]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 322bc807-a83a-4ad9-bd83-c17d0f667e4f
+_uuid               : ae1a2b40-ae2f-4d4d-a12a-020734d0571f
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=671, sec_since_disconnect=1, state=BACKOFF}
+status              : {last_error=Connection refused, sec_since_connect=727, sec_since_disconnect=2, state=BACKOFF}
 target              : tcp:10.24.150.30
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 69b95654-68f1-4e53-90d8-16a76d3a2559
+_uuid               : b4b9a254-ab7a-4a9d-914c-6c1dafcbbccd
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d21badfb-a7d4-4649-81d1-21a81537d8ca]
-name                : eth21
-
-_uuid               : 09e5abe1-c985-49bc-9b68-7e098789c542
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [7172f198-dffe-4727-ba4e-03a6147752f1]
+interfaces          : [764a83e3-ee9c-4459-ad54-e1fde6b9394f]
 name                : eth22
 
-_uuid               : b67d0869-bcd7-484e-b9b3-904a9c2c4f01
+_uuid               : 7315139a-c094-497d-9cc2-ee56e0b36cea
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4deba30c-c2c2-4990-9241-d32c46c994c8]
-name                : br0
-
-_uuid               : 3b1337b3-28d4-42f3-bf56-a4ab40fd63cf
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [894a23a8-5308-411a-bb37-e6945cb1c53f]
+interfaces          : [7ffa9582-5d35-4f67-8922-3b450434bcc5]
 name                : eth23
 
+_uuid               : 7ac2263a-4257-48da-b41c-7a74ad3f2637
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [e6ea0509-5d74-4c3e-8bd3-c224a7a32655]
+name                : eth21
+
+_uuid               : 40ed6283-8479-469a-bcfc-7d2c5781218c
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [9fde34d6-5a4e-4c44-be51-e4cb1f7f5dd6]
+name                : br0
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4deba30c-c2c2-4990-9241-d32c46c994c8
+_uuid               : e6ea0509-5d74-4c3e-8bd3-c224a7a32655
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : 00:60:e0:56:53:5c
+mtu                 : 1550
+name                : eth21
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=3186166533, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=171158559, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
+type                : 
+
+_uuid               : 9fde34d6-5a4e-4c44-be51-e4cb1f7f5dd6
 admin_state         : down
 duplex              : full
-ifindex             : 287
+ifindex             : 291
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -94,7 +111,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
 type                : internal
 
-_uuid               : 894a23a8-5308-411a-bb37-e6945cb1c53f
+_uuid               : 7ffa9582-5d35-4f67-8922-3b450434bcc5
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -107,11 +124,11 @@ mac_in_use          : 00:60:e0:56:53:5e
 mtu                 : 1550
 name                : eth23
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4089829408, tx_dropped=0, tx_errors=0, tx_packets=8453176}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=4265201908, tx_dropped=0, tx_errors=0, tx_packets=8570091}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 
-_uuid               : 7172f198-dffe-4727-ba4e-03a6147752f1
+_uuid               : 764a83e3-ee9c-4459-ad54-e1fde6b9394f
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -124,24 +141,7 @@ mac_in_use          : 00:60:e0:56:53:5d
 mtu                 : 1550
 name                : eth22
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2781469832, tx_dropped=0, tx_errors=0, tx_packets=104977640}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
-
-_uuid               : d21badfb-a7d4-4649-81d1-21a81537d8ca
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1550
-name                : eth21
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=2952375617, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=171001436, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=2886626152, tx_dropped=0, tx_errors=0, tx_packets=105048330}
 status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
 type                : 
 </pre>
@@ -149,18 +149,25 @@ type                :
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 8341662d1b57edc90e7bbc020319b282ca7f3ab2
-Author:     Nithin Raju &lt;nithin@vmware.com&gt;
-AuthorDate: Fri Oct 24 08:14:52 2014 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Oct 24 16:49:31 2014 -0700
+commit b1b72f2de4141017ee230d889c23d0e3ffc297a2
+Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+AuthorDate: Mon Oct 27 10:57:28 2014 -0700
+Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+CommitDate: Mon Oct 27 13:15:35 2014 -0700
 
-    netlink-socket: Fix a couple of compilation warnings.
+    lib/ovs-rcu: Support static initialization.
     
-    Reported-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Signed-off-by: Nithin Raju &lt;nithin@vmware.com&gt;
-    Acked-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-    Tested-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-    [blp@nicira.com replaced conventional cast by CONST_CAST]
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Currently, OVSRCU_TYPE_INITIALIZER always initializes the RCU pointer
+    as NULL.  There is no reason why the RCU pointer could not be
+    initialized with a non-NULL value, however, as statically allocated
+    memory is even more stable than required for RCU.
+    
+    This patch changes the initializer to OVSRCU_INITIALIZER&#40;VALUE&#41;, which
+    can take any pointer value as a parameter.
+    
+    This allows rculist, which is introduced in a following patch, to
+    provide an initializer similar to the one in the normal list.
+    
+    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
