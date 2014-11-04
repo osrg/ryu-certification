@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 75481a04e1f6539a2a0316375e8a2167162f7704
-Merge: cf80840 19909f0
+commit dfd8d139d48eafefe3007f6fdd577c64d5a2517a
+Merge: 75481a0 f2085d8
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Oct 29 16:16:19 2014 -0700
+AuthorDate: Mon Nov 3 14:16:29 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Oct 29 16:16:19 2014 -0700
+CommitDate: Mon Nov 3 14:16:29 2014 -0800
 
-    Merge into master from pull request #211:
-    ivs: change RLIMIT_NOFILE failure to a warning (https://github.com/floodlight/ivs/pull/211)
+    Merge into master from pull request #212:
+    convert LOCI list iteration to of_object_t (https://github.com/floodlight/ivs/pull/212)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
