@@ -14,13 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c532c3167523564d4ea9f9754628900a0e96000f
-Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
-AuthorDate: Mon Oct 20 11:45:59 2014 -0700
-Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
-CommitDate: Sat Nov 8 12:47:30 2014 -0200
+commit 01e5dd04022331615803cd49da00466a9398dce0
+Merge: c532c31 5e5774d
+Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
+AuthorDate: Sat Nov 8 15:37:08 2014 -0200
+Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
+CommitDate: Sat Nov 8 15:37:08 2014 -0200
 
-    Add simple validations to table feature request.
+    Merge pull request #129 from hdnivara/master
+    
+    128: Hex metadata is being displayed in decimal in flow statistics
 </pre>
 
 # Modified test scenario for switch restrictions
