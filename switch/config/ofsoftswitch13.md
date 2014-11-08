@@ -14,17 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 227ecaa4fb1319c9e3eff63abea9e2413f96f368
-Author:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Sat Oct 11 01:33:08 2014 -0300
-Commit:     oftutorial &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Sat Oct 11 01:33:08 2014 -0300
+commit c532c3167523564d4ea9f9754628900a0e96000f
+Author:     Jean Tourrilhes &lt;jean.tourrilhes@hp.com&gt;
+AuthorDate: Mon Oct 20 11:45:59 2014 -0700
+Commit:     ederlf &lt;ederlf@cpqd.com.br&gt;
+CommitDate: Sat Nov 8 12:47:30 2014 -0200
 
-    Change IPv6 flow label and traffic class parsing.
-    
-    This commit changes the parsing specification of the fields:
-    version, traffic class and flow label. Now they are parsed as
-    only one field on customnetpdl.
+    Add simple validations to table feature request.
 </pre>
 
 # Modified test scenario for switch restrictions
