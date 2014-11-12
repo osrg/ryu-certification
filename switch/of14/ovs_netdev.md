@@ -1905,22 +1905,22 @@ title: Ryu Certification - ovs netdev
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 479.66kbps, {'in_port': 3} 1538.59kbps
+        Received unexpected throughput: {'in_port': 2} 515.60kbps, {'in_port': 3} 1504.23kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 502.71kbps, {'in_port': 3} 1528.06kbps
+        Received unexpected throughput: {'in_port': 2} 523.79kbps, {'in_port': 3} 1507.32kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 497.24kbps, {'in_port': 3} 1522.58kbps
+        Received unexpected throughput: {'in_port': 2} 490.99kbps, {'in_port': 3} 1528.83kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 507.79kbps, {'in_port': 3} 1491.33kbps
+        Received unexpected throughput: {'in_port': 2} 504.25kbps, {'in_port': 3} 1494.80kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 523.78kbps, {'in_port': 3} 1475.26kbps
+        Received unexpected throughput: {'in_port': 2} 504.26kbps, {'in_port': 3} 1494.82kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
