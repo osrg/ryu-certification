@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b77e1325241a31554e885b89cb0fc8ac7a4d3893
-Merge: 107107d 601d729
+commit ad3241526a9bbc601fed69b398c251bebbf7a222
+Merge: b77e132 2d9ba2f
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Nov 12 11:32:22 2014 -0800
+AuthorDate: Wed Nov 12 14:54:43 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Nov 12 11:32:22 2014 -0800
+CommitDate: Wed Nov 12 14:54:43 2014 -0800
 
-    Merge into master from pull request #215:
-    Shared memory, per-thread stats (https://github.com/floodlight/ivs/pull/215)
+    Merge into master from pull request #216:
+    OVSDriver: use a socket to send kflow requests to the main thread (https://github.com/floodlight/ivs/pull/216)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
