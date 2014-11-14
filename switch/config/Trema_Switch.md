@@ -13,11 +13,11 @@ $ sudo -E ./objects/switch/switch/switch -d --datapath_id=1 --server_ip=10.24.15
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bdda57057921d41cf0e727cdbd0c5077e451622b
-Author:     Kazuya Suzuki &lt;kazuya@ax.jp.nec.com&gt;
-AuthorDate: Sat Aug 23 14:04:13 2014 +0900
-Commit:     Kazuya Suzuki &lt;kazuya@ax.jp.nec.com&gt;
-CommitDate: Sat Aug 23 14:04:13 2014 +0900
+commit f5221f754a5340bbc98b4c740a36007b4035d8b4
+Author:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+AuthorDate: Fri Nov 14 13:46:06 2014 +0900
+Commit:     Yasuhito Takamiya &lt;yasuhito@gmail.com&gt;
+CommitDate: Fri Nov 14 13:46:06 2014 +0900
 
-    Fix README in examples/packet_in.
+    More RuboCop.
 </pre>
