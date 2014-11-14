@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit aaca991b15c85eeec208cd66ff27998e0b8fbd05
-Merge: 9e65928 6ceed41
+commit 2fc736810c4b5dc4b96ea1da23df213df8437556
+Merge: aaca991 102618c
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Nov 13 14:19:33 2014 -0800
+AuthorDate: Thu Nov 13 16:12:28 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Nov 13 14:19:33 2014 -0800
+CommitDate: Thu Nov 13 16:12:28 2014 -0800
 
-    Merge into master from pull request #214:
-    Experimental LuaJIT packet pipeline (https://github.com/floodlight/ivs/pull/214)
+    Merge into master from pull request #219:
+    pipeline_lua: use a barrier blocker when code/data gentables are modified (https://github.com/floodlight/ivs/pull/219)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
