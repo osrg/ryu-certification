@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit ad3241526a9bbc601fed69b398c251bebbf7a222
-Merge: b77e132 2d9ba2f
+commit aaca991b15c85eeec208cd66ff27998e0b8fbd05
+Merge: 9e65928 6ceed41
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Nov 12 14:54:43 2014 -0800
+AuthorDate: Thu Nov 13 14:19:33 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Nov 12 14:54:43 2014 -0800
+CommitDate: Thu Nov 13 14:19:33 2014 -0800
 
-    Merge into master from pull request #216:
-    OVSDriver: use a socket to send kflow requests to the main thread (https://github.com/floodlight/ivs/pull/216)
+    Merge into master from pull request #214:
+    Experimental LuaJIT packet pipeline (https://github.com/floodlight/ivs/pull/214)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
