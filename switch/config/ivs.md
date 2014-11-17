@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0348caece3f391600961ba6d00a7f654d6d50c49
-Merge: 60af9fb 0841cee
+commit 5cb535df06f66387f91d7e58f02bcdd1396201e0
+Merge: 0348cae 5a1e9ab
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Nov 13 18:57:35 2014 -0800
+AuthorDate: Mon Nov 17 11:10:50 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Nov 13 18:57:35 2014 -0800
+CommitDate: Mon Nov 17 11:10:50 2014 -0800
 
-    Merge into master from pull request #220:
-    pipeline_lua: remove unnecessary locking (https://github.com/floodlight/ivs/pull/220)
+    Merge into master from pull request #221:
+    pipeline_lua: embed base Lua code during the build process and create sandbox (https://github.com/floodlight/ivs/pull/221)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
