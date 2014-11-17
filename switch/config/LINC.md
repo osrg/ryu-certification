@@ -69,16 +69,16 @@ CommitDate: Wed Sep 17 08:31:57 2014 +0200
     Update config_gen
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit d09dcab6515a299cf6423d8ad5f8282b09168935
-Merge: 2da25f4 590d7d1
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Aug 19 13:18:56 2014 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Aug 19 13:18:56 2014 +0200
+commit 84f086ec34658f41635b76e79938f700e0876104
+Merge: 3f1b893 dfb4d78
+Author:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
+AuthorDate: Sun Nov 16 18:20:58 2014 -0800
+Commit:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
+CommitDate: Sun Nov 16 18:20:58 2014 -0800
 
-    Merge pull request #76 from FlowForwarding/ofp_match_for_vlan
+    Merge pull request #59 from legoscia/fixes
     
-    Add macros for OFPVID_PRESENT and OFPVID_NONE values
+    Minor fixes for problems found by dialyzer
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
