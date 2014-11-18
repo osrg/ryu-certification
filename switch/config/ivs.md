@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 5cb535df06f66387f91d7e58f02bcdd1396201e0
-Merge: 0348cae 5a1e9ab
+commit 670adb72f34bb7f8f6d692d19f5f5a6d9ccf4990
+Merge: 5cb535d 3afe922
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Nov 17 11:10:50 2014 -0800
+AuthorDate: Tue Nov 18 11:00:28 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Nov 17 11:10:50 2014 -0800
+CommitDate: Tue Nov 18 11:00:28 2014 -0800
 
-    Merge into master from pull request #221:
-    pipeline_lua: embed base Lua code during the build process and create sandbox (https://github.com/floodlight/ivs/pull/221)
+    Merge into master from pull request #222:
+    Fix multicast socket overrun (https://github.com/floodlight/ivs/pull/222)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
