@@ -204,6 +204,7 @@ title: Ryu Certification - LINC
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 <pre>
     ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
     ethernet/arp-->'actions=output:2'                                                                    OK
 </pre>
@@ -636,9 +637,9 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -650,8 +651,8 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -758,8 +759,8 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -773,8 +774,8 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -891,9 +892,9 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -904,9 +905,9 @@ dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -917,15 +918,14 @@ dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
 <a name="b81664d2c1b70f417d5a1d0a03ea0a1c">action: set_field: 24_ARP_SHA</a>
 <pre>
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -954,6 +954,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv4/tcp-->'in_port=1,actions=output:2'                                                     OK
     ethernet/ipv4/tcp-->'in_port=1,actions=output:CONTROLLER'                                            OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4/tcp-->'in_port=2,actions=output:2'                                                     OK
     ethernet/ipv6/tcp-->'in_port=1,actions=output:2'                                                     OK
     ethernet/ipv6/tcp-->'in_port=1,actions=output:CONTROLLER'                                            OK
@@ -970,10 +971,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id=1,metadata=255,actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:CONTROLLER' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=255,actions=output:2' OK
 </pre>
 <a name="a2f35fb4c31f68b07ba0bbeb91463095">match: 02_METADATA (Mask)</a>
@@ -983,10 +984,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv4/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/ipv6/tcp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6/tcp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
     ethernet/arp-->'actions=write_metadata:255/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:CONTROLLER' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/arp-->'actions=write_metadata:155/0xffffffff,goto_table:1','table_id:1,metadata=240(mask=0xfffffff0),actions=output:2' OK
 </pre>
 <a name="fe864e7ac5b2d7b2aafc87bbd83da455">match: 03_ETH_DST</a>
@@ -1019,10 +1020,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=12:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=12:11:11:11:11:11,actions=output:CONTROLLER'   OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=12:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=12:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=12:11:11:11:11:11,actions=output:CONTROLLER'   OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=12:11:11:11:11:11,actions=output:2'            OK
     ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=12:11:11:11:11:11,actions=output:2'                 OK
     ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=12:11:11:11:11:11,actions=output:CONTROLLER'        OK
@@ -1032,9 +1033,9 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
     ethernet(src='12:11:11:11:11:11')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv4/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
     ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet(src='12:11:11:11:11:11')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:CONTROLLER' OK
     ethernet(src='aa:aa:aa:aa:aa:aa')/ipv6/tcp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
     ethernet(src='12:11:11:11:11:11')/arp-->'eth_src=00:11:11:11:11:11(mask=00:ff:ff:ff:ff:ff),actions=output:2' OK
@@ -1127,7 +1128,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=100)/arp-->'vlan_vid=100,actions=output:CONTROLLER'                                ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=203)/arp-->'vlan_vid=100,actions=output:2'                                         OK
 </pre>
 <a name="f984e51f48e954737fa86b294c96fdd0">match: 06_VLAN_VID (Mask)</a>
@@ -1138,6 +1138,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=100)/ipv4/tcp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                 ERROR
         Receiving timeout: no change in rx_packtes on target.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=203)/ipv4/tcp-->'vlan_vid=96(mask=0xf0),actions=output:2'                          ERROR
         Table-miss error: no change in lookup_count.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -1154,7 +1155,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=100)/arp-->'vlan_vid=96(mask=0xf0),actions=output:CONTROLLER'                      ERROR
         Receiving timeout: no change in rx_packtes on target.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan(vid=203)/arp-->'vlan_vid=96(mask=0xf0),actions=output:2'                               ERROR
         Table-miss error: no change in lookup_count.
 </pre>
@@ -1216,7 +1216,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/mpls(bsb=0)/mpls(bsb=1)/ipv6/tcp-->'mpls_bos=1,actions=output:2'                            OK
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                             OK
     ethernet/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:CONTROLLER'                                    OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls(bsb=0)/mpls(bsb=1)/arp-->'mpls_bos=1,actions=output:2'                                 OK
 </pre>
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
@@ -1227,6 +1226,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
@@ -1241,7 +1241,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:CONTROLLER'      ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               OK
 </pre>
 <a name="a0f136634ba501a112c0bb437349a478">match: 37_PBB_ISID (Mask)</a>
@@ -1252,6 +1251,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
@@ -1272,6 +1272,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <a name="0445f4506456f0406f5f718b15173da7">match: 08_IP_DSCP (IPv4)</a>
 <pre>
     ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                             OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                                    OK
     ethernet/ipv4(tos=65)/tcp-->'ip_dscp=8,actions=output:2'                                             OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=output:2'                                        OK
@@ -1308,7 +1309,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                              OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=output:CONTROLLER'                                OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv4(tos=65)/tcp-->'ip_ecn=0,actions=output:2'                                         OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
@@ -1316,6 +1316,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -1369,9 +1370,9 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                   OK
     ethernet/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'          OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                     OK
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'              OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:CONTROLLER'     OK
     ethernet/vlan/ipv4(src='10.10.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=output:2'                OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -1387,8 +1388,8 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
@@ -1412,7 +1413,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -1434,6 +1434,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:2'                   OK
     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:CONTROLLER'          OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:2'                     OK
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:2'              OK
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=output:CONTROLLER'     OK
@@ -1444,21 +1445,20 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1466,6 +1466,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
     ethernet/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4(dst='10.10.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2'  OK
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
@@ -1503,12 +1504,12 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv4/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv4/tcp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -1606,19 +1607,19 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/udp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv4/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1626,6 +1627,7 @@ dpid=000000000060e04a : Join target SW.
 <pre>
     ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                               OK
     ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                      OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv4/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                               OK
     ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                          OK
     ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                 OK
@@ -1757,7 +1759,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv6(traffic_class=65)/tcp-->'ip_dscp=8,actions=output:2'                                   OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:2'                              OK
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=output:CONTROLLER'                     OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6(traffic_class=65)/tcp-->'ip_dscp=8,actions=output:2'                              OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
@@ -1765,6 +1766,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -1818,10 +1820,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:2'                                             OK
     ethernet/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'                                    OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6(nxt=6)/tcp-->'ip_proto=17,actions=output:2'                                            OK
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:2'                                        OK
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=6,actions=output:CONTROLLER'                               OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6(nxt=6)/tcp-->'ip_proto=17,actions=output:2'                                       OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
@@ -1853,7 +1855,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv6/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                                 OK
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=output:2'                            OK
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=output:CONTROLLER'                   OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6/tcp(src_port=12345)-->'tcp_src=11111,actions=output:2'                            OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
@@ -1861,6 +1862,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/tcp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -1957,21 +1959,20 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/udp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2014,11 +2015,11 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/ipv6/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                                 OK
     ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                            OK
     ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                   OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                            OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
@@ -2043,10 +2044,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:2'                                 OK
     ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:CONTROLLER'                        OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::10,actions=output:2'                                 OK
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:2'                            OK
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=output:CONTROLLER'                   OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6(src='a0::a0')/tcp-->'ipv6_src=10::10,actions=output:2'                            OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
@@ -2120,8 +2121,8 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
@@ -2130,8 +2131,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2169,9 +2170,9 @@ dpid=000000000060e04a : Join target SW.
 </pre>
 <a name="4d0f792bc907702cfb20f47709320f71">match: 28_IPV6_FLABEL</a>
 <pre>
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:2'                               OK
     ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:CONTROLLER'                      OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6(flow_label=203)/tcp-->'ipv6_flabel=100,actions=output:2'                               OK
     ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:2'                          OK
     ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=output:CONTROLLER'                 OK
@@ -2364,10 +2365,10 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' ERROR
@@ -2409,12 +2410,12 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
         Receiving timeout: no packet-in.
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=68,actions=output:2'                                           OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -2447,7 +2448,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/ipv6/tcp-->'ipv6_exthdr=64(mask=0x1f0),actions=output:2'                               OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
@@ -2455,6 +2455,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -2521,18 +2522,18 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Join target SW.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2551,21 +2552,20 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
 dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2573,6 +2573,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 <pre>
     ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:2'                      OK
     ethernet/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:CONTROLLER'             OK
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/arp(dst_ip='10.10.20.20')-->'arp_tpa=192.168.20.20,actions=output:2'                        OK
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:2'                 OK
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=output:CONTROLLER'        OK
@@ -2640,7 +2641,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:11:11:11,actions=output:2'             OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=output:2'        OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:11:11:11,actions=output:2'        OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
@@ -2648,6 +2648,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -2672,7 +2673,6 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
     ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' OK
-unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/vlan/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
@@ -2680,6 +2680,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
@@ -2768,36 +2769,36 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          OK
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               OK
 </pre>
 <a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
@@ -2805,42 +2806,42 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.82kbps, {'in_port': 3} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.75kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2030.76kbps, {'in_port': 3} 0.00kbps
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2018.25kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
@@ -2849,80 +2850,80 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.13kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.46kbps, {'in_port': 3} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.03kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.07kbps, {'in_port': 3} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1997.95kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1998.34kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2018.99kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2018.98kbps, {'in_port': 3} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.77kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2030.75kbps, {'in_port': 3} 0.00kbps
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
 </pre>
@@ -2933,38 +2934,38 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.06kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.07kbps, {'in_port': 3} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.07kbps, {'in_port': 3} 0.00kbps
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
+unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-.unsupported version 0x5. If possible, set the switch to use one of the versions [4]
-
+.
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 1999.51kbps, {'in_port': 3} 0.00kbps
 </pre>
@@ -3024,7 +3025,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.37kbps
+        Received unexpected throughput: {'in_port': 2} 325.38kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3050,7 +3051,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
-        Received unexpected throughput: {'in_port': 2} 325.38kbps
+        Received unexpected throughput: {'in_port': 2} 325.36kbps
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
@@ -3150,7 +3151,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1999.11kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1999.12kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3163,7 +3164,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1997.95kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1997.94kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3191,7 +3192,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 19992.37kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 19991.64kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3204,7 +3205,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19987.71kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19992.32kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3232,7 +3233,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 194.99pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3245,7 +3246,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.79pktps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3273,7 +3274,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1949.50pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1949.43pktps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
@@ -3286,7 +3287,7 @@ unsupported version 0x5. If possible, set the switch to use one of the versions 
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1916.70pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1947.36pktps
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
 .unsupported version 0x5. If possible, set the switch to use one of the versions [4]
