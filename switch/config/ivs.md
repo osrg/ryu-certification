@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 670adb72f34bb7f8f6d692d19f5f5a6d9ccf4990
-Merge: 5cb535d 3afe922
+commit 542b1c73b9f8b97033eecad31dc674d2c1285d51
+Merge: 670adb7 3a414d4
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Nov 18 11:00:28 2014 -0800
+AuthorDate: Wed Nov 19 12:15:44 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Nov 18 11:00:28 2014 -0800
+CommitDate: Wed Nov 19 12:15:44 2014 -0800
 
-    Merge into master from pull request #222:
-    Fix multicast socket overrun (https://github.com/floodlight/ivs/pull/222)
+    Merge into master from pull request #223:
+    ivs-ctl: show stats for kernel flows (https://github.com/floodlight/ivs/pull/223)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
