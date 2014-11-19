@@ -9,9 +9,9 @@ title: Ryu Certification - LINC
 
 | |OK|ERROR|
 |----------|---|---|
-|[Action](#Action)|2|54|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|&nbsp;&nbsp;&nbsp;&nbsp;(51)|
+|[Action](#Action)|24|32|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(21)|&nbsp;&nbsp;&nbsp;&nbsp;(32)|
 |[set_field](#set_field)|68|102|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(68)|&nbsp;&nbsp;&nbsp;&nbsp;(102)|
 |[Match](#Match)|428|286|
@@ -22,32 +22,32 @@ title: Ryu Certification - LINC
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|504|499|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(390)|&nbsp;&nbsp;&nbsp;&nbsp;(487)|
+|Total|526|477|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(409)|&nbsp;&nbsp;&nbsp;&nbsp;(468)|
 
 ## <a name ='Action'>Action</a>
 
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
-|[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json)|x | [ERROR](#7a352e3512f38379b485f134027ab25c) | [ERROR](#7a352e3512f38379b485f134027ab25c) | [ERROR](#7a352e3512f38379b485f134027ab25c) |
+|[OUTPUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/00_OUTPUT.json)|x | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) | [OK](#7a352e3512f38379b485f134027ab25c) |
 |[PUSH_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN.json)|- | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) | [ERROR](#0ff360d2030da3a14f9fbeb67a5eb9d7) |
-|[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json)|- | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) |
+|[PUSH_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS.json)|- | [OK](#84114b5397172ba5a314008b52c36388) | [ERROR](#84114b5397172ba5a314008b52c36388) | [OK](#84114b5397172ba5a314008b52c36388) |
 |[PUSH_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB.json)|- | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) | [ERROR](#5d818f5bd3c537066c61f0a9a71df0b3) |
 |[PUSH_VLAN (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/17_PUSH_VLAN_multiple.json)|- | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) | [ERROR](#cdf28d261795cce41af2b316f024c762) |
-|[POP_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/18_POP_VLAN.json)|- | [ERROR](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [ERROR](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [ERROR](#9d7f35a26be3f1fd987a89d0d6ba67c9) |
+|[POP_VLAN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/18_POP_VLAN.json)|- | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) | [OK](#9d7f35a26be3f1fd987a89d0d6ba67c9) |
 |[COPY_TTL_OUT](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/11_COPY_TTL_OUT.json)|- | [ERROR](#069a36adbdd0739563365540be6e9b28) | [ERROR](#069a36adbdd0739563365540be6e9b28) | [](#069a36adbdd0739563365540be6e9b28) |
 |[COPY_TTL_IN](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/12_COPY_TTL_IN.json)|- | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [ERROR](#4f5d77f1fc49b1b854e116048c24058d) | [](#4f5d77f1fc49b1b854e116048c24058d) |
-|[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json)|- | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) | [ERROR](#391ff7ab74606cd489b6f124de990d54) |
-|[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json)|- | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) | [ERROR](#99129ba6405fd4693710eefd98e3f84d) |
-|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) | [ERROR](#f08789a3180cac4973ffd9b67c942078) |
-|[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) | [ERROR](#9df48d86c13b11c4f384f69242ec75bb) |
+|[SET_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/15_SET_MPLS_TTL.json)|- | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) | [OK](#391ff7ab74606cd489b6f124de990d54) |
+|[DEC_MPLS_TTL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/16_DEC_MPLS_TTL.json)|- | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) | [OK](#99129ba6405fd4693710eefd98e3f84d) |
+|[PUSH_MPLS (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/19_PUSH_MPLS_multiple.json)|- | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) | [OK](#f08789a3180cac4973ffd9b67c942078) |
+|[POP_MPLS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/20_POP_MPLS.json)|- | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) | [OK](#9df48d86c13b11c4f384f69242ec75bb) |
 |[PUSH_PBB (multiple)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/26_PUSH_PBB_multiple.json)|- | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) | [ERROR](#679a3a4770d632a7630e275449e964e3) |
 |[POP_PBB](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/27_POP_PBB.json)|- | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) | [ERROR](#1dd12601d2ca1cc3425fed290f033b6d) |
 
 | |Required|ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|----|
-|[SET_NW_TTL (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/23_SET_NW_TTL_IPv4.json)|- | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) |
+|[SET_NW_TTL (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/23_SET_NW_TTL_IPv4.json)|- | [OK](#8d22f11393c5477f32a0ffec71d1e876) | [OK](#8d22f11393c5477f32a0ffec71d1e876) | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) | [ERROR](#8d22f11393c5477f32a0ffec71d1e876) |
 |[DEC_NW_TTL (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/24_DEC_NW_TTL_IPv4.json)|- | [OK](#f471c07fa8015a1122291b7856271775) | [OK](#f471c07fa8015a1122291b7856271775) | [ERROR](#f471c07fa8015a1122291b7856271775) | [ERROR](#f471c07fa8015a1122291b7856271775) |
 |[SET_NW_TTL (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/23_SET_NW_TTL_IPv6.json)|- | [ERROR](#e681feea42a220cf08b32c4a6cacbda5) | [ERROR](#e681feea42a220cf08b32c4a6cacbda5) | [ERROR](#e681feea42a220cf08b32c4a6cacbda5) | [ERROR](#e681feea42a220cf08b32c4a6cacbda5) |
 |[DEC_NW_TTL (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/24_DEC_NW_TTL_IPv6.json)|- | [ERROR](#c15841f43eee16c595166a5766716919) | [ERROR](#c15841f43eee16c595166a5766716919) | [ERROR](#c15841f43eee16c595166a5766716919) | [ERROR](#c15841f43eee16c595166a5766716919) |
@@ -207,30 +207,25 @@ title: Ryu Certification - LINC
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
 <pre>
-    ethernet/ipv4/tcp-->'actions=output:2'                                                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/ipv6/tcp-->'actions=output:2'                                                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/arp-->'actions=output:2'                                                                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/ipv4/tcp-->'actions=output:2'                                                               OK
+    ethernet/ipv6/tcp-->'actions=output:2'                                                               OK
+    ethernet/arp-->'actions=output:2'                                                                    OK
 </pre>
 <a name="0ff360d2030da3a14f9fbeb67a5eb9d7">action: 17_PUSH_VLAN</a>
 <pre>
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x8100,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in rx_packets on tester.
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x8100,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in tx_packets on target.
     ethernet/arp-->'eth_type=0x0806,actions=push_vlan:0x8100,output:2'                                   ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in tx_packets on target.
 </pre>
 <a name="84114b5397172ba5a314008b52c36388">action: 19_PUSH_MPLS</a>
 <pre>
-    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              OK
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/arp-->'eth_type=0x0806,actions=push_mpls:0x8847,output:2'                                   ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Received incorrect packet: mpls(ttl=0)
+    ethernet/arp-->'eth_type=0x0806,actions=push_mpls:0x8847,output:2'                                   OK
 </pre>
 <a name="5d818f5bd3c537066c61f0a9a71df0b3">action: 26_PUSH_PBB</a>
 <pre>
@@ -250,70 +245,55 @@ dpid=000000000060e04a : Join target SW.
 <a name="cdf28d261795cce41af2b316f024c762">action: 17_PUSH_VLAN (multiple)</a>
 <pre>
     ethernet/vlan/ipv4/tcp-->'eth_type=0x0800,actions=push_vlan:0x88a8,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
     ethernet/vlan/ipv6/tcp-->'eth_type=0x86dd,actions=push_vlan:0x88a8,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
     ethernet/vlan/arp-->'eth_type=0x0806,actions=push_vlan:0x88a8,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Received incorrect packet: ethernet(ethertype=33024)/vlan(ethertype=33024)
 </pre>
 <a name="9d7f35a26be3f1fd987a89d0d6ba67c9">action: 18_POP_VLAN</a>
 <pre>
-    ethernet/vlan(vid=100)/ipv4/tcp-->'eth_type=0x0800,vlan_vid=0,actions=pop_vlan,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/vlan(vid=100)/ipv6/tcp-->'eth_type=0x86dd,vlan_vid=0,actions=pop_vlan,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/vlan(vid=100)/arp-->'eth_type=0x0806,vlan_vid=0,actions=pop_vlan,output:2'                  ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/vlan(vid=100)/ipv4/tcp-->'eth_type=0x0800,vlan_vid=0,actions=pop_vlan,output:2'             OK
+    ethernet/vlan(vid=100)/ipv6/tcp-->'eth_type=0x86dd,vlan_vid=0,actions=pop_vlan,output:2'             OK
+    ethernet/vlan(vid=100)/arp-->'eth_type=0x0806,vlan_vid=0,actions=pop_vlan,output:2'                  OK
 </pre>
 <a name="069a36adbdd0739563365540be6e9b28">action: 11_COPY_TTL_OUT</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'             ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in tx_packets on target.
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_out,output:2'       ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in rx_packtes on target.
 </pre>
 <a name="4f5d77f1fc49b1b854e116048c24058d">action: 12_COPY_TTL_IN</a>
 <pre>
     ethernet/mpls(ttl=64)/ipv4(ttl=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in rx_packtes on target.
     ethernet/mpls(ttl=64)/ipv6(hop_limit=32)/tcp-->'eth_type=0x8847,actions=copy_ttl_in,output:2'        ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in rx_packtes on target.
 </pre>
 <a name="391ff7ab74606cd489b6f124de990d54">action: 15_SET_MPLS_TTL</a>
 <pre>
-    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 OK
+    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                 OK
+    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=set_mpls_ttl:127,output:2'                      OK
 </pre>
 <a name="99129ba6405fd4693710eefd98e3f84d">action: 16_DEC_MPLS_TTL</a>
 <pre>
-    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/mpls(ttl=64)/ipv4/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
+    ethernet/mpls(ttl=64)/ipv6/tcp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                     OK
+    ethernet/mpls(ttl=64)/arp-->'eth_type=0x8847,actions=dec_mpls_ttl,output:2'                          OK
 </pre>
 <a name="f08789a3180cac4973ffd9b67c942078">action: 19_PUSH_MPLS (multiple)</a>
 <pre>
-    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                         OK
+    ethernet/mpls/arp-->'eth_type=0x8847,actions=push_mpls:0x8847,output:2'                              OK
 </pre>
 <a name="9df48d86c13b11c4f384f69242ec75bb">action: 20_POP_MPLS</a>
 <pre>
-    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=pop_mpls:0x0800,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=pop_mpls:0x86dd,output:2'                          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/mpls/arp-->'eth_type=0x8847,actions=pop_mpls:0x0806,output:2'                               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/mpls/ipv4/tcp-->'eth_type=0x8847,actions=pop_mpls:0x0800,output:2'                          OK
+    ethernet/mpls/ipv6/tcp-->'eth_type=0x8847,actions=pop_mpls:0x86dd,output:2'                          OK
+    ethernet/mpls/arp-->'eth_type=0x8847,actions=pop_mpls:0x0806,output:2'                               OK
 </pre>
 <a name="679a3a4770d632a7630e275449e964e3">action: 26_PUSH_PBB (multiple)</a>
 <pre>
@@ -347,12 +327,10 @@ dpid=000000000060e04a : Join target SW.
 </pre>
 <a name="8d22f11393c5477f32a0ffec71d1e876">action: 23_SET_NW_TTL (IPv4)</a>
 <pre>
-    ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
-    ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+    ethernet/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                         OK
+    ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x02, code=0x04]
+        Receiving timeout: no change in tx_packets on target.
 dpid=000000000060e04a : Leave target SW.
 dpid=000000000060e04a : Join target SW.
     ethernet/itag/ethernet/ipv4(ttl=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
@@ -2353,13 +2331,13 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.76kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.34kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.76kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.82kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
@@ -2368,28 +2346,28 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.04kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.51kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2018.99kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2023.34kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.68kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.53kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.83kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.05kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
@@ -2413,10 +2391,10 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.38kbps
+        Received unexpected throughput: {'in_port': 2} 325.37kbps
 ..........
     20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.38kbps
+        Received unexpected throughput: {'in_port': 2} 325.37kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
         Received unexpected throughput: {'in_port': 2} 325.38kbps
@@ -2425,19 +2403,19 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 20557.79kbps
+        Received unexpected throughput: {'in_port': 2} 21203.09kbps
 ..........
     200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 19744.49kbps
+        Received unexpected throughput: {'in_port': 2} 20628.92kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
-        Received unexpected throughput: {'in_port': 2} 19976.54kbps
+        Received unexpected throughput: {'in_port': 2} 21286.16kbps
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
 ..........
     200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00pktps
+        Received unexpected throughput: {'in_port': 2} 3.33pktps
 ..........
     200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
         Received unexpected throughput: {'in_port': 2} 0.00pktps
@@ -2449,25 +2427,25 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 19.23pktps
+        Received unexpected throughput: {'in_port': 2} 69.63pktps
 ..........
     2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 53.36pktps
+        Received unexpected throughput: {'in_port': 2} 145.99pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
-        Received unexpected throughput: {'in_port': 2} 96.73pktps
+        Received unexpected throughput: {'in_port': 2} 39.07pktps
 </pre>
 <a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
 <pre>
 ..........
     20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 1206.50pktps
+        Received unexpected throughput: {'in_port': 2} 1216.60pktps
 ..........
     20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 1568.94pktps
+        Received unexpected throughput: {'in_port': 2} 1776.08pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
-        Received unexpected throughput: {'in_port': 2} 1674.67pktps
+        Received unexpected throughput: {'in_port': 2} 1772.93pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
@@ -2479,7 +2457,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
-        Received unexpected throughput: {'in_port': 2} 11845.21kbps
+        Received unexpected throughput: {'in_port': 2} 22815.06kbps
 </pre>
 <a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
 <pre>
@@ -2491,7 +2469,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
-        Received unexpected throughput: {'in_port': 2} 24054.69kbps
+        Received unexpected throughput: {'in_port': 2} 3037.37kbps
 </pre>
 <a name="c915561eabc278589470d2187cb110f2">meter: 02_DSCP_REMARK_00_KBPS_02_100M</a>
 <pre>
@@ -2503,7 +2481,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 16481.08kbps
+        Received unexpected throughput: {'in_port': 2} 18359.06kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -2515,7 +2493,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
-        Received unexpected throughput: {'in_port': 2} 1591.30pktps
+        Received unexpected throughput: {'in_port': 2} 1528.10pktps
 </pre>
 <a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
 <pre>
@@ -2527,7 +2505,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
-        Received unexpected throughput: {'in_port': 2} 679.33pktps
+        Received unexpected throughput: {'in_port': 2} 279.39pktps
 </pre>
 <a name="638dd569a77001f62f3f1f9f267daea8">meter: 02_DSCP_REMARK_01_PKTPS_02_10000</a>
 <pre>
@@ -2539,5 +2517,5 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 1004.08pktps
+        Received unexpected throughput: {'in_port': 2} 1069.70pktps
 </pre>
