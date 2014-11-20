@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 542b1c73b9f8b97033eecad31dc674d2c1285d51
-Merge: 670adb7 3a414d4
+commit 432e72bafcd5634fd629ae7bf0a9de64ddc94709
+Merge: 542b1c7 24aadfa
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Nov 19 12:15:44 2014 -0800
+AuthorDate: Thu Nov 20 11:48:28 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Nov 19 12:15:44 2014 -0800
+CommitDate: Thu Nov 20 11:48:28 2014 -0800
 
-    Merge into master from pull request #223:
-    ivs-ctl: show stats for kernel flows (https://github.com/floodlight/ivs/pull/223)
+    Merge into master from pull request #224:
+    OVSDriver: automatically revalidate after a timeout (https://github.com/floodlight/ivs/pull/224)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
