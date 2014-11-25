@@ -20,11 +20,11 @@ title: Ryu Certification - LINC
 |[Group](#Group)|3|12|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
-|[Meter](#Meter)|1|35|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(1)|&nbsp;&nbsp;&nbsp;&nbsp;(35)|
-|Total|527|476|
+|[Meter](#Meter)|0|36|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
+|Total|526|477|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(410)|&nbsp;&nbsp;&nbsp;&nbsp;(467)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(409)|&nbsp;&nbsp;&nbsp;&nbsp;(468)|
 
 ## <a name ='Action'>Action</a>
 
@@ -198,7 +198,7 @@ title: Ryu Certification - LINC
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) |
 |[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
 |[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) |
-|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
+|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) |
 |[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
 |[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) |
 |[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) |
@@ -2334,46 +2334,46 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.75kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2030.76kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2018.65kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.06kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.06kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.05kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2030.77kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2030.76kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.82kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2019.05kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.44kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.11kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.07kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
@@ -2391,25 +2391,25 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.37kbps
+        Received unexpected throughput: {'in_port': 2} 325.38kbps
 ..........
     20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
         Received unexpected throughput: {'in_port': 2} 325.38kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
-        Received unexpected throughput: {'in_port': 2} 325.38kbps
+        Received unexpected throughput: {'in_port': 2} 325.37kbps
 </pre>
 <a name="374de7cf3ba3cd6962f98683ef2d0ee5">meter: 01_DROP_00_KBPS_02_100M</a>
 <pre>
 ..........
     200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 21800.97kbps
+        Received unexpected throughput: {'in_port': 2} 21677.86kbps
 ..........
     200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 21797.86kbps
+        Received unexpected throughput: {'in_port': 2} 21456.82kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                             ERROR
-        Received unexpected throughput: {'in_port': 2} 21454.78kbps
+        Received unexpected throughput: {'in_port': 2} 21411.33kbps
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
@@ -2427,25 +2427,25 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 51.23pktps
+        Received unexpected throughput: {'in_port': 2} 23.60pktps
 ..........
     2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 132.22pktps
+        Received unexpected throughput: {'in_port': 2} 100.33pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
-        Received unexpected throughput: {'in_port': 2} 42.63pktps
+        Received unexpected throughput: {'in_port': 2} 27.40pktps
 </pre>
 <a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
 <pre>
 ..........
     20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 1222.93pktps
+        Received unexpected throughput: {'in_port': 2} 1691.87pktps
 ..........
     20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 1605.70pktps
+        Received unexpected throughput: {'in_port': 2} 1786.31pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
-        Received unexpected throughput: {'in_port': 2} 1784.94pktps
+        Received unexpected throughput: {'in_port': 2} 1805.60pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
@@ -2457,7 +2457,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
-        Received unexpected throughput: {'in_port': 2} 12335.83kbps
+        Received unexpected throughput: {'in_port': 2} 11926.00kbps
 </pre>
 <a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
 <pre>
@@ -2468,7 +2468,8 @@ dpid=000000000060e04a : Join target SW.
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
-    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
+        Received unexpected throughput: {'in_port': 2} 2644.33kbps
 </pre>
 <a name="c915561eabc278589470d2187cb110f2">meter: 02_DSCP_REMARK_00_KBPS_02_100M</a>
 <pre>
@@ -2480,7 +2481,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 21482.59kbps
+        Received unexpected throughput: {'in_port': 2} 12643.01kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -2492,7 +2493,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
-        Received unexpected throughput: {'in_port': 2} 1314.85pktps
+        Received unexpected throughput: {'in_port': 2} 1969.45pktps
 </pre>
 <a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
 <pre>
@@ -2504,7 +2505,7 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
-        Received unexpected throughput: {'in_port': 2} 541.93pktps
+        Received unexpected throughput: {'in_port': 2} 1772.16pktps
 </pre>
 <a name="638dd569a77001f62f3f1f9f267daea8">meter: 02_DSCP_REMARK_01_PKTPS_02_10000</a>
 <pre>
@@ -2516,5 +2517,5 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 0.00pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 1020.19pktps
+        Received unexpected throughput: {'in_port': 2} 1141.46pktps
 </pre>
