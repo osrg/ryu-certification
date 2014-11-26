@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 432e72bafcd5634fd629ae7bf0a9de64ddc94709
-Merge: 542b1c7 24aadfa
+commit da195a8a1a5234f58fc785b9a45832a0ece56fe9
+Merge: 432e72b af199aa
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Nov 20 11:48:28 2014 -0800
+AuthorDate: Wed Nov 26 12:13:27 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Nov 20 11:48:28 2014 -0800
+CommitDate: Wed Nov 26 12:13:27 2014 -0800
 
-    Merge into master from pull request #224:
-    OVSDriver: automatically revalidate after a timeout (https://github.com/floodlight/ivs/pull/224)
+    Merge into master from pull request #225:
+    update submodules (https://github.com/floodlight/ivs/pull/225)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     E7E5DFE64E79BDBFF178C1A
+srcversion:     411944BF6ECC8B656C8757E
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
