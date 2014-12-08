@@ -14,16 +14,19 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 01e5dd04022331615803cd49da00466a9398dce0
-Merge: c532c31 5e5774d
+commit 242bc555f95c345169cac4a8667a1aaca05fe77c
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Sat Nov 8 15:37:08 2014 -0200
+AuthorDate: Mon Dec 8 16:54:11 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Sat Nov 8 15:37:08 2014 -0200
+CommitDate: Mon Dec 8 16:54:11 2014 -0200
 
-    Merge pull request #129 from hdnivara/master
+    Various bug fixes.
     
-    128: Hex metadata is being displayed in decimal in flow statistics
+    - Add checksum recalculation after set icmo fields.
+    - Fix IPv6 flow label parsing
+    - Fix incorrect size of VLAN pcp in the parsing
+    - Correct netpdl specification for the IPv6 Neighbor Discovery source
+      link layer field.
 </pre>
 
 # Modified test scenario for switch restrictions
