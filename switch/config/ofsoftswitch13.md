@@ -14,19 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 242bc555f95c345169cac4a8667a1aaca05fe77c
+commit 4e8c72d1d5e64c39dc50a0634144f7696e4d18b1
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Mon Dec 8 16:54:11 2014 -0200
+AuthorDate: Mon Dec 8 17:07:31 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Mon Dec 8 16:54:11 2014 -0200
+CommitDate: Mon Dec 8 17:07:31 2014 -0200
 
-    Various bug fixes.
-    
-    - Add checksum recalculation after set icmo fields.
-    - Fix IPv6 flow label parsing
-    - Fix incorrect size of VLAN pcp in the parsing
-    - Correct netpdl specification for the IPv6 Neighbor Discovery source
-      link layer field.
+    Update README.md
 </pre>
 
 # Modified test scenario for switch restrictions
