@@ -14,13 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4e8c72d1d5e64c39dc50a0634144f7696e4d18b1
+commit c4816e89d3f79408abfd18550c97cf01fce07773
+Merge: 80169c1 fd4c11b
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Mon Dec 8 17:07:31 2014 -0200
+AuthorDate: Tue Dec 9 13:12:31 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Mon Dec 8 17:07:31 2014 -0200
+CommitDate: Tue Dec 9 13:12:31 2014 -0200
 
-    Update README.md
+    Merge pull request #140 from InterfaceMasters/imt_fixes
+    
+    Set of cleanup fixes.
 </pre>
 
 # Modified test scenario for switch restrictions
