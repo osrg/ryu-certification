@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 8d5f796111483322769bbd658fa4a0fe991838af
-Merge: 5d28566 8e227a5
+commit bed861da058792b33018b82ccb34576cd1362597
+Merge: 8d5f796 d975e0e
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Dec 5 16:48:29 2014 -0800
+AuthorDate: Mon Dec 8 18:54:31 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Dec 5 16:48:29 2014 -0800
+CommitDate: Mon Dec 8 18:54:31 2014 -0800
 
-    Merge into master from pull request #228:
-    OVSDriver: remove unnecessary fields from the packet-in match (https://github.com/floodlight/ivs/pull/228)
+    Merge into master from pull request #229:
+    add sample and raw VLAN actions (https://github.com/floodlight/ivs/pull/229)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
