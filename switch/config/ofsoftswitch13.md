@@ -14,16 +14,17 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 01baa960fdda19a1bf8701f508a501d1cf133f44
+commit 31ccda60d55341947b7b48f48939a30b9a6e8923
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Tue Dec 9 23:38:55 2014 -0200
+AuthorDate: Wed Dec 10 00:04:10 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Tue Dec 9 23:38:55 2014 -0200
+CommitDate: Wed Dec 10 00:04:10 2014 -0200
 
-    Add tcp and udp checksum recalculation after ipv6 src and dst set_field.
+    Add support to match sctp
     
-    The addition fix wrong checksum error after a set_field action with
-    ipv6 src or ipv6 dst.
+    This commmit introduces to the parsing engine the specification
+    of the sctp header. Now it is possible to match sctp src and dst
+    ports.
 </pre>
 
 # Modified test scenario for switch restrictions

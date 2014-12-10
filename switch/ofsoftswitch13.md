@@ -14,17 +14,17 @@ title: Ryu Certification - ofsoftswitch13
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(47)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[set_field](#set_field)|136|30|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(136)|&nbsp;&nbsp;&nbsp;&nbsp;(30)|
-|[Match](#Match)|628|86|
+|[Match](#Match)|660|54|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(520)|&nbsp;&nbsp;&nbsp;&nbsp;(86)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(552)|&nbsp;&nbsp;&nbsp;&nbsp;(54)|
 |[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[Meter](#Meter)|26|10|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
-|Total|855|132|
+|Total|887|100|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(741)|&nbsp;&nbsp;&nbsp;&nbsp;(132)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(773)|&nbsp;&nbsp;&nbsp;&nbsp;(100)|
 
 ## <a name ='Action'>Action</a>
 
@@ -140,8 +140,8 @@ title: Ryu Certification - ofsoftswitch13
 |[TCP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/14_TCP_DST_IPv4.json)|x | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) |
 |[UDP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/15_UDP_SRC_IPv4.json)|x | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) |
 |[UDP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/16_UDP_DST_IPv4.json)|x | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) |
-|[SCTP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv4.json)|- | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) |
-|[SCTP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv4.json)|- | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) |
+|[SCTP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv4.json)|- | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) |
+|[SCTP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv4.json)|- | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) |
 |[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) |
 |[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
 |[IP_DSCP (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv6.json)|- | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) |
@@ -151,8 +151,8 @@ title: Ryu Certification - ofsoftswitch13
 |[TCP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/14_TCP_DST_IPv6.json)|x | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) | [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) / [OK](#76468208d68bf226618b837237d6a25d) |
 |[UDP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/15_UDP_SRC_IPv6.json)|x | [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) | [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) | [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) | [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) / [OK](#8d18497462a3613e5d61621c43a93663) |
 |[UDP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/16_UDP_DST_IPv6.json)|x | [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) | [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) | [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) | [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) / [OK](#7a151941fd85ee77529e98600bb4e453) |
-|[SCTP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv6.json)|- | [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [ERROR](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) |
-|[SCTP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv6.json)|- | [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [ERROR](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) |
+|[SCTP_SRC (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv6.json)|- | [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) | [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) / [OK](#240b857647a122ed49ede8ba99fcef5b) |
+|[SCTP_DST (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv6.json)|- | [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) | [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) / [OK](#da1a82ba7717d831cdc09eb998938b03) |
 |[IPV6_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/26_IPV6_SRC.json)|x | [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) | [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) | [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) | [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) / [OK](#f1aa241fb8578365b4946f6f7fe0946e) |
 |[IPV6_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/26_IPV6_SRC_Mask.json)|x | [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) | [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) | [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) | [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) / [OK](#2d311c3547bd5be21d19374ba63f2062) |
 |[IPV6_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST.json)|x | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) |
@@ -456,24 +456,24 @@ title: Ryu Certification - ofsoftswitch13
 <a name="803b0fcd7a244f192a4c6e304f14ae0c">action: set_field: 17_SCTP_SRC (IPv4)</a>
 <pre>
     ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
 </pre>
 <a name="2c8963178cda864114bce4dcceb3328a">action: set_field: 18_SCTP_DST (IPv4)</a>
 <pre>
     ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'        ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'   ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
 </pre>
 <a name="25a7e26fb3289ad1d95bdf7111a47fd4">action: set_field: 19_ICMPV4_TYPE</a>
 <pre>
@@ -534,24 +534,24 @@ title: Ryu Certification - ofsoftswitch13
 <a name="2476412662f05c76d05abdd5f983e9bb">action: set_field: 17_SCTP_SRC (IPv6)</a>
 <pre>
     ethernet/ipv6/udp(sctp_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2'     ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160,dst_port=12345)
 </pre>
 <a name="18c493adb0cefd57638e8d9dadd2d622">action: set_field: 18_SCTP_DST (IPv6)</a>
 <pre>
     ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'        ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2'   ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
+        Received incorrect packet: sctp(csum=506283160)
 </pre>
 <a name="3386037a7fb9bba0939901969d7443a8">action: set_field: 26_IPV6_SRC</a>
 <pre>
@@ -1065,48 +1065,32 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="b1866c1f93e4b9d4a6f88be3b9dd686d">match: 17_SCTP_SRC (IPv4)</a>
 <pre>
-    ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                               ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                      ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                               OK
+    ethernet/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                      OK
     ethernet/ipv4/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                               OK
-    ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                          ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                 ERROR
-        Receiving timeout: no packet-in.
+    ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                          OK
+    ethernet/vlan/ipv4/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                 OK
     ethernet/vlan/ipv4/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                          OK
-    ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
+    ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv4/sctp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-    ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
+    ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv4/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
 </pre>
 <a name="3b5fb36aac9f8c7e7e5163a09a534f7c">match: 18_SCTP_DST (IPv4)</a>
 <pre>
-    ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                                 ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                        ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                                 OK
+    ethernet/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                        OK
     ethernet/ipv4/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                                 OK
-    ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                            ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                   ERROR
-        Receiving timeout: no packet-in.
+    ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                            OK
+    ethernet/vlan/ipv4/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv4/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                            OK
-    ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
+    ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv4/sctp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-    ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
+    ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv4/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
 </pre>
 <a name="b20ebaff16d8e2a0219796e41563743f">match: 19_ICMPV4_TYPE</a>
@@ -1246,48 +1230,32 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="240b857647a122ed49ede8ba99fcef5b">match: 17_SCTP_SRC (IPv6)</a>
 <pre>
-    ethernet/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                               ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                      ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                               OK
+    ethernet/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                      OK
     ethernet/ipv6/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                               OK
-    ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                          ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                 ERROR
-        Receiving timeout: no packet-in.
+    ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:2'                          OK
+    ethernet/vlan/ipv6/sctp(src_port=11111)-->'sctp_src=11111,actions=output:CONTROLLER'                 OK
     ethernet/vlan/ipv6/sctp(src_port=12345)-->'sctp_src=11111,actions=output:2'                          OK
-    ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
+    ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv6/sctp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-    ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
+    ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv6/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
 </pre>
 <a name="da1a82ba7717d831cdc09eb998938b03">match: 18_SCTP_DST (IPv6)</a>
 <pre>
-    ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                                 ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                        ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                                 OK
+    ethernet/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                        OK
     ethernet/ipv6/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                                 OK
-    ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                            ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                   ERROR
-        Receiving timeout: no packet-in.
+    ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:2'                            OK
+    ethernet/vlan/ipv6/sctp(dst_port=2222)-->'sctp_dst=2222,actions=output:CONTROLLER'                   OK
     ethernet/vlan/ipv6/sctp(dst_port=6789)-->'sctp_dst=2222,actions=output:2'                            OK
-    ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
+    ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' OK
     ethernet/mpls/ipv6/sctp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-    ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
+    ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv6/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
 </pre>
 <a name="f1aa241fb8578365b4946f6f7fe0946e">match: 26_IPV6_SRC</a>
@@ -1745,7 +1713,7 @@ title: Ryu Certification - ofsoftswitch13
     2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1998.72kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1999.12kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
 </pre>
@@ -1755,7 +1723,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.89kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.13kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1763,13 +1731,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 69329.02kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 68469.95kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 173418.46kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 171919.59kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 177168.64kbps
+        Received unexpected throughput: {'in_port': 2} 175067.91kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1787,7 +1755,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1948.48pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.90pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1795,11 +1763,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6768.83pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6661.53pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16551.63pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16344.37pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 16830.44pktps
+        Received unexpected throughput: {'in_port': 2} 16645.10pktps
 </pre>
