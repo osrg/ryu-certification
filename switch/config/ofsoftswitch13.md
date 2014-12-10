@@ -14,16 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c4816e89d3f79408abfd18550c97cf01fce07773
-Merge: 80169c1 fd4c11b
+commit 70e1eb02b7745ca2c5ec79d132fc5e60fdfaddfa
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Tue Dec 9 13:12:31 2014 -0200
+AuthorDate: Tue Dec 9 22:49:32 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Tue Dec 9 13:12:31 2014 -0200
+CommitDate: Tue Dec 9 22:49:32 2014 -0200
 
-    Merge pull request #140 from InterfaceMasters/imt_fixes
+    Correct IPv6 ecn and dscp parsing
     
-    Set of cleanup fixes.
+    IPv6 ecn and dscp fields were missing on the packet parsing engine.
 </pre>
 
 # Modified test scenario for switch restrictions
