@@ -14,17 +14,19 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 31ccda60d55341947b7b48f48939a30b9a6e8923
+commit 7b2d263570a79b3f6c566e4950fd9fce8ee7cd57
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Wed Dec 10 00:04:10 2014 -0200
+AuthorDate: Thu Dec 11 18:25:09 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Wed Dec 10 00:04:10 2014 -0200
+CommitDate: Thu Dec 11 18:25:09 2014 -0200
 
-    Add support to match sctp
+    Recalculate sctp check sum after set_field action.
     
-    This commmit introduces to the parsing engine the specification
-    of the sctp header. Now it is possible to match sctp src and dst
-    ports.
+    This commit fixes wrong checksum of sctp packets after changes due
+    to a set_field action on the field sctp src and dst ports.
+    
+    Also changes the crc32.c and crc32.h files with code to calculate
+    the crc32c, used by the sctp checksum.
 </pre>
 
 # Modified test scenario for switch restrictions
