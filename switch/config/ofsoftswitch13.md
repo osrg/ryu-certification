@@ -14,21 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 80ceb15b70fc7eeedb25380a2815c7b69bdb6b06
+commit 0fe63d4ca90f83c6279efcdbcf826743427719d6
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Sat Dec 13 00:17:27 2014 -0200
+AuthorDate: Sun Dec 14 22:25:25 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Sat Dec 13 00:20:45 2014 -0200
+CommitDate: Sun Dec 14 22:25:25 2014 -0200
 
-    Fix IPv6 neighbor discovery target pre requisites check.
-    
-    The check for icmp type was not working because of
-    the order of insertion on the flow mod message parsing.
-    
-    Also it fixes the set_field action, calculating the
-    checksum after change the neighbor discovery target field.
-    
-    This commit also removes unecessary debugging printf.
+    Fix wrong checksum calculation of IPv6 neighbor discovery target.
 </pre>
 
 # Modified test scenario for switch restrictions
