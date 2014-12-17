@@ -14,13 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 58fc961d3ae922cbec2e01927ccc7e2d7547ae9f
+commit 355e0fdc7366218351e4e364b9882618512d22e9
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Wed Dec 17 18:32:26 2014 -0200
+AuthorDate: Wed Dec 17 20:41:33 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Wed Dec 17 18:32:26 2014 -0200
+CommitDate: Wed Dec 17 20:41:33 2014 -0200
 
-    Fix vlan pcp parsing.
+    Fix match_mask32.
+    
+    This commit fixes the cast of the mask for matching
+    masked 32 bits fields.
 </pre>
 
 # Modified test scenario for switch restrictions

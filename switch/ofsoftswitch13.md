@@ -14,17 +14,17 @@ title: Ryu Certification - ofsoftswitch13
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(47)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[set_field](#set_field)|159|7|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(159)|&nbsp;&nbsp;&nbsp;&nbsp;(7)|
-|[Match](#Match)|700|14|
+|[Match](#Match)|708|6|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(592)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(600)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[Meter](#Meter)|30|6|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(30)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
-|Total|954|33|
+|Total|962|25|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(840)|&nbsp;&nbsp;&nbsp;&nbsp;(33)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(848)|&nbsp;&nbsp;&nbsp;&nbsp;(25)|
 
 ## <a name ='Action'>Action</a>
 
@@ -158,7 +158,7 @@ title: Ryu Certification - ofsoftswitch13
 |[IPV6_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST.json)|x | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) | [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) / [OK](#5f6f38ef2d6379737bbbbfbe7485849f) |
 |[IPV6_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/27_IPV6_DST_Mask.json)|x | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) | [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) / [OK](#c665e95a0a2e29b356d008fbae1c9a6a) |
 |[IPV6_FLABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL.json)|- | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) | [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) / [OK](#4d0f792bc907702cfb20f47709320f71) |
-|[IPV6_FLABEL (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL_Mask.json)|- | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [ERROR](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) |
+|[IPV6_FLABEL (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/28_IPV6_FLABEL_Mask.json)|- | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) | [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) / [OK](#310fca49f5f48423d70d71be9df80b5f) |
 |[ICMPV6_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/29_ICMPV6_TYPE.json)|- | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) | [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) / [OK](#cdd8e795bba586eaa11e89ba972af7a5) |
 |[ICMPV6_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/30_ICMPV6_CODE.json)|- | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) | [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) / [OK](#f2b820c0dbea85f4c95a2e83379c54fa) |
 |[IPV6_ND_TARGET](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/31_IPV6_ND_TARGET.json)|- | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) | [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) / [OK](#927147b096027f4e78f58e0672cdb6e3) |
@@ -1284,25 +1284,17 @@ title: Ryu Certification - ofsoftswitch13
 </pre>
 <a name="310fca49f5f48423d70d71be9df80b5f">match: 28_IPV6_FLABEL (Mask)</a>
 <pre>
-    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER'      ERROR
-        Receiving timeout: no packet-in.
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
+    ethernet/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER'      OK
     ethernet/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'               OK
-    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
+    ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
     ethernet/vlan/ipv6(flow_label=203)/tcp-->'ipv6_flabel=96(mask=0x000ffff0),actions=output:2'          OK
-    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
-    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
-        Receiving timeout: no change in tx_packets on target.
-    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
-        Receiving timeout: no packet-in.
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
+    ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' OK
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
 </pre>
 <a name="cdd8e795bba586eaa11e89ba972af7a5">match: 29_ICMPV6_TYPE</a>
@@ -1666,13 +1658,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 67261.85kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 61542.87kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 66069.53kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 60772.82kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 176675.12kbps
+        Received unexpected throughput: {'in_port': 2} 170337.13kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1696,11 +1688,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6610.13pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6137.66pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 6484.39pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 5964.40pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 16777.78pktps
+        Received unexpected throughput: {'in_port': 2} 16312.06pktps
 </pre>
