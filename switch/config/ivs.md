@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bed861da058792b33018b82ccb34576cd1362597
-Merge: 8d5f796 d975e0e
+commit 5288ea9f669eade3709f957f2d6ac07daa2f2cc1
+Merge: bed861d ce0cf34
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Dec 8 18:54:31 2014 -0800
+AuthorDate: Wed Dec 17 12:57:47 2014 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Dec 8 18:54:31 2014 -0800
+CommitDate: Wed Dec 17 12:57:47 2014 -0800
 
-    Merge into master from pull request #229:
-    add sample and raw VLAN actions (https://github.com/floodlight/ivs/pull/229)
+    Merge into master from pull request #230:
+    update submodules (https://github.com/floodlight/ivs/pull/230)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
