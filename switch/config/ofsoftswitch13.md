@@ -14,13 +14,13 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0ce861bd40bc46923f4c790325164c00cf3d6e79
+commit 58fc961d3ae922cbec2e01927ccc7e2d7547ae9f
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Wed Dec 17 00:45:05 2014 -0200
+AuthorDate: Wed Dec 17 18:32:26 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Wed Dec 17 00:45:05 2014 -0200
+CommitDate: Wed Dec 17 18:32:26 2014 -0200
 
-    Apply DSCP remark for IPv6 packets.
+    Fix vlan pcp parsing.
 </pre>
 
 # Modified test scenario for switch restrictions
