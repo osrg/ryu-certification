@@ -14,13 +14,19 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0fe63d4ca90f83c6279efcdbcf826743427719d6
+commit 9942fb14a6ca80977a570cff835ba1679286157c
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Sun Dec 14 22:25:25 2014 -0200
+AuthorDate: Tue Dec 16 23:31:04 2014 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Sun Dec 14 22:25:25 2014 -0200
+CommitDate: Tue Dec 16 23:31:04 2014 -0200
 
-    Fix wrong checksum calculation of IPv6 neighbor discovery target.
+    Fix pbb_isid size to conform with the specification.
+    
+    This huge commit brings lots of changes to conform the the pbb isid
+    match field size to conform with the OpenFlow 1.3.4 specification.
+    
+    Also, changes the code to reconstruct the vlan tag to check if the
+    ethertype the default value for VLANs or is the one belonging to PBB.
 </pre>
 
 # Modified test scenario for switch restrictions

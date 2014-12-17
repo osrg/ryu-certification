@@ -14,17 +14,17 @@ title: Ryu Certification - ofsoftswitch13
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(47)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
 |[set_field](#set_field)|156|10|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(156)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
-|[Match](#Match)|672|42|
+|[Match](#Match)|684|30|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(564)|&nbsp;&nbsp;&nbsp;&nbsp;(42)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(576)|&nbsp;&nbsp;&nbsp;&nbsp;(30)|
 |[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[Meter](#Meter)|26|10|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
-|Total|919|68|
+|Total|931|56|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(805)|&nbsp;&nbsp;&nbsp;&nbsp;(68)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(817)|&nbsp;&nbsp;&nbsp;&nbsp;(56)|
 
 ## <a name ='Action'>Action</a>
 
@@ -124,8 +124,8 @@ title: Ryu Certification - ofsoftswitch13
 |[MPLS_LABEL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/34_MPLS_LABEL.json)|- | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) | [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) / [OK](#c1cf14c00edeb647eb396c65bac9b6b9) |
 |[MPLS_TC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/35_MPLS_TC.json)|- | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) | [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) / [OK](#f3ff641757553b6eda3a52ade54d5e7d) |
 |[MPLS_BOS](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/36_MPLS_BOS.json)|- | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) | [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) / [OK](#1aecdbcd4d391560791f6f9ae2cb56ad) |
-|[PBB_ISID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID.json)|- | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) |
-|[PBB_ISID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID_Mask.json)|- | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) / [ERROR](#a0f136634ba501a112c0bb437349a478) |
+|[PBB_ISID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID.json)|- | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) | [ERROR](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) / [OK](#42d8b469a2a3868f8fb4a5059ad451ff) |
+|[PBB_ISID (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/37_PBB_ISID_Mask.json)|- | [ERROR](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) | [ERROR](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) / [OK](#a0f136634ba501a112c0bb437349a478) |
 
 | |Required|ether|vlan|mpls|pbb|
 |-----------|----|----|----|----|----|
@@ -380,11 +380,11 @@ title: Ryu Certification - ofsoftswitch13
 <a name="9e9826295e4fcce4158b54ff2f2ce35d">action: set_field: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
 </pre>
 <a name="ce97749e537c30572fe41bc5f97f525c">action: set_field: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -835,44 +835,32 @@ title: Ryu Certification - ofsoftswitch13
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          OK
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:CONTROLLER' OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          OK
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:CONTROLLER'      ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:CONTROLLER'      OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               OK
 </pre>
 <a name="a0f136634ba501a112c0bb437349a478">match: 37_PBB_ISID (Mask)</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' OK
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' OK
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
-    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Failed to add flows: OFPErrorMsg[type=0x04, code=0x06]
+        Received incorrect packet: ethernet(dst='22:22:22:22:22:22',ethertype=33024,src='12:11:11:11:11:11')/vlan(ethertype=35047,pcp=0,vid=10)
+    ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' OK
+    ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     OK
 </pre>
 <a name="0445f4506456f0406f5f718b15173da7">match: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -1691,7 +1679,7 @@ title: Ryu Certification - ofsoftswitch13
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19986.65kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19989.93kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
 ..........
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
 </pre>
@@ -1699,13 +1687,13 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 66934.82kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 67983.98kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 170824.27kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 170877.67kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 174249.13kbps
+        Received unexpected throughput: {'in_port': 2} 174873.59kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1723,7 +1711,7 @@ title: Ryu Certification - ofsoftswitch13
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' OK
 ..........
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.89pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1949.91pktps
 ..........
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
 </pre>
@@ -1731,11 +1719,11 @@ title: Ryu Certification - ofsoftswitch13
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6455.12pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 6678.78pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16247.77pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 16421.33pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 16741.96pktps
+        Received unexpected throughput: {'in_port': 2} 16860.05pktps
 </pre>
