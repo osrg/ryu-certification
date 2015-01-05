@@ -23,9 +23,9 @@ $ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
                 {controllers_listener,disabled},
                 {queues_status,disabled},
                 {ports,
-                    [{port,1,{queues,[]}},
-                     {port,2,{queues,[]}},
-                     {port,3,{queues,[]}}]}]}]}]},
+                    [{port,1,[{queues,[]}]},
+                     {port,2,[{queues,[]}]},
+                     {port,3,[{queues,[]}]}]}]}]}]},
  {enetconf,
      [{capabilities,
           [{base,{1,0}},
@@ -57,28 +57,28 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 25e5e34d45cba7c211192baacf2fb36f4549f0a4
-Merge: 9f1ee10 e8743a7
+commit 6598e797912eb794776dd4f33cddb0522b1890f3
+Merge: 84e7e78 1034809
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Sep 17 08:31:57 2014 +0200
+AuthorDate: Mon Dec 29 19:46:57 2014 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Sep 17 08:31:57 2014 +0200
+CommitDate: Mon Dec 29 19:46:57 2014 +0100
 
-    Merge pull request #342 from subh007/patch-1
+    Merge pull request #346 from FlowForwarding/no_multipart
     
-    Update config_gen
+    Describe of_protocol's no_multipart flag in sys.config
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 84f086ec34658f41635b76e79938f700e0876104
-Merge: 3f1b893 dfb4d78
-Author:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-AuthorDate: Sun Nov 16 18:20:58 2014 -0800
-Commit:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-CommitDate: Sun Nov 16 18:20:58 2014 -0800
+commit 48b734bf0db0dd0c0960210b281235b6ccff30ac
+Merge: 84f086e 5745934
+Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+AuthorDate: Tue Dec 23 18:57:28 2014 +0100
+Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
+CommitDate: Tue Dec 23 18:57:28 2014 +0100
 
-    Merge pull request #59 from legoscia/fixes
+    Merge pull request #81 from shivarammysore/open_source
     
-    Minor fixes for problems found by dialyzer
+    Open source
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
