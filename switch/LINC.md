@@ -20,11 +20,11 @@ title: Ryu Certification - LINC
 |[Group](#Group)|3|12|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|
-|[Meter](#Meter)|4|20|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(4)|&nbsp;&nbsp;&nbsp;&nbsp;(20)|
-|Total|527|452|
+|[Meter](#Meter)|0|24|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(24)|
+|Total|523|456|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(413)|&nbsp;&nbsp;&nbsp;&nbsp;(452)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(409)|&nbsp;&nbsp;&nbsp;&nbsp;(456)|
 
 ## <a name ='Action'>Action</a>
 
@@ -195,10 +195,10 @@ title: Ryu Certification - LINC
 |[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) | [ERROR](#d622dfa2ed128286d03f44d2790591e7) |
 |[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) | [ERROR](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) | [ERROR](#2e4331e147a562542585036dcf5c507a) |
-|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
-|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
-|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [OK](#50fc5b625263a400208fee338d37d088) |
-|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [OK](#a90e19ea457ae862fc5292fca16226bb) |
+|[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) | [ERROR](#b5ce2897cf7d803b22135f5fd7421b38) |
+|[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) | [ERROR](#5c4346f7b1d133f7f2d99dd68612fd98) |
+|[DSCP_REMARK_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_00_100.json)|- | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) | [ERROR](#50fc5b625263a400208fee338d37d088) |
+|[DSCP_REMARK_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_01_PKTPS_01_1000.json)|- | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) | [ERROR](#a90e19ea457ae862fc5292fca16226bb) |
 
 ## Detailed log
 <a name="7a352e3512f38379b485f134027ab25c">action: 00_OUTPUT</a>
@@ -225,16 +225,16 @@ title: Ryu Certification - LINC
 </pre>
 <a name="5d818f5bd3c537066c61f0a9a71df0b3">action: 26_PUSH_PBB</a>
 <pre>
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_pbb:0x88e7,output:2'                               ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_pbb:0x88e7,output:2'                               ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/arp-->'eth_type=0x0806,actions=push_pbb:0x88e7,output:2'                                    ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -293,31 +293,31 @@ dpid=000000000060e04a : Join target SW.
 </pre>
 <a name="679a3a4770d632a7630e275449e964e3">action: 26_PUSH_PBB (multiple)</a>
 <pre>
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_pbb:0x88e7,push_pbb:0x88e7,output:2'               ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_pbb:0x88e7,push_pbb:0x88e7,output:2'               ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/arp-->'eth_type=0x0806,actions=push_pbb:0x88e7,push_pbb:0x88e7,output:2'                    ERROR
         Failed to add flows: barrier request timeout.
 </pre>
 <a name="1dd12601d2ca1cc3425fed290f033b6d">action: 27_POP_PBB</a>
 <pre>
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/svlan/vlan/ipv4/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/svlan/vlan/ipv6/tcp-->'eth_type=0x88e7,actions=pop_pbb,output:2'              ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/svlan/vlan/arp-->'eth_type=0x88e7,actions=pop_pbb,output:2'                   ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -327,8 +327,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=set_nw_ttl:32,output:2'                    OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(ttl=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x0800,actions=set_nw_ttl:32,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -338,8 +338,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(ttl=64)/tcp-->'eth_type=0x0800,actions=dec_nw_ttl,output:2'                       OK
     ethernet/mpls/ipv4(ttl=64)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(ttl=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x0800,actions=dec_nw_ttl,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -351,8 +351,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: ipv6(hop_limit=64)
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(hop_limit=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x86dd,actions=set_nw_ttl:32,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -364,8 +364,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: ipv6(hop_limit=64)
     ethernet/mpls/ipv6(hop_limit=64)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(hop_limit=64)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,eth_type=0x86dd,actions=dec_nw_ttl,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -453,8 +453,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'                  OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -464,8 +464,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(tos=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'                     OK
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -477,8 +477,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: ipv4(proto=6,csum=56094)/tcp(ack=0,bits=0,csum=52044,dst_port=2222,offset=6,option='\x00\x00\x00\x00',seq=0,src_port=11111,urgent=0,window_size=0)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -488,8 +488,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(src='192.168.10.10')/tcp-->'ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=set_field:10.10.10.10->ipv4_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -499,8 +499,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4(dst='192.168.20.20')/tcp-->'ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' OK
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=set_field:10.10.20.20->ipv4_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -510,8 +510,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -521,8 +521,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      OK
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -532,8 +532,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -543,8 +543,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -556,8 +556,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -569,8 +569,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -580,8 +580,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2'          OK
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=set_field:0->icmpv4_type,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -591,8 +591,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2'         OK
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=set_field:10->icmpv4_code,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -602,8 +602,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_dscp=8,actions=set_field:16->ip_dscp,output:2'        OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=set_field:16->ip_dscp,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -613,8 +613,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6(traffic_class=32)/tcp-->'ip_ecn=0,actions=set_field:1->ip_ecn,output:2'           OK
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=set_field:1->ip_ecn,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -626,8 +626,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: ipv6(nxt=6)/tcp(ack=0,bits=0,csum=27228,dst_port=2222,offset=6,option='\x00\x00\x00\x00',seq=0,src_port=11111,urgent=0,window_size=0)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=set_field:17->ip_proto,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -637,8 +637,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/tcp(src_port=11111)-->'tcp_src=11111,actions=set_field:12345->tcp_src,output:2'   OK
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=set_field:12345->tcp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -648,8 +648,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/tcp(dst_port=2222)-->'tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2'      OK
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=set_field:6789->tcp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -659,8 +659,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/udp(src_port=11111)-->'udp_src=11111,actions=set_field:12345->udp_src,output:2'   OK
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=set_field:12345->udp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -670,8 +670,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/udp(dst_port=2222)-->'udp_dst=2222,actions=set_field:6789->udp_dst,output:2'      OK
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=set_field:6789->udp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -683,8 +683,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=set_field:12345->sctp_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -696,8 +696,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: sctp(csum=506283160)
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=set_field:6789->sctp_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -707,8 +707,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' OK
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -718,8 +718,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' OK
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp--->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -729,8 +729,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6(flow_label=100)/tcp-->'ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' OK
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=set_field:203->ipv6_flabel,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -740,8 +740,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/icmpv6(type=128)-->'icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2'  OK
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(type=128)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=set_field:135->icmpv6_type,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -751,8 +751,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/icmpv6(code=0)-->'icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2'        OK
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=set_field:1->icmpv6_code,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -762,8 +762,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' OK
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=set_field:a0::a0->ipv6_nd_target,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -773,8 +773,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'ipv6_nd_sll=12:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' OK
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_sll,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -786,8 +786,8 @@ dpid=000000000060e04a : Join target SW.
         Received incorrect packet: icmpv6(csum=3742,data=nd_neighbor(dst='20::20',option=nd_option_tla(data=None,hw_src='22:22:22:22:22:22',length=1),res=0))
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=set_field:aa:aa:aa:aa:aa:aa->ipv6_nd_tll,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -797,8 +797,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/arp(opcode=1)-->'arp_op=1,actions=set_field:2->arp_op,output:2'                        OK
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=set_field:2->arp_op,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -808,8 +808,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/arp(src_ip='192.168.10.10')-->'arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' OK
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=set_field:10.10.10.10->arp_spa,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -819,8 +819,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/arp(dst_ip='192.168.20.20')-->'arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' OK
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=set_field:10.10.20.20->arp_tpa,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -830,8 +830,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/arp(src_mac='12:11:11:11:11:11')-->'arp_sha=12:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' OK
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=set_field:aa:aa:aa:aa:aa:aa->arp_sha,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -841,8 +841,8 @@ dpid=000000000060e04a : Join target SW.
     ethernet/vlan/arp(dst_mac='22:22:22:22:22:22')-->'arp_tha=22:22:22:22:22:22,actions=set_field:ba:bb:bb:bb:bb:bb->arp_tha,output:2' OK
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=set_field:ba:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=set_field:ba:bb:bb:bb:bb:bb->arp_tha,output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1123,16 +1123,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1149,16 +1149,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(tos=32)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(tos=65)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(tos=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1175,16 +1175,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(proto=6)/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ip_proto=17,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(proto=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1201,16 +1201,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1227,16 +1227,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(src='10.10.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1253,16 +1253,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1279,16 +1279,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1305,16 +1305,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/tcp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/tcp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1331,16 +1331,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/tcp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/tcp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/tcp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1357,16 +1357,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/udp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/udp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1383,16 +1383,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/udp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/udp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1409,16 +1409,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/sctp(src_port=11111)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/sctp(src_port=12345)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1435,16 +1435,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/sctp(dst_port=2222)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/sctp(dst_port=6789)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1461,16 +1461,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/icmp(type=3)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(type=3)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1487,16 +1487,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv4/icmp(code=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv4/icmp(code=1)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1513,16 +1513,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_dscp=8,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1539,16 +1539,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(traffic_class=32)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(traffic_class=65)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=32)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(traffic_class=65)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_ecn=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1565,16 +1565,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(nxt=6)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ip_proto=17,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=6,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(nxt=6)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ip_proto=17,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1591,16 +1591,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/tcp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1617,16 +1617,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/tcp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,tcp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1643,16 +1643,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/udp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/udp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1669,16 +1669,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/udp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/udp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/udp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,udp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1695,16 +1695,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/sctp(src_port=11111)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/sctp(src_port=12345)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(src_port=11111)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(src_port=12345)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_src=11111,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1721,16 +1721,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/sctp(dst_port=2222)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/sctp(dst_port=6789)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(dst_port=2222)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/sctp(dst_port=6789)-->'actions=pop_pbb,goto_table:1','table_id:1,sctp_dst=2222,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1747,16 +1747,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1773,16 +1773,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(src='a0::a0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(src='a0::a0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::0(mask=ffff:ffff:ffff:ffff:ffff:ffff:ffff:0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1799,16 +1799,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1825,16 +1825,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(dst='b0::b0')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(dst='b0::b0')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=0::20(mask=0:ffff:ffff:ffff:ffff:ffff:ffff:ffff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1851,16 +1851,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=100,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1877,16 +1877,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(flow_label=100)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6(flow_label=203)/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=100)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(flow_label=203)/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_flabel=96(mask=0x000ffff0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1903,16 +1903,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/icmpv6(type=128)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(type=135)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(type=128)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(type=128)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(type=135)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_type=128,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1929,16 +1929,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/icmpv6(code=0)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(code=1)-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(code=1)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv6_code=0,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1955,16 +1955,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='20::20'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(dst='b0::b0'))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_target=20::20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -1981,16 +1981,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_sla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_sll=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2007,16 +2007,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='22:22:22:22:22:22')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/icmpv6(data=nd_neighbor(option=nd_option_tla(hw_src='aa:aa:aa:aa:aa:aa')))-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_nd_tll=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2037,16 +2037,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=68,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2067,16 +2067,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/ipv6/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6(ext_hdrs=[hop_opts,auth])/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/ipv6/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_exthdr=64(mask=0x1f0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2093,16 +2093,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(opcode=1)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(opcode=2)-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_op=1,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(opcode=1)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(opcode=2)-->'actions=pop_pbb,goto_table:1','table_id:1,arp_op=1,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2119,16 +2119,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.10,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2145,16 +2145,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(src_ip='192.168.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_ip='10.10.10.10')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='192.168.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_ip='10.10.10.10')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_spa=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2171,16 +2171,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.20.20,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2197,16 +2197,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(dst_ip='192.168.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_ip='10.10.20.20')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='192.168.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_ip='10.10.20.20')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tpa=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2223,16 +2223,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:11:11:11,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2249,16 +2249,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='12:11:11:11:11:11')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(src_mac='aa:aa:aa:aa:aa:aa')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_sha=12:11:11:00:11:11(mask=ff:ff:ff:00:ff:ff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2275,16 +2275,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:22:22:22:22,actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2301,16 +2301,16 @@ dpid=000000000060e04a : Join target SW.
     ethernet/mpls/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Receiving timeout: no packet-in.
     ethernet/mpls/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_mpls:0x0806,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' OK
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='22:22:22:22:22:22')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:CONTROLLER' ERROR
         Failed to add flows: barrier request timeout.
-dpid=000000000060e04a : Leave target SW.
-dpid=000000000060e04a : Join target SW.
+dpid=00000060e04a84e5 : Leave target SW.
+dpid=00000060e04a84e5 : Join target SW.
     ethernet/itag/ethernet/arp(dst_mac='ba:bb:bb:bb:bb:bb')-->'actions=pop_pbb,goto_table:1','table_id:1,arp_tha=22:22:00:22:22:22(mask=ff:ff:00:ff:ff:ff),actions=output:2' ERROR
         Failed to add flows: barrier request timeout.
 </pre>
@@ -2327,37 +2327,37 @@ dpid=000000000060e04a : Join target SW.
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.83kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2020.60kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.04kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2020.99kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1999.90kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.13kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1997.94kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2020.57kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2020.60kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2031.55kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2031.54kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 2019.83kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 2021.77kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
@@ -2366,100 +2366,80 @@ dpid=000000000060e04a : Join target SW.
         Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1998.73kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1999.12kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
         Received unexpected throughput: {'in_port': 2} 1999.51kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
-..........
     2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
-        Received unexpected throughput: {'in_port': 2} 32.42kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                            ERROR
-        Received unexpected throughput: {'in_port': 2} 32.42kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     2Mbps(ethernet/arp)-->'in_port=1,actions=meter:1Mbps(drop),output:2'                                 ERROR
-        Received unexpected throughput: {'in_port': 2} 32.42kbps
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="d622dfa2ed128286d03f44d2790591e7">meter: 01_DROP_00_KBPS_01_10M</a>
 <pre>
-..........
     20Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.37kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     20Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                          ERROR
-        Received unexpected throughput: {'in_port': 2} 325.36kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     20Mbps(ethernet/arp)-->'in_port=1,actions=meter:10Mbps(drop),output:2'                               ERROR
-        Received unexpected throughput: {'in_port': 2} 325.38kbps
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="492d526b9df30e66fa495c155a7bc957">meter: 01_DROP_01_PKTPS_00_100</a>
 <pre>
-..........
     200pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
-        Received unexpected throughput: {'in_port': 2} 3.33pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     200pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                      ERROR
-        Received unexpected throughput: {'in_port': 2} 3.33pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     200pktps(ethernet/arp)-->'in_port=1,actions=meter:100pktps(drop),output:2'                           ERROR
-        Received unexpected throughput: {'in_port': 2} 3.33pktps
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="2e4331e147a562542585036dcf5c507a">meter: 01_DROP_01_PKTPS_01_1000</a>
 <pre>
-..........
     2000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 33.33pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     2000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                    ERROR
-        Received unexpected throughput: {'in_port': 2} 33.33pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     2000pktps(ethernet/arp)-->'in_port=1,actions=meter:1000pktps(drop),output:2'                         ERROR
-        Received unexpected throughput: {'in_port': 2} 33.33pktps
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
-..........
     2Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1999.12kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     2Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1998.71kbps
-..........
-    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             OK
+        Failed to add meters: meter config stats request timeout.
+    2Mbps(ethernet/arp)-->'in_port=1,actions=meter:2Mbps(dscp_remark:prec_level=1),output:2'             ERROR
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="5c4346f7b1d133f7f2d99dd68612fd98">meter: 02_DSCP_REMARK_00_KBPS_01_10M</a>
 <pre>
-..........
     20Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 19993.55kbps
-..........
+        Failed to add meters: meter config stats request timeout.
     20Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 19993.10kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00kbps
-..........
-    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           OK
+        Failed to add meters: meter config stats request timeout.
+    20Mbps(ethernet/arp)-->'in_port=1,actions=meter:20Mbps(dscp_remark:prec_level=1),output:2'           ERROR
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
-..........
     200pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 194.99pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     200pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 194.92pktps
-..........
-    200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       OK
+        Failed to add meters: meter config stats request timeout.
+    200pktps(ethernet/arp)-->'in_port=1,actions=meter:200pktps(dscp_remark:prec_level=1),output:2'       ERROR
+        Failed to add meters: meter config stats request timeout.
 </pre>
 <a name="a90e19ea457ae862fc5292fca16226bb">meter: 02_DSCP_REMARK_01_PKTPS_01_1000</a>
 <pre>
-..........
     2000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 1949.30pktps
-..........
+        Failed to add meters: meter config stats request timeout.
     2000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:1000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 0.00pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 1899.83pktps
-..........
-    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     OK
+        Failed to add meters: meter config stats request timeout.
+    2000pktps(ethernet/arp)-->'in_port=1,actions=meter:2000pktps(dscp_remark:prec_level=1),output:2'     ERROR
+        Failed to add meters: meter config stats request timeout.
 </pre>
