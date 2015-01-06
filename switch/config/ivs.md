@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 5288ea9f669eade3709f957f2d6ac07daa2f2cc1
-Merge: bed861d ce0cf34
+commit 7101738160e2a7cafd88a160445f0df9428c2dc5
+Merge: 5288ea9 012f327
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Dec 17 12:57:47 2014 -0800
+AuthorDate: Mon Jan 5 15:50:37 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Dec 17 12:57:47 2014 -0800
+CommitDate: Mon Jan 5 15:50:37 2015 -0800
 
-    Merge into master from pull request #230:
-    update submodules (https://github.com/floodlight/ivs/pull/230)
+    Merge into master from pull request #231:
+    Use new OpenFlow message to upload Lua (https://github.com/floodlight/ivs/pull/231)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     411944BF6ECC8B656C8757E
+srcversion:     7572C1DF4F2C8D11796B350
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
