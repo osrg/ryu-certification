@@ -14,16 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 355e0fdc7366218351e4e364b9882618512d22e9
+commit 16b60b73574339c603f32906c6ee4513e0322fa6
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Wed Dec 17 20:41:33 2014 -0200
+AuthorDate: Thu Jan 8 09:22:38 2015 -0200
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Wed Dec 17 20:41:33 2014 -0200
+CommitDate: Thu Jan 8 09:22:38 2015 -0200
 
-    Fix match_mask32.
+    Update README.md
     
-    This commit fixes the cast of the mask for matching
-    masked 32 bits fields.
+    Fix directory name.
 </pre>
 
 # Modified test scenario for switch restrictions
