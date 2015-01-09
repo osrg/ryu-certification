@@ -57,28 +57,25 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 6598e797912eb794776dd4f33cddb0522b1890f3
-Merge: 84e7e78 1034809
+commit a412b0f26cc4e2ac84380f3be4140035edf26563
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon Dec 29 19:46:57 2014 +0100
+AuthorDate: Thu Jan 8 13:50:42 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon Dec 29 19:46:57 2014 +0100
+CommitDate: Thu Jan 8 13:52:10 2015 +0100
 
-    Merge pull request #346 from FlowForwarding/no_multipart
-    
-    Describe of_protocol's no_multipart flag in sys.config
+    Fix typos in optical_extension.md
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 48b734bf0db0dd0c0960210b281235b6ccff30ac
-Merge: 84f086e 5745934
+commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
+Merge: 48b734b 8f557cd
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Dec 23 18:57:28 2014 +0100
+AuthorDate: Wed Jan 7 18:08:32 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Dec 23 18:57:28 2014 +0100
+CommitDate: Wed Jan 7 18:08:32 2015 +0100
 
-    Merge pull request #81 from shivarammysore/open_source
+    Merge pull request #82 from FlowForwarding/oe_refactorings
     
-    Open source
+    OE refactorings
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
