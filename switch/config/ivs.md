@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 15bef2fffac15bf351ad0bea2e84d505d40eb57d
-Merge: 7101738 1cfd4a0
+commit 0b601a5f27c1e147200f3fe3bc5d58f0e09b8193
+Merge: 15bef2f 8d843e9
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Jan 12 17:42:36 2015 -0800
+AuthorDate: Tue Jan 13 16:28:48 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Jan 12 17:42:36 2015 -0800
+CommitDate: Tue Jan 13 16:28:48 2015 -0800
 
-    Merge into master from pull request #232:
-    Implement of_bsn_lua_command_request message (https://github.com/floodlight/ivs/pull/232)
+    Merge into master from pull request #233:
+    update submodules (https://github.com/floodlight/ivs/pull/233)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
