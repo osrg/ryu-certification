@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 9b82a803f1045e4da41a9263c44d10cdc06edfbd
-Merge: 0b601a5 35b5bbe
+commit 0e3982a209784ed3b5f44acd020f5ee473c01ee8
+Merge: 14ad9a5 1e034ec
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Jan 22 14:30:32 2015 -0800
+AuthorDate: Thu Jan 22 15:46:15 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Jan 22 14:30:32 2015 -0800
+CommitDate: Thu Jan 22 15:46:15 2015 -0800
 
-    Merge into master from pull request #235:
-    setup.sh: install pkg-config (https://github.com/floodlight/ivs/pull/235)
+    Merge into master from pull request #236:
+    update submodules (https://github.com/floodlight/ivs/pull/236)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
