@@ -57,13 +57,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit a412b0f26cc4e2ac84380f3be4140035edf26563
+commit 0d6b7bc64a07d62696267e418db4e72fa69004c2
+Merge: cd943e8 8bb2ebf
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Thu Jan 8 13:50:42 2015 +0100
+AuthorDate: Wed Jan 28 16:48:22 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Thu Jan 8 13:52:10 2015 +0100
+CommitDate: Wed Jan 28 16:48:22 2015 +0100
 
-    Fix typos in optical_extension.md
+    Merge pull request #350 from FlowForwarding/port_numbering
+    
+    Refactor independent logical/ofp port numbering
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
