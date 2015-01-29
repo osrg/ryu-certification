@@ -57,16 +57,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit cd943e817c6821ceb35eb4bd98fec761f81bdcf2
-Merge: a412b0f e7a6857
+commit 0d6b7bc64a07d62696267e418db4e72fa69004c2
+Merge: cd943e8 8bb2ebf
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Fri Jan 23 16:29:09 2015 +0100
+AuthorDate: Wed Jan 28 16:48:22 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Fri Jan 23 16:29:09 2015 +0100
+CommitDate: Wed Jan 28 16:48:22 2015 +0100
 
-    Merge pull request #348 from FlowForwarding/os-interfaces-status
+    Merge pull request #350 from FlowForwarding/port_numbering
     
-    Introduce reporting physical interfaces status.
+    Refactor independent logical/ofp port numbering
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
