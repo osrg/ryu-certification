@@ -57,16 +57,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 0d6b7bc64a07d62696267e418db4e72fa69004c2
-Merge: cd943e8 8bb2ebf
+commit fe12e57abad85784b25ef1a16a293db33be1dc36
+Merge: 0d6b7bc d51f609
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Jan 28 16:48:22 2015 +0100
+AuthorDate: Thu Jan 29 15:19:50 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Jan 28 16:48:22 2015 +0100
+CommitDate: Thu Jan 29 15:19:50 2015 +0100
 
-    Merge pull request #350 from FlowForwarding/port_numbering
+    Merge pull request #352 from FlowForwarding/travis-erl-17.3
     
-    Refactor independent logical/ofp port numbering
+    Make Travis use Erlang 17.3
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
