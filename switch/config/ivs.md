@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 284f3d953a55821076f835d86254317ef275d244
-Merge: 0e3982a 69f7e17
+commit 500804c4e9e3909cc827e7d96b6c269e0ff5acb3
+Merge: 284f3d9 81095c9
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Jan 27 17:48:21 2015 -0800
+AuthorDate: Thu Jan 29 18:48:47 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Jan 27 17:48:21 2015 -0800
+CommitDate: Thu Jan 29 18:48:47 2015 -0800
 
-    Merge into master from pull request #237:
-    update submodules (https://github.com/floodlight/ivs/pull/237)
+    Merge into master from pull request #238:
+    action: make raw VLAN push/pop more user-friendly (https://github.com/floodlight/ivs/pull/238)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
