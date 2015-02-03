@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 500804c4e9e3909cc827e7d96b6c269e0ff5acb3
-Merge: 284f3d9 81095c9
+commit fe6cfe9c77a4fd2fe57162f0aae6c77e7ae68038
+Merge: 500804c d20b87f
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Jan 29 18:48:47 2015 -0800
+AuthorDate: Mon Feb 2 15:31:21 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Jan 29 18:48:47 2015 -0800
+CommitDate: Mon Feb 2 15:31:21 2015 -0800
 
-    Merge into master from pull request #238:
-    action: make raw VLAN push/pop more user-friendly (https://github.com/floodlight/ivs/pull/238)
+    Merge into master from pull request #239:
+    set inband control queue priority (https://github.com/floodlight/ivs/pull/239)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
