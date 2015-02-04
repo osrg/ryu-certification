@@ -17,14 +17,14 @@ title: Ryu Certification - ivs
 |[Match](#Match)|337|377|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(229)|&nbsp;&nbsp;&nbsp;&nbsp;(377)|
-|[Group](#Group)|2|13|
+|[Group](#Group)|3|12|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|402|589|
+|Total|403|588|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(291)|&nbsp;&nbsp;&nbsp;&nbsp;(586)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(292)|&nbsp;&nbsp;&nbsp;&nbsp;(585)|
 
 ## <a name ='Action'>Action</a>
 
@@ -182,7 +182,7 @@ title: Ryu Certification - ivs
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
 |[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) |
-|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
 |[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
 |[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
 |[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
@@ -2073,16 +2073,15 @@ title: Ryu Certification - ivs
         Received unexpected throughput: {'in_port': 2} 1794.05kbps, {'in_port': 3} 1794.05kbps
 ..........
     2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
-        Received unexpected throughput: {'in_port': 2} 1794.40kbps, {'in_port': 3} 1794.40kbps
+        Received unexpected throughput: {'in_port': 2} 1794.01kbps, {'in_port': 3} 1794.01kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               ERROR
-        Received unexpected throughput: {'in_port': 2} 1794.05kbps, {'in_port': 3} 1794.05kbps
+        Received unexpected throughput: {'in_port': 2} 1794.02kbps, {'in_port': 3} 1794.02kbps
 </pre>
 <a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
 <pre>
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 3} 895.27kbps
+    2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
@@ -2092,37 +2091,37 @@ title: Ryu Certification - ivs
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 3} 869.88kbps
+        Received unexpected throughput: {'in_port': 2} 897.22kbps, {'in_port': 3} 894.88kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 882.38kbps
+        Received unexpected throughput: {'in_port': 2} 894.10kbps, {'in_port': 3} 898.78kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 898.00kbps, {'in_port': 3} 896.05kbps
+        Received unexpected throughput: {'in_port': 3} 885.11kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 935.50kbps, {'in_port': 3} 890.19kbps
+        Received unexpected throughput: {'in_port': 2} 909.72kbps, {'in_port': 3} 915.97kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 912.04kbps, {'in_port': 3} 914.78kbps
+        Received unexpected throughput: {'in_port': 2} 901.50kbps, {'in_port': 3} 924.93kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 902.69kbps, {'in_port': 3} 921.44kbps
+        Received unexpected throughput: {'in_port': 2} 883.55kbps, {'in_port': 3} 940.57kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 895.63kbps, {'in_port': 3} 898.36kbps
+        Received unexpected throughput: {'in_port': 2} 906.20kbps, {'in_port': 3} 887.85kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 900.73kbps, {'in_port': 3} 892.92kbps
+        Received unexpected throughput: {'in_port': 2} 892.53kbps, {'in_port': 3} 901.12kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 922.19kbps, {'in_port': 3} 871.41kbps
+        Received unexpected throughput: {'in_port': 2} 914.02kbps, {'in_port': 3} 880.03kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
