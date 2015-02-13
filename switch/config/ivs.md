@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 1e966da17b7c229b4dacc6bdde4c386a869fbd82
-Merge: 3d94a50 6b4c213
+commit 7e4cce8bcd7a244abb9c4d4ef4db79e689cfcf75
+Merge: 1e966da f79ef7b
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Feb 11 16:54:31 2015 -0800
+AuthorDate: Thu Feb 12 16:06:45 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Feb 11 16:54:31 2015 -0800
+CommitDate: Thu Feb 12 16:06:45 2015 -0800
 
-    Merge into master from pull request #242:
-    update submodules (https://github.com/floodlight/ivs/pull/242)
+    Merge into master from pull request #243:
+    set skb priority for packets sent through pipeline (https://github.com/floodlight/ivs/pull/243)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     EEADF5DA85FA84BEF538FB2
+srcversion:     D2CA8DBF1FEA4A00E76E211
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
