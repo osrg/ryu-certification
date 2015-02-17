@@ -57,16 +57,13 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit fe12e57abad85784b25ef1a16a293db33be1dc36
-Merge: 0d6b7bc d51f609
+commit 3d114ee9feac3565f344fb27e0e87bd4b11084c8
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Thu Jan 29 15:19:50 2015 +0100
+AuthorDate: Mon Feb 16 14:37:03 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Thu Jan 29 15:19:50 2015 +0100
+CommitDate: Mon Feb 16 14:37:03 2015 +0100
 
-    Merge pull request #352 from FlowForwarding/travis-erl-17.3
-    
-    Make Travis use Erlang 17.3
+    Remove old lager config section for rel/files/sys.config.orig
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
