@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 245747a21637de23bcce4dcff166df1547d1cb84
-Merge: 44ecc28 6aaad11
+commit 8e9fd5c328204a4441be0dc866440c421aac3825
+Merge: 245747a 02beba2
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Feb 20 14:06:15 2015 -0800
+AuthorDate: Sat Feb 21 08:20:25 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Feb 20 14:06:15 2015 -0800
+CommitDate: Sat Feb 21 08:20:25 2015 -0800
 
-    Merge into master from pull request #244:
-    add --internal-port command line option (https://github.com/floodlight/ivs/pull/244)
+    Merge into master from pull request #246:
+    OVSDriver: revalidate kflows on link status change (https://github.com/floodlight/ivs/pull/246)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
