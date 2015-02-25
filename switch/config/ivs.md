@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 53b9f6828aa31f59d062bf1231d66d4cb588e58e
-Merge: f6a00bf a8d442a
+commit 7e29592aafd64a4de49e32c21fed8e69e636f845
+Merge: 53b9f68 492e166
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Feb 24 16:21:15 2015 -0800
+AuthorDate: Tue Feb 24 18:08:29 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Feb 24 16:21:15 2015 -0800
+CommitDate: Tue Feb 24 18:08:29 2015 -0800
 
-    Merge into master from pull request #248:
-    speed up pre-checkin builds (https://github.com/floodlight/ivs/pull/248)
+    Merge into master from pull request #249:
+    optimize port status changes (https://github.com/floodlight/ivs/pull/249)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
