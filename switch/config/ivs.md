@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f6a00bf963df6a4a9cae8bbe20eafb88c4346b14
-Merge: 8e9fd5c a0666ee
+commit 53b9f6828aa31f59d062bf1231d66d4cb588e58e
+Merge: f6a00bf a8d442a
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Feb 24 13:57:32 2015 -0800
+AuthorDate: Tue Feb 24 16:21:15 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Feb 24 13:57:32 2015 -0800
+CommitDate: Tue Feb 24 16:21:15 2015 -0800
 
-    Merge into master from pull request #247:
-    megaflow infrastructure (https://github.com/floodlight/ivs/pull/247)
+    Merge into master from pull request #248:
+    speed up pre-checkin builds (https://github.com/floodlight/ivs/pull/248)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
