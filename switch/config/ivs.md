@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 37ed2e9d16f123a0bc029fb3491a66782b59849f
-Merge: 7e29592 c05b17f
+commit 16b7b281031bf563459558f6db5518c46f071e67
+Merge: 37ed2e9 f703520
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Feb 24 19:04:22 2015 -0800
+AuthorDate: Wed Feb 25 11:21:37 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Feb 24 19:04:22 2015 -0800
+CommitDate: Wed Feb 25 11:21:37 2015 -0800
 
-    Merge into master from pull request #250:
-    OVSDriver: fix a leak of netlink sockets when nl_connect fails (https://github.com/floodlight/ivs/pull/250)
+    Merge into master from pull request #251:
+    use git:// URL for loxigen-artifacts submodule (https://github.com/floodlight/ivs/pull/251)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
