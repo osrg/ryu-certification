@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 16b7b281031bf563459558f6db5518c46f071e67
-Merge: 37ed2e9 f703520
+commit bd34b279535a80cb41ea13ae3134db3ef9373bfb
+Merge: 16b7b28 d0a6fe4
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Feb 25 11:21:37 2015 -0800
+AuthorDate: Wed Feb 25 16:58:30 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Feb 25 11:21:37 2015 -0800
+CommitDate: Wed Feb 25 16:58:30 2015 -0800
 
-    Merge into master from pull request #251:
-    use git:// URL for loxigen-artifacts submodule (https://github.com/floodlight/ivs/pull/251)
+    Merge into master from pull request #252:
+    add userspace actions (https://github.com/floodlight/ivs/pull/252)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
