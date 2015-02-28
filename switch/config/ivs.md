@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bd34b279535a80cb41ea13ae3134db3ef9373bfb
-Merge: 16b7b28 d0a6fe4
+commit 3145c4cb3ec0ef213a210aaef942e99c59d1def0
+Merge: bd34b27 6b989e2
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Feb 25 16:58:30 2015 -0800
+AuthorDate: Fri Feb 27 14:33:29 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Feb 25 16:58:30 2015 -0800
+CommitDate: Fri Feb 27 14:33:29 2015 -0800
 
-    Merge into master from pull request #252:
-    add userspace actions (https://github.com/floodlight/ivs/pull/252)
+    Merge into master from pull request #253:
+    megaflow implementation for pipeline_standard (https://github.com/floodlight/ivs/pull/253)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     98151CAB4899109D6F5C5EC
+srcversion:     AD40B500DD5C28718A043A4
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
