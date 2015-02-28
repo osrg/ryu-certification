@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3145c4cb3ec0ef213a210aaef942e99c59d1def0
-Merge: bd34b27 6b989e2
+commit d1cd93d17a760155e9d1fd3090125f3149007d07
+Merge: 3145c4c cfb10fc
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Feb 27 14:33:29 2015 -0800
+AuthorDate: Sat Feb 28 12:06:30 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Feb 27 14:33:29 2015 -0800
+CommitDate: Sat Feb 28 12:06:30 2015 -0800
 
-    Merge into master from pull request #253:
-    megaflow implementation for pipeline_standard (https://github.com/floodlight/ivs/pull/253)
+    Merge into master from pull request #255:
+    update submodules (https://github.com/floodlight/ivs/pull/255)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
