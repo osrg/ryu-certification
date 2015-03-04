@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d1cd93d17a760155e9d1fd3090125f3149007d07
-Merge: 3145c4c cfb10fc
+commit 6247e5feb8ae3337e1e385e69c6c22f61057309d
+Merge: d5786ff c331236
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Sat Feb 28 12:06:30 2015 -0800
+AuthorDate: Tue Mar 3 16:16:30 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Sat Feb 28 12:06:30 2015 -0800
+CommitDate: Tue Mar 3 16:16:30 2015 -0800
 
-    Merge into master from pull request #255:
-    update submodules (https://github.com/floodlight/ivs/pull/255)
+    Merge into master from pull request #258:
+    add bsn_uplink port desc property, and fix a port desc bug (https://github.com/floodlight/ivs/pull/258)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
