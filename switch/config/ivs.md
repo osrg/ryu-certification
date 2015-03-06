@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 1ae882751b3aea51a7b605ebbbdff8637b97576b
-Merge: 18076eb 0130547
+commit 7c81bdebf7e386e475d27821fa7fe0d8cc95b300
+Merge: 1ae8827 074454c
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Mar 5 15:46:42 2015 -0800
+AuthorDate: Thu Mar 5 18:04:26 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Mar 5 15:46:42 2015 -0800
+CommitDate: Thu Mar 5 18:04:26 2015 -0800
 
-    Merge into master from pull request #259:
-    update submodules (https://github.com/floodlight/ivs/pull/259)
+    Merge into master from pull request #260:
+    ivs-ctl: add list-ports command (https://github.com/floodlight/ivs/pull/260)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
