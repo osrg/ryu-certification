@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f17b384ee9d0ea84b6cf832937c2af1f583a0262
-Merge: 4aff748 90efa44
+commit 3edf731524623b8a24e2a6e1b1015f0ab4382acb
+Merge: f17b384 becc5f3
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Mar 6 16:45:21 2015 -0800
+AuthorDate: Fri Mar 6 18:03:31 2015 -0800
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Mar 6 16:45:21 2015 -0800
+CommitDate: Fri Mar 6 18:03:31 2015 -0800
 
-    Merge into master from pull request #262:
-    OVSDriver: move datapath name hash to upper bytes of dpid (https://github.com/floodlight/ivs/pull/262)
+    Merge into master from pull request #263:
+    set BUILD_ID when building packages using Docker (https://github.com/floodlight/ivs/pull/263)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
