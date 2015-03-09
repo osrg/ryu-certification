@@ -57,13 +57,13 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 49a2161ed4b7d704985f6cdb6abfe80dcd3fd912
+commit 3d0188266307c96ed4883f061d5a9a3403c6e54e
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon Mar 2 13:38:22 2015 +0100
+AuthorDate: Mon Mar 9 16:30:18 2015 +0100
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon Mar 2 13:38:22 2015 +0100
+CommitDate: Mon Mar 9 16:30:18 2015 +0100
 
-    Register linc supervisor process running linc_capable_sup
+    Do not crash making release when setcap fails but warn the user
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
