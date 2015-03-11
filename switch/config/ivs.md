@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3edf731524623b8a24e2a6e1b1015f0ab4382acb
-Merge: f17b384 becc5f3
+commit b1037258581ebf90fd136d8cd0eee7e30a2ac69a
+Merge: 3edf731 4a89b39
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Mar 6 18:03:31 2015 -0800
+AuthorDate: Tue Mar 10 15:53:36 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Mar 6 18:03:31 2015 -0800
+CommitDate: Tue Mar 10 15:53:36 2015 -0700
 
-    Merge into master from pull request #263:
-    set BUILD_ID when building packages using Docker (https://github.com/floodlight/ivs/pull/263)
+    Merge into master from pull request #264:
+    OVSDriver: add debug counters (https://github.com/floodlight/ivs/pull/264)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
