@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit fe1922c50eedd4c43a386c0a6adf4e5621d217aa
-Merge: b103725 4e0c2c8
+commit 92669baae7c08e60f22f09142a61ca36c13d4897
+Merge: a97780b 2964e95
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Mar 11 16:02:29 2015 -0700
+AuthorDate: Wed Mar 11 17:26:30 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Mar 11 16:02:29 2015 -0700
+CommitDate: Wed Mar 11 17:26:30 2015 -0700
 
-    Merge into master from pull request #266:
-    shared debug counters (https://github.com/floodlight/ivs/pull/266)
+    Merge into master from pull request #267:
+    ivs: continue startup after failing to add a port (https://github.com/floodlight/ivs/pull/267)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
