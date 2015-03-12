@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b1037258581ebf90fd136d8cd0eee7e30a2ac69a
-Merge: 3edf731 4a89b39
+commit fe1922c50eedd4c43a386c0a6adf4e5621d217aa
+Merge: b103725 4e0c2c8
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Mar 10 15:53:36 2015 -0700
+AuthorDate: Wed Mar 11 16:02:29 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Mar 10 15:53:36 2015 -0700
+CommitDate: Wed Mar 11 16:02:29 2015 -0700
 
-    Merge into master from pull request #264:
-    OVSDriver: add debug counters (https://github.com/floodlight/ivs/pull/264)
+    Merge into master from pull request #266:
+    shared debug counters (https://github.com/floodlight/ivs/pull/266)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
