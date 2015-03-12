@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 92669baae7c08e60f22f09142a61ca36c13d4897
-Merge: a97780b 2964e95
+commit 585538096251f033b367f16de81fc55446139b8b
+Merge: 92669ba 0a26462
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Mar 11 17:26:30 2015 -0700
+AuthorDate: Thu Mar 12 15:14:49 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Mar 11 17:26:30 2015 -0700
+CommitDate: Thu Mar 12 15:14:49 2015 -0700
 
-    Merge into master from pull request #267:
-    ivs: continue startup after failing to add a port (https://github.com/floodlight/ivs/pull/267)
+    Merge into master from pull request #270:
+    OVSDriver: automatically reconnect uplinks to the datapath (https://github.com/floodlight/ivs/pull/270)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
