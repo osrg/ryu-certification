@@ -8,76 +8,77 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ca745d46-4602-402f-a744-955dff80ca5f
-    Bridge br0
-        Controller tcp:10.24.150.30
+66d3eda0-ecc0-4239-8cc8-a424f694e02b
+    Bridge "br0"
+        Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port br0
-            Interface br0
+        Port "eth21"
+            Interface "eth21"
+        Port "eth22"
+            Interface "eth22"
+        Port "eth23"
+            Interface "eth23"
+        Port "br0"
+            Interface "br0"
                 type: internal
-        Port eth23
-            Interface eth23
-        Port eth21
-            Interface eth21
-        Port eth22
-            Interface eth22
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : a29be6f8-eebf-4cf6-a0da-6ae5d77550fb
-controller          : [4232b684-194e-420f-9a91-c7c4f5b1bf90]
-datapath_id         : 0000000000000001
+_uuid               : 58ff1847-564c-4fd0-a2bd-2a8f9b0c5b63
+controller          : [7a48c0bb-8922-460d-9331-ca58ca2eb5f3]
+datapath_id         : "0000000000000001"
 datapath_type       : netdev
+datapath_version    : "<built-in>"
 fail_mode           : secure
 mcast_snooping_enable: false
-name                : br0
-other_config        : {datapath-id=0000000000000001}
-ports               : [1c4f3e82-dbe9-4594-be63-14713d03163f, 245d2571-e633-4ce0-b426-e61757bb6cd2, 341e3dba-446c-4b24-a594-079fa7e64764, 5ef7027f-a496-433c-b707-edeb26ebcfee]
-protocols           : [OpenFlow14]
+name                : "br0"
+other_config        : {datapath-id="0000000000000001"}
+ports               : [457842af-0790-4b10-975e-848736b64c11, 968683c8-4263-43a9-8cdb-9b7ef6a04dda, a05081e3-d4f9-4ce0-a443-a7ca235bbcbe, de39fe48-0fc7-4a54-8975-ad7673bd7a89]
+protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4232b684-194e-420f-9a91-c7c4f5b1bf90
+_uuid               : 7a48c0bb-8922-460d-9331-ca58ca2eb5f3
 is_connected        : false
 role                : other
-status              : {last_error=Connection refused, sec_since_connect=852, sec_since_disconnect=2, state=BACKOFF}
-target              : tcp:10.24.150.30
+status              : {last_error="Connection refused", sec_since_connect="652", sec_since_disconnect="1", state=BACKOFF}
+target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 245d2571-e633-4ce0-b426-e61757bb6cd2
+_uuid               : de39fe48-0fc7-4a54-8975-ad7673bd7a89
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bffd5bfc-cf82-499b-a8bf-019b652d58c9]
-name                : eth23
+interfaces          : [0a4049e9-8ee5-420d-802e-7817178ff500]
+name                : "br0"
 
-_uuid               : 341e3dba-446c-4b24-a594-079fa7e64764
+_uuid               : 968683c8-4263-43a9-8cdb-9b7ef6a04dda
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c819248c-bfa4-49fc-bca9-3f948c607755]
-name                : eth21
+interfaces          : [76c8371b-2214-4395-939e-1001d6cd790d]
+name                : "eth22"
 
-_uuid               : 1c4f3e82-dbe9-4594-be63-14713d03163f
+_uuid               : a05081e3-d4f9-4ce0-a443-a7ca235bbcbe
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [cf7e4e48-2fc2-4e5c-8819-f1ca0cee7c8a]
-name                : br0
+interfaces          : [34ee6751-57ef-4440-b9d2-37e16b749039]
+name                : "eth23"
 
-_uuid               : 5ef7027f-a496-433c-b707-edeb26ebcfee
+_uuid               : 457842af-0790-4b10-975e-848736b64c11
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bb4fc532-0f6f-426e-9164-f0850848c25d]
-name                : eth22
+interfaces          : [2334fbc5-4f4f-4e68-b485-467a8d89ed75]
+name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : c819248c-bfa4-49fc-bca9-3f948c607755
+_uuid               : 2334fbc5-4f4f-4e68-b485-467a8d89ed75
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -86,15 +87,32 @@ ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:56:53:5c
+mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
-name                : eth21
+name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=271338612923, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=181004613, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
+statistics          : {collisions=0, rx_bytes=1192715632132, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=795487760, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 
-_uuid               : bffd5bfc-cf82-499b-a8bf-019b652d58c9
+_uuid               : 0a4049e9-8ee5-420d-802e-7817178ff500
+admin_state         : down
+duplex              : full
+ifindex             : 817
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : 34ee6751-57ef-4440-b9d2-37e16b749039
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -103,32 +121,15 @@ ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:56:53:5e
+mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
-name                : eth23
+name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=14556990000, tx_dropped=0, tx_errors=0, tx_packets=9704660}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=37510677000, tx_dropped=0, tx_errors=0, tx_packets=25007118}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 
-_uuid               : cf7e4e48-2fc2-4e5c-8819-f1ca0cee7c8a
-admin_state         : down
-duplex              : full
-ifindex             : 327
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : 00:60:e0:56:53:5c
-mtu                 : 1500
-name                : br0
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version=1.6, firmware_version=N/A}
-type                : internal
-
-_uuid               : bb4fc532-0f6f-426e-9164-f0850848c25d
+_uuid               : 76c8371b-2214-4395-939e-1001d6cd790d
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -137,27 +138,38 @@ ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : 00:60:e0:56:53:5d
+mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
-name                : eth22
+name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=160831249392, tx_dropped=0, tx_errors=0, tx_packets=107271464}
-status              : {driver_name=igb, driver_version=3.2.10-k, firmware_version=2.10-9}
-type                : 
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=602493544544, tx_dropped=0, tx_errors=0, tx_packets=401812751}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 5167d6b010082d0a164fd743800fe653bbb310d2
-Author:     Eitan Eliahu &lt;eliahue@vmware.com&gt;
-AuthorDate: Wed Nov 5 01:39:20 2014 -0800
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Wed Nov 5 07:28:23 2014 -0800
+commit 4e5e44e30133939b792a013a812c84f564ffa8aa
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Fri Mar 27 23:19:22 2015 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Sat Mar 28 14:31:47 2015 -0700
 
-    router-table-stub: Fix compilation error.
+    ofproto-dpif: Set need_revalidate when removing cfm from ofport.
     
-    Signed-off-by: Eitan Eliahu &lt;eliahue@vmware.com&gt;
-    Acked-by: Nithin Raju &lt;nithin@vmware.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    When cfm is deleted from a port, all modules should release their
+    reference so that the cfm struct can be removed from the global hmap
+    and freed.  Therein, the reference held by xlate module can only be
+    released when the need_revalidate flag is set &#40;e.g set to
+    REV_RECONFIGURE&#41;.  And this flag should be set while removing cfm
+    from ofport.  Unfortunately, this has never been done before and the
+    bug was hidden by another bug fixed in recent commit a190839
+    &#40;netdev-vport: Do not update netdev when there is no config change.&#41;
+    
+    To fix this issue, this commit makes the code set need_revalidate
+    when removing cfm from ofport.
+    
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
