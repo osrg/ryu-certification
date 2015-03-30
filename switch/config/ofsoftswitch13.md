@@ -14,15 +14,22 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit cb740bd2565ac7e5d61ebe30ee75160a5452a033
+commit c31d2a1c84dbb690aca4c99fdd7222fde712fba5
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Mon Feb 23 18:42:49 2015 -0300
+AuthorDate: Wed Mar 25 21:40:24 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Mon Feb 23 18:42:49 2015 -0300
+CommitDate: Wed Mar 25 21:40:24 2015 -0300
 
-    Add flags member to ofp_flow_stats.
+    Fix strict masked ip matching.
     
-    Fix missing flags field in the response of a flow stats request.
+    Quick and dirty hack to stop different IP addresses, with equal masks,
+    to match.
+    The problem is caused because we work with IP addresses in the network
+    byte order format and the function strict_match32 performs matching
+    on values in the host byte order. Thus, in little endian machines,
+    the function will not work.
+    Problems like this show  that the match needs a
+    huge refactoring.
 </pre>
 
 # Modified test scenario for switch restrictions
