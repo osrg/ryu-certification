@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7c405a72f3e4f208d9b8ea024c85bfb88c14eb69
-Merge: bcdff77 67cd73d
+commit a5a5b3166dd6b171432898e90f458612c133f2c1
+Merge: 7c405a7 90dbfa8
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Mar 30 16:51:22 2015 -0700
+AuthorDate: Tue Mar 31 09:40:33 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Mar 30 16:51:22 2015 -0700
+CommitDate: Tue Mar 31 09:40:33 2015 -0700
 
-    Merge into master from pull request #283:
-    OVSDriver: sticky uplinks (https://github.com/floodlight/ivs/pull/283)
+    Merge into master from pull request #284:
+    cleanup getting the vport MAC address (https://github.com/floodlight/ivs/pull/284)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
