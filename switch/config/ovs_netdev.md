@@ -8,10 +8,12 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-4f6401b5-2a59-43e9-964a-16265e6ba4e7
+4d940db4-b2df-4ce7-b52f-856e44b80f98
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth21"
+            Interface "eth21"
         Port "eth22"
             Interface "eth22"
         Port "br0"
@@ -19,12 +21,10 @@ $ sudo ovs-vsctl show
                 type: internal
         Port "eth23"
             Interface "eth23"
-        Port "eth21"
-            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6ae87a8d-42fe-4e6f-a3c8-ee81e4d4ce00
-controller          : [7b942a8c-935b-4f8a-9926-8fbfaec8b5b3]
+_uuid               : a14546e7-2b56-4033-b37e-2c14cc4fc61f
+controller          : [8842b134-fd2b-422c-bbda-b091a9a272c4]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,73 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [193b7599-ed62-4b2b-9f46-09090c7bb656, 647ad537-24a2-472a-83a6-ec029c1c727e, 75949526-32cd-41f0-b9d9-e8832a6355b5, ba0c4a93-b77c-4fa5-b11c-e205c83551b6]
+ports               : [45c99a7f-6009-4fe8-a6a0-e778481efd07, 960cd20d-d8c3-4fca-8061-b5ee6e47793a, 9e222668-8aef-40a7-8c5f-9fc58f9a3d36, c95c38ef-68a0-450c-9100-6b5c35bca24d]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7b942a8c-935b-4f8a-9926-8fbfaec8b5b3
+_uuid               : 8842b134-fd2b-422c-bbda-b091a9a272c4
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="657", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="657", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 193b7599-ed62-4b2b-9f46-09090c7bb656
+_uuid               : 9e222668-8aef-40a7-8c5f-9fc58f9a3d36
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4a1e96c4-b731-49e9-964e-8329250e52c0]
-name                : "eth22"
-
-_uuid               : 75949526-32cd-41f0-b9d9-e8832a6355b5
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1743fe0b-fb32-46c7-a5f8-4954cbae0e2a]
-name                : "eth23"
-
-_uuid               : 647ad537-24a2-472a-83a6-ec029c1c727e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [b6dbcc31-ed5d-4fa2-a562-df5a01f46bd9]
+interfaces          : [47b05e80-b393-470f-9f23-46fb1beb3d73]
 name                : "br0"
 
-_uuid               : ba0c4a93-b77c-4fa5-b11c-e205c83551b6
+_uuid               : 960cd20d-d8c3-4fca-8061-b5ee6e47793a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [5e765171-6fba-4541-811e-c132e816142d]
+interfaces          : [478eff5d-e068-4276-8b5f-d608ed6d00d5]
+name                : "eth22"
+
+_uuid               : c95c38ef-68a0-450c-9100-6b5c35bca24d
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [83b93773-3ef5-441b-8620-63214e0741fb]
+name                : "eth23"
+
+_uuid               : 45c99a7f-6009-4fe8-a6a0-e778481efd07
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [d260808d-947e-4c0e-a19b-4ebec7b6ba18]
 name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4a1e96c4-b731-49e9-964e-8329250e52c0
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=610371365916, tx_dropped=0, tx_errors=0, tx_packets=407065887}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : b6dbcc31-ed5d-4fa2-a562-df5a01f46bd9
+_uuid               : 47b05e80-b393-470f-9f23-46fb1beb3d73
 admin_state         : down
 duplex              : full
-ifindex             : 823
+ifindex             : 830
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +95,24 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 5e765171-6fba-4541-811e-c132e816142d
+_uuid               : 478eff5d-e068-4276-8b5f-d608ed6d00d5
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=610729316968, tx_dropped=0, tx_errors=0, tx_packets=407305776}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : d260808d-947e-4c0e-a19b-4ebec7b6ba18
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1204332484758, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=803234909, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1204881949872, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=803603763, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 1743fe0b-fb32-46c7-a5f8-4954cbae0e2a
+_uuid               : 83b93773-3ef5-441b-8620-63214e0741fb
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=37806393000, tx_dropped=0, tx_errors=0, tx_packets=25204262}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=38107678500, tx_dropped=0, tx_errors=0, tx_packets=25405119}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,35 +150,24 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 0d42597cd1b9fa32fdfc6c033c97d28c09087b57
-Author:     Alin Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-AuthorDate: Mon Mar 30 15:34:28 2015 +0000
-Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-CommitDate: Mon Mar 30 10:08:34 2015 -0700
+commit 4adb03cb6e62d938b586e68aae7af06587e58f49
+Author:     Thomas Graf &lt;tgraf@noironetworks.com&gt;
+AuthorDate: Mon Mar 30 12:21:09 2015 +0200
+Commit:     Thomas Graf &lt;tgraf@noironetworks.com&gt;
+CommitDate: Tue Mar 31 01:19:06 2015 +0200
 
-    build-aux/cccl: Enhance --with-debug option
+    datapath: Use alternate name for udp_sock_create&#40;&#41; backport
     
-    This patch changes the behaviour in case the configure argument: --with-debug
-    was specified.
+    Account for kernels which provide udp_sock_create&#40;&#41; in an
+    insufficient version.
     
-    Currently the optimization flag in the case of debugging is the following:
-    https://msdn.microsoft.com/en-us/library/f9534wye.aspx
-    which does not fully disable optimization, that is why it was changed with
-    the following flag:
-    https://msdn.microsoft.com/en-us/library/aafb762y.aspx
-    which disables all code optimization.
+    Avoids the following error when inserting openvswitch.ko on
+    respective kernels:
     
-    Also this patch includes the definition of the following preprocessor
-    definitions:
-    _DEBUG - in case --with-debug is specified
+    openvswitch: exports duplicate symbol udp_sock_create &#40;owned by udp_tunnel&#41;
     
-    The above definitions usually are defined when compiling with the following
-    flags:
-    https://msdn.microsoft.com/en-us/library/2kzt1wy3.aspx
-    Since we are not compiling with the above flag, mimic the behaviour the
-    debug becahviour.
-    
-    Signed-off-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Fixes: eb6eebd28 &#40;&quot;datapath: Account for &quot;udp: Add udp_sock_create for UDP tunnels to open listener socket&quot;&#41;
+    Signed-off-by: Thomas Graf &lt;tgraf@noironetworks.com&gt;
+    Cc: Jesse Gross &lt;jesse@nicira.com&gt;
+    Acked-by: Jesse Gross &lt;jesse@nicira.com&gt;
 </pre>
