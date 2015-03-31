@@ -13,22 +13,22 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 585538096251f033b367f16de81fc55446139b8b
-Merge: 92669ba 0a26462
+commit bcdff77481eb9bc9bd6733668ea662c2daeb0f5e
+Merge: c3b944d 30d6460
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Mar 12 15:14:49 2015 -0700
+AuthorDate: Mon Mar 30 15:59:40 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Mar 12 15:14:49 2015 -0700
+CommitDate: Mon Mar 30 15:59:40 2015 -0700
 
-    Merge into master from pull request #270:
-    OVSDriver: automatically reconnect uplinks to the datapath (https://github.com/floodlight/ivs/pull/270)
+    Merge into master from pull request #282:
+    OVSDriver: reuse kernel datapath (https://github.com/floodlight/ivs/pull/282)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
 version:        2.3.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     AD40B500DD5C28718A043A4
+srcversion:     20B4C851BF1F0F70A9AED29
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
