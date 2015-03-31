@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a5a5b3166dd6b171432898e90f458612c133f2c1
-Merge: 7c405a7 90dbfa8
+commit 127f0c717fbf18c575b57eaac5c03cb8e828c160
+Merge: a5a5b31 62aeef2
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Mar 31 09:40:33 2015 -0700
+AuthorDate: Tue Mar 31 11:03:34 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Mar 31 09:40:33 2015 -0700
+CommitDate: Tue Mar 31 11:03:34 2015 -0700
 
-    Merge into master from pull request #284:
-    cleanup getting the vport MAC address (https://github.com/floodlight/ivs/pull/284)
+    Merge into master from pull request #281:
+    Packet trace (https://github.com/floodlight/ivs/pull/281)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
