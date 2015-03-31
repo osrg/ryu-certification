@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bcdff77481eb9bc9bd6733668ea662c2daeb0f5e
-Merge: c3b944d 30d6460
+commit 7c405a72f3e4f208d9b8ea024c85bfb88c14eb69
+Merge: bcdff77 67cd73d
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Mon Mar 30 15:59:40 2015 -0700
+AuthorDate: Mon Mar 30 16:51:22 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Mon Mar 30 15:59:40 2015 -0700
+CommitDate: Mon Mar 30 16:51:22 2015 -0700
 
-    Merge into master from pull request #282:
-    OVSDriver: reuse kernel datapath (https://github.com/floodlight/ivs/pull/282)
+    Merge into master from pull request #283:
+    OVSDriver: sticky uplinks (https://github.com/floodlight/ivs/pull/283)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
