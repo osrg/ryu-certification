@@ -13,15 +13,15 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit b590e433746fb939fd72a02699b300b0ff96537e
-Merge: 1e6a7cd 43c5d38
+commit 4b6f92f8993e33543e2b66357d78672ce031cb72
+Merge: a15309b 30d7fb9
 Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Tue Mar 31 21:07:19 2015 -0700
+AuthorDate: Wed Apr 1 14:23:38 2015 -0700
 Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Tue Mar 31 21:07:19 2015 -0700
+CommitDate: Wed Apr 1 14:23:38 2015 -0700
 
-    Merge into master from pull request #286:
-    use ccache to build packages faster (https://github.com/floodlight/ivs/pull/286)
+    Merge into master from pull request #287:
+    packet trace improvements (https://github.com/floodlight/ivs/pull/287)
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
