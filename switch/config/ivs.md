@@ -13,15 +13,14 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4b6f92f8993e33543e2b66357d78672ce031cb72
-Merge: a15309b 30d7fb9
-Author:     abat &lt;abat@bigswitch.com&gt;
-AuthorDate: Wed Apr 1 14:23:38 2015 -0700
-Commit:     abat &lt;abat@bigswitch.com&gt;
-CommitDate: Wed Apr 1 14:23:38 2015 -0700
+commit 65db0163ae07ae6b18429623d8dbd4c612a1b59b
+Merge: 58f5ead 9fd5596
+Author:     Big Switch Networks &lt;abat@bigswitch.com&gt;
+AuthorDate: Wed Apr 1 17:09:34 2015 -0700
+Commit:     Big Switch Networks &lt;abat@bigswitch.com&gt;
+CommitDate: Wed Apr 1 17:09:34 2015 -0700
 
-    Merge into master from pull request #287:
-    packet trace improvements (https://github.com/floodlight/ivs/pull/287)
+    Merge pull request #290 from rlane/test-jenkins2
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
