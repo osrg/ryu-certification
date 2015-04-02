@@ -14,22 +14,15 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c31d2a1c84dbb690aca4c99fdd7222fde712fba5
+commit 936696eb955f68ca1c4da5d6b209ce9038362328
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Wed Mar 25 21:40:24 2015 -0300
+AuthorDate: Thu Apr 2 19:29:31 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Wed Mar 25 21:40:24 2015 -0300
+CommitDate: Thu Apr 2 19:29:31 2015 -0300
 
-    Fix strict masked ip matching.
+    Fix network byte order on pack and unpack of get/set async message.
     
-    Quick and dirty hack to stop different IP addresses, with equal masks,
-    to match.
-    The problem is caused because we work with IP addresses in the network
-    byte order format and the function strict_match32 performs matching
-    on values in the host byte order. Thus, in little endian machines,
-    the function will not work.
-    Problems like this show  that the match needs a
-    huge refactoring.
+    Correct the byte order of the message fields.
 </pre>
 
 # Modified test scenario for switch restrictions
