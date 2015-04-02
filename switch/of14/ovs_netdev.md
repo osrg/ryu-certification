@@ -14,17 +14,17 @@ title: Ryu Certification - ovs netdev
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(31)|&nbsp;&nbsp;&nbsp;&nbsp;(22)|
 |[set_field](#set_field)|102|68|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(102)|&nbsp;&nbsp;&nbsp;&nbsp;(68)|
-|[Match](#Match)|464|250|
+|[Match](#Match)|466|248|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(93)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(371)|&nbsp;&nbsp;&nbsp;&nbsp;(235)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(373)|&nbsp;&nbsp;&nbsp;&nbsp;(233)|
 |[Group](#Group)|8|7|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(5)|&nbsp;&nbsp;&nbsp;&nbsp;(7)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|608|395|
+|Total|610|393|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(99)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(509)|&nbsp;&nbsp;&nbsp;&nbsp;(368)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(511)|&nbsp;&nbsp;&nbsp;&nbsp;(366)|
 
 ## <a name ='Action'>Action</a>
 
@@ -134,9 +134,9 @@ title: Ryu Certification - ovs netdev
 |[IP_ECN (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv4.json)|- | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) | [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) / [OK](#ccd612d79452abeda8e01ec1ae8e41b0) | [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) / [ERROR](#ccd612d79452abeda8e01ec1ae8e41b0) |
 |[IP_PROTO (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv4.json)|x | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) / [OK](#f3327379b91290e99b0e2dccd289d8e0) | [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) / [ERROR](#f3327379b91290e99b0e2dccd289d8e0) |
 |[IPV4_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC.json)|x | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) | [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) / [OK](#100366c2f43f886128d669052f8fe25a) | [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) / [ERROR](#100366c2f43f886128d669052f8fe25a) |
-|[IPV4_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC_Mask.json)|x | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) | [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) |
+|[IPV4_SRC (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/11_IPV4_SRC_Mask.json)|x | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) | [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) / [OK](#fd152ac5dc105cba865d2181e72ebbc9) | [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) / [ERROR](#fd152ac5dc105cba865d2181e72ebbc9) |
 |[IPV4_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/12_IPV4_DST.json)|x | [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [ERROR](#fa9569007b6a7d5bfc410b623ba7c85b) | [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [ERROR](#fa9569007b6a7d5bfc410b623ba7c85b) | [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [OK](#fa9569007b6a7d5bfc410b623ba7c85b) / [OK](#fa9569007b6a7d5bfc410b623ba7c85b) | [ERROR](#fa9569007b6a7d5bfc410b623ba7c85b) / [ERROR](#fa9569007b6a7d5bfc410b623ba7c85b) / [ERROR](#fa9569007b6a7d5bfc410b623ba7c85b) |
-|[IPV4_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/12_IPV4_DST_Mask.json)|x | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) | [ERROR](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) |
+|[IPV4_DST (Mask)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/12_IPV4_DST_Mask.json)|x | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) | [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) / [OK](#73178bbfef71338f9e1819ceaa7b2542) | [ERROR](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) / [ERROR](#73178bbfef71338f9e1819ceaa7b2542) |
 |[TCP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/13_TCP_SRC_IPv4.json)|x | [OK](#7b14766f93cc3b890182cbcc302a049d) / [OK](#7b14766f93cc3b890182cbcc302a049d) / [OK](#7b14766f93cc3b890182cbcc302a049d) | [OK](#7b14766f93cc3b890182cbcc302a049d) / [OK](#7b14766f93cc3b890182cbcc302a049d) / [ERROR](#7b14766f93cc3b890182cbcc302a049d) | [OK](#7b14766f93cc3b890182cbcc302a049d) / [OK](#7b14766f93cc3b890182cbcc302a049d) / [OK](#7b14766f93cc3b890182cbcc302a049d) | [ERROR](#7b14766f93cc3b890182cbcc302a049d) / [ERROR](#7b14766f93cc3b890182cbcc302a049d) / [ERROR](#7b14766f93cc3b890182cbcc302a049d) |
 |[TCP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/14_TCP_DST_IPv4.json)|x | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [ERROR](#ec3d8884918ea4b637ed7d07bb467161) | [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) / [OK](#ec3d8884918ea4b637ed7d07bb467161) | [ERROR](#ec3d8884918ea4b637ed7d07bb467161) / [ERROR](#ec3d8884918ea4b637ed7d07bb467161) / [ERROR](#ec3d8884918ea4b637ed7d07bb467161) |
 |[UDP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/15_UDP_SRC_IPv4.json)|x | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [ERROR](#2e57888f406e3b2903a4107cfd2b9919) | [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) / [OK](#2e57888f406e3b2903a4107cfd2b9919) | [ERROR](#2e57888f406e3b2903a4107cfd2b9919) / [ERROR](#2e57888f406e3b2903a4107cfd2b9919) / [ERROR](#2e57888f406e3b2903a4107cfd2b9919) |
@@ -1055,8 +1055,7 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
     ethernet/mpls/ipv4(src='192.168.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet/mpls/ipv4(src='10.10.10.10')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' OK
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(src='192.168.10.10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_src=192.168.10.0(mask=255.255.255.0),actions=output:CONTROLLER' ERROR
@@ -1096,8 +1095,7 @@ title: Ryu Certification - ovs netdev
         Table-miss error: no change in lookup_count.
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
     ethernet/mpls/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' OK
-    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
-        Table-miss error: no change in lookup_count.
+    ethernet/mpls/ipv4(dst='10.10.20.20')/tcp-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' OK
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
     ethernet/itag/ethernet/ipv4(dst='192.168.20.20')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv4_dst=192.168.0.20(mask=255.255.0.255),actions=output:CONTROLLER' ERROR
@@ -1892,31 +1890,31 @@ title: Ryu Certification - ovs netdev
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.67kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.73kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 513.63kbps, {'in_port': 3} 1508.09kbps
+        Received unexpected throughput: {'in_port': 2} 510.52kbps, {'in_port': 3} 1510.09kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 510.12kbps, {'in_port': 3} 1521.38kbps
+        Received unexpected throughput: {'in_port': 2} 491.38kbps, {'in_port': 3} 1539.38kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 503.49kbps, {'in_port': 3} 1519.84kbps
+        Received unexpected throughput: {'in_port': 2} 494.10kbps, {'in_port': 3} 1528.40kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 503.49kbps, {'in_port': 3} 1498.75kbps
+        Received unexpected throughput: {'in_port': 2} 477.72kbps, {'in_port': 3} 1521.42kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 483.18kbps, {'in_port': 3} 1515.54kbps
+        Received unexpected throughput: {'in_port': 2} 494.51kbps, {'in_port': 3} 1504.23kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.69kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1999.12kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
