@@ -13,14 +13,14 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 5d0f1f4096c14e98dd5e14e15ac2ae25eae4a3a8
-Merge: 7a697c9 635282d
+commit c2a37120d191dd3d5276a4bbc4590e9bba406221
+Merge: 5d0f1f4 a22fe57
 Author:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Apr 2 17:16:47 2015 -0700
+AuthorDate: Fri Apr 3 17:28:39 2015 -0700
 Commit:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Apr 2 17:16:47 2015 -0700
+CommitDate: Fri Apr 3 17:28:39 2015 -0700
 
-    Merge pull request #293 from rlane/crash2
+    Merge pull request #296 from rlane/update-submodules
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
