@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-d95390aa-099d-4309-af47-d02c89271c48
+3d7a2c70-890c-4905-ad57-74fc17c2d615
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
@@ -23,8 +23,8 @@ d95390aa-099d-4309-af47-d02c89271c48
             Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : beb7dcb2-805f-411e-a77d-54de21671672
-controller          : [cb11e7a0-bd1b-4e08-8295-aa5999abbf2e]
+_uuid               : de903639-f98a-4031-a39e-d24368886ed1
+controller          : [66114657-61a3-48ac-a69e-7f7c9424d903]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [029169e3-f20d-47e1-a859-8d819294a703, 0c10ceb8-3c0d-4785-ba2a-e35880f95d17, 2460a90b-a13e-4235-8ee5-a3f95269f753, f001e769-a969-4bde-a448-108b84871cf7]
+ports               : [1a2dadc2-cc33-4387-bf4d-4c366e973a3d, 4e0c76a6-3c41-41ad-be84-e32d7396cf8c, 6a750578-6c38-49d5-a5a8-142725164446, a294d08e-e900-409a-95b5-0dcc376298c9]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : cb11e7a0-bd1b-4e08-8295-aa5999abbf2e
+_uuid               : 66114657-61a3-48ac-a69e-7f7c9424d903
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_connect="657", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0c10ceb8-3c0d-4785-ba2a-e35880f95d17
+_uuid               : 6a750578-6c38-49d5-a5a8-142725164446
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [abe7fbf6-891d-4472-812d-41c9866c4aaf]
-name                : "eth22"
-
-_uuid               : f001e769-a969-4bde-a448-108b84871cf7
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [b2876fab-9b22-4991-9459-fe7879e4272d]
-name                : "eth21"
-
-_uuid               : 2460a90b-a13e-4235-8ee5-a3f95269f753
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [7dabc692-ad8a-4c23-9dde-eade5e5821a9]
+interfaces          : [17ec5df6-64eb-45be-82ca-19561d697dad]
 name                : "eth23"
 
-_uuid               : 029169e3-f20d-47e1-a859-8d819294a703
+_uuid               : 1a2dadc2-cc33-4387-bf4d-4c366e973a3d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2f1ac001-9ca3-4e3f-846d-99451b3927b8]
+interfaces          : [ace60a15-e7d2-4fad-bb17-a858f19c4249]
 name                : "br0"
 
+_uuid               : 4e0c76a6-3c41-41ad-be84-e32d7396cf8c
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [f43f75bb-5fdf-4f5d-8694-f4c491ac43a1]
+name                : "eth22"
+
+_uuid               : a294d08e-e900-409a-95b5-0dcc376298c9
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [1b192793-cb82-4329-a448-fbd34811df14]
+name                : "eth21"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2f1ac001-9ca3-4e3f-846d-99451b3927b8
+_uuid               : ace60a15-e7d2-4fad-bb17-a858f19c4249
 admin_state         : down
 duplex              : full
-ifindex             : 861
+ifindex             : 865
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 7dabc692-ad8a-4c23-9dde-eade5e5821a9
+_uuid               : 17ec5df6-64eb-45be-82ca-19561d697dad
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -108,11 +108,11 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=39483303000, tx_dropped=0, tx_errors=0, tx_packets=26322202}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=39658402500, tx_dropped=0, tx_errors=0, tx_packets=26438935}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : abe7fbf6-891d-4472-812d-41c9866c4aaf
+_uuid               : f43f75bb-5fdf-4f5d-8694-f4c491ac43a1
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=619743265050, tx_dropped=0, tx_errors=0, tx_packets=413320703}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=619848675604, tx_dropped=0, tx_errors=0, tx_packets=413391585}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : b2876fab-9b22-4991-9459-fe7879e4272d
+_uuid               : 1b192793-cb82-4329-a448-fbd34811df14
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1218380111990, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=812614035, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1218613899140, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=812771178, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,17 +150,18 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4207d631d4841ddc38abdc0f2aea3b9fcb5ddfdc
-Author:     Justin Pettit &lt;jpettit@nicira.com&gt;
-AuthorDate: Sat Apr 4 16:30:44 2015 -0700
-Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
-CommitDate: Sun Apr 5 10:01:00 2015 -0700
+commit 6c6045a72a93f72317567cc6075ac306ef0a3c44
+Author:     Alin Serdean &lt;aserdean@cloudbasesolutions.com&gt;
+AuthorDate: Mon Apr 6 17:22:06 2015 +0000
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Mon Apr 6 11:06:22 2015 -0700
 
-    Makefile.am: Clarify error message about missing distribution files.
+    datapath-windows Release lock on HVUpdateNIC
     
-    The error message did not make it clear that the problem was due to
-    files being in git but not the distribution.
+    Release switchContext-&gt;dispatchLock in case the vport has not been found.
     
-    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Eitan Eliahu &lt;eliahue@vmware.com&gt;
+    Acked-by: Sorin Vinturis &lt;svinturis@cloudbasesolutions.com&gt;
+    Signed-off-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
