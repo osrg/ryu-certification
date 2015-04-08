@@ -57,13 +57,16 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 3d0188266307c96ed4883f061d5a9a3403c6e54e
+commit 70ffc9b1ea6bb43e23d5e4154a611ce797d7f251
+Merge: 3d01882 6009b25
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon Mar 9 16:30:18 2015 +0100
+AuthorDate: Tue Apr 7 18:00:49 2015 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon Mar 9 16:30:18 2015 +0100
+CommitDate: Tue Apr 7 18:00:49 2015 +0200
 
-    Do not crash making release when setcap fails but warn the user
+    Merge pull request #357 from FlowForwarding/doc
+    
+    Add technical LINC-Switch documentation
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
