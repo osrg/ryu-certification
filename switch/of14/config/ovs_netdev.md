@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-42ca56f8-7398-4b16-ae6c-c2b054355ade
+589888cb-74c1-4169-9a93-ab31c387b6bd
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
@@ -23,8 +23,8 @@ $ sudo ovs-vsctl show
             Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1ed20f25-7b90-4294-bf22-f77e65d07fbb
-controller          : [f465a91c-3af1-43ec-8313-27499cd0c1ae]
+_uuid               : 7a1f7df9-dc86-419d-a2b2-d49566b15ddc
+controller          : [6e298606-3c11-42de-a03a-e66262797df4]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [27a5aa5f-bfdb-4800-a116-30f3c56eec20, a7108f9b-eefb-43f2-b584-7b3753b594ca, efa5128e-04bf-4ca1-b9b9-912483066311, f811eb8c-18d0-4593-b943-3015ca87b1b4]
+ports               : [1bf6a8d7-5cd4-41a2-966a-971a00f14a17, 90299038-4f90-4cfa-81eb-7e1e6d3114d0, aa65fa21-6806-4c13-8f42-0b7457c39e05, e04b218e-4505-4d39-8017-39131d528bd2]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : f465a91c-3af1-43ec-8313-27499cd0c1ae
+_uuid               : 6e298606-3c11-42de-a03a-e66262797df4
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="651", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="652", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f811eb8c-18d0-4593-b943-3015ca87b1b4
+_uuid               : 90299038-4f90-4cfa-81eb-7e1e6d3114d0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [fd6bfa6e-47e9-4835-9a39-6d79a2fde37e]
-name                : "eth21"
-
-_uuid               : efa5128e-04bf-4ca1-b9b9-912483066311
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [ece1a163-d242-46a8-8eb3-ebe355fbb304]
-name                : "eth23"
-
-_uuid               : 27a5aa5f-bfdb-4800-a116-30f3c56eec20
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [0297fbf7-c700-4974-b5d8-c97e8f5bd84e]
-name                : "eth22"
-
-_uuid               : a7108f9b-eefb-43f2-b584-7b3753b594ca
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [68835d36-8b1c-44fe-b2bb-3afda0d4a08d]
+interfaces          : [4a6f8153-3a6e-489c-b437-facd4850f607]
 name                : "br0"
 
+_uuid               : aa65fa21-6806-4c13-8f42-0b7457c39e05
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3fe3700d-90dd-4f13-b9c4-27ee5ff561d9]
+name                : "eth23"
+
+_uuid               : e04b218e-4505-4d39-8017-39131d528bd2
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b26501c4-1ff7-466d-b2f8-0be0e05089a7]
+name                : "eth21"
+
+_uuid               : 1bf6a8d7-5cd4-41a2-966a-971a00f14a17
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [1cf62103-335d-4148-807f-e22a7f309ad4]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : fd6bfa6e-47e9-4835-9a39-6d79a2fde37e
+_uuid               : b26501c4-1ff7-466d-b2f8-0be0e05089a7
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -91,14 +91,31 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1230556327411, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=820737412, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1230790191061, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=820894606, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 68835d36-8b1c-44fe-b2bb-3afda0d4a08d
+_uuid               : 3fe3700d-90dd-4f13-b9c4-27ee5ff561d9
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=40318930500, tx_dropped=0, tx_errors=0, tx_packets=26879287}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 4a6f8153-3a6e-489c-b437-facd4850f607
 admin_state         : down
 duplex              : full
-ifindex             : 877
+ifindex             : 881
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,24 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : ece1a163-d242-46a8-8eb3-ebe355fbb304
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=40143312000, tx_dropped=0, tx_errors=0, tx_packets=26762208}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 0297fbf7-c700-4974-b5d8-c97e8f5bd84e
+_uuid               : 1cf62103-335d-4148-807f-e22a7f309ad4
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=629680302805, tx_dropped=0, tx_errors=0, tx_packets=419947976}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=629785276859, tx_dropped=0, tx_errors=0, tx_packets=420018567}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,19 +150,14 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 46e7137c77d845c488e17b718eac7c3fb97cedcc
-Author:     Jesse Gross &lt;jesse@nicira.com&gt;
-AuthorDate: Tue Apr 7 18:55:54 2015 -0700
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Tue Apr 7 19:00:17 2015 -0700
+commit 0be55e389d2f12dbbf5dca5c16a7b2c8177e58ff
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Thu Apr 9 08:54:23 2015 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Thu Apr 9 13:52:10 2015 -0700
 
-    geneve: Zero header before parsing userspace tunneling action.
+    INSTALL.Windows: Add documentation about Windows services.
     
-    When we parse the text representation of the Geneve action the
-    header is not fully initialized. Besides the obvious potential
-    to generate an action that the user did not actually specify, this
-    also causes intermittent unit test failures when an action is
-    read in and printed out and the result is different.
-    
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Nithin Raju &lt;nithin@vmware.com&gt;
 </pre>
