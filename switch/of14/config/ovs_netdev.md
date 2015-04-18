@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ed87fd5f-4ec4-4112-b029-c137f0bbaf70
+3388ee9e-bac5-40fe-917c-abb7edf8dbe9
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth22"
-            Interface "eth22"
         Port "eth23"
             Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
+        Port "eth21"
+            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth21"
-            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 91e0268f-ddbe-441a-a176-a5746faa5f4e
-controller          : [dbae6a54-79ac-4f44-90dd-a2ecd3b2d0d8]
+_uuid               : 476c2d79-1a76-49ea-9582-6a875a1dd74f
+controller          : [61c06c27-4249-4149-b398-693af3ca98af]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [018d9a48-ba9a-48f9-8f91-e608865f55d4, 7e4e6d02-dd01-4ccb-b718-89469fa5791d, b38236e0-ede9-4fa3-81b1-58914fd0c2e3, f36fa1a3-9037-43c7-9ee8-278f2c2e7b0d]
+ports               : [1920e2cc-3bbf-47de-bcc6-ce320aa606e3, 2e453764-fd9f-4424-a4f3-f8c30cff5454, 6596808c-9f42-4bdf-a84a-dc7fd18c5a59, fdd368a4-26af-4875-bc45-04f36d19cb83]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : dbae6a54-79ac-4f44-90dd-a2ecd3b2d0d8
+_uuid               : 61c06c27-4249-4149-b398-693af3ca98af
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="652", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="652", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 018d9a48-ba9a-48f9-8f91-e608865f55d4
+_uuid               : 2e453764-fd9f-4424-a4f3-f8c30cff5454
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [979163ea-e049-40f1-aead-d6ec7594b110]
+interfaces          : [48893762-0c89-4e29-a10f-fe42b5ff2162]
 name                : "eth22"
 
-_uuid               : b38236e0-ede9-4fa3-81b1-58914fd0c2e3
+_uuid               : 1920e2cc-3bbf-47de-bcc6-ce320aa606e3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b8b7a571-4664-426d-9bc8-aa7715a811a1]
-name                : "br0"
-
-_uuid               : 7e4e6d02-dd01-4ccb-b718-89469fa5791d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [5dbef48f-48f4-4173-8b6c-06b69d947d59]
+interfaces          : [ea66b94f-39f0-4b05-9de9-3ca2cfd5add6]
 name                : "eth23"
 
-_uuid               : f36fa1a3-9037-43c7-9ee8-278f2c2e7b0d
+_uuid               : fdd368a4-26af-4875-bc45-04f36d19cb83
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6ac2aa5f-236a-4bb0-8a57-b2370ca223bb]
+interfaces          : [b4cfdb2c-6aae-49e4-b014-683b62f21c42]
+name                : "br0"
+
+_uuid               : 6596808c-9f42-4bdf-a84a-dc7fd18c5a59
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [0cb3aa83-9c88-464a-abe7-8d58fc1cd561]
 name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : b8b7a571-4664-426d-9bc8-aa7715a811a1
+_uuid               : b4cfdb2c-6aae-49e4-b014-683b62f21c42
 admin_state         : down
 duplex              : full
-ifindex             : 917
+ifindex             : 921
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 979163ea-e049-40f1-aead-d6ec7594b110
+_uuid               : 48893762-0c89-4e29-a10f-fe42b5ff2162
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -108,11 +108,11 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=630732240845, tx_dropped=0, tx_errors=0, tx_packets=420655351}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=630836992899, tx_dropped=0, tx_errors=0, tx_packets=420725794}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 5dbef48f-48f4-4173-8b6c-06b69d947d59
+_uuid               : ea66b94f-39f0-4b05-9de9-3ca2cfd5add6
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=41896911000, tx_dropped=0, tx_errors=0, tx_packets=27931274}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=42072708000, tx_dropped=0, tx_errors=0, tx_packets=28048472}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 6ac2aa5f-236a-4bb0-8a57-b2370ca223bb
+_uuid               : 0cb3aa83-9c88-464a-abe7-8d58fc1cd561
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=1232894584411, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=822309099, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=1233128404561, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=822466264, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,16 +150,18 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 1c79befb3cdf1dd861f463c6f58762bc34f6784c
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Fri Apr 17 10:06:17 2015 -0700
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Apr 17 10:06:17 2015 -0700
+commit f315ae4f469a44c3691057b541425da4d4f9cbdf
+Author:     Alex Wang &lt;alexw@nicira.com&gt;
+AuthorDate: Fri Apr 17 11:30:18 2015 -0700
+Commit:     Alex Wang &lt;alexw@nicira.com&gt;
+CommitDate: Sat Apr 18 00:56:18 2015 -0700
 
-    perf-counter: Remove unused vlog module.
+    dkms.conf.in: Install all kernel modules.
     
-    Otherwise Clang warns about an unused variable.
+    With the latest change of separating vports into their own modules,
+    we need to update the dkms.conf.in and make dkms install all vport
+    modules.  So, this commit modifies the debian/rules to read all
+    kernel module names and sets the dkms.conf correctly.
     
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
+    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
