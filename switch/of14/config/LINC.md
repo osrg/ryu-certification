@@ -12,14 +12,14 @@ $ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
      [{of_config,enabled},
       {sync_routing,true},
       {capable_switch_ports,
-          [{port,1,[{interface,eth21}]},
-           {port,2,[{interface,eth22}]},
-           {port,3,[{interface,eth23}]}]},
+          [{port,1,[{interface,"eth21"}]},
+           {port,2,[{interface,"eth22"}]},
+           {port,3,[{interface,"eth23"}]}]},
       {capable_switch_queues,[]},
       {logical_switches,
           [{switch,0,
                [{backend,linc_us5},
-                {controllers,[{Switch0-Controller,10.24.150.30,6633,tcp}]},
+                {controllers,[{"Switch0-Controller","10.24.150.30",6633,tcp}]},
                 {controllers_listener,disabled},
                 {queues_status,disabled},
                 {ports,
@@ -35,17 +35,17 @@ $ cat rel/linc/releases/1.0/sys.config | grep -v '%%'
       {callback_module,linc_ofconfig},
       {sshd_ip,any},
       {sshd_port,1830},
-      {sshd_user_passwords,[{linc,linc}]}]},
+      {sshd_user_passwords,[{"linc","linc"}]}]},
  {lager,
      [{handlers,
           [{lager_console_backend,debug},
            {lager_file_backend,
-               [{log/error.log,error,10485760,,5},
-                {log/console.log,info,10485760,,5}]}]}]},
+               [{"log/error.log",error,10485760,"$D0",5},
+                {"log/console.log",info,10485760,"$D0",5}]}]}]},
  {sasl,
-     [{sasl_error_logger,{file,log/sasl-error.log}},
+     [{sasl_error_logger,{file,"log/sasl-error.log"}},
       {errlog_type,error},
-      {error_logger_mf_dir,log/sasl},
+      {error_logger_mf_dir,"log/sasl"},
       {error_logger_mf_maxbytes,10485760},
       {error_logger_mf_maxfiles,5}]},
  {sync,[{excluded_modules,[procket]}]}].
@@ -57,28 +57,25 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 70ffc9b1ea6bb43e23d5e4154a611ce797d7f251
-Merge: 3d01882 6009b25
+commit c65c1674a1883260256a8e1da6a4d5675505f6b3
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue Apr 7 18:00:49 2015 +0200
+AuthorDate: Tue May 5 14:49:21 2015 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue Apr 7 18:00:49 2015 +0200
+CommitDate: Tue May 5 14:49:21 2015 +0200
 
-    Merge pull request #357 from FlowForwarding/doc
-    
-    Add technical LINC-Switch documentation
+    Improve LINC_internals Quick Start section
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit a52f54a9fb02633e4cb5cb74290caf0f308ea2e1
-Merge: 48b734b 8f557cd
+commit 3cd185bcc738908878f81c085e23950c1ef1b6dd
+Merge: b968b84 a843e41
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Wed Jan 7 18:08:32 2015 +0100
+AuthorDate: Mon May 4 15:10:58 2015 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Wed Jan 7 18:08:32 2015 +0100
+CommitDate: Mon May 4 15:10:58 2015 +0200
 
-    Merge pull request #82 from FlowForwarding/oe_refactorings
+    Merge pull request #84 from cloudozer/poc
     
-    OE refactorings
+    Add queue state experimenter fields
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
