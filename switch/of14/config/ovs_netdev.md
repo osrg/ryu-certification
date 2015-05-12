@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-8474ec64-3e71-4db2-8ac0-56a3f4ba03e1
+03081209-cb48-447a-9efe-02984681224a
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth22"
-            Interface "eth22"
-        Port "eth21"
-            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth21"
+            Interface "eth21"
         Port "eth23"
             Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 62da65b5-5a7a-4f77-852f-9615fe391716
-controller          : [8962d6aa-3038-4f8b-9504-87ef556bd1c9]
+_uuid               : 9d64b20b-6238-4f2d-875e-76a0e4f87f3d
+controller          : [08a4950e-f1c1-403f-adeb-ea412f67dae7]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,90 +32,73 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [19634b3c-41f1-4254-9fae-e129edcdd46e, 40bd9a16-7ea7-47e3-8538-a9067a040882, 702baf3e-bf2a-4e70-9b51-d08b00b5e0c5, bd4d2ef9-3e90-459e-a4de-c5d0c46bf461]
+ports               : [3b83a84a-ec39-4ded-bb2b-acf50514118e, b730cb38-6695-4218-8523-14d3eccf3f17, c659252b-4805-4110-ae7d-32ad824dff82, d3813265-5e02-4b0d-9f1c-e5cfcba6dae2]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8962d6aa-3038-4f8b-9504-87ef556bd1c9
+_uuid               : 08a4950e-f1c1-403f-adeb-ea412f67dae7
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="652", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="646", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 19634b3c-41f1-4254-9fae-e129edcdd46e
+_uuid               : b730cb38-6695-4218-8523-14d3eccf3f17
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [14ae5df6-9969-4b73-af03-c5a9831edfc2]
-name                : "eth22"
-
-_uuid               : bd4d2ef9-3e90-459e-a4de-c5d0c46bf461
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [0052616a-9b5e-4510-8912-4e613ff955b9]
-name                : "eth23"
-
-_uuid               : 702baf3e-bf2a-4e70-9b51-d08b00b5e0c5
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [92d07657-184d-4b82-bd0b-27b4bc9e0668]
-name                : "br0"
-
-_uuid               : 40bd9a16-7ea7-47e3-8538-a9067a040882
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [47ecfc17-dc8f-48dc-8ea2-9b699064463d]
+interfaces          : [a3e25fdc-5778-468c-967a-56ddf9ce2c28]
 name                : "eth21"
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0052616a-9b5e-4510-8912-4e613ff955b9
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=572988000, tx_dropped=0, tx_errors=0, tx_packets=381992}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 14ae5df6-9969-4b73-af03-c5a9831edfc2
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
+_uuid               : d3813265-5e02-4b0d-9f1c-e5cfcba6dae2
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [9fd090c7-814a-4f78-8efc-2ab1ec76cc14]
 name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9780281978, tx_dropped=0, tx_errors=0, tx_packets=6522465}
+
+_uuid               : 3b83a84a-ec39-4ded-bb2b-acf50514118e
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b62eaae8-a5bf-49e7-9a5f-fdc5c5867194]
+name                : "br0"
+
+_uuid               : c659252b-4805-4110-ae7d-32ad824dff82
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [260a9363-7a3d-48e6-9027-e5195fb17ff1]
+name                : "eth23"
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : a3e25fdc-5778-468c-967a-56ddf9ce2c28
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1550
+name                : "eth21"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=12279588746, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=8192935, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 92d07657-184d-4b82-bd0b-27b4bc9e0668
+_uuid               : b62eaae8-a5bf-49e7-9a5f-fdc5c5867194
 admin_state         : down
 duplex              : full
-ifindex             : 39
+ifindex             : 43
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -129,20 +112,37 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 47ecfc17-dc8f-48dc-8ea2-9b699064463d
+_uuid               : 260a9363-7a3d-48e6-9027-e5195fb17ff1
 admin_state         : up
 duplex              : full
-ifindex             : 23
+ifindex             : 25
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5c"
+mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
-name                : "eth21"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=12045590096, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=8035651, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=748425000, tx_dropped=0, tx_errors=0, tx_packets=498950}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 9fd090c7-814a-4f78-8efc-2ab1ec76cc14
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9885572532, tx_dropped=0, tx_errors=0, tx_packets=6593267}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,20 +150,21 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c875bb948df059855c18b29bdfbfbfcb986e607a
-Author:     Ethan Jackson &lt;ethan@nicira.com&gt;
-AuthorDate: Thu Mar 26 12:52:42 2015 -0700
-Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
-CommitDate: Fri May 8 15:26:26 2015 -0700
+commit 9899125aaae9f0634f43307cc0ff72f5afb287bb
+Author:     Oleg Strikov &lt;oleg.strikov@canonical.com&gt;
+AuthorDate: Fri May 8 12:05:13 2015 -0700
+Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
+CommitDate: Tue May 12 09:14:12 2015 -0700
 
-    utilities: Add new pipeline generator script.
+    INSTALL.DPDK: Notes on running ovs-vswitchd/dpdk inside a VM
     
-    When doing OVS performance testing, it's important to have both
-    realistic traffic traces and OpenFlow pipelines on which to evaluate
-    prospective changes.  As a first step in this direction, this patch
-    adds a python script which generates an OpenFlow pipeline intended to
-    simulate typical network virtualization workloads.
+    Additional configuration is required if you want to run ovs-vswitchd
+    with DPDK backend inside a QEMU virtual machine. This happens because,
+    by default, virtio NIC provided to the guest doesn't support multiple
+    TX queues which are required by ovs-vswitchd/dpdk. This commit updates
+    INSTALL.DPDK.md to provide guidelines on how to enable support for
+    multiple TX queues using QEMU command line and Libvirt config file.
     
-    Signed-off-by: Ethan Jackson &lt;ethan@nicira.com&gt;
-    Acked-by: Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+    Signed-off-by: Oleg Strikov &lt;oleg.strikov@canonical.com&gt;
+    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
 </pre>
