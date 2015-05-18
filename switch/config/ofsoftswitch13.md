@@ -14,15 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 936696eb955f68ca1c4da5d6b209ce9038362328
+commit a89ecf6eb2b69c8253500187b5e62be7e0252fa2
+Merge: 7886dba e2c05d7
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Thu Apr 2 19:29:31 2015 -0300
+AuthorDate: Mon May 18 13:24:09 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Thu Apr 2 19:29:31 2015 -0300
+CommitDate: Mon May 18 13:24:09 2015 -0300
 
-    Fix network byte order on pack and unpack of get/set async message.
+    Merge pull request #173 from ljerezchaves/async-fix
     
-    Correct the byte order of the message fields.
+    This commit fix bug #172, with proper asynchronous configuration check.
 </pre>
 
 # Modified test scenario for switch restrictions
