@@ -14,16 +14,25 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a89ecf6eb2b69c8253500187b5e62be7e0252fa2
-Merge: 7886dba e2c05d7
+commit 41cb72dbbd40dd5418177bea22fea3d2f8802e09
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Mon May 18 13:24:09 2015 -0300
+AuthorDate: Tue May 19 21:02:02 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Mon May 18 13:24:09 2015 -0300
+CommitDate: Tue May 19 21:12:58 2015 -0300
 
-    Merge pull request #173 from ljerezchaves/async-fix
+    Fix segmentation fault when handling packets larger than MTU.
     
-    This commit fix bug #172, with proper asynchronous configuration check.
+    This commit fixes the switch segmenation fault when packets
+    larger than the interface MTU are received.
+    
+    The problem is caused mainly due to TCP segmentation offload, which
+    enables the TCP stack to send an entire chunk of data to be break up by
+    the network interface.
+    
+    While the switch does not break anymore, it still does not handle TSO,
+    so larger packets might be dropped when sent to the switch causing
+    loss of performance. For this reason is still recommended to disable
+    TSO support on the interface.
 </pre>
 
 # Modified test scenario for switch restrictions
