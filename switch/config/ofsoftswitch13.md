@@ -14,23 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a30149a0a4d4c3de9318aa9fad27665351ff625f
-Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Thu May 21 13:43:01 2015 -0300
+commit 8089471f75eb94bcbfcc6885d521e1407bddf661
+Author:     Chris Kappler &lt;chrisk@mysticlabs.com&gt;
+AuthorDate: Fri Apr 11 05:37:24 2014 -0700
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Thu May 21 13:43:01 2015 -0300
+CommitDate: Thu May 21 18:18:04 2015 -0300
 
-    Minor refactor to meter token bucket.
-    
-    This commit modified the token bucket capacity unity.
-    Previously the code considered tokens in Kbps. For this
-    reason the packet size, which is presented in bytes,
-    value was also converted. This packet size convertion was wrong,
-    because small packets sizes were truncated to 0 in Kbps preventing
-    token remotion.
-    
-    The code now changes the bucket capacity and packet conversion to bits.
-    It avoids divisions and eliminates errors of truncation.
+    Fixed masking logic for:
+      masked ip range forwarding
+      masked rule overlap detection
+      masked rule overwrite detection
 </pre>
 
 # Modified test scenario for switch restrictions
