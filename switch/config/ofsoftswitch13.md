@@ -14,25 +14,23 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 41cb72dbbd40dd5418177bea22fea3d2f8802e09
+commit a30149a0a4d4c3de9318aa9fad27665351ff625f
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Tue May 19 21:02:02 2015 -0300
+AuthorDate: Thu May 21 13:43:01 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Tue May 19 21:12:58 2015 -0300
+CommitDate: Thu May 21 13:43:01 2015 -0300
 
-    Fix segmentation fault when handling packets larger than MTU.
+    Minor refactor to meter token bucket.
     
-    This commit fixes the switch segmenation fault when packets
-    larger than the interface MTU are received.
+    This commit modified the token bucket capacity unity.
+    Previously the code considered tokens in Kbps. For this
+    reason the packet size, which is presented in bytes,
+    value was also converted. This packet size convertion was wrong,
+    because small packets sizes were truncated to 0 in Kbps preventing
+    token remotion.
     
-    The problem is caused mainly due to TCP segmentation offload, which
-    enables the TCP stack to send an entire chunk of data to be break up by
-    the network interface.
-    
-    While the switch does not break anymore, it still does not handle TSO,
-    so larger packets might be dropped when sent to the switch causing
-    loss of performance. For this reason is still recommended to disable
-    TSO support on the interface.
+    The code now changes the bucket capacity and packet conversion to bits.
+    It avoids divisions and eliminates errors of truncation.
 </pre>
 
 # Modified test scenario for switch restrictions
