@@ -14,16 +14,17 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 8089471f75eb94bcbfcc6885d521e1407bddf661
-Author:     Chris Kappler &lt;chrisk@mysticlabs.com&gt;
-AuthorDate: Fri Apr 11 05:37:24 2014 -0700
+commit 3b6a7746e38ba45a7f2c142f429a04394b5f27cf
+Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
+AuthorDate: Fri May 22 11:04:30 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Thu May 21 18:18:04 2015 -0300
+CommitDate: Fri May 22 11:04:30 2015 -0300
 
-    Fixed masking logic for:
-      masked ip range forwarding
-      masked rule overlap detection
-      masked rule overwrite detection
+    Fix endianity problem after setting eth_type.
+    
+        This commit fixes the endianity change of the eth_type value
+        in a set_field action.
+        Fixes #157.
 </pre>
 
 # Modified test scenario for switch restrictions
