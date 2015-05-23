@@ -57,25 +57,31 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit c65c1674a1883260256a8e1da6a4d5675505f6b3
-Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Tue May 5 14:49:21 2015 +0200
-Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Tue May 5 14:49:21 2015 +0200
+commit 78b590b353b353d985c0c839ffcaa26669255a76
+Merge: c65c167 a862e0c
+Author:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
+AuthorDate: Fri May 22 13:59:19 2015 -0700
+Commit:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
+CommitDate: Fri May 22 13:59:19 2015 -0700
 
-    Improve LINC_internals Quick Start section
+    Merge pull request #359 from FlowForwarding/appfest_bugs
+    
+    Appfest bugs
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
-commit 3cd185bcc738908878f81c085e23950c1ef1b6dd
-Merge: b968b84 a843e41
+commit cfe639c92749fcd633801b34149ac15ca908338b
 Author:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-AuthorDate: Mon May 4 15:10:58 2015 +0200
+AuthorDate: Tue May 19 18:19:33 2015 +0200
 Commit:     Szymon Mentel &lt;szymon.mentel@erlang-solutions.com&gt;
-CommitDate: Mon May 4 15:10:58 2015 +0200
+CommitDate: Thu May 21 17:21:05 2015 +0200
 
-    Merge pull request #84 from cloudozer/poc
+    Fix interpretation of total_len field in packet_in message
     
-    Add queue state experimenter fields
+    The 'total_len' field indicates total length of the frame captured
+    on the switch. Thus it cannot be computed from the ofp_packet_in.data field
+    value as it can contain only a packet portion.
+    
+    The fix is applied to OpenFlow v1.3 and 1.4.
 
 $ git --git-dir=deps/pkt/.git/ log -1 --pretty=fuller
 commit 5b96ba0f3ba573f69ffc3bc6b3adae1ebcb58509
