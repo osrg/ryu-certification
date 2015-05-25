@@ -8,14 +8,14 @@ title: Ryu Certification - lagopus - config
 # Version information
 <pre>
 git log -1 --pretty=fuller
-commit b92042118ced8e4d20a4f3e61e61666d435aba32
-Merge: cb6cb41 54cdd5e
+commit 5a14c95a5e033e0e348aaaab90739686efcbe21c
+Merge: c5e358b c1657c9
 Author:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-AuthorDate: Sun Nov 9 22:16:32 2014 +0900
+AuthorDate: Tue May 19 16:50:50 2015 +0900
 Commit:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-CommitDate: Sun Nov 9 22:16:32 2014 +0900
+CommitDate: Tue May 19 16:50:50 2015 +0900
 
-    Merge pull request #19 from hidetai/quickstart
+    Merge pull request #37 from kumagi/intro-document-on-build-fail
     
-    doc: Fixed typos in QUICKSTART.md
+    Added an instruction text to lead user to online documentation when unity is not installed.
 </pre>
