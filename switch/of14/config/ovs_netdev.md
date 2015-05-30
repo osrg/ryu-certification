@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-3801edf1-5354-4fab-8f29-843dba586a28
+eade3208-9cd6-4719-879e-4dfc824d97c2
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
         Port "eth22"
             Interface "eth22"
+        Port "br0"
+            Interface "br0"
+                type: internal
         Port "eth23"
             Interface "eth23"
         Port "eth21"
             Interface "eth21"
-        Port "br0"
-            Interface "br0"
-                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7a16bd33-7bd1-4ae3-aada-7fd12b30b575
-controller          : [360369c8-03d9-4115-bfd3-1ba11b1e2014]
+_uuid               : 4b6851e7-dd6b-4788-b1fe-e9c77aa9576a
+controller          : [5bab7f52-6154-4b21-bb7a-0e105c00507b]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,70 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [617a7e05-3247-4b28-821f-7787e415f558, 806a16d1-9a4c-41ca-8636-92eb39dee0c1, 9fa33c34-4e67-42ba-b9a0-4c942a7bfd93, dfc6f5d7-e67d-44c7-90c9-9c3372b1c307]
+ports               : [06f5f981-6593-4ad7-b380-0c7c9e982f2c, 59193a3c-7e5d-4b6c-8385-1bc91d0fd46a, aa283649-fe56-4c49-871b-16d06fd823f0, bb276fc8-01e3-46ae-974a-ce5b96420ba7]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 360369c8-03d9-4115-bfd3-1ba11b1e2014
+_uuid               : 5bab7f52-6154-4b21-bb7a-0e105c00507b
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 9fa33c34-4e67-42ba-b9a0-4c942a7bfd93
+_uuid               : 59193a3c-7e5d-4b6c-8385-1bc91d0fd46a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [40b59bfb-36e6-423f-8863-bad7030b7f71]
-name                : "eth21"
-
-_uuid               : 806a16d1-9a4c-41ca-8636-92eb39dee0c1
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [19ce30fb-5552-4017-b383-4766bc9fc9fe]
-name                : "eth23"
-
-_uuid               : 617a7e05-3247-4b28-821f-7787e415f558
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [0f8b6980-ffce-483e-bfff-9dea8a98e430]
-name                : "eth22"
-
-_uuid               : dfc6f5d7-e67d-44c7-90c9-9c3372b1c307
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3bf737e9-0bb6-4c9e-a898-11f2f8eb5e74]
+interfaces          : [667e32f4-af02-45d7-8ab2-4e7ac5f19c61]
 name                : "br0"
 
+_uuid               : bb276fc8-01e3-46ae-974a-ce5b96420ba7
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8521fcb1-94fa-4326-94af-34599f719e0f]
+name                : "eth21"
+
+_uuid               : aa283649-fe56-4c49-871b-16d06fd823f0
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [8774df10-e0f1-4a0e-97ff-a80fccf6f202]
+name                : "eth23"
+
+_uuid               : 06f5f981-6593-4ad7-b380-0c7c9e982f2c
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [11daf488-8789-46df-8468-c23397a401b0]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0f8b6980-ffce-483e-bfff-9dea8a98e430
+_uuid               : 8774df10-e0f1-4a0e-97ff-a80fccf6f202
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 11daf488-8789-46df-8468-c23397a401b0
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,10 +112,10 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 3bf737e9-0bb6-4c9e-a898-11f2f8eb5e74
+_uuid               : 667e32f4-af02-45d7-8ab2-4e7ac5f19c61
 admin_state         : down
 duplex              : full
-ifindex             : 88
+ifindex             : 92
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 40b59bfb-36e6-423f-8863-bad7030b7f71
+_uuid               : 8521fcb1-94fa-4326-94af-34599f719e0f
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -128,54 +145,19 @@ ofport              : 1
 statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
-
-_uuid               : 19ce30fb-5552-4017-b383-4766bc9fc9fe
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c05c01cd86bdb26be1c107741c3ede2659e51a29
-Author:     Jesse Gross &lt;jesse@nicira.com&gt;
-AuthorDate: Fri May 29 10:41:05 2015 -0700
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Fri May 29 10:52:57 2015 -0700
+commit 7e911055e657fa2a2af52f9fa3e7545055fa1f09
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Sat Mar 14 00:40:18 2015 -0700
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Fri May 29 17:45:15 2015 -0700
 
-    odp-util: Fix alignment when scanning Geneve attributes.
+    ovsdb-monitor: allow multiple of 'ovsdb_monitor_changes' in each ovsdb monitor table
     
-    Clang complains about the fact that we use a byte array to scan
-    Geneve attributes into since there are different alignment requirements:
-    
-    lib/odp-util.c:2936:30: error: cast from 'uint8_t *' &#40;aka 'unsigned char *'&#41; to
-    
-          'struct geneve_opt *' increases required alignment from 1 to 2
-    
-          [-Werror,-Wcast-align]
-    
-        struct geneve_opt *opt = &#40;struct geneve_opt *&#41;key-&gt;d;
-    
-                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
-    We can instead treat this as an array of Geneve option headers to
-    ensure we get the right alignment and then there are no need for
-    casts.
-    
-    Reported-by: Joe Stringer &lt;joestringer@nicira.com&gt;
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
-    Acked-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
