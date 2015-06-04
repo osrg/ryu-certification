@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-dd8dfe10-385f-43eb-8960-c81ba63a4434
+db4599dc-4079-4e1f-884d-de9149985041
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth22"
-            Interface "eth22"
         Port "eth23"
             Interface "eth23"
         Port "eth21"
             Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6046d3c7-36aa-4a16-9886-5f989d377c8c
-controller          : [5ac5d980-d95b-4f58-8970-9f2c7417e5e8]
+_uuid               : d94d0d6a-6115-4ac6-b15a-a77ed1d1e7a4
+controller          : [47fcdaae-8162-485b-b9ac-2f0c87766773]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [1001f71e-b2d5-47e0-8b1f-9972be32a471, 4c6bde5b-74c2-4a55-81ee-60a19108179e, c107bdb2-eec2-4a3c-9eae-bf042ccfe3d6, ecbee979-1db5-4224-90c8-73cd46e4687f]
+ports               : [8a6cc9e4-5a54-4800-af24-d51f0c3c9a7d, b988bb72-e55d-48b5-8786-c1a40b989369, e7455ce1-ca05-4b3c-8f12-8623497d66b9, eb65ed2d-bbec-439b-941c-3fbc1eac0419]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5ac5d980-d95b-4f58-8970-9f2c7417e5e8
+_uuid               : 47fcdaae-8162-485b-b9ac-2f0c87766773
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ecbee979-1db5-4224-90c8-73cd46e4687f
+_uuid               : 8a6cc9e4-5a54-4800-af24-d51f0c3c9a7d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6e6d0893-ad6f-4b63-a86b-f239f65d7d94]
-name                : "eth21"
-
-_uuid               : c107bdb2-eec2-4a3c-9eae-bf042ccfe3d6
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [ad6c452e-589e-4b9d-b832-4113940d7d8f]
-name                : "eth23"
-
-_uuid               : 1001f71e-b2d5-47e0-8b1f-9972be32a471
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [fc01d4db-009c-4a16-b124-8f8c56df3675]
-name                : "br0"
-
-_uuid               : 4c6bde5b-74c2-4a55-81ee-60a19108179e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [89ef30d2-48b1-44e4-bcc7-ca0e3d4eb4d5]
+interfaces          : [b9b56885-eda2-44c7-8ef1-5c272f7070a1]
 name                : "eth22"
 
+_uuid               : e7455ce1-ca05-4b3c-8f12-8623497d66b9
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3cf190cb-02f2-4ddd-9d40-c9ad95691691]
+name                : "eth23"
+
+_uuid               : eb65ed2d-bbec-439b-941c-3fbc1eac0419
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [f3890e07-fa92-4d59-9f1d-e06fe03cc70c]
+name                : "eth21"
+
+_uuid               : b988bb72-e55d-48b5-8786-c1a40b989369
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [f432198e-6c84-4f2e-bb82-f91b98db4766]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 89ef30d2-48b1-44e4-bcc7-ca0e3d4eb4d5
+_uuid               : b9b56885-eda2-44c7-8ef1-5c272f7070a1
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,27 +95,10 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : ad6c452e-589e-4b9d-b832-4113940d7d8f
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : fc01d4db-009c-4a16-b124-8f8c56df3675
+_uuid               : f432198e-6c84-4f2e-bb82-f91b98db4766
 admin_state         : down
 duplex              : full
-ifindex             : 100
+ifindex             : 104
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -129,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 6e6d0893-ad6f-4b63-a86b-f239f65d7d94
+_uuid               : f3890e07-fa92-4d59-9f1d-e06fe03cc70c
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -145,19 +128,50 @@ ofport              : 1
 statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
+
+_uuid               : 3cf190cb-02f2-4ddd-9d40-c9ad95691691
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 7762f7c39a8f5f115427b598d9e768f9336af466
-Author:     YAMAMOTO Takashi &lt;yamamoto@midokura.com&gt;
-AuthorDate: Mon Jun 1 12:26:40 2015 +0900
-Commit:     YAMAMOTO Takashi &lt;yamamoto@midokura.com&gt;
-CommitDate: Wed Jun 3 15:27:35 2015 +0900
+commit 3bcc10c0701c241ef62bdb32c5d21c060ad7590b
+Author:     Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+AuthorDate: Wed Jun 3 15:55:16 2015 +0100
+Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
+CommitDate: Wed Jun 3 15:34:58 2015 -0700
 
-    Update my email address
+    dpif-netdev: Fix non-pmd thread queue id.
     
-    Signed-off-by: YAMAMOTO Takashi &lt;yamamoto@midokura.com&gt;
-    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
+    Non pmd threads have a core_id == UINT32_MAX, while queue ids used by
+    netdevs range from 0 to the number of CPUs.  Therefore core ids cannot
+    be used directly to select a queue.
+    
+    This commit introduces a simple mapping to fix the problem: pmd threads
+    continue using queues 0 to N &#40;where N is the number of CPUs in the
+    system&#41;, while non pmd threads use queue N+1.
+    
+    Fixes: d5c199ea7ff7 &#40;&quot;netdev-dpdk: Properly support non pmd threads.&quot;&#41;
+    
+    Reported-by: 차은호 &lt;eunho.cha@atto-research.com
+    Signed-off-by: Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+    Signed-off-by: Mark D. Gray &lt;mark.d.gray@intel.com&gt;
+    Signed-off-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Acked-by: Flavio Leitner &lt;fbl@redhat.com&gt;
+    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
 </pre>
