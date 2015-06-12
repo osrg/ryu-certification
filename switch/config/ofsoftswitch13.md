@@ -14,17 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3b6a7746e38ba45a7f2c142f429a04394b5f27cf
+commit 9227dcc9b88f4a5e33d8ec1469ac176f710d98df
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Fri May 22 11:04:30 2015 -0300
+AuthorDate: Thu Jun 11 21:51:05 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Fri May 22 11:04:30 2015 -0300
+CommitDate: Thu Jun 11 21:51:05 2015 -0300
 
-    Fix endianity problem after setting eth_type.
+    Implement port up/down detection.
     
-        This commit fixes the endianity change of the eth_type value
-        in a set_field action.
-        Fixes #157.
+    This commit implements port up/down detection through
+    a netlink socket that listens for RTMGRP_LINK messages.
 </pre>
 
 # Modified test scenario for switch restrictions
