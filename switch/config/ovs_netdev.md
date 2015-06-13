@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-ef22bec6-bbd3-4ded-9ffb-8b3841406eae
+0c676856-36ad-40f5-a6bf-e15673c6c433
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "br0"
+            Interface "br0"
+                type: internal
         Port "eth23"
             Interface "eth23"
         Port "eth21"
             Interface "eth21"
-        Port "br0"
-            Interface "br0"
-                type: internal
         Port "eth22"
             Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 75413602-c436-4e2c-8b06-f5eb15b85f34
-controller          : [bcfd925b-3f8b-4f62-a3aa-5863bcf074c8]
+_uuid               : 77bfa836-df0b-45ea-ae86-fc84675cac81
+controller          : [94697c5b-f615-4aa7-ad8e-0c23015624a6]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [dbabff8e-0941-4f4b-ab8f-1e0f3b4b1507, df37fcf5-bb56-4b34-844d-a141922dcea3, ea02c099-659d-4ba7-9a31-481cd0da94a5, f8c14ed5-93ca-4e0c-8a2c-cf5792dac414]
+ports               : [36667c34-c2d3-4b8d-8185-dc3234f097b8, 597af0d3-a652-4315-aaeb-0064f7af2cd0, 8e7d5bf6-ab0a-4a47-8c90-1c079da3573a, ee64320f-4f4b-4aa9-937b-527d494ceb56]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : bcfd925b-3f8b-4f62-a3aa-5863bcf074c8
+_uuid               : 94697c5b-f615-4aa7-ad8e-0c23015624a6
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ea02c099-659d-4ba7-9a31-481cd0da94a5
+_uuid               : 36667c34-c2d3-4b8d-8185-dc3234f097b8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bf67abbc-4101-4889-a329-05ee9aa73300]
+interfaces          : [29837776-5c46-4d79-afdd-b095689db380]
 name                : "br0"
 
-_uuid               : f8c14ed5-93ca-4e0c-8a2c-cf5792dac414
+_uuid               : 8e7d5bf6-ab0a-4a47-8c90-1c079da3573a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [116da267-2624-4cb3-b977-d70b2ae5d361]
-name                : "eth22"
-
-_uuid               : df37fcf5-bb56-4b34-844d-a141922dcea3
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [66ae9cd7-d56a-4664-8bd2-1d71a3128b36]
+interfaces          : [de733d3f-2beb-443b-a119-415433b85912]
 name                : "eth21"
 
-_uuid               : dbabff8e-0941-4f4b-ab8f-1e0f3b4b1507
+_uuid               : 597af0d3-a652-4315-aaeb-0064f7af2cd0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [a0687d65-3460-4f51-9569-ada5e565c938]
+interfaces          : [14ff608a-73b5-43e0-bb9f-58498501ecad]
 name                : "eth23"
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : bf67abbc-4101-4889-a329-05ee9aa73300
-admin_state         : down
-duplex              : full
-ifindex             : 149
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
+_uuid               : ee64320f-4f4b-4aa9-937b-527d494ceb56
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [0e12838b-400f-44c0-954a-293831e2986b]
+name                : "eth22"
 
-_uuid               : a0687d65-3460-4f51-9569-ada5e565c938
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 14ff608a-73b5-43e0-bb9f-58498501ecad
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -112,7 +95,24 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 116da267-2624-4cb3-b977-d70b2ae5d361
+_uuid               : 29837776-5c46-4d79-afdd-b095689db380
+admin_state         : down
+duplex              : full
+ifindex             : 153
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : 0e12838b-400f-44c0-954a-293831e2986b
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -129,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 66ae9cd7-d56a-4664-8bd2-1d71a3128b36
+_uuid               : de733d3f-2beb-443b-a119-415433b85912
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -150,33 +150,23 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 2541d75983cb6a48f0303ab96ec2a1be1b0ccbe7
+commit 1c38055de17b4ef00e12e0573fd433989309dc96
 Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Thu Jun 11 17:28:37 2015 -0700
+AuthorDate: Fri Jun 12 16:12:56 2015 -0700
 Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Thu Jun 11 17:28:37 2015 -0700
+CommitDate: Fri Jun 12 16:12:56 2015 -0700
 
-    rculist: Remove postponed poisoning.
+    ofproto: Support port mods in bundles.
     
-    Postponed 'next' member poisoning was based on the faulty assumption
-    that postponed functions would be called in the order they were
-    postponed.  This assumption holds only for the functions postponed by
-    any single thread.  When functions are postponed by different
-    threads, there are no guarantees of the order in which the functions
-    may be called, or timing between those calls after the next grace
-    period has passed.
+    Add support for port mods in an OpenFlow 1.4 bundle, as required for
+    the minimum support level by the OpenFlow 1.4 specification.  If the
+    bundle includes port mods, it may not specify the OFPBF_ATOMIC flag.
+    Port mods and flow mods in a bundle are always applied in order and
+    the consecutive flow mods between port mods are made available to
+    lookups atomically.
     
-    Given this, the postponed poisoning could have executed after
-    postponed destruction of the object containing the rculist element.
-    
-    This bug was revealed after the memory leaks on rule deletion were
-    recently fixed.
-    
-    This patch removes the postponed 'next' member poisoning and adds
-    documentation describing the ordering limitations in OVS RCU.
-    
-    Alex Wang dug out the root cause of the resulting crashes, thanks!
+    Note that ovs-ofctl does not support creating bundles with port mods.
     
     Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
