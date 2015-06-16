@@ -57,16 +57,13 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit 78b590b353b353d985c0c839ffcaa26669255a76
-Merge: c65c167 a862e0c
+commit f374b2a2141fa61eab6ecc3c28d6c2f4c04243a8
 Author:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-AuthorDate: Fri May 22 13:59:19 2015 -0700
+AuthorDate: Mon Jun 15 09:59:30 2015 -0700
 Commit:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-CommitDate: Fri May 22 13:59:19 2015 -0700
+CommitDate: Mon Jun 15 09:59:30 2015 -0700
 
-    Merge pull request #359 from FlowForwarding/appfest_bugs
-    
-    Appfest bugs
+    Update README.md
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit cfe639c92749fcd633801b34149ac15ca908338b
