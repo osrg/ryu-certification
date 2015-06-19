@@ -14,16 +14,16 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 9227dcc9b88f4a5e33d8ec1469ac176f710d98df
+commit 17fe16d3551de25619a8879cb7ac5de557d70900
+Merge: 9227dcc 37a17cf
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Thu Jun 11 21:51:05 2015 -0300
+AuthorDate: Fri Jun 19 14:47:37 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Thu Jun 11 21:51:05 2015 -0300
+CommitDate: Fri Jun 19 14:47:37 2015 -0300
 
-    Implement port up/down detection.
+    Merge pull request #186 from ljerezchaves/queue_id
     
-    This commit implements port up/down detection through
-    a netlink socket that listens for RTMGRP_LINK messages.
+    Fix queue id check when looking up or adding new queues.
 </pre>
 
 # Modified test scenario for switch restrictions
