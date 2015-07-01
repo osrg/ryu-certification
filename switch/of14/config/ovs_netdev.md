@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-5f86f807-a281-4984-98a8-da72a290cd5d
+6464a04b-386e-4230-b7df-1b2f34223e12
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth21"
-            Interface "eth21"
-        Port "eth23"
-            Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth22"
-            Interface "eth22"
+        Port "eth23"
+            Interface "eth23"
+        Port "eth21"
+            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : f2bc732f-94e0-4f8d-9279-4f66411190f9
-controller          : [8e904b3f-08d6-406c-946d-24da1f648c00]
+_uuid               : 093b8084-275d-481f-be78-228499e53727
+controller          : [c2bc6579-b9ad-4fab-b7a3-83313de9d6ea]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,73 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [378dbceb-60a9-40a7-838f-3eece5ec3b10, 7983888f-9582-4de3-b6e9-4964d28aaf73, b136b81f-8536-452a-97e8-82c3544a8131, ceb3e35c-c4a0-47e8-b0c3-d8f2e3c2465e]
+ports               : [26c1f6ff-5841-4a84-a278-0fb956677288, 3a6e54ba-5795-4590-b2da-6ac5c615ee3f, 5f262e7c-caa3-45c3-8cf3-97a07562a8cc, c6d19e81-6139-45f0-88f0-6700d7ecf16d]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8e904b3f-08d6-406c-946d-24da1f648c00
+_uuid               : c2bc6579-b9ad-4fab-b7a3-83313de9d6ea
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ceb3e35c-c4a0-47e8-b0c3-d8f2e3c2465e
+_uuid               : 5f262e7c-caa3-45c3-8cf3-97a07562a8cc
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [e8f93af9-5649-48d6-acbd-3b7207412ad9]
-name                : "eth22"
-
-_uuid               : 378dbceb-60a9-40a7-838f-3eece5ec3b10
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [e0d6e856-c685-43ce-a33a-8027220aaf31]
-name                : "eth21"
-
-_uuid               : 7983888f-9582-4de3-b6e9-4964d28aaf73
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [435a3673-fda0-429a-95a1-fe109b82c76e]
+interfaces          : [fdc542ea-8c6c-4aed-a3da-857795a88aaf]
 name                : "eth23"
 
-_uuid               : b136b81f-8536-452a-97e8-82c3544a8131
+_uuid               : c6d19e81-6139-45f0-88f0-6700d7ecf16d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [5c45c214-b057-4f40-aa3f-67e5fa3144f8]
+interfaces          : [d1472c7f-0e04-4061-85a6-8521e0499248]
+name                : "eth21"
+
+_uuid               : 3a6e54ba-5795-4590-b2da-6ac5c615ee3f
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [e4b8d79a-2106-431e-b6d4-069e9ab1c565]
 name                : "br0"
 
+_uuid               : 26c1f6ff-5841-4a84-a278-0fb956677288
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [62c1f37b-d1b7-43ce-8178-cd1c6b56d27f]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 5c45c214-b057-4f40-aa3f-67e5fa3144f8
+_uuid               : fdc542ea-8c6c-4aed-a3da-857795a88aaf
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : e4b8d79a-2106-431e-b6d4-069e9ab1c565
 admin_state         : down
 duplex              : full
-ifindex             : 204
+ifindex             : 210
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,24 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : e8f93af9-5649-48d6-acbd-3b7207412ad9
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : e0d6e856-c685-43ce-a33a-8027220aaf31
+_uuid               : d1472c7f-0e04-4061-85a6-8521e0499248
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -129,20 +129,20 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 435a3673-fda0-429a-95a1-fe109b82c76e
+_uuid               : 62c1f37b-d1b7-43ce-8178-cd1c6b56d27f
 admin_state         : up
 duplex              : full
-ifindex             : 25
+ifindex             : 24
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
+mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,17 +150,29 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 532e1463fcfb71738316a86420ae4fcb07b56ac3
-Author:     Ansis Atteka &lt;aatteka@nicira.com&gt;
-AuthorDate: Sat Jun 13 13:28:02 2015 -0700
-Commit:     Ansis Atteka &lt;aatteka@nicira.com&gt;
-CommitDate: Sat Jun 27 12:38:33 2015 -0700
+commit 421e24220fc9493683f75fafc7e2ced8ba60bf30
+Author:     Nithin Raju &lt;nithin@vmware.com&gt;
+AuthorDate: Fri Jun 26 11:51:29 2015 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Wed Jul 1 14:13:46 2015 -0700
 
-    vlog: add &quot;vlog/list-pattern&quot; command
+    datapath-windows: Rename 'vport-&gt;isPresentOnHv' to 'isAbsentOnHv'
     
-    This patch allows to query logging format at the runtime for each destination
-    with &quot;vlog/list-pattern&quot; command.
+    Looking at the code, the flag 'vport-&gt;isPresentOnHv' is actually
+    indicating if the vport is present on the Hyper-V switch or not, but the
+    logic seems to be inverse. 'isPresentOnHv == TRUE' indicates that the
+    vport is not present on the Hyper-V switch. Eg. VXLAN port, would have
+    isPresentOnHv == TRUE.
     
-    Signed-off-by: Ansis Atteka &lt;aatteka@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    In this patch, we rename the variable to reflect its meaning.
+    
+    vport-&gt;isAbsentOnHv is TRUE iff:
+    - vport is bridge internal port
+    - vport is tunnel port
+    - vport was added from Hyper-V and also from OVS, but got deleted from
+    Hyper-V
+    
+    Signed-off-by: Nithin Raju &lt;nithin@vmware.com&gt;
+    Acked-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
