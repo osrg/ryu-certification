@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-b106dfe9-26a8-4796-8928-d42a1dbddf07
+c06e9989-c139-43eb-b23e-f71b6742a647
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
         Port "eth23"
             Interface "eth23"
+        Port "br0"
+            Interface "br0"
+                type: internal
         Port "eth22"
             Interface "eth22"
         Port "eth21"
             Interface "eth21"
-        Port "br0"
-            Interface "br0"
-                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 44d39422-ab64-4faa-b5a9-0befa87212be
-controller          : [4f099f52-f756-45bd-9869-0454f2f47e79]
+_uuid               : edf01f8f-10e4-4793-b447-038654dbf103
+controller          : [ecfb34d8-246e-4635-a4e3-7cb126402c58]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,70 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [1495c8a9-12c1-4228-863f-55f16f9f437c, 23545141-5673-4e78-b8af-3dbe2624d525, 9a381880-a83b-4283-a306-3d9245a56212, d7abc4d0-2078-431b-abb0-5903a1645103]
+ports               : [1e9d9bec-5838-4985-9411-fb2f9990304a, 69f04b5f-9b84-4c08-857b-204438ab3a7a, d99b52b4-a8cf-466f-9330-88b7080df602, ed812e34-2809-47df-ae5d-5ed64044553a]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4f099f52-f756-45bd-9869-0454f2f47e79
+_uuid               : ecfb34d8-246e-4635-a4e3-7cb126402c58
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : d7abc4d0-2078-431b-abb0-5903a1645103
+_uuid               : ed812e34-2809-47df-ae5d-5ed64044553a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8552f33a-89b1-4959-bf9a-2744cc80e727]
-name                : "br0"
-
-_uuid               : 9a381880-a83b-4283-a306-3d9245a56212
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [09bb92e9-43c5-4dfd-8332-54e32619399e]
+interfaces          : [2f5cb751-a53c-4f62-9524-5e130fdd6a69]
 name                : "eth21"
 
-_uuid               : 1495c8a9-12c1-4228-863f-55f16f9f437c
+_uuid               : 1e9d9bec-5838-4985-9411-fb2f9990304a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [daaefae5-f0c2-488f-956b-51f489285712]
+interfaces          : [3ea02b72-4901-4826-ba61-a48c7f7db0c6]
 name                : "eth23"
 
-_uuid               : 23545141-5673-4e78-b8af-3dbe2624d525
+_uuid               : d99b52b4-a8cf-466f-9330-88b7080df602
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [79fd8be0-c9fe-4768-a487-59b174f259ae]
+interfaces          : [e06fc1e4-58b6-45e1-a800-6199a1994b82]
 name                : "eth22"
 
+_uuid               : 69f04b5f-9b84-4c08-857b-204438ab3a7a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [92e66620-044d-4ed3-9e8e-6bd6b81d5d03]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 79fd8be0-c9fe-4768-a487-59b174f259ae
+_uuid               : 92e66620-044d-4ed3-9e8e-6bd6b81d5d03
+admin_state         : down
+duplex              : full
+ifindex             : 219
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : e06fc1e4-58b6-45e1-a800-6199a1994b82
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,24 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : daaefae5-f0c2-488f-956b-51f489285712
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 09bb92e9-43c5-4dfd-8332-54e32619399e
+_uuid               : 2f5cb751-a53c-4f62-9524-5e130fdd6a69
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -129,36 +129,37 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 8552f33a-89b1-4959-bf9a-2744cc80e727
-admin_state         : down
+_uuid               : 3ea02b72-4901-4826-ba61-a48c7f7db0c6
+admin_state         : up
 duplex              : full
-ifindex             : 214
+ifindex             : 25
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit d79ee67fa70b83a3728384062a1d4efe09c53788
-Author:     Luis E. P &lt;lpena@vmware.com&gt;
-AuthorDate: Thu Jul 2 12:34:19 2015 -0700
-Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
-CommitDate: Thu Jul 2 13:30:02 2015 -0700
+commit 03c72922c2c7b00933d97235fddfd7956948349d
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Thu Jul 2 20:35:44 2015 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Fri Jul 3 08:46:40 2015 -0700
 
-    datapath/README: Fix some typos.
+    Implement OpenFlow 1.4+ OFPMP_TABLE_DESC message.
     
-    Signed-off-by: Luis E. P &lt;lpena@vmware.com&gt;
-    Signed-off-by: Ethan Jackson &lt;ethan@nicira.com&gt;
-    Acked-by: Ethan Jackson &lt;ethan@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Co-authored-by: Saloni Jain &lt;saloni.jain@tcs.com&gt;
+    Signed-off-by: Saloni Jain &lt;saloni.jain@tcs.com&gt;
+    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
 </pre>
