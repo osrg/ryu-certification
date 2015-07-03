@@ -14,16 +14,18 @@ $ /usr/local/bin/ofprotocol tcp:127.0.0.1:3333 tcp:10.24.150.30:6633
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 17fe16d3551de25619a8879cb7ac5de557d70900
-Merge: 9227dcc 37a17cf
+commit 8d3df820f7487f541b3f5862081a939aad76d8b5
 Author:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-AuthorDate: Fri Jun 19 14:47:37 2015 -0300
+AuthorDate: Thu Jul 2 21:07:38 2015 -0300
 Commit:     Eder Leão Fernandes &lt;ederleaofernandes@gmail.com&gt;
-CommitDate: Fri Jun 19 14:47:37 2015 -0300
+CommitDate: Thu Jul 2 21:07:38 2015 -0300
 
-    Merge pull request #186 from ljerezchaves/queue_id
+    Fix port up/down detection.
     
-    Fix queue id check when looking up or adding new queues.
+    Check if the port index from the netlink message
+    is the same from the netdev port. It is necessary
+    because other ports might be running in the
+    dp_ports_run loop.
 </pre>
 
 # Modified test scenario for switch restrictions
