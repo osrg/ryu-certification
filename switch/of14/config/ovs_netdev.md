@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-3e79a2ba-d410-4199-9b45-385c5c8286ba
+1534f737-e587-4556-9137-3f9e3ea1d197
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth21"
+            Interface "eth21"
         Port "eth23"
             Interface "eth23"
         Port "eth22"
             Interface "eth22"
-        Port "eth21"
-            Interface "eth21"
-        Port "br0"
-            Interface "br0"
-                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7f8e8889-a01a-41b4-aa4b-eb3f6fbef478
-controller          : [99a47f92-9828-4a3a-8a95-ac678d285678]
+_uuid               : 76eab73a-f376-48b0-9faf-9649f963b961
+controller          : [26dbb4e4-912a-47f2-90fd-5c7d3904a7cd]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [1477e57c-bb6c-4abd-a591-8586dda112f0, 91c903ae-e30c-44b5-b3d0-47f21cf6c57b, db52b1df-7e0c-4e8d-8db4-ca0bf276b0cb, fe06088c-5fda-4391-86ea-b787a50e8034]
+ports               : [25c75176-247a-4272-bd72-ff6b18a1ed3d, e3752932-82af-4cd8-a017-16d271053380, e644eb63-c19c-4643-8d1f-1e90c6822ede, e6d08e9b-2182-437c-99ad-5ddd9c435228]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 99a47f92-9828-4a3a-8a95-ac678d285678
+_uuid               : 26dbb4e4-912a-47f2-90fd-5c7d3904a7cd
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1477e57c-bb6c-4abd-a591-8586dda112f0
+_uuid               : 25c75176-247a-4272-bd72-ff6b18a1ed3d
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [80afa524-3d1c-4b84-8c19-f73d736e51fc]
-name                : "eth23"
-
-_uuid               : fe06088c-5fda-4391-86ea-b787a50e8034
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1ecb84ca-0ff7-4144-bfca-2f2d249a0ffa]
+interfaces          : [4a6f9145-fab6-41f3-9764-e4b392b6801e]
 name                : "br0"
 
-_uuid               : 91c903ae-e30c-44b5-b3d0-47f21cf6c57b
+_uuid               : e3752932-82af-4cd8-a017-16d271053380
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c7fd25b0-7ec9-4ede-86e2-98e388abc1d5]
-name                : "eth22"
-
-_uuid               : db52b1df-7e0c-4e8d-8db4-ca0bf276b0cb
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3ad40d12-15c6-496e-9d01-0af302502c8f]
+interfaces          : [39e3aa31-54e6-462c-a372-0ed674a9b02a]
 name                : "eth21"
 
+_uuid               : e644eb63-c19c-4643-8d1f-1e90c6822ede
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4ea257dc-49f1-420f-835d-4745b3233f30]
+name                : "eth23"
+
+_uuid               : e6d08e9b-2182-437c-99ad-5ddd9c435228
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [78699f78-ac84-46aa-9b11-73d7083d7ff0]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 80afa524-3d1c-4b84-8c19-f73d736e51fc
+_uuid               : 4ea257dc-49f1-420f-835d-4745b3233f30
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : c7fd25b0-7ec9-4ede-86e2-98e388abc1d5
+_uuid               : 78699f78-ac84-46aa-9b11-73d7083d7ff0
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -112,10 +112,10 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 1ecb84ca-0ff7-4144-bfca-2f2d249a0ffa
+_uuid               : 4a6f9145-fab6-41f3-9764-e4b392b6801e
 admin_state         : down
 duplex              : full
-ifindex             : 227
+ifindex             : 231
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -129,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 3ad40d12-15c6-496e-9d01-0af302502c8f
+_uuid               : 39e3aa31-54e6-462c-a372-0ed674a9b02a
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -150,20 +150,16 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit bd53aa1723a007415d26fdd8fb7da05acc06aad0
-Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-AuthorDate: Mon Jul 6 11:45:54 2015 -0700
-Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-CommitDate: Mon Jul 6 11:46:34 2015 -0700
+commit 8c0de36e8f8efe20d4168890b4c3ab0b3966760d
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Mon Jul 6 07:26:11 2015 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Mon Jul 6 21:09:03 2015 -0700
 
-    classifier: Make versioning more explicit.
+    FAQ.md: Remove text saying that OpenFlow 1.5 is not final.
     
-    Now that struct cls_match has 'add_version' the 'version' in cls_match
-    was largely redundant.  Remove 'version' from struct cls_rule, and add
-    it to function prototypes that need it.  This makes versioning more
-    explicit &#40;or less indirect&#41; in the API.
+    OF1.5 was released months ago.
     
-    Suggested-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
