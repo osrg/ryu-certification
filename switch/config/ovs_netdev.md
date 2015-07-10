@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c1e90fa7-6f68-426d-a4f3-33856a658922
+e5b9a638-4e1b-409f-8add-b715e339d44e
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth23"
-            Interface "eth23"
         Port "eth21"
             Interface "eth21"
-        Port "eth22"
-            Interface "eth22"
+        Port "eth23"
+            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth22"
+            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 55763a49-ccda-4f52-956c-e7c185850d5b
-controller          : [8f6740a4-0450-4fd4-9d56-6f07db9d86a5]
+_uuid               : 0610b664-4ea5-4f3e-9d4e-8ecfdc47a434
+controller          : [b8af851a-1fba-4f3e-852d-c3648f65c31b]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [513f3782-63ce-491b-8256-bdaa15b6ccd1, 94a11e78-b0d7-4fe7-8648-035641245289, b1f96fa4-da1f-4919-93a4-e8bf6dbe34ec, ef9b7e98-535b-464b-8d5b-d6754e077f53]
+ports               : [4b8f39e0-e98d-42b7-a598-016e75958537, 8e96e0e9-4d56-4229-95ed-fce8f4e08035, b23e8a5c-a137-47f2-a178-dbbcd313de5a, bd6c6eba-618e-497e-9f67-3398942f7053]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8f6740a4-0450-4fd4-9d56-6f07db9d86a5
+_uuid               : b8af851a-1fba-4f3e-852d-c3648f65c31b
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ef9b7e98-535b-464b-8d5b-d6754e077f53
+_uuid               : 4b8f39e0-e98d-42b7-a598-016e75958537
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [0418c0a7-2572-4501-9f91-b048969825d9]
-name                : "br0"
-
-_uuid               : 94a11e78-b0d7-4fe7-8648-035641245289
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1861c8a9-3625-454b-bab0-bd1c576918c3]
+interfaces          : [3328af38-5358-473f-97c8-9e5db923beb8]
 name                : "eth21"
 
-_uuid               : b1f96fa4-da1f-4919-93a4-e8bf6dbe34ec
+_uuid               : b23e8a5c-a137-47f2-a178-dbbcd313de5a
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1ba4004c-e3b1-407c-a430-0cac9be6db6d]
-name                : "eth22"
+interfaces          : [2e309e65-0610-4a3c-b642-e5a52e776b39]
+name                : "br0"
 
-_uuid               : 513f3782-63ce-491b-8256-bdaa15b6ccd1
+_uuid               : 8e96e0e9-4d56-4229-95ed-fce8f4e08035
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4ea948ea-0261-41f2-9576-254958ecea7a]
+interfaces          : [fb8c581f-2abf-409c-bf0a-a2166b96c3da]
 name                : "eth23"
 
+_uuid               : bd6c6eba-618e-497e-9f67-3398942f7053
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [ff718874-5577-4c13-9d9b-2fe51917afdd]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1ba4004c-e3b1-407c-a430-0cac9be6db6d
+_uuid               : ff718874-5577-4c13-9d9b-2fe51917afdd
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 1861c8a9-3625-454b-bab0-bd1c576918c3
+_uuid               : 3328af38-5358-473f-97c8-9e5db923beb8
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,7 +112,24 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 4ea948ea-0261-41f2-9576-254958ecea7a
+_uuid               : 2e309e65-0610-4a3c-b642-e5a52e776b39
+admin_state         : down
+duplex              : full
+ifindex             : 239
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : fb8c581f-2abf-409c-bf0a-a2166b96c3da
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -128,37 +145,21 @@ ofport              : 3
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
-
-_uuid               : 0418c0a7-2572-4501-9f91-b048969825d9
-admin_state         : down
-duplex              : full
-ifindex             : 233
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 4249b5470e65e1665d448f471356a144accdea47
-Author:     Jeroen van Bemmel &lt;jvb127@gmail.com&gt;
-AuthorDate: Mon Jul 6 12:58:24 2015 -0500
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Wed Jul 8 08:33:27 2015 -0700
+commit 943f394ea332837d8e5285986c5182e9746c6c62
+Author:     Andy Zhou &lt;azhou@nicira.com&gt;
+AuthorDate: Tue Jul 7 18:59:13 2015 -0700
+Commit:     Andy Zhou &lt;azhou@nicira.com&gt;
+CommitDate: Thu Jul 9 12:53:58 2015 -0700
 
-    hash: Add symmetric L3/L4 hash functions for multipath, bundle hashing.
+    db-ctl-base: fix a few typos
     
-    Signed-off-by: Jeroen van Bemmel &lt;jvb127@gmail.com&gt;
-    [blp@nicira.com made code style fixes, expanded documentation]
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Minor typo and style fixes.
+    
+    Signed-off-by: Andy Zhou &lt;azhou@nicira.com&gt;
+    Acked-by: Alex Wang &lt;alexw@nicira.com&gt;
 </pre>
