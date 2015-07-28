@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-8bdd94e1-5939-4b1a-8eba-04ca608c48a6
+a587a02a-babc-40fb-bdfc-fae5072808d6
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
@@ -23,8 +23,8 @@ $ sudo ovs-vsctl show
             Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : ce5ace31-b451-4a09-b75b-dd23085a222f
-controller          : [b6b38d01-36e0-4f2a-b79d-40ea52077c87]
+_uuid               : ffbaf4bc-04b7-452c-93d9-e428d4547e3b
+controller          : [a4010b94-207e-4b84-8df5-280aa5c5b535]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [27877fa2-28b7-46eb-a522-e72460cbda5e, 3db54b2d-1648-4d82-908e-e0610e519dd2, aca3c997-f0e8-494b-837b-06ace5286ade, b94904a0-abeb-4555-96e3-d0ca38db528f]
+ports               : [27517622-9334-4083-a5f2-fc0635684e45, 367d78c0-e85d-4e5f-87e8-04b58309bd87, 544ef4e8-1c11-4766-9dc1-a4a27ac33f79, f5a94ab4-573a-494d-974b-fed3159b250b]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : b6b38d01-36e0-4f2a-b79d-40ea52077c87
+_uuid               : a4010b94-207e-4b84-8df5-280aa5c5b535
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : b94904a0-abeb-4555-96e3-d0ca38db528f
+_uuid               : f5a94ab4-573a-494d-974b-fed3159b250b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [e7713547-126f-4088-9ac3-f99bf75576bc]
+interfaces          : [d4df4add-6352-4a67-94a8-a54f4641d24c]
 name                : "eth23"
 
-_uuid               : 3db54b2d-1648-4d82-908e-e0610e519dd2
+_uuid               : 367d78c0-e85d-4e5f-87e8-04b58309bd87
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [827fbf2b-148b-42b4-90c2-4929d734a4f3]
+interfaces          : [25a3c7db-2433-40b3-be36-79e7cae20f15]
 name                : "eth21"
 
-_uuid               : 27877fa2-28b7-46eb-a522-e72460cbda5e
+_uuid               : 544ef4e8-1c11-4766-9dc1-a4a27ac33f79
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2e218bd6-2678-40f7-9b7d-d11d836d43b7]
-name                : "br0"
-
-_uuid               : aca3c997-f0e8-494b-837b-06ace5286ade
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [d44ba079-50d0-4715-9730-2a3eb6bd3618]
+interfaces          : [075a7f64-b5d5-4c1b-9bac-5b85ccc14762]
 name                : "eth22"
 
+_uuid               : 27517622-9334-4083-a5f2-fc0635684e45
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4b2dff59-5435-4ad5-ab52-22ecd4b9c63a]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : d44ba079-50d0-4715-9730-2a3eb6bd3618
+_uuid               : 075a7f64-b5d5-4c1b-9bac-5b85ccc14762
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,10 +95,10 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 2e218bd6-2678-40f7-9b7d-d11d836d43b7
+_uuid               : 4b2dff59-5435-4ad5-ab52-22ecd4b9c63a
 admin_state         : down
 duplex              : full
-ifindex             : 291
+ifindex             : 295
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : e7713547-126f-4088-9ac3-f99bf75576bc
+_uuid               : d4df4add-6352-4a67-94a8-a54f4641d24c
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 827fbf2b-148b-42b4-90c2-4929d734a4f3
+_uuid               : 25a3c7db-2433-40b3-be36-79e7cae20f15
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -150,38 +150,43 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 980904823303ef02af605e62a30c9bebda25f1ef
-Author:     Niti Rohilla &lt;niti.rohilla@tcs.com&gt;
-AuthorDate: Thu Jul 23 17:05:44 2015 +0530
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Mon Jul 27 10:15:28 2015 -0700
+commit 693e11384088643e2dcf7822e392d9a7af1f94b8
+Author:     Gary Mussar &lt;gmussar@ciena.com&gt;
+AuthorDate: Thu Jul 23 10:48:53 2015 -0700
+Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
+CommitDate: Tue Jul 28 14:00:54 2015 -0700
 
-    ofproto: Implement OF1.4 Set/Get asynchronous configuration messages.
+    dpdk: Fix detection of vhost_cuse in dpdk rte_config.h
     
-    This patch adds support for Openflow1.4 set/get asynchronous configuration
-    messages. OpenVSwitch already supports set/get asynchronous configuration
-    messages for Openflow1.3. In this patch OFPT_SET_ASYNC_CONFIG message
-    allows the controllers to set the configuration for OFPT_ROLE_STATUS,
-    OFPT_TABLE_STATUS and OFPT_REQUESTFORWARD in addition to the Openflow1.3
-    messages. In a OFPT_SET_ASYNC, only the properties that shall be changed
-    need to be included, properties that are omitted from the message are
-    unchanged.
+    Dpdk allows users to create a config that includes other config files and
+    then override values.
     
-    The OFPT_GET_ASYNC_CONFIG is used to query the asynchronous configuration
-    of switch. In a OFPT_GET_ASYNC_REPLY message, all properties must be
-    included.
+    Eg.
+    defconfig_x86_64-native_vhost_cuse-linuxapp-gcc:
     
-    According to Openflow1.4 the initial configuration shall be:
+    CONFIG_RTE_BUILD_COMBINE_LIBS=y
+    CONFIG_RTE_BUILD_SHARED_LIB=n
+    CONFIG_RTE_LIBRTE_VHOST=y
+    CONFIG_RTE_LIBRTE_VHOST_USER=n
     
-       - In the “master” or “equal” role, enable all OFPT_PACKET_IN messages,
-         except those with reason OFPR_INVALID_TTL, enable all OFPT_PORT_STATUS
-         and OFPT_FLOW_REMOVED messages, and disable all OFPT_ROLE_STATUS,
-         OFPT_TABLE_STATUS and OFPT_REQUESTFORWARD messages.
+    This allows you to have both a vhostuser and vhostcuse config in the same
+    source tree without the need to replicate everything in those config files
+    just to change a couple of settings. The resultant .config file has all of
+    the settings from the included files with the updated settings at the end.
+    The resultant rte_config.h contains multiple undefs and defines for the
+    overridden settings.
     
-       - In the “slave” role, enable all OFPT_PORT_STATUS messages and disable
-         all OFPT_PACKET_IN, OFPT_FLOW_REMOVED, OFPT_ROLE_STATUS,
-         OFPT_TABLE_STATUS and OFPT_REQUESTFORWARD messages.
+    Eg.
+      &gt; grep RTE_LIBRTE_VHOST_USER x86_64-native_vhost_cuse-linuxapp-gcc/include/rte_config.h
+      #undef RTE_LIBRTE_VHOST_USER
+      #define RTE_LIBRTE_VHOST_USER 1
+      #undef RTE_LIBRTE_VHOST_USER
     
-    Signed-off-by: Niti Rohilla &lt;niti.rohilla@tcs.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    The current mechanism to detect the RTE_LIBRTE_VHOST_USER setting merely
+    greps the rte_config.h file for the string &quot;define RTE_LIBRTE_VHOST_USER 1&quot;
+    rather than the final setting of RTE_LIBRTE_VHOST_USER. The following patch
+    changes this test to detect the final setting of RTE_LIBRTE_VHOST_USER.
+    
+    Signed-off-by: Gary Mussar &lt;gmussar@ciena.com&gt;
+    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com
 </pre>
