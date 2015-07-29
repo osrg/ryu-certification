@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-a587a02a-babc-40fb-bdfc-fae5072808d6
+d6c8787d-6aab-41d5-b817-5c4c295450ac
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth22"
+            Interface "eth22"
+        Port "eth21"
+            Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth21"
-            Interface "eth21"
-        Port "eth22"
-            Interface "eth22"
-        Port "eth23"
-            Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : ffbaf4bc-04b7-452c-93d9-e428d4547e3b
-controller          : [a4010b94-207e-4b84-8df5-280aa5c5b535]
+_uuid               : 013d8eec-bb89-456d-928b-2709e2163685
+controller          : [86c4e7e0-c402-4bef-8a6a-365c5f0af791]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,87 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [27517622-9334-4083-a5f2-fc0635684e45, 367d78c0-e85d-4e5f-87e8-04b58309bd87, 544ef4e8-1c11-4766-9dc1-a4a27ac33f79, f5a94ab4-573a-494d-974b-fed3159b250b]
+ports               : [0173399e-20b9-4de7-9e6f-b561b87258db, 5cf44dfe-d08a-47cf-8ca7-6ff30b2b6f77, e1ecaf58-c7cb-4cf9-808c-a6382e3d360f, ff19b72e-c62a-45e8-ac07-2eae4a92e27b]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : a4010b94-207e-4b84-8df5-280aa5c5b535
+_uuid               : 86c4e7e0-c402-4bef-8a6a-365c5f0af791
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f5a94ab4-573a-494d-974b-fed3159b250b
+_uuid               : e1ecaf58-c7cb-4cf9-808c-a6382e3d360f
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d4df4add-6352-4a67-94a8-a54f4641d24c]
+interfaces          : [73018831-fc33-4e86-9ac2-628c5c2c4903]
 name                : "eth23"
 
-_uuid               : 367d78c0-e85d-4e5f-87e8-04b58309bd87
+_uuid               : 5cf44dfe-d08a-47cf-8ca7-6ff30b2b6f77
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [25a3c7db-2433-40b3-be36-79e7cae20f15]
+interfaces          : [621f283e-2c00-4a1a-a681-486518dd16e6]
 name                : "eth21"
 
-_uuid               : 544ef4e8-1c11-4766-9dc1-a4a27ac33f79
+_uuid               : ff19b72e-c62a-45e8-ac07-2eae4a92e27b
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [075a7f64-b5d5-4c1b-9bac-5b85ccc14762]
-name                : "eth22"
-
-_uuid               : 27517622-9334-4083-a5f2-fc0635684e45
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [4b2dff59-5435-4ad5-ab52-22ecd4b9c63a]
+interfaces          : [a88272de-1991-4ff2-a03f-6b7351f741b7]
 name                : "br0"
+
+_uuid               : 0173399e-20b9-4de7-9e6f-b561b87258db
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [57c7647e-ac58-452f-9379-e3a18c621478]
+name                : "eth22"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 075a7f64-b5d5-4c1b-9bac-5b85ccc14762
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 4b2dff59-5435-4ad5-ab52-22ecd4b9c63a
-admin_state         : down
-duplex              : full
-ifindex             : 295
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
-
-_uuid               : d4df4add-6352-4a67-94a8-a54f4641d24c
+_uuid               : 73018831-fc33-4e86-9ac2-628c5c2c4903
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,7 +95,41 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 25a3c7db-2433-40b3-be36-79e7cae20f15
+_uuid               : a88272de-1991-4ff2-a03f-6b7351f741b7
+admin_state         : down
+duplex              : full
+ifindex             : 299
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : 57c7647e-ac58-452f-9379-e3a18c621478
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 621f283e-2c00-4a1a-a681-486518dd16e6
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -150,43 +150,32 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 693e11384088643e2dcf7822e392d9a7af1f94b8
-Author:     Gary Mussar &lt;gmussar@ciena.com&gt;
-AuthorDate: Thu Jul 23 10:48:53 2015 -0700
-Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-CommitDate: Tue Jul 28 14:00:54 2015 -0700
+commit 64e8c446ae140df25fa5976fa0a7f7c58f51ac55
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Tue Jul 28 22:01:24 2015 -0700
+Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
+CommitDate: Wed Jul 29 08:39:50 2015 -0700
 
-    dpdk: Fix detection of vhost_cuse in dpdk rte_config.h
+    Fix treatment of OpenFlow 1.1+ bucket weights.
     
-    Dpdk allows users to create a config that includes other config files and
-    then override values.
+    Until now, OVS has parsed all OF1.1+ group buckets that lack a weight
+    as having weight 1.  Unfortunately, OpenFlow says that only &quot;select&quot;
+    groups may have a nonzero weight, and requires reporting an error for
+    other kinds of groups that have a nonzero weight.  This commit fixes
+    the problem by parsing only select groups with a default weight of 1
+    and other groups with a default weight of 0.  It also adds the
+    OpenFlow-required check for nonzero weights for other kinds of groups.
     
-    Eg.
-    defconfig_x86_64-native_vhost_cuse-linuxapp-gcc:
+    This complies with OpenFlow 1.1 and later.  OF1.1 says in section 5.8:
     
-    CONFIG_RTE_BUILD_COMBINE_LIBS=y
-    CONFIG_RTE_BUILD_SHARED_LIB=n
-    CONFIG_RTE_LIBRTE_VHOST=y
-    CONFIG_RTE_LIBRTE_VHOST_USER=n
+        If a specified group type is invalid &#40;ie: includes fields such as
+        weight that are undefined for the specified group type&#41; then the
+        switch must refuse to add the group entry and must send an
+        ofp_error_msg with OFPET_GROUP_MOD_FAILED type and
+        OFPGMFC_INVALID_GROUP code.
     
-    This allows you to have both a vhostuser and vhostcuse config in the same
-    source tree without the need to replicate everything in those config files
-    just to change a couple of settings. The resultant .config file has all of
-    the settings from the included files with the updated settings at the end.
-    The resultant rte_config.h contains multiple undefs and defines for the
-    overridden settings.
+    Found by OFTest.
     
-    Eg.
-      &gt; grep RTE_LIBRTE_VHOST_USER x86_64-native_vhost_cuse-linuxapp-gcc/include/rte_config.h
-      #undef RTE_LIBRTE_VHOST_USER
-      #define RTE_LIBRTE_VHOST_USER 1
-      #undef RTE_LIBRTE_VHOST_USER
-    
-    The current mechanism to detect the RTE_LIBRTE_VHOST_USER setting merely
-    greps the rte_config.h file for the string &quot;define RTE_LIBRTE_VHOST_USER 1&quot;
-    rather than the final setting of RTE_LIBRTE_VHOST_USER. The following patch
-    changes this test to detect the final setting of RTE_LIBRTE_VHOST_USER.
-    
-    Signed-off-by: Gary Mussar &lt;gmussar@ciena.com&gt;
-    Acked-by: Pravin B Shelar &lt;pshelar@nicira.com
+    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Flavio Leitner &lt;fbl@sysclose.org&gt;
 </pre>
