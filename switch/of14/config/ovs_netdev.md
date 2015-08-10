@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-a2dc476e-4614-4a26-9596-dca02a7a7cbc
+121e5ade-962b-46a7-aebb-655dfa268590
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth22"
-            Interface "eth22"
         Port "eth21"
             Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth23"
-            Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 41051d5a-d937-44e6-ba5b-6713d83fc1ec
-controller          : [9c0a2109-7a64-4d0d-ac02-ad3e5c0f74a0]
+_uuid               : 5b5f39fa-ae14-4291-9cb5-9fae58ce8195
+controller          : [3dfc88d1-88ca-411d-b2c8-5bfb62d2d43c]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [21d94bb4-fc8c-4405-9b57-112692c20cbf, 6278a8b5-bfa7-42bc-ad9f-ff12057bd34d, e6387f41-6549-4966-8119-52624c103766, fea6a254-fc1a-4038-a441-794bd332881f]
+ports               : [387e8ca4-0dcc-4c8d-9a26-0cf5cbd6e668, 502007ec-841e-4e55-9fc4-cc181e0d3723, cd306fff-c269-4895-8ab5-5d28034dce50, f63f40fd-a327-471b-9c9d-d9bb77d334b5]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 9c0a2109-7a64-4d0d-ac02-ad3e5c0f74a0
+_uuid               : 3dfc88d1-88ca-411d-b2c8-5bfb62d2d43c
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : fea6a254-fc1a-4038-a441-794bd332881f
+_uuid               : 502007ec-841e-4e55-9fc4-cc181e0d3723
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b69873ad-4a78-4395-a202-23c0ccc15c1f]
+interfaces          : [650619a6-3882-4eb2-90a1-08ce3a4d3ae2]
 name                : "eth23"
 
-_uuid               : 21d94bb4-fc8c-4405-9b57-112692c20cbf
+_uuid               : 387e8ca4-0dcc-4c8d-9a26-0cf5cbd6e668
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [42ba96b6-7b37-4a2f-95fe-e7c4251150ae]
-name                : "eth22"
-
-_uuid               : e6387f41-6549-4966-8119-52624c103766
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [4df85346-dbbc-4650-b454-3d8a0e803ca0]
-name                : "br0"
-
-_uuid               : 6278a8b5-bfa7-42bc-ad9f-ff12057bd34d
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [b5ae3d1d-cf2e-419c-96f6-afcf8f87c61b]
+interfaces          : [d5bef223-f5d4-4ecb-a488-96e49efa3865]
 name                : "eth21"
 
+_uuid               : f63f40fd-a327-471b-9c9d-d9bb77d334b5
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [37fd7dcb-fdd4-401b-a464-755904a073f9]
+name                : "br0"
+
+_uuid               : cd306fff-c269-4895-8ab5-5d28034dce50
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [e35c98b7-7190-487b-a741-3cf3ed27ba3d]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : b69873ad-4a78-4395-a202-23c0ccc15c1f
+_uuid               : 650619a6-3882-4eb2-90a1-08ce3a4d3ae2
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : b5ae3d1d-cf2e-419c-96f6-afcf8f87c61b
+_uuid               : d5bef223-f5d4-4ecb-a488-96e49efa3865
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,10 +112,10 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 4df85346-dbbc-4650-b454-3d8a0e803ca0
+_uuid               : 37fd7dcb-fdd4-401b-a464-755904a073f9
 admin_state         : down
 duplex              : full
-ifindex             : 337
+ifindex             : 339
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -129,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 42ba96b6-7b37-4a2f-95fe-e7c4251150ae
+_uuid               : e35c98b7-7190-487b-a741-3cf3ed27ba3d
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -150,17 +150,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a548a764b89ac6421c9c8bbb5c683aff0d5ddd88
-Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Tue Aug 4 09:52:26 2015 -0700
-Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Sat Aug 8 09:49:39 2015 -0700
+commit cd144a41fda5372645403d5ec2ae4cd1cb695727
+Author:     Justin Pettit &lt;jpettit@nicira.com&gt;
+AuthorDate: Fri Aug 7 16:05:35 2015 -0700
+Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
+CommitDate: Mon Aug 10 11:33:29 2015 -0700
 
-    idl-loop: Move idl-loop into ovsdb-idl library.
+    ovn-architecture: Document the registers used for logical ports.
     
-    idl-loop is needed in implementing other controller &#40;i.e., vtep controller&#41;.
-    So, this commit moves the logic into ovsdb-idl library module.
+    When reviewing the OpenFlow flows generated by ovn-controller, it's nice
+    to have this information.
     
-    Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
+    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
     Acked-by: Russell Bryant &lt;rbryant@redhat.com&gt;
 </pre>
