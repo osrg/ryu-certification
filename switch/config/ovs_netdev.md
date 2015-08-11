@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-0a3c2f02-3750-48b1-b00c-9845d3724a3a
+32f71b50-ac70-48fb-8144-a1ce2fb45d51
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth22"
-            Interface "eth22"
-        Port "eth23"
-            Interface "eth23"
-        Port "eth21"
-            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth21"
+            Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4cf95d28-84a4-4961-b132-61763f7d0209
-controller          : [59c4f440-0c05-47a4-aef4-5895ee57da78]
+_uuid               : 8d646bfc-7157-4f5d-af8f-e42e9955ace1
+controller          : [1fdb8d0f-ff29-4704-8869-d28cd30d1130]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [ab311964-a0a0-4ed1-b49b-4fa0e787c733, ba31a070-001e-49e1-a084-2a822e30f538, bb90902d-62fb-4639-b86d-07025dea922b, e435a838-db20-4948-bf10-07e6f2b441d6]
+ports               : [2222a403-fd5c-43fe-8597-0aff6e4781da, 587c4f27-e7b0-40cf-9249-85385f920e80, 93d84918-d9a1-4e04-80d2-8e5b9ad10e89, 99651dff-d3e5-455d-b66a-a0fe0d7fb885]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 59c4f440-0c05-47a4-aef4-5895ee57da78
+_uuid               : 1fdb8d0f-ff29-4704-8869-d28cd30d1130
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ab311964-a0a0-4ed1-b49b-4fa0e787c733
+_uuid               : 93d84918-d9a1-4e04-80d2-8e5b9ad10e89
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1b0d4685-82eb-436c-a099-d456e69590c9]
-name                : "eth22"
-
-_uuid               : ba31a070-001e-49e1-a084-2a822e30f538
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1683f671-1e23-4715-8625-4aeef1a69b26]
+interfaces          : [4742825f-4cc5-485a-8981-362eb9e11806]
 name                : "eth23"
 
-_uuid               : e435a838-db20-4948-bf10-07e6f2b441d6
+_uuid               : 587c4f27-e7b0-40cf-9249-85385f920e80
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [582ce641-2a63-4675-98d6-8e71b8ff7641]
-name                : "br0"
-
-_uuid               : bb90902d-62fb-4639-b86d-07025dea922b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [59b15077-b043-4ba8-a1b3-68021e7ee4d5]
+interfaces          : [bc3e795e-c659-4cf1-bbd7-87df7f4fa1d3]
 name                : "eth21"
 
+_uuid               : 2222a403-fd5c-43fe-8597-0aff6e4781da
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [1471ae82-2e7d-49c0-90cd-750f22d80238]
+name                : "br0"
+
+_uuid               : 99651dff-d3e5-455d-b66a-a0fe0d7fb885
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4a812e13-1a3f-49e1-947d-436b93fb0b74]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 582ce641-2a63-4675-98d6-8e71b8ff7641
+_uuid               : 1471ae82-2e7d-49c0-90cd-750f22d80238
 admin_state         : down
 duplex              : full
-ifindex             : 335
+ifindex             : 341
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,24 +95,24 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 1b0d4685-82eb-436c-a099-d456e69590c9
+_uuid               : bc3e795e-c659-4cf1-bbd7-87df7f4fa1d3
 admin_state         : up
 duplex              : full
-ifindex             : 24
+ifindex             : 23
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
+mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+name                : "eth21"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 1683f671-1e23-4715-8625-4aeef1a69b26
+_uuid               : 4742825f-4cc5-485a-8981-362eb9e11806
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,20 +129,20 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 59b15077-b043-4ba8-a1b3-68021e7ee4d5
+_uuid               : 4a812e13-1a3f-49e1-947d-436b93fb0b74
 admin_state         : up
 duplex              : full
-ifindex             : 23
+ifindex             : 24
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5c"
+mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
-name                : "eth21"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,16 +150,21 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit a548a764b89ac6421c9c8bbb5c683aff0d5ddd88
+commit 0c1e8a7d637eb080e755c4ddca2e3d38583230e1
 Author:     Alex Wang &lt;alexw@nicira.com&gt;
-AuthorDate: Tue Aug 4 09:52:26 2015 -0700
+AuthorDate: Sun Aug 9 00:02:47 2015 -0700
 Commit:     Alex Wang &lt;alexw@nicira.com&gt;
-CommitDate: Sat Aug 8 09:49:39 2015 -0700
+CommitDate: Mon Aug 10 19:53:59 2015 -0700
 
-    idl-loop: Move idl-loop into ovsdb-idl library.
+    ovn-controller-vtep: Add gateway module.
     
-    idl-loop is needed in implementing other controller &#40;i.e., vtep controller&#41;.
-    So, this commit moves the logic into ovsdb-idl library module.
+    This commit adds the gateway module to ovn-controller-vtep.  The
+    module will register the physical switches to ovnsb as chassis and
+    constantly update the &quot;vtep_logical_switches&quot; column in Chassis table.
+    
+    Limitation &#40;Recorded in TODO file&#41;:
+    
+    - Do not support reading multiple tunnel ips of physical switch.
     
     Signed-off-by: Alex Wang &lt;alexw@nicira.com&gt;
     Acked-by: Russell Bryant &lt;rbryant@redhat.com&gt;
