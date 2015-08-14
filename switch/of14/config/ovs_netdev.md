@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-30e109de-2792-47e2-903d-b375d0109201
+831a85cc-9d2d-4985-874b-cbb2e5ce7b2a
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth21"
+            Interface "eth21"
+        Port "br0"
+            Interface "br0"
+                type: internal
         Port "eth23"
             Interface "eth23"
         Port "eth22"
             Interface "eth22"
-        Port "br0"
-            Interface "br0"
-                type: internal
-        Port "eth21"
-            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : c8dc502a-3eb4-42fc-b6cc-9d1ae29306c7
-controller          : [74d95a27-3a85-4188-8a7d-1a9037376649]
+_uuid               : 88f7de79-d256-4f2f-8d29-71c9167cf101
+controller          : [ecb74779-4a40-47e8-9f1a-f23df06c80fd]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,70 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [8e588b9d-538d-428c-a196-ba819d29bbc8, c87e219b-59d4-4625-8338-7c15fefa5fcd, ced702f0-9255-459c-820c-ebb9939f95e3, fe6ee5fa-3746-49ed-a6ea-92f42fc1cf5c]
+ports               : [00b6809e-c653-4812-992c-117a652f7ca5, 3dfc8041-db7a-488e-ada4-5a4c5ea3d521, 75333a62-1af1-417a-ad06-b0b980c5a1f2, f912bce3-2a7d-4c1d-a14a-31a6fdb50020]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 74d95a27-3a85-4188-8a7d-1a9037376649
+_uuid               : ecb74779-4a40-47e8-9f1a-f23df06c80fd
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ced702f0-9255-459c-820c-ebb9939f95e3
+_uuid               : 3dfc8041-db7a-488e-ada4-5a4c5ea3d521
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [9cfb15c6-11f9-4fc8-9bc5-b2915ae15a92]
+interfaces          : [29237aa5-9c16-499b-880e-6e14d784fea2]
 name                : "br0"
 
-_uuid               : 8e588b9d-538d-428c-a196-ba819d29bbc8
+_uuid               : 00b6809e-c653-4812-992c-117a652f7ca5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [aece5c42-d7f0-48fa-bacb-6603d77425dc]
-name                : "eth23"
-
-_uuid               : fe6ee5fa-3746-49ed-a6ea-92f42fc1cf5c
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3f024151-8e00-44dd-81a9-fd4f589c0e85]
+interfaces          : [14966afc-23a5-433a-900e-b94108f793c0]
 name                : "eth21"
 
-_uuid               : c87e219b-59d4-4625-8338-7c15fefa5fcd
+_uuid               : 75333a62-1af1-417a-ad06-b0b980c5a1f2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [06963146-9429-4331-8e80-2ce23dc55318]
+interfaces          : [809c4d30-36f3-4be7-9f62-eb201776f297]
+name                : "eth23"
+
+_uuid               : f912bce3-2a7d-4c1d-a14a-31a6fdb50020
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [2c146458-bc6b-4847-a1ee-137095338513]
 name                : "eth22"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3f024151-8e00-44dd-81a9-fd4f589c0e85
+_uuid               : 2c146458-bc6b-4847-a1ee-137095338513
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 14966afc-23a5-433a-900e-b94108f793c0
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -95,24 +112,7 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 9cfb15c6-11f9-4fc8-9bc5-b2915ae15a92
-admin_state         : down
-duplex              : full
-ifindex             : 351
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
-
-_uuid               : aece5c42-d7f0-48fa-bacb-6603d77425dc
+_uuid               : 809c4d30-36f3-4be7-9f62-eb201776f297
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,47 +129,42 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 06963146-9429-4331-8e80-2ce23dc55318
-admin_state         : up
+_uuid               : 29237aa5-9c16-499b-880e-6e14d784fea2
+admin_state         : down
 duplex              : full
-ifindex             : 24
+ifindex             : 355
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 43b2f131a229238619ed9ae9ee64092fcae092ca
-Author:     Ethan Jackson &lt;ethan@nicira.com&gt;
-AuthorDate: Mon Aug 3 18:43:53 2015 -0700
-Commit:     Ethan Jackson &lt;ethan@nicira.com&gt;
-CommitDate: Thu Aug 13 13:06:59 2015 -0700
+commit 600a8085e27f00a538e1abd14128606c67fcc7e1
+Author:     Flavio Leitner &lt;fbl@redhat.com&gt;
+AuthorDate: Thu Aug 13 16:06:29 2015 -0300
+Commit:     Justin Pettit &lt;jpettit@nicira.com&gt;
+CommitDate: Fri Aug 14 09:37:59 2015 -0700
 
-    ofproto: Allow in-place modifications of datapath flows.
+    rhel: add installed but not packaged OVN tools
     
-    There are certain use cases &#40;such as bond rebalancing&#41; where a
-    datapath flow's actions may change, while it's wildcard pattern
-    remains the same.  Before this patch, revalidators would note the
-    change, delete the flow, and wait for the handlers to install an
-    updated version.  This is inefficient, as many packets could get
-    punted to userspace before the new flow is finally installed.
+    This patch adds the following to OVN %files:
+       /usr/bin/ovn-controller-vtep
+       /usr/bin/ovn-sbctl
+       /usr/share/man/man8/ovn-controller-vtep.8.gz
+       /usr/share/man/man8/ovn-sbctl.8.gz
     
-    To improve the situation, this patch implements in place modification
-    of datapath flows.  If the revalidators detect the only change to a
-    given ukey is its actions, instead of deleting it, it does a put with
-    the MODIFY flag set.
-    
-    Signed-off-by: Ethan J. Jackson &lt;ethan@nicira.com&gt;
-    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+    Signed-off-by: Flavio Leitner &lt;fbl@redhat.com&gt;
+    Signed-off-by: Justin Pettit &lt;jpettit@nicira.com&gt;
+    Acked-by: Russell Bryant &lt;rbryant@redhat.com&gt;
 </pre>
