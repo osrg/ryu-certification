@@ -57,13 +57,15 @@ $ erl -version
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 6.1
 
 $ git log -1 --pretty=fuller
-commit f374b2a2141fa61eab6ecc3c28d6c2f4c04243a8
-Author:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-AuthorDate: Mon Jun 15 09:59:30 2015 -0700
-Commit:     Marc Sugiyama &lt;sugiyama@acm.org&gt;
-CommitDate: Mon Jun 15 09:59:30 2015 -0700
+commit 9c28e7c8677c03440a62023292dd700fef0c3420
+Author:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+AuthorDate: Wed Aug 26 17:05:35 2015 +0100
+Commit:     Magnus Henoch &lt;magnus.henoch@gmail.com&gt;
+CommitDate: Wed Aug 26 17:05:35 2015 +0100
 
-    Update README.md
+    config_gen: when required argument is missing, specify which one
+    
+    Clearer error message now tells you which argument is missing.
 
 $ git --git-dir=deps/of_protocol/.git/ log -1 --pretty=fuller
 commit cfe639c92749fcd633801b34149ac15ca908338b
