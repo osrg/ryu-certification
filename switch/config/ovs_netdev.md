@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-7e898507-7b9a-4ea8-8a8f-51159927f53b
+90b3b869-7958-4f9b-8a66-5f8e3cbc6f19
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth23"
-            Interface "eth23"
-        Port "eth22"
-            Interface "eth22"
         Port "eth21"
             Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 08413c9e-9d86-4699-b7af-a5a850d712c8
-controller          : [bb3ccbc7-02cd-40b4-bf4e-58db89c303c5]
+_uuid               : 19496721-3cab-4f92-bf4f-ed91b80900ab
+controller          : [ea43ec5e-652e-41df-b73e-02701c1e5f4f]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [438266c9-d4cf-4ef5-9311-227f24ee76ef, 4b2e23f6-fbc1-4489-a7cc-fb3abbb5f9a9, 7a9fa164-e9ef-4161-9b0c-bd17b92a38e0, 885cb548-16cf-408b-a0cd-652034fd133c]
+ports               : [28b84b39-dc5d-475e-b633-1689937ce6d3, 70fc62f2-aaae-4196-b01a-76ec6c9bcda4, a03345ce-ceea-4e6c-b3fd-d57f41dfe1f3, d11915ee-4a54-4ec1-8d25-bb09e8346ada]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : bb3ccbc7-02cd-40b4-bf4e-58db89c303c5
+_uuid               : ea43ec5e-652e-41df-b73e-02701c1e5f4f
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7a9fa164-e9ef-4161-9b0c-bd17b92a38e0
+_uuid               : 28b84b39-dc5d-475e-b633-1689937ce6d3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [51bac33d-e4ac-4656-9700-f9da12ce0c54]
+interfaces          : [956fd347-a080-4807-914e-7e3ec7da4899]
 name                : "eth22"
 
-_uuid               : 885cb548-16cf-408b-a0cd-652034fd133c
+_uuid               : d11915ee-4a54-4ec1-8d25-bb09e8346ada
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [60cc5274-1a04-4ce2-91bb-ef669cb4baef]
+interfaces          : [cd1d673e-b6a2-45c0-a764-c4b5d2e9e200]
+name                : "eth23"
+
+_uuid               : a03345ce-ceea-4e6c-b3fd-d57f41dfe1f3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b1087084-45ec-4727-b4b0-4e495fea4c01]
 name                : "eth21"
 
-_uuid               : 438266c9-d4cf-4ef5-9311-227f24ee76ef
+_uuid               : 70fc62f2-aaae-4196-b01a-76ec6c9bcda4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3496c1f9-c608-4137-beb1-ce4338945cf4]
+interfaces          : [dbec5f78-3836-4792-b89a-5b08bda65493]
 name                : "br0"
 
-_uuid               : 4b2e23f6-fbc1-4489-a7cc-fb3abbb5f9a9
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3c8dc910-24a1-455b-924a-b6c260ca238e]
-name                : "eth23"
-
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3c8dc910-24a1-455b-924a-b6c260ca238e
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 60cc5274-1a04-4ce2-91bb-ef669cb4baef
+_uuid               : b1087084-45ec-4727-b4b0-4e495fea4c01
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,7 +95,41 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 51bac33d-e4ac-4656-9700-f9da12ce0c54
+_uuid               : dbec5f78-3836-4792-b89a-5b08bda65493
+admin_state         : down
+duplex              : full
+ifindex             : 407
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : cd1d673e-b6a2-45c0-a764-c4b5d2e9e200
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 956fd347-a080-4807-914e-7e3ec7da4899
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -128,42 +145,35 @@ ofport              : 2
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
-
-_uuid               : 3496c1f9-c608-4137-beb1-ce4338945cf4
-admin_state         : down
-duplex              : full
-ifindex             : 403
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 14dd55a3e3496057e7a7e0281a782b180714348d
-Author:     Alex Wang &lt;ee07b291@gmail.com&gt;
-AuthorDate: Fri Aug 21 15:20:24 2015 -0700
-Commit:     Alex Wang &lt;ee07b291@gmail.com&gt;
-CommitDate: Sat Aug 29 00:48:21 2015 +0000
+commit 1cb20095c3c933aca1e7607ad2dd6ed9933b359e
+Author:     Jesse Gross &lt;jesse@nicira.com&gt;
+AuthorDate: Tue Aug 11 18:41:37 2015 -0700
+Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
+CommitDate: Fri Aug 28 18:02:00 2015 -0700
 
-    bridge: Relax the whitelist format for punix path.
+    tunnel: Support matching on the presence of Geneve options.
     
-    This commit relaxes the whitelist format for punix path of
-    service controller.  Instead of only allowing
-    punix:&lt;ovs_rundir&gt;/&lt;bridge_name&gt;.controller, the new format
-    allows any suffix, like punix:&lt;ovs_rundir&gt;/&lt;bridge_name&gt;.*.
-    &#40;except one containing '/'&#41;.
+    Sometimes it is useful to match only on whether a Geneve option
+    is present even if the specific value is unimportant. A special
+    case of this is zero length options where there is no value at all
+    and the only information conveyed is whether the option was included
+    in the packet.
     
-    Signed-off-by: Alex Wang &lt;ee07b291@gmail.com&gt;
-    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    This operation was partially supported before but it was not consistent -
+    in particular, options were never serialized through NXM/OXM unless
+    they had a non-zero mask. Furthermore, zero length options were rejected
+    altogether when they were installed through the Geneve map OpenFlow
+    command.
+    
+    This adds support for these types of matches by making any NXM/OXM for
+    tunnel metadata force a match on that field. In the case of a zero length
+    option, both the value and mask of the NXM are ignored.
+    
+    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Acked-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
 </pre>
