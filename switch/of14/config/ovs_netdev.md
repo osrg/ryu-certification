@@ -8,10 +8,12 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-eccea6ad-3ee2-4378-867b-4a87ace7bb8d
+73cfaa65-e40d-453c-a467-6677acbeee22
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth22"
+            Interface "eth22"
         Port "eth21"
             Interface "eth21"
         Port "br0"
@@ -19,12 +21,10 @@ eccea6ad-3ee2-4378-867b-4a87ace7bb8d
                 type: internal
         Port "eth23"
             Interface "eth23"
-        Port "eth22"
-            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3ab05f4d-df60-4870-a1ab-eb87d309e5eb
-controller          : [7bc3d7a1-d34a-4e5c-86fd-9761b442806e]
+_uuid               : f8efde0b-9c72-44c2-bf5e-3e81153f9d8d
+controller          : [b2ea485b-4f0b-4a54-a9a0-63561bdb713e]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [37d73683-a717-416b-963f-8da4ae0c9295, 6ceee852-617a-4157-b486-d8ebc2650d81, 79baffe4-38d7-44f3-b41f-24fc5e22a5c2, 81e5e98d-1aef-47a8-92cd-44f65a9def78]
+ports               : [031be930-2727-48a6-a46e-6fbdec1f4f76, 37b69989-620e-4288-b982-7f4be39f10b4, 7d8ddd0b-59a5-4634-a398-818c91e70146, ab8de76b-b320-45fe-81d3-0083b4e4f2ea]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7bc3d7a1-d34a-4e5c-86fd-9761b442806e
+_uuid               : b2ea485b-4f0b-4a54-a9a0-63561bdb713e
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 79baffe4-38d7-44f3-b41f-24fc5e22a5c2
+_uuid               : 031be930-2727-48a6-a46e-6fbdec1f4f76
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [038632fe-2ba9-436f-bbb3-1fb01c6d30da]
-name                : "eth23"
-
-_uuid               : 81e5e98d-1aef-47a8-92cd-44f65a9def78
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [6d1ff2ee-9862-47e2-b65b-e16cd30d45bb]
+interfaces          : [50b7a6a9-138e-4c19-bffa-06996dc07f1c]
 name                : "eth22"
 
-_uuid               : 6ceee852-617a-4157-b486-d8ebc2650d81
+_uuid               : 37b69989-620e-4288-b982-7f4be39f10b4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [dce08154-a246-48e8-86ac-5561b1a86374]
-name                : "br0"
-
-_uuid               : 37d73683-a717-416b-963f-8da4ae0c9295
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [69ba08d9-e0aa-4da6-b334-7ddef66679ae]
+interfaces          : [12c77900-caa8-4a5b-bb6c-0dd2d1e51003]
 name                : "eth21"
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : dce08154-a246-48e8-86ac-5561b1a86374
-admin_state         : down
-duplex              : full
-ifindex             : 415
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
+_uuid               : ab8de76b-b320-45fe-81d3-0083b4e4f2ea
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [178a4fd8-9856-45ff-bb23-437b5c5798bb]
+name                : "eth23"
 
-_uuid               : 69ba08d9-e0aa-4da6-b334-7ddef66679ae
+_uuid               : 7d8ddd0b-59a5-4634-a398-818c91e70146
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [bfbf43d3-3d32-4c28-bf49-9d697f1e1942]
+name                : "br0"
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 12c77900-caa8-4a5b-bb6c-0dd2d1e51003
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,7 +95,24 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 6d1ff2ee-9862-47e2-b65b-e16cd30d45bb
+_uuid               : 178a4fd8-9856-45ff-bb23-437b5c5798bb
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 50b7a6a9-138e-4c19-bffa-06996dc07f1c
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -129,53 +129,53 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 038632fe-2ba9-436f-bbb3-1fb01c6d30da
-admin_state         : up
+_uuid               : bfbf43d3-3d32-4c28-bf49-9d697f1e1942
+admin_state         : down
 duplex              : full
-ifindex             : 25
+ifindex             : 419
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 54b21db7235d51b75a45a477d57daa06cb9ffe55
-Author:     Thadeu Lima de Souza Cascardo &lt;cascardo@redhat.com&gt;
-AuthorDate: Tue Sep 1 17:56:09 2015 -0300
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Sep 1 13:59:30 2015 -0700
+commit e4e74c3a2b9a83544cb976e5049fb65da9ecbed5
+Author:     Alex Wang &lt;ee07b291@gmail.com&gt;
+AuthorDate: Tue Aug 25 16:36:46 2015 -0700
+Commit:     Alex Wang &lt;ee07b291@gmail.com&gt;
+CommitDate: Wed Sep 2 05:57:59 2015 +0000
 
-    ovs-ctl: Add option to delete transient ports.
+    dpif-netdev: Purge all ukeys when reconfigure pmd.
     
-    When using virtualization, new ports are created and removed all the time. These
-    ports do not persist after a system reboot, for example. They may be created
-    again by the virtualization manager, but that will happen after the vswitch is
-    already running, and the virtualization manager will add them again to the
-    bridge.
+    When dpdk configuration changes, all pmd threads are recreated
+    and rx queues of each port are reloaded.  After this process,
+    rx queue could be mapped to a different pmd thread other than
+    the one before reconfiguration.  However, this is totally
+    transparent to ofproto layer modules.  So, if the ofproto-dpif-upcall
+    module still holds ukeys generated before pmd thread recreation,
+    this old ukey will collide with the ukey for the new upcalls
+    from same traffic flow, causing flow installation failure.
     
-    If a reboot happens without properly deleting such ports, all kinds of errors
-    will happen. The absence of the ports will be logged as errors, and adding those
-    ports again to the database will fail.
+    To fix the bug, this commit adds a new call-back function
+    in dpif layer for notifying upper layer the purging of datapath
+    &#40;e.g. pmd thread deletion in dpif-netdev&#41;.  So, the
+    ofproto-dpif-upcall module can react properly with deleting
+    the ukeys and with collecting flows' last stats.
     
-    Deleting all bridges may not be an option, if the system cannot persist other
-    information outside of OVSDB.
-    
-    This patch introduces the notion of transient ports. Ports may be added as
-    transient, as a boolean in other_config smap. When openvswitch is started by
-    using --delete-transient-ports ovs-ctl option, all transient ports will be
-    removed.
-    
-    Signed-off-by: Thadeu Lima de Souza Cascardo &lt;cascardo@redhat.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Reported-by: Ilya Maximets &lt;i.maximets@samsung.com&gt;
+    Signed-off-by: Alex Wang &lt;ee07b291@gmail.com&gt;
+    Acked-by: Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+    Tested-by: Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+    Acked-by: Joe Stringer &lt;joestringer@nicira.com&gt;
 </pre>
