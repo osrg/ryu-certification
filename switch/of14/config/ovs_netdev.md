@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-422f44f5-d59f-46ec-9642-efcfc3e70e1c
+c2511c1a-5815-4eb7-8258-99ef6adee93f
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth21"
-            Interface "eth21"
-        Port "eth22"
-            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth21"
+            Interface "eth21"
         Port "eth23"
             Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : c24d54fb-2263-40ff-9aa6-bf7756eed827
-controller          : [7f33acd1-e2d2-48a1-964c-b1aae0cb7308]
+_uuid               : 3fdb5765-1f4b-459d-88d1-438660ec4da8
+controller          : [808a7e8b-3d43-4e63-8ae9-c40f9acc1c45]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [716a0b27-ad71-40ce-a407-73f72bcdef59, 7b4b2ddc-2884-4a74-827d-2e43ca140106, b635f289-54fe-4b3a-a732-0f7c612d8631, dc4127ea-fc12-418d-99ed-f6420d3b6426]
+ports               : [0895933f-d251-4287-8437-5e74793d4421, 121d3e45-14ff-43ea-959a-4ddcb363222c, 495c57bc-0559-4af3-a691-0ee590ae07ca, 975d3e84-c0f3-49b9-8bb9-fd5994f94ac3]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7f33acd1-e2d2-48a1-964c-b1aae0cb7308
+_uuid               : 808a7e8b-3d43-4e63-8ae9-c40f9acc1c45
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 7b4b2ddc-2884-4a74-827d-2e43ca140106
+_uuid               : 975d3e84-c0f3-49b9-8bb9-fd5994f94ac3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [5561577a-aea3-47d2-8424-c839594feca1]
+interfaces          : [913310a7-2e11-49e0-90c9-5c4707e554a2]
 name                : "eth22"
 
-_uuid               : b635f289-54fe-4b3a-a732-0f7c612d8631
+_uuid               : 495c57bc-0559-4af3-a691-0ee590ae07ca
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8f3698e0-8a24-4d03-919b-8633c2988526]
-name                : "br0"
-
-_uuid               : dc4127ea-fc12-418d-99ed-f6420d3b6426
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [9abd9474-0cef-421d-808a-d09f059253de]
+interfaces          : [3f3000f5-e3dc-41d4-af49-63c0a62bc56e]
 name                : "eth23"
 
-_uuid               : 716a0b27-ad71-40ce-a407-73f72bcdef59
+_uuid               : 121d3e45-14ff-43ea-959a-4ddcb363222c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [069ced02-dd68-4904-95cf-91e5036a6e08]
+interfaces          : [43647b3a-9048-42a0-b20b-b2cf830c4a85]
 name                : "eth21"
 
+_uuid               : 0895933f-d251-4287-8437-5e74793d4421
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [095eacfa-cd48-45a2-b6c4-4a37426c0ebd]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 9abd9474-0cef-421d-808a-d09f059253de
+_uuid               : 3f3000f5-e3dc-41d4-af49-63c0a62bc56e
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -95,24 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 8f3698e0-8a24-4d03-919b-8633c2988526
-admin_state         : down
-duplex              : full
-ifindex             : 431
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
-
-_uuid               : 069ced02-dd68-4904-95cf-91e5036a6e08
+_uuid               : 43647b3a-9048-42a0-b20b-b2cf830c4a85
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -129,7 +112,24 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 5561577a-aea3-47d2-8424-c839594feca1
+_uuid               : 095eacfa-cd48-45a2-b6c4-4a37426c0ebd
+admin_state         : down
+duplex              : full
+ifindex             : 435
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : 913310a7-2e11-49e0-90c9-5c4707e554a2
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -150,34 +150,21 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit eac0dc83c468dc7c5b5751c96cda0e568b8b188b
-Author:     Ben Pfaff &lt;blp@nicira.com&gt;
-AuthorDate: Mon Aug 31 09:53:18 2015 -0700
+commit ca92d173aa29240c38735ad9e4f46e4222792b52
+Author:     Aaron Conole &lt;aconole@redhat.com&gt;
+AuthorDate: Fri Sep 4 16:53:30 2015 -0400
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Fri Sep 4 16:50:15 2015 -0700
+CommitDate: Sat Sep 5 19:45:56 2015 -0700
 
-    ovsdb: Update _version more accurately in transaction commit.
+    netdev-dpdk: Fix build failure due to new struct eth_addr.
     
-    The _version column in each OVSDB row is supposed to be updated whenever
-    any other column in the row changes.  However, the transaction code was
-    not careful to do this only when a row actually changed--there were other
-    cases where a row was considered at transaction commit time and _version
-    updated even though the row did not actually change.  For example,
-    ovsdb_txn_adjust_atom_refs&#40;&#41; calls find_or_make_txn_row&#40;&#41;, which calls
-    ovsdb_txn_row_modify&#40;&#41;, which updates _version, but
-    ovsdb_txn_adjust_atom_refs&#40;&#41; doesn't actually update any data.
+    The netdev-dpdk uses the struct ether_addr rather than struct eth_addr
+    internal ovs datatype.
     
-    One way to fix this would be to carefully consider and adjust all the code
-    that looks at transaction rows.  However, this seems somewhat error prone
-    and thus difficult to test.  This commit takes a different approach: it
-    drops the code that adjusts _version on the fly, instead replacing it by
-    a final pass over the database at the end of the commit process that checks
-    for each row whether any columns changed and updates _version at that point
-    if any did.  That seems pretty foolproof to me.
+    To facilitate using either the .ea OR the struct ether_addr.addr_bytes
+    argument for printing/logging, add a new ETH_ADDR_BYTES_ARG&#40;&#41; define.
     
-    Reported-by: RishiRaj Maulick &lt;rishi.raj2509@gmail.com&gt;
-    Reported-at: http://openvswitch.org/pipermail/dev/2015-August/059439.html
+    Signed-off-by: Aaron Conole &lt;aconole@redhat.com&gt;
+    [blp@nicira.com made stylistic changes]
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
-    Acked-by: Andy Zhou &lt;azhou@nicira.com&gt;
-    Tested-by: RishiRaj Maulick &lt;rishi.raj2509@gmail.com&gt;
 </pre>
