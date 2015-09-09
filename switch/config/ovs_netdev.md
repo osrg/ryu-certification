@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-5d4bec55-e269-4529-86ea-a912bd79fd80
+05062c24-1331-4020-8951-e2a17d73c72c
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
@@ -23,8 +23,8 @@ $ sudo ovs-vsctl show
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 24bf07c9-1f5b-42dc-a1b9-25c7903bfe4d
-controller          : [163f3bae-750d-40c4-9782-72a3a9268f8c]
+_uuid               : 526328f0-a191-4058-9c2c-1cbcbe705fb8
+controller          : [4731ad8e-af6b-4dba-8c19-87c5ff0d3afc]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,70 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [00212227-5517-47e2-a2c8-10c58853a8fd, 8a0e5d84-aedc-406c-83d8-bf32c9ae9461, eb318c55-a466-4a17-bcd0-1491995b65e7, ff5f8f61-b68e-4a44-88c5-ddf0953dfb4e]
+ports               : [3691fd31-e52b-4a88-aedf-c255d048a5fa, 3b79468b-5b11-4cfa-a75f-21069c69f40b, 799c0cde-feba-47be-b635-855ad871ab33, e5784262-98a1-421c-98c2-44f1c20f0b94]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 163f3bae-750d-40c4-9782-72a3a9268f8c
+_uuid               : 4731ad8e-af6b-4dba-8c19-87c5ff0d3afc
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8a0e5d84-aedc-406c-83d8-bf32c9ae9461
+_uuid               : 3691fd31-e52b-4a88-aedf-c255d048a5fa
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [654fadd4-10bd-4551-85ff-8a9909899e30]
-name                : "eth22"
-
-_uuid               : ff5f8f61-b68e-4a44-88c5-ddf0953dfb4e
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [59241e61-d92b-4ffe-bb8f-b72e05619351]
-name                : "br0"
-
-_uuid               : eb318c55-a466-4a17-bcd0-1491995b65e7
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [88c647ee-6718-4ba5-91c7-7ba6556445a9]
-name                : "eth23"
-
-_uuid               : 00212227-5517-47e2-a2c8-10c58853a8fd
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a616b620-25a9-4e4c-aef9-a1aa4f9a6c1f]
+interfaces          : [c143ae75-e1a9-4a96-b820-c94545a24a4d]
 name                : "eth21"
 
+_uuid               : e5784262-98a1-421c-98c2-44f1c20f0b94
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [23f5427f-7885-4ccd-941a-980055e3528e]
+name                : "br0"
+
+_uuid               : 799c0cde-feba-47be-b635-855ad871ab33
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [c8c54e08-c75f-42c6-a967-96a2ebf09af9]
+name                : "eth23"
+
+_uuid               : 3b79468b-5b11-4cfa-a75f-21069c69f40b
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [dc5a7272-cab4-4720-a59b-507ad14415ff]
+name                : "eth22"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 654fadd4-10bd-4551-85ff-8a9909899e30
+_uuid               : c8c54e08-c75f-42c6-a967-96a2ebf09af9
 admin_state         : up
 duplex              : full
-ifindex             : 24
+ifindex             : 25
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
+mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : a616b620-25a9-4e4c-aef9-a1aa4f9a6c1f
+_uuid               : c143ae75-e1a9-4a96-b820-c94545a24a4d
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,10 +112,27 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 59241e61-d92b-4ffe-bb8f-b72e05619351
+_uuid               : dc5a7272-cab4-4720-a59b-507ad14415ff
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 23f5427f-7885-4ccd-941a-980055e3528e
 admin_state         : down
 duplex              : full
-ifindex             : 437
+ifindex             : 441
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -128,40 +145,23 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
-
-_uuid               : 88c647ee-6718-4ba5-91c7-7ba6556445a9
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit e43fc07cd00f7f579a2cb69b6d8091876e1af90e
-Author:     Russell Bryant &lt;rbryant@redhat.com&gt;
-AuthorDate: Thu Sep 3 12:45:00 2015 -0400
+commit 3514c765179a92f57508885a41356cda940bed0c
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Tue Jul 21 16:19:54 2015 -0700
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Tue Sep 8 10:57:47 2015 -0700
+CommitDate: Wed Sep 9 10:38:41 2015 -0700
 
-    ovn: Automatically create br-int in ovn-controller.
+    tnl-arp-cache: Add a command to add or modify an ARP cache entry.
     
-    ovn-controller previously required the integration bridge to be
-    created before running ovn-controller.  This patch makes
-    ovn-controller automatically create it if it doesn't already exist.
+    This allows the ARP cache to be prepopulated for testing purposes, so
+    that tests don't lose the first packet to each destination.  &#40;I guess
+    this feature could have other uses too.&#41;
     
-    Signed-off-by: Russell Bryant &lt;rbryant@redhat.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Andy Zhou &lt;azhou@nicira.com&gt;
 </pre>
