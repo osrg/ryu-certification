@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-de36c4b8-5e2f-45c3-8820-4f3c4fad7580
+925d29d6-84c9-4fee-b250-858ad78fa82d
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth22"
+            Interface "eth22"
+        Port "eth23"
+            Interface "eth23"
+        Port "eth21"
+            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth23"
-            Interface "eth23"
-        Port "eth22"
-            Interface "eth22"
-        Port "eth21"
-            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 53d41424-2c44-4cdf-8b29-31ad49fd0386
-controller          : [cadecc9d-ff05-4c3f-af5f-82737a02877b]
+_uuid               : 94d9a6b5-01d3-4c17-b61a-9273cb9d9838
+controller          : [081d5d34-2250-4fc2-96f6-af4cc4c56089]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [281e8996-3139-487c-b24e-5029df70aa81, 3480e673-8e63-4956-bdd3-68004a360248, 48a09f7c-ff85-4fbe-9267-d556548aac87, ce0705d2-3433-43d3-a0ea-6fb8b4f16e07]
+ports               : [51a89304-05a9-44c3-88b3-6b26012ce0d7, 70125509-d65f-4d18-b2b2-01d2ecdfbebe, 917e611f-5a19-4440-af82-e9ee5cdfcfa3, b4912712-008b-4da1-b16b-71d7a52c2267]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : cadecc9d-ff05-4c3f-af5f-82737a02877b
+_uuid               : 081d5d34-2250-4fc2-96f6-af4cc4c56089
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 48a09f7c-ff85-4fbe-9267-d556548aac87
+_uuid               : 51a89304-05a9-44c3-88b3-6b26012ce0d7
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4be1f82f-8090-456c-89ea-51d3f69386ab]
+interfaces          : [d30259bf-1bd4-48bd-a003-c23fee1a0402]
 name                : "eth22"
 
-_uuid               : 281e8996-3139-487c-b24e-5029df70aa81
+_uuid               : 70125509-d65f-4d18-b2b2-01d2ecdfbebe
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [00a3aedc-3e4e-41ac-bf7a-856ecaf5a894]
-name                : "br0"
-
-_uuid               : ce0705d2-3433-43d3-a0ea-6fb8b4f16e07
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [6c9d1463-072e-4f20-99f5-14795ad488bb]
-name                : "eth21"
-
-_uuid               : 3480e673-8e63-4956-bdd3-68004a360248
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [758975bb-7e62-4083-9884-ce4259bb54af]
+interfaces          : [bd09f842-4c27-4a06-b844-979f783f3ca4]
 name                : "eth23"
 
+_uuid               : b4912712-008b-4da1-b16b-71d7a52c2267
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3ce3da75-77df-4f97-97d0-e9c8768cf3ed]
+name                : "br0"
+
+_uuid               : 917e611f-5a19-4440-af82-e9ee5cdfcfa3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [5d33239b-be2c-44d4-a1aa-9db59c41be92]
+name                : "eth21"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 00a3aedc-3e4e-41ac-bf7a-856ecaf5a894
+_uuid               : 3ce3da75-77df-4f97-97d0-e9c8768cf3ed
 admin_state         : down
 duplex              : full
-ifindex             : 443
+ifindex             : 449
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,24 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 4be1f82f-8090-456c-89ea-51d3f69386ab
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 758975bb-7e62-4083-9884-ce4259bb54af
+_uuid               : bd09f842-4c27-4a06-b844-979f783f3ca4
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 6c9d1463-072e-4f20-99f5-14795ad488bb
+_uuid               : 5d33239b-be2c-44d4-a1aa-9db59c41be92
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -145,27 +128,50 @@ ofport              : 1
 statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
+
+_uuid               : d30259bf-1bd4-48bd-a003-c23fee1a0402
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3c35db62d0ebdf6191c60aae0ccadbb40ac933ba
-Author:     Niti Rohilla &lt;niti.rohilla@tcs.com&gt;
-AuthorDate: Wed Sep 9 17:33:42 2015 +0530
+commit 96af668a82016d17c6300f0cfad5cd156f850545
+Author:     Ben Pfaff &lt;blp@nicira.com&gt;
+AuthorDate: Fri Sep 11 13:42:41 2015 -0700
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Wed Sep 9 13:17:23 2015 -0700
+CommitDate: Fri Sep 11 13:42:41 2015 -0700
 
-    ofproto: Implement OF1.4 Group &amp; Meter change notification messages
+    ovn-northd: Minor logical flow table optimizations.
     
-    This patch adds support for Openflow1.4 Group &amp; meter change notification
-    messages. In a multi controller environment, when a controller modifies the
-    state of group and meter table, the request that successfully modifies this
-    state is forwarded to other controllers. Other controllers are informed with
-    the OFPT_REQUESTFORWARD message. Request forwarding is enabled on a per
-    controller channel basis using the Set Asynchronous Configuration Message.
+    There's no need to add a priority-0 &quot;drop&quot; flow, because OVN logical flow
+    tables always drop non-matching packets.
     
-    Signed-off-by: Niti Rohilla &lt;niti.rohilla@tcs.com&gt;
-    Co-authored-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    There's no need to add a &quot;drop&quot; flow for ingress port security on disabled
+    logical ports, because no other flow would allow those packets; it's
+    more efficient to omit the logical flow entirely.
+    
+    Finally, there's no need to add disabled logical ports to the MC_UNKNOWN
+    multicast group, since packets won't be delivered to a disabled logical
+    port anyway.  &#40;This is just an optimization; the packets were dropped in
+    the egress pipeline anyway.&#41;
+    
+    Found by inspection.
+    
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Acked-by: Justin Pettit &lt;jpettit@nicira.com&gt;
 </pre>
