@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-b073de2d-9139-4153-9ceb-839d9ea7ed33
+325c11c7-7c0a-45b0-a4a7-d75d9ce55c85
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth22"
-            Interface "eth22"
         Port "eth23"
             Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
         Port "eth21"
             Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 651ce657-6ddc-460d-a6ff-30998f048fe6
-controller          : [23e5836a-9547-4e34-bb3e-5d2f1170fece]
+_uuid               : 9c501a9c-ab75-4c5d-8843-51cea3a6574e
+controller          : [6858b076-fa03-483b-a151-f89d7f6bef4d]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [09b403f4-9445-4702-991b-d1719d5fb970, 3289b439-e2f0-47b3-a396-f6b6e4ebe8a3, 72eca14d-bbc5-4bb9-9cad-67906629154f, f7c25f8a-231f-4835-8ae2-51792d1923eb]
+ports               : [17a39e2f-b297-44a6-83be-601d785cf8ad, 513447f2-ea5d-4437-967a-444f98f36563, bfd00002-3017-45d1-994d-ebafb3892b42, c4529782-1af7-4420-be99-ee2d62a9f0f3]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 23e5836a-9547-4e34-bb3e-5d2f1170fece
+_uuid               : 6858b076-fa03-483b-a151-f89d7f6bef4d
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 09b403f4-9445-4702-991b-d1719d5fb970
+_uuid               : 513447f2-ea5d-4437-967a-444f98f36563
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bda47cd5-cf72-45d5-99b8-70481b6fa15a]
-name                : "br0"
-
-_uuid               : 72eca14d-bbc5-4bb9-9cad-67906629154f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3eeb53c1-0236-4426-98dc-3523c27239a1]
+interfaces          : [ec1980ca-77e1-42a7-97d4-324cdeaeda68]
 name                : "eth23"
 
-_uuid               : 3289b439-e2f0-47b3-a396-f6b6e4ebe8a3
+_uuid               : bfd00002-3017-45d1-994d-ebafb3892b42
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [f50591cd-5d54-4909-9722-aac2583b828c]
+interfaces          : [c885d6be-d0f6-4be4-b81b-31b2653b0e42]
 name                : "eth22"
 
-_uuid               : f7c25f8a-231f-4835-8ae2-51792d1923eb
+_uuid               : c4529782-1af7-4420-be99-ee2d62a9f0f3
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2af734a6-5a0d-469f-adc8-f5853ba24dfc]
+interfaces          : [6ad2080a-6e5b-43fa-b286-98ed3c32eb76]
 name                : "eth21"
 
+_uuid               : 17a39e2f-b297-44a6-83be-601d785cf8ad
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [b3555669-72f7-4d47-8ad1-92aef8bd173d]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : bda47cd5-cf72-45d5-99b8-70481b6fa15a
+_uuid               : b3555669-72f7-4d47-8ad1-92aef8bd173d
 admin_state         : down
 duplex              : full
-ifindex             : 455
+ifindex             : 459
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : f50591cd-5d54-4909-9722-aac2583b828c
+_uuid               : c885d6be-d0f6-4be4-b81b-31b2653b0e42
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -112,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 3eeb53c1-0236-4426-98dc-3523c27239a1
+_uuid               : ec1980ca-77e1-42a7-97d4-324cdeaeda68
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -129,7 +129,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 2af734a6-5a0d-469f-adc8-f5853ba24dfc
+_uuid               : 6ad2080a-6e5b-43fa-b286-98ed3c32eb76
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -150,23 +150,20 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit f41256d709d1733262b7538613237b34e801f457
-Author:     Jesse Gross &lt;jesse@nicira.com&gt;
-AuthorDate: Fri Sep 11 09:01:05 2015 -0700
-Commit:     Jesse Gross &lt;jesse@nicira.com&gt;
-CommitDate: Sun Sep 13 08:13:11 2015 -0700
+commit dd693f9bf23ae1108d956c5d58a7036dcb636e19
+Author:     Jiri Benc &lt;jbenc@redhat.com&gt;
+AuthorDate: Thu Sep 10 06:15:32 2015 -0700
+Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
+CommitDate: Mon Sep 14 10:44:57 2015 -0700
 
-    tunnel: Validate IP header for userspace tunneling.
+    datapath: Use netlink ipv4 API to handle the ipv4 addr attributes.
     
-    Currently, when doing userspace tunneling we don't perform much in
-    the way of integrity checks on the incoming IP header. The case of
-    tunneling is different from the usual case of switching since we are
-    acting as the endpoint here and should not allow invalid packets to
-    pass.
+    upstream: &#40;&quot;netlink: implement nla_put_in_addr and nla_put_in6_addr&quot;&#41;
+    upstream: &#40;&quot;netlink: implement nla_get_in_addr and nla_get_in6_addr&quot;&#41;
+    IP addresses are often stored in netlink attributes. Add generic functions
+    to do that.
     
-    This adds checks for IP checksum, version, total length, and options and
-    drops packets that don't pass.
-    
-    Signed-off-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Signed-off-by: Jiri Benc &lt;jbenc@redhat.com&gt;
+    Signed-off-by: David S. Miller &lt;davem@davemloft.net&gt;
     Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
 </pre>
