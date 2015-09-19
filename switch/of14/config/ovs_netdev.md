@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-fe1c9d4e-1b5f-498c-bbc7-d560757da53f
+e3556654-afcc-4451-9e26-4962064190c7
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth23"
-            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth21"
-            Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
         Port "eth22"
             Interface "eth22"
+        Port "eth21"
+            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : fc830b51-4aba-40b2-92f2-e2ff53f97ced
-controller          : [2931d5e1-80b9-4273-9f7f-17d8590d1ec8]
+_uuid               : 2d655855-4ffd-460e-853c-515ffcab7280
+controller          : [513cb72d-e9b3-4e47-9574-df1f98bde1d5]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [3bc45de3-c25b-4e44-8634-8da2a4d95229, 44b5a9b0-13b5-4ba9-87df-f0f9ef872ec8, 451fc3b4-73f6-498f-bee4-02bfa4f4f852, dd97b6d5-bd38-4ddd-b90a-e4aa0cf87082]
+ports               : [2ce752e6-4f66-4c6e-8a70-0b319adc107f, 3923aa94-c782-4889-acd1-f27f631738b2, 68f5842d-1390-442f-8673-672b8b291201, 84cc99dd-21c8-4f02-babf-b8cd952ebb63]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2931d5e1-80b9-4273-9f7f-17d8590d1ec8
+_uuid               : 513cb72d-e9b3-4e47-9574-df1f98bde1d5
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 44b5a9b0-13b5-4ba9-87df-f0f9ef872ec8
+_uuid               : 3923aa94-c782-4889-acd1-f27f631738b2
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d421efc1-3942-455c-a1bf-3f97d3ab811d]
-name                : "br0"
-
-_uuid               : 451fc3b4-73f6-498f-bee4-02bfa4f4f852
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3f5a40b1-520b-445d-83db-9bd0c25f9232]
-name                : "eth21"
-
-_uuid               : dd97b6d5-bd38-4ddd-b90a-e4aa0cf87082
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [917dd3a4-9658-4feb-8840-ce68ef624a24]
-name                : "eth22"
-
-_uuid               : 3bc45de3-c25b-4e44-8634-8da2a4d95229
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [1ac84d47-c06b-4b8e-8770-038aee7aa993]
+interfaces          : [1b07166a-4a1f-4f43-8a7b-7893f1556083]
 name                : "eth23"
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 917dd3a4-9658-4feb-8840-ce68ef624a24
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
+_uuid               : 68f5842d-1390-442f-8673-672b8b291201
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [6f8fa36b-28b9-4322-acb8-9e2f5a2a37cf]
 name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
 
-_uuid               : 3f5a40b1-520b-445d-83db-9bd0c25f9232
+_uuid               : 84cc99dd-21c8-4f02-babf-b8cd952ebb63
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [92fc2508-fc5d-4734-8d1f-9b3ed4ae41cf]
+name                : "eth21"
+
+_uuid               : 2ce752e6-4f66-4c6e-8a70-0b319adc107f
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [335a9932-49b7-4104-b51d-4be052bd0be3]
+name                : "br0"
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 92fc2508-fc5d-4734-8d1f-9b3ed4ae41cf
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -112,24 +95,7 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : d421efc1-3942-455c-a1bf-3f97d3ab811d
-admin_state         : down
-duplex              : full
-ifindex             : 475
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
-
-_uuid               : 1ac84d47-c06b-4b8e-8770-038aee7aa993
+_uuid               : 1b07166a-4a1f-4f43-8a7b-7893f1556083
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -145,43 +111,73 @@ ofport              : 3
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
+
+_uuid               : 335a9932-49b7-4104-b51d-4be052bd0be3
+admin_state         : down
+duplex              : full
+ifindex             : 479
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : 6f8fa36b-28b9-4322-acb8-9e2f5a2a37cf
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit cee06621d90f0a30b16735e40094918a38e2d010
-Author:     Chris J Arges &lt;chris.j.arges@canonical.com&gt;
-AuthorDate: Fri Sep 18 13:34:22 2015 -0700
-Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-CommitDate: Fri Sep 18 13:40:29 2015 -0700
+commit 449b81311336977d874f80adde9c275dc67e0f8c
+Author:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+AuthorDate: Fri Sep 18 17:47:37 2015 -0700
+Commit:     Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+CommitDate: Fri Sep 18 17:47:37 2015 -0700
 
-    datapath: Backport &quot;openvswitch: allocate nr_node_ids flow_stats instead of num_possible_nodes&quot;
+    dpif-netdev: Exact match non-presence of vlans.
     
-    Upstream commit:
-        openvswitch: allocate nr_node_ids flow_stats instead of num_possible_nodes
+    The Netlink encoding of datapath flow keys cannot express wildcarding
+    the presence of a VLAN tag. Instead, a missing VLAN tag is interpreted
+    as exact match on the fact that there is no VLAN.  This makes reading
+    datapath flow dumps confusing, since for everything else, a missing
+    key value means that the corresponding key was wildcarded.
     
-        Some architectures like POWER can have a NUMA node_possible_map that
-        contains sparse entries. This causes memory corruption with openvswitch
-        since it allocates flow_cache with a multiple of num_possible_nodes&#40;&#41; and
-        assumes the node variable returned by for_each_node will index into
-        flow-&gt;stats[node].
+    Unless we refactor a lot of code that translates between Netlink and
+    struct flow representations, we have to do the same in the userspace
+    datapath.  This makes at least the flow install logs show that the
+    vlan_tci field is matched to zero.  However, the datapath flow dumps
+    remain as they were before, as they are performed using the netlink
+    format.
     
-        Use nr_node_ids to allocate a maximal sparse array instead of
-        num_possible_nodes&#40;&#41;.
+    Add a test to verify that packet with a vlan will not match a rule
+    that may seem wildcarding the presence of the vlan tag.  Applying this
+    test without the userspace datapath modification showed that the
+    userspace datapath failed to create a new datapath flow for the VLAN
+    packet before this patch.
     
-        The crash was noticed after 3af229f2 was applied as it changed the
-        node_possible_map to match node_online_map on boot.
-        Fixes: 3af229f2071f5b5cb31664be6109561fbe19c861
-    
-        Signed-off-by: Chris J Arges &lt;chris.j.arges@canonical.com&gt;
-        Acked-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
-        Acked-by: Nishanth Aravamudan &lt;nacc@linux.vnet.ibm.com&gt;
-        Signed-off-by: David S. Miller &lt;davem@davemloft.net&gt;
-    
-    Upstream: bac541e4631&#40;&quot;&quot;openvswitch: allocate nr_node_ids flow_stats
-    instead of num_possible_nodes&quot;&#41;
-    
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
-    Acked-by: Jesse Gross &lt;jesse@nicira.com&gt;
+    Reported-by: Tony van der Peet &lt;tony.vanderpeet@gmail.com&gt;
+    Signed-off-by: Jarno Rajahalme &lt;jrajahalme@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
