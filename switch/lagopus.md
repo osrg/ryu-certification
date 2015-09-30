@@ -20,11 +20,11 @@ title: Ryu Certification - lagopus
 |[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|[Meter](#Meter)|30|6|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(30)|&nbsp;&nbsp;&nbsp;&nbsp;(6)|
-|Total|976|15|
+|[Meter](#Meter)|27|9|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
+|Total|973|18|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(862)|&nbsp;&nbsp;&nbsp;&nbsp;(15)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(859)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|
 
 ## <a name ='Action'>Action</a>
 
@@ -193,10 +193,10 @@ title: Ryu Certification - lagopus
 |-----------|----|----|----|----|
 |[DROP_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_00_1M.json)|- | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) | [OK](#9a2ce1d3a56a898592257439f05d22bf) |
 |[DROP_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_01_10M.json)|- | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) | [OK](#d622dfa2ed128286d03f44d2790591e7) |
-|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
+|[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
 |[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
-|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) |
+|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
 |[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
 |[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
 |[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
@@ -1601,7 +1601,8 @@ title: Ryu Certification - lagopus
 <a name="374de7cf3ba3cd6962f98683ef2d0ee5">meter: 01_DROP_00_KBPS_02_100M</a>
 <pre>
 ..........
-    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
+    200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
+        Received unexpected throughput: {'in_port': 2} 89605.85kbps
 ..........
     200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
 ..........
@@ -1628,11 +1629,13 @@ title: Ryu Certification - lagopus
 <a name="41aa053a730cd3a8949410c96489828f">meter: 01_DROP_01_PKTPS_02_10000</a>
 <pre>
 ..........
-    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
+    20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Received unexpected throughput: {'in_port': 2} 8644.30pktps
 ..........
     20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
 ..........
-    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       OK
+    20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
+        Received unexpected throughput: {'in_port': 2} 8806.85pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
@@ -1656,13 +1659,13 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 55346.34kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 24076.46kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 81292.06kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 56002.42kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 27179.35kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 81156.48kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 149859.13kbps
+        Received unexpected throughput: {'in_port': 2} 107379.00kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1686,11 +1689,11 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 4280.78pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 1987.56pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 8257.95pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 4418.85pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 2272.53pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 8327.71pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 13543.83pktps
+        Received unexpected throughput: {'in_port': 2} 10345.46pktps
 </pre>

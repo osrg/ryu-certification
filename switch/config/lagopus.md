@@ -8,14 +8,14 @@ title: Ryu Certification - lagopus - config
 # Version information
 <pre>
 git log -1 --pretty=fuller
-commit 5a14c95a5e033e0e348aaaab90739686efcbe21c
-Merge: c5e358b c1657c9
+commit 6cd6660e2d5e7ce79e713aa4de9ab32efa011905
+Merge: 5a14c95 b8684e2
 Author:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-AuthorDate: Tue May 19 16:50:50 2015 +0900
+AuthorDate: Sat Aug 8 13:49:58 2015 +0900
 Commit:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-CommitDate: Tue May 19 16:50:50 2015 +0900
+CommitDate: Sat Aug 8 13:49:58 2015 +0900
 
-    Merge pull request #37 from kumagi/intro-document-on-build-fail
+    Merge pull request #41 from lagopus/release-0.2
     
-    Added an instruction text to lead user to online documentation when unity is not installed.
+    Lagopus Release 0.2
 </pre>
