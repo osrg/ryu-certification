@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-827d0477-c851-4c35-ad6f-78e2edbcfd5c
+8692c9d4-fbb1-4676-bb22-87076a231554
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth23"
-            Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth23"
+            Interface "eth23"
         Port "eth21"
             Interface "eth21"
-        Port "eth22"
-            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8e41a050-2fdf-47bb-ab4c-65d6352b98f0
-controller          : [f7660191-21b4-47b7-ad93-c112a515bda0]
+_uuid               : 572f03f5-396a-464a-b29d-7158516f1230
+controller          : [b7d76b5d-dac0-43d7-ad11-a17e9c79016b]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [16cd30af-e462-4573-8c70-3b4413988761, 2bf602e6-4b14-4ecc-96d1-9954477ffa1b, 7b5d4f6b-79de-456d-a297-701556adde49, a44118cd-c26f-41d9-89e5-f5c883921858]
+ports               : [0d59c427-9ec3-46f0-bea3-659f22313609, 4d71f2f3-9f36-47a5-a83c-4bc148048d01, 7c3bead5-5171-4ff7-b680-6b830612cf75, a65f4560-f664-4a22-a5b7-eaff3954dbc1]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : f7660191-21b4-47b7-ad93-c112a515bda0
+_uuid               : b7d76b5d-dac0-43d7-ad11-a17e9c79016b
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : a44118cd-c26f-41d9-89e5-f5c883921858
+_uuid               : a65f4560-f664-4a22-a5b7-eaff3954dbc1
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [b51fd870-2ab2-4631-821e-1e8dc455c01b]
-name                : "eth22"
-
-_uuid               : 2bf602e6-4b14-4ecc-96d1-9954477ffa1b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c12a273d-787e-431f-982b-ea56d4b0a4cf]
-name                : "br0"
-
-_uuid               : 16cd30af-e462-4573-8c70-3b4413988761
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3d1f034e-4099-40e8-bc16-f7e9e5663b9d]
-name                : "eth23"
-
-_uuid               : 7b5d4f6b-79de-456d-a297-701556adde49
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [dcfec061-e5b2-465b-bf9c-89458dac9453]
+interfaces          : [89b53c5e-f969-4218-abdf-0ea781ab532d]
 name                : "eth21"
 
+_uuid               : 7c3bead5-5171-4ff7-b680-6b830612cf75
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [d51f242f-9133-4512-a454-d15c738a25e7]
+name                : "eth23"
+
+_uuid               : 0d59c427-9ec3-46f0-bea3-659f22313609
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [4061ea2c-f9ce-479e-91dc-9b19393417a7]
+name                : "eth22"
+
+_uuid               : 4d71f2f3-9f36-47a5-a83c-4bc148048d01
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [ee2d003b-cff7-4e63-ba8f-d1742f789d3d]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : b51fd870-2ab2-4631-821e-1e8dc455c01b
+_uuid               : 4061ea2c-f9ce-479e-91dc-9b19393417a7
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -95,24 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : c12a273d-787e-431f-982b-ea56d4b0a4cf
-admin_state         : down
-duplex              : full
-ifindex             : 511
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 10000000
-link_state          : down
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1500
-name                : "br0"
-ofport              : 65534
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
-type                : internal
-
-_uuid               : dcfec061-e5b2-465b-bf9c-89458dac9453
+_uuid               : 89b53c5e-f969-4218-abdf-0ea781ab532d
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -129,7 +112,24 @@ statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_drop
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 3d1f034e-4099-40e8-bc16-f7e9e5663b9d
+_uuid               : ee2d003b-cff7-4e63-ba8f-d1742f789d3d
+admin_state         : down
+duplex              : full
+ifindex             : 515
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 10000000
+link_state          : down
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1500
+name                : "br0"
+ofport              : 65534
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
+type                : internal
+
+_uuid               : d51f242f-9133-4512-a454-d15c738a25e7
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -150,18 +150,14 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c28a1f83b1d6028cd3bc7aae6e07bbcc5665e57a
-Author:     Simon Horman &lt;simon.horman@netronome.com&gt;
-AuthorDate: Wed Sep 30 15:44:53 2015 +0900
-Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Wed Sep 30 09:07:15 2015 -0700
+commit cbf01675d8ec0259279777d2684ed4265652768e
+Author:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+AuthorDate: Thu Oct 1 09:12:41 2015 -0700
+Commit:     Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+CommitDate: Thu Oct 1 09:36:54 2015 -0700
 
-    openflow-common: Correct Netronome vendor ID.
+    ovn-ctl: Fix a function call.
     
-    Due to an error on my part the Netronome vendor Id is incorrect:
-    the last digit should be 'd' rather than '0' as per the
-    Netronome IEEE OUI.
-    
-    Signed-off-by: Simon Horman &lt;simon.horman@netronome.com&gt;
-    Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
+    Signed-off-by: Gurucharan Shetty &lt;gshetty@nicira.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
