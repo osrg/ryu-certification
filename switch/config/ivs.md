@@ -13,21 +13,21 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c2a37120d191dd3d5276a4bbc4590e9bba406221
-Merge: 5d0f1f4 a22fe57
+commit 3e847a58e356638214f528cbef8289546fa6c938
+Merge: d01ea97 5c9af52
 Author:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-AuthorDate: Fri Apr 3 17:28:39 2015 -0700
+AuthorDate: Thu Aug 27 14:25:22 2015 -0700
 Commit:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-CommitDate: Fri Apr 3 17:28:39 2015 -0700
+CommitDate: Thu Aug 27 14:25:22 2015 -0700
 
-    Merge pull request #296 from rlane/update-submodules
+    Merge pull request #345 from harshsin/ipv6-tlv
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
-version:        2.3.90
+version:        2.4.90
 license:        GPL
 description:    Open vSwitch switching datapath
-srcversion:     20B4C851BF1F0F70A9AED29
+srcversion:     41F30D3DA215085A5793FD4
 depends:        libcrc32c,gre
 vermagic:       3.2.0-29-generic SMP mod_unload modversions 
 </pre>
