@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-8b5eea4a-cbb7-4c04-a6c7-df248032b0d0
+c24a2a65-b156-4487-9ab8-f2e19077b48c
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth22"
-            Interface "eth22"
-        Port "eth23"
-            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
         Port "eth21"
             Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : e7fb0390-b706-4f74-84b9-8f1950d095e0
-controller          : [d8e62112-98f6-4967-87a9-900e921b6bd9]
+_uuid               : d41b5ab1-f3b7-41fa-ba5d-2505ff340711
+controller          : [b02b32c6-d3ab-4f89-8ae5-0a6e11d362a8]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,73 +32,56 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [5330bd72-6d3c-4c1d-8afa-776801698869, 85fbc12a-73e5-463c-b439-af7f00c7cbc3, 9356b39b-826b-444e-8a43-af1df1d586b1, 9baef0db-c657-45da-893a-d2b24c8b02ac]
+ports               : [3aeeb0cf-cfac-4975-bc1b-896fe36e55f5, 82d2936c-68ca-4aaf-9f8c-5606653cb025, af77df34-35f6-4e81-854b-ddbe6dd86eeb, d61e1a2a-0128-48c7-b3c9-391cdec379a3]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : d8e62112-98f6-4967-87a9-900e921b6bd9
+_uuid               : b02b32c6-d3ab-4f89-8ae5-0a6e11d362a8
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="762", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 85fbc12a-73e5-463c-b439-af7f00c7cbc3
+_uuid               : af77df34-35f6-4e81-854b-ddbe6dd86eeb
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [8e60bc2e-5718-49be-ab9c-421beabdb749]
+interfaces          : [4035c535-859a-4712-aa5a-dbfbae018be2]
 name                : "eth23"
 
-_uuid               : 5330bd72-6d3c-4c1d-8afa-776801698869
+_uuid               : 82d2936c-68ca-4aaf-9f8c-5606653cb025
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [aaf313ea-6a31-4b62-9dd0-d0393aa6b832]
+interfaces          : [87cc1652-2571-49ee-b1d5-9470f04e3203]
+name                : "eth21"
+
+_uuid               : d61e1a2a-0128-48c7-b3c9-391cdec379a3
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [a8eb5ae5-ce1e-4b02-9fb2-92d8b0429841]
 name                : "eth22"
 
-_uuid               : 9356b39b-826b-444e-8a43-af1df1d586b1
+_uuid               : 3aeeb0cf-cfac-4975-bc1b-896fe36e55f5
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3ee4506e-57f8-4a21-81e9-6d777371494b]
+interfaces          : [5669a918-7a24-407e-9642-48dbb8770f18]
 name                : "br0"
 
-_uuid               : 9baef0db-c657-45da-893a-d2b24c8b02ac
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c6761a64-194c-4045-a16f-e77a0ad3926c]
-name                : "eth21"
-
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : c6761a64-194c-4045-a16f-e77a0ad3926c
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1550
-name                : "eth21"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=24024581534, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16026376, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 3ee4506e-57f8-4a21-81e9-6d777371494b
+_uuid               : 5669a918-7a24-407e-9642-48dbb8770f18
 admin_state         : down
 duplex              : full
-ifindex             : 522
+ifindex             : 526
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +95,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 8e60bc2e-5718-49be-ab9c-421beabdb749
+_uuid               : 4035c535-859a-4712-aa5a-dbfbae018be2
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -125,11 +108,11 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1176922500, tx_dropped=0, tx_errors=0, tx_packets=784615}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1264573500, tx_dropped=0, tx_errors=0, tx_packets=843049}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : aaf313ea-6a31-4b62-9dd0-d0393aa6b832
+_uuid               : a8eb5ae5-ce1e-4b02-9fb2-92d8b0429841
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -142,7 +125,24 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18089315792, tx_dropped=0, tx_errors=0, tx_packets=12064077}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=18142024226, tx_dropped=0, tx_errors=0, tx_packets=12099491}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 87cc1652-2571-49ee-b1d5-9470f04e3203
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1550
+name                : "eth21"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=24141583859, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=16105020, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
