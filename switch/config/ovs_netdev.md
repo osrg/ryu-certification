@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-4b6cb764-283a-4835-8bd0-e8aa3ccfaa11
+3d3907de-b1d9-42a3-b9d3-e8a8d4f7ad79
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth21"
-            Interface "eth21"
-        Port "br0"
-            Interface "br0"
-                type: internal
         Port "eth23"
             Interface "eth23"
         Port "eth22"
             Interface "eth22"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth21"
+            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : e044ad56-74a7-4854-a9b1-7895f7da5d2b
-controller          : [fd03a003-2b74-4a77-b7df-ca2ee4920b6a]
+_uuid               : e0e709aa-ac73-4ae6-b68a-a83a4313b917
+controller          : [a88bea61-06a0-4853-9cdc-7bbce69e5bcf]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [4baabf45-37ba-4423-84ad-3a88802d362e, 4ee26d59-cb19-4fdb-97f8-7dcae1e287e0, bc750ee0-e9d3-4b37-a37f-9bd797aada66, d5b7924d-df8f-492f-aaee-53a420a05819]
+ports               : [0d2d343e-063c-4385-ab04-ec9cba8e5870, a3f51dfa-3c76-4a45-a97b-eccfdeb8547c, aa4bffb7-f908-41ec-84b6-02ffaaaf2767, f3e27417-7025-4a7e-933e-f235af46e777]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : fd03a003-2b74-4a77-b7df-ca2ee4920b6a
+_uuid               : a88bea61-06a0-4853-9cdc-7bbce69e5bcf
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="752", sec_since_disconnect="2", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="757", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : bc750ee0-e9d3-4b37-a37f-9bd797aada66
+_uuid               : 0d2d343e-063c-4385-ab04-ec9cba8e5870
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [070b685e-a06d-406f-a557-680d95af9988]
+interfaces          : [ed6dced8-3065-48d2-aa51-92114ec5253d]
 name                : "eth23"
 
-_uuid               : d5b7924d-df8f-492f-aaee-53a420a05819
+_uuid               : a3f51dfa-3c76-4a45-a97b-eccfdeb8547c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [11c285f4-42ea-4ea1-92dd-065f210a8a01]
+interfaces          : [5d1e5d65-dce3-4f38-bb10-a50f4ee3e29a]
 name                : "eth22"
 
-_uuid               : 4ee26d59-cb19-4fdb-97f8-7dcae1e287e0
+_uuid               : aa4bffb7-f908-41ec-84b6-02ffaaaf2767
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ab637f7b-9393-4584-9b44-ed46d4c4d8c7]
+interfaces          : [a07d0c6f-4ca1-4fb3-b160-bc5f6cef26b3]
 name                : "br0"
 
-_uuid               : 4baabf45-37ba-4423-84ad-3a88802d362e
+_uuid               : f3e27417-7025-4a7e-933e-f235af46e777
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [705e4b27-a6ca-445e-8e35-bfd5ea67bf58]
+interfaces          : [a156864d-bd01-46b2-8e90-b6e63b7616cc]
 name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 11c285f4-42ea-4ea1-92dd-065f210a8a01
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=26212828468, tx_dropped=0, tx_errors=0, tx_packets=17481301}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 070b685e-a06d-406f-a557-680d95af9988
+_uuid               : ed6dced8-3065-48d2-aa51-92114ec5253d
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -108,11 +91,28 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1560039000, tx_dropped=0, tx_errors=0, tx_packets=1040026}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=1735014000, tx_dropped=0, tx_errors=0, tx_packets=1156676}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 705e4b27-a6ca-445e-8e35-bfd5ea67bf58
+_uuid               : 5d1e5d65-dce3-4f38-bb10-a50f4ee3e29a
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=26318573836, tx_dropped=0, tx_errors=0, tx_packets=17552348}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : a156864d-bd01-46b2-8e90-b6e63b7616cc
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -125,14 +125,14 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=35749469141, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=23846294, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=35983475291, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=24003583, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : ab637f7b-9393-4584-9b44-ed46d4c4d8c7
+_uuid               : a07d0c6f-4ca1-4fb3-b160-bc5f6cef26b3
 admin_state         : down
 duplex              : full
-ifindex             : 532
+ifindex             : 536
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -150,20 +150,18 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 8c46162bb41c27c86523f59e6d0cbf91ea42b5d6
-Author:     Jiri Benc &lt;jbenc@redhat.com&gt;
-AuthorDate: Tue Sep 29 19:10:54 2015 -0300
+commit bb4c7107b270a941de48ae51a95978bea14fb14d
+Author:     Russell Bryant &lt;rbryant@redhat.com&gt;
+AuthorDate: Tue Oct 6 04:50:46 2015 +0100
 Commit:     Ben Pfaff &lt;blp@nicira.com&gt;
-CommitDate: Mon Oct 5 11:15:31 2015 -0700
+CommitDate: Mon Oct 5 21:13:28 2015 -0700
 
-    lib: Add ipv6 helper functions.
+    ovn-nbctl: Split parent and tag in &quot;show&quot; output.
     
-    ipv6_addr_is_set is going to be used by next patches.
+    As of 779e72cc57a106251cc9e6696e8c9aabb56d30b5, localnet ports may have
+    the tag column set.  This case does not make use of the parent column,
+    so output these fields independently of each other.
     
-    [cascardo: compare with in6addr_any in ipv6_addr_is_set]
-    [cascardo: keep only ipv6_addr_is_* functions]
-    
-    Signed-off-by: Jiri Benc &lt;jbenc@redhat.com&gt;
-    Signed-off-by: Thadeu Lima de Souza Cascardo &lt;cascardo@redhat.com&gt;
+    Signed-off-by: Russell Bryant &lt;rbryant@redhat.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@nicira.com&gt;
 </pre>
