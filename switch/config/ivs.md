@@ -13,14 +13,14 @@ $ /usr/sbin/ivs --pipeline=standard-1.3 -c 10.24.150.30:6633 --dpid 000000000000
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 3e847a58e356638214f528cbef8289546fa6c938
-Merge: d01ea97 5c9af52
+commit 87fbdca27bbe89095169ef257937003e1601eaf1
+Merge: 3e847a5 292b974
 Author:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-AuthorDate: Thu Aug 27 14:25:22 2015 -0700
+AuthorDate: Tue Oct 6 12:13:34 2015 -0700
 Commit:     Big Switch Networks &lt;abat@bigswitch.com&gt;
-CommitDate: Thu Aug 27 14:25:22 2015 -0700
+CommitDate: Tue Oct 6 12:13:34 2015 -0700
 
-    Merge pull request #345 from harshsin/ipv6-tlv
+    Merge pull request #346 from kenchiang/submodule-update
 
 $ modinfo openvswitch
 filename:       /lib/modules/3.2.0-29-generic/extra/openvswitch.ko
