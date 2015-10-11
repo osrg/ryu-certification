@@ -8,14 +8,14 @@ title: Ryu Certification - lagopus - config
 # Version information
 <pre>
 git log -1 --pretty=fuller
-commit 6cd6660e2d5e7ce79e713aa4de9ab32efa011905
-Merge: 5a14c95 b8684e2
+commit f683ca1b89ddea5bdef57d33b1138a0385ee2375
+Merge: 6cd6660 8d1f6ce
 Author:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-AuthorDate: Sat Aug 8 13:49:58 2015 +0900
+AuthorDate: Sun Oct 11 14:48:58 2015 +0900
 Commit:     Yoshihiro Nakajima &lt;nakajima.yoshihiro@lab.ntt.co.jp&gt;
-CommitDate: Sat Aug 8 13:49:58 2015 +0900
+CommitDate: Sun Oct 11 14:48:58 2015 +0900
 
-    Merge pull request #41 from lagopus/release-0.2
+    Merge pull request #54 from lagopus/release-0.2
     
-    Lagopus Release 0.2
+    Lagopus 0.2.1-release
 </pre>

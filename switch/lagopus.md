@@ -12,16 +12,16 @@ title: Ryu Certification - lagopus
 |[Action](#Action)|56|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(53)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|[set_field](#set_field)|161|9|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(161)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
+|[set_field](#set_field)|162|8|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(162)|&nbsp;&nbsp;&nbsp;&nbsp;(8)|
 |[Match](#Match)|714|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(606)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |[Group](#Group)|15|0|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(12)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|[Meter](#Meter)|27|9|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|&nbsp;&nbsp;&nbsp;&nbsp;(9)|
+|[Meter](#Meter)|26|10|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
 |Total|973|18|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(114)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(859)|&nbsp;&nbsp;&nbsp;&nbsp;(18)|
@@ -58,7 +58,7 @@ title: Ryu Certification - lagopus
 |-----------|----|----|----|----|
 |[ETH_DST](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/03_ETH_DST.json)|- | [OK](#054537c75c2343772badd2d72824d6d0) | [OK](#054537c75c2343772badd2d72824d6d0) | [OK](#054537c75c2343772badd2d72824d6d0) |
 |[ETH_SRC](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/04_ETH_SRC.json)|- | [OK](#0c20b607710509d07df984934ea6e709) | [OK](#0c20b607710509d07df984934ea6e709) | [OK](#0c20b607710509d07df984934ea6e709) |
-|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/05_ETH_TYPE.json)|- | [OK](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [OK](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [ERROR](#ba60e9bfb8e4d339de7040f0f5e3d0c2) |
+|[ETH_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/05_ETH_TYPE.json)|- | [OK](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [OK](#ba60e9bfb8e4d339de7040f0f5e3d0c2) | [OK](#ba60e9bfb8e4d339de7040f0f5e3d0c2) |
 |[TUNNEL_ID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/38_TUNNEL_ID.json)|- | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) | [OK](#21b7587a754c08356f3f60d3b4bb8a99) |
 |[VLAN_VID](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/06_VLAN_VID.json)|- | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) | [OK](#cbb7ad4ba4f1c1f3dabc03ae2f07c663) |
 |[VLAN_PCP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/action/25_SET_FIELD/07_VLAN_PCP.json)|- | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) | [OK](#4aac2024fdbed94a15211163ccb7b2d0) |
@@ -196,7 +196,7 @@ title: Ryu Certification - lagopus
 |[DROP_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_00_KBPS_02_100M.json)|- | [ERROR](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) | [OK](#374de7cf3ba3cd6962f98683ef2d0ee5) |
 |[DROP_01_PKTPS_00_100](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_00_100.json)|- | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) | [OK](#492d526b9df30e66fa495c155a7bc957) |
 |[DROP_01_PKTPS_01_1000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_01_1000.json)|- | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) | [OK](#2e4331e147a562542585036dcf5c507a) |
-|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [OK](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
+|[DROP_01_PKTPS_02_10000](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/01_DROP_01_PKTPS_02_10000.json)|- | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) | [ERROR](#41aa053a730cd3a8949410c96489828f) |
 |[DSCP_REMARK_00_KBPS_00_1M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_00_1M.json)|- | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) | [OK](#b5ce2897cf7d803b22135f5fd7421b38) |
 |[DSCP_REMARK_00_KBPS_01_10M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_01_10M.json)|- | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) | [OK](#5c4346f7b1d133f7f2d99dd68612fd98) |
 |[DSCP_REMARK_00_KBPS_02_100M](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/meter/02_DSCP_REMARK_00_KBPS_02_100M.json)|- | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) | [ERROR](#c915561eabc278589470d2187cb110f2) |
@@ -331,8 +331,7 @@ title: Ryu Certification - lagopus
 <pre>
     ethernet(ethertype=0x0800)/ipv4/tcp-->'eth_type=0x0800,actions=set_field:0x8848->eth_type,output:2'  OK
     ethernet(ethertype=0x86dd)/ipv6/tcp-->'eth_type=0x86dd,actions=set_field:0x8848->eth_type,output:2'  OK
-    ethernet(ethertype=0x0806)/arp-->'eth_type=0x0806,actions=set_field:0x8848->eth_type,output:2'       ERROR
-        Received incorrect packet: str('\x00\x01\x08\x00\x06\x04\x00\x01\x12\x11\x11\x11\x11\x11\xc0\xa8\n\n""""""\xc0\xa8\x14\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ethernet(ethertype=0x0806)/arp-->'eth_type=0x0806,actions=set_field:0x8848->eth_type,output:2'       OK
 </pre>
 <a name="21b7587a754c08356f3f60d3b4bb8a99">action: set_field: 38_TUNNEL_ID</a>
 <pre>
@@ -1602,7 +1601,7 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     200Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        ERROR
-        Received unexpected throughput: {'in_port': 2} 89605.85kbps
+        Received unexpected throughput: {'in_port': 2} 89565.04kbps
 ..........
     200Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:100Mbps(drop),output:2'                        OK
 ..........
@@ -1630,12 +1629,13 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     20000pktps(ethernet/ipv4/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
-        Received unexpected throughput: {'in_port': 2} 8644.30pktps
+        Received unexpected throughput: {'in_port': 2} 8895.45pktps
 ..........
-    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  OK
+    20000pktps(ethernet/ipv6/tcp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                  ERROR
+        Received unexpected throughput: {'in_port': 2} 8850.62pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:10000pktps(drop),output:2'                       ERROR
-        Received unexpected throughput: {'in_port': 2} 8806.85pktps
+        Received unexpected throughput: {'in_port': 2} 8974.05pktps
 </pre>
 <a name="b5ce2897cf7d803b22135f5fd7421b38">meter: 02_DSCP_REMARK_00_KBPS_00_1M</a>
 <pre>
@@ -1659,13 +1659,13 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     200Mbps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 24076.46kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 81292.06kbps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 25505.36kbps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 84296.20kbps
 ..........
     200Mbps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:100Mbps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 27179.35kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 81156.48kbps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 27865.99kbps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 83092.52kbps
 ..........
     200Mbps(ethernet/arp)-->'in_port=1,actions=meter:200Mbps(dscp_remark:prec_level=1),output:2'         ERROR
-        Received unexpected throughput: {'in_port': 2} 107379.00kbps
+        Received unexpected throughput: {'in_port': 2} 109099.66kbps
 </pre>
 <a name="50fc5b625263a400208fee338d37d088">meter: 02_DSCP_REMARK_01_PKTPS_00_100</a>
 <pre>
@@ -1689,11 +1689,11 @@ title: Ryu Certification - lagopus
 <pre>
 ..........
     20000pktps(ethernet/ipv4(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 1987.56pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 8257.95pktps
+        Received unexpected throughput: {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 20} 1911.29pktps, {'eth_type': 2048, 'in_port': 2, 'ip_dscp': 18} 8486.87pktps
 ..........
     20000pktps(ethernet/ipv6(dscp=18)/tcp)-->'in_port=1,actions=meter:10000pktps(dscp_remark:ip_dscp=20),output:2' ERROR
-        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 2272.53pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 8327.71pktps
+        Received unexpected throughput: {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 20} 2032.43pktps, {'eth_type': 34525, 'in_port': 2, 'ip_dscp': 18} 8235.86pktps
 ..........
     20000pktps(ethernet/arp)-->'in_port=1,actions=meter:20000pktps(dscp_remark:prec_level=1),output:2'   ERROR
-        Received unexpected throughput: {'in_port': 2} 10345.46pktps
+        Received unexpected throughput: {'in_port': 2} 10303.72pktps
 </pre>
