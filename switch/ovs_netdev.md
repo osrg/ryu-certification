@@ -14,17 +14,17 @@ title: Ryu Certification - ovs netdev
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(27)|&nbsp;&nbsp;&nbsp;&nbsp;(26)|
 |[set_field](#set_field)|75|95|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(75)|&nbsp;&nbsp;&nbsp;&nbsp;(95)|
-|[Match](#Match)|472|242|
+|[Match](#Match)|460|254|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(89)|&nbsp;&nbsp;&nbsp;&nbsp;(19)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(383)|&nbsp;&nbsp;&nbsp;&nbsp;(223)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(371)|&nbsp;&nbsp;&nbsp;&nbsp;(235)|
 |[Group](#Group)|8|7|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(5)|&nbsp;&nbsp;&nbsp;&nbsp;(7)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|585|406|
+|Total|573|418|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(95)|&nbsp;&nbsp;&nbsp;&nbsp;(19)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(490)|&nbsp;&nbsp;&nbsp;&nbsp;(387)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(478)|&nbsp;&nbsp;&nbsp;&nbsp;(399)|
 
 ## <a name ='Action'>Action</a>
 
@@ -143,8 +143,8 @@ title: Ryu Certification - ovs netdev
 |[UDP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/16_UDP_DST_IPv4.json)|x | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) |
 |[SCTP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv4.json)|- | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) |
 |[SCTP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv4.json)|- | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) |
-|[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) |
-|[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
+|[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) |
+|[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
 |[IP_DSCP (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv6.json)|- | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) |
 |[IP_ECN (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv6.json)|- | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) |
 |[IP_PROTO (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv6.json)|x | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) |
@@ -221,9 +221,9 @@ title: Ryu Certification - ovs netdev
 <pre>
     ethernet/ipv4/tcp-->'eth_type=0x0800,actions=push_mpls:0x8847,output:2'                              OK
     ethernet/ipv6/tcp-->'eth_type=0x86dd,actions=push_mpls:0x8847,output:2'                              ERROR
-        Received incorrect packet: mpls(label=2)
+        Received incorrect packet: mpls(label=2)/str('\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 +g\x08\xae\x00\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00j\\\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/arp-->'eth_type=0x0806,actions=push_mpls:0x8847,output:2'                                   ERROR
-        Received incorrect packet: mpls(ttl=64)
+        Received incorrect packet: mpls(ttl=64)/str('\x12\x11\x11\x11\x11\x11\xc0\xa8\n\n""""""\xc0\xa8\x14\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 </pre>
 <a name="5d818f5bd3c537066c61f0a9a71df0b3">action: 26_PUSH_PBB</a>
 <pre>
@@ -619,9 +619,9 @@ title: Ryu Certification - ovs netdev
 <a name="3386037a7fb9bba0939901969d7443a8">action: set_field: 26_IPV6_SRC</a>
 <pre>
     ethernet/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2'      ERROR
-        Received incorrect packet: tcp(csum=27228)
+        Received incorrect packet: tcp(csum=27228)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/vlan/ipv6(src='10::10')/tcp-->'ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
-        Received incorrect packet: tcp(csum=27228)
+        Received incorrect packet: tcp(csum=27228)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/mpls/ipv6(src='10::10')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(src='10::10')/tcp-->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_src=10::10,actions=set_field:a0::a0->ipv6_src,output:2' ERROR
@@ -630,9 +630,9 @@ title: Ryu Certification - ovs netdev
 <a name="b3d87765d9d8e73d5826b1966523f4f0">action: set_field: 27_IPV6_DST</a>
 <pre>
     ethernet/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2'      ERROR
-        Received incorrect packet: tcp(csum=27228)
+        Received incorrect packet: tcp(csum=27228)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/vlan/ipv6(dst='20::20')/tcp-->'ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
-        Received incorrect packet: tcp(csum=27228)
+        Received incorrect packet: tcp(csum=27228)/str('\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f')
     ethernet/mpls/ipv6(dst='20::20')/tcp-->'actions=pop_mpls:0x86dd,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
         Receiving timeout: no change in tx_packets on target.
     ethernet/itag/ethernet/ipv6(dst='20::20')/tcp--->'actions=pop_pbb,goto_table:1','table_id:1,ipv6_dst=20::20,actions=set_field:b0::b0->ipv6_dst,output:2' ERROR
@@ -1257,14 +1257,20 @@ title: Ryu Certification - ovs netdev
 </pre>
 <a name="b20ebaff16d8e2a0219796e41563743f">match: 19_ICMPV4_TYPE</a>
 <pre>
-    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                        OK
-    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                               OK
+    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                        ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                               ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/ipv4/icmp(type=3)-->'icmpv4_type=8,actions=output:2'                                        OK
-    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                   OK
-    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                          OK
+    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                   ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                          ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/vlan/ipv4/icmp(type=3)-->'icmpv4_type=8,actions=output:2'                                   OK
-    ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' OK
-    ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:CONTROLLER' ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/mpls/ipv4/icmp(type=3)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' OK
     ethernet/itag/ethernet/ipv4/icmp(type=8)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
@@ -1275,14 +1281,20 @@ title: Ryu Certification - ovs netdev
 </pre>
 <a name="ad9044b9c4d90ae16d41d04cc1eb47f0">match: 20_ICMPV4_CODE</a>
 <pre>
-    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                        OK
-    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                               OK
+    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                        ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                               ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/ipv4/icmp(code=1)-->'icmpv4_code=0,actions=output:2'                                        OK
-    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                   OK
-    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                          OK
+    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                   ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                          ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/vlan/ipv4/icmp(code=1)-->'icmpv4_code=0,actions=output:2'                                   OK
-    ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' OK
-    ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' OK
+    ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:CONTROLLER' ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/mpls/ipv4/icmp(code=1)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' OK
     ethernet/itag/ethernet/ipv4/icmp(code=0)-->'actions=pop_pbb,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
@@ -1915,31 +1927,31 @@ title: Ryu Certification - ovs netdev
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1998.34kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1997.09kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 514.82kbps, {'in_port': 3} 1515.94kbps
+        Received unexpected throughput: {'in_port': 2} 531.62kbps, {'in_port': 3} 1499.15kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 502.71kbps, {'in_port': 3} 1528.05kbps
+        Received unexpected throughput: {'in_port': 2} 509.74kbps, {'in_port': 3} 1521.02kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 502.71kbps, {'in_port': 3} 1528.05kbps
+        Received unexpected throughput: {'in_port': 2} 500.76kbps, {'in_port': 3} 1530.00kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 484.35kbps, {'in_port': 3} 1515.16kbps
+        Received unexpected throughput: {'in_port': 2} 526.93kbps, {'in_port': 3} 1472.19kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 507.01kbps, {'in_port': 3} 1491.72kbps
+        Received unexpected throughput: {'in_port': 2} 501.93kbps, {'in_port': 3} 1496.80kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1997.16kbps
+        Received unexpected throughput: {'in_port': 2} 0.00kbps, {'in_port': 3} 1997.95kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
