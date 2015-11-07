@@ -14,17 +14,17 @@ title: Ryu Certification - ivs
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(14)|&nbsp;&nbsp;&nbsp;&nbsp;(39)|
 |[set_field](#set_field)|46|124|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(46)|&nbsp;&nbsp;&nbsp;&nbsp;(124)|
-|[Match](#Match)|345|369|
+|[Match](#Match)|337|377|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(108)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(237)|&nbsp;&nbsp;&nbsp;&nbsp;(369)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(229)|&nbsp;&nbsp;&nbsp;&nbsp;(377)|
 |[Group](#Group)|2|13|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(2)|&nbsp;&nbsp;&nbsp;&nbsp;(10)|
 |[Meter](#Meter)|0|36|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(0)|&nbsp;&nbsp;&nbsp;&nbsp;(36)|
-|Total|410|581|
+|Total|402|589|
 |&nbsp;&nbsp;&nbsp;&nbsp;(Required)|&nbsp;&nbsp;&nbsp;&nbsp;(111)|&nbsp;&nbsp;&nbsp;&nbsp;(3)|
-|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(299)|&nbsp;&nbsp;&nbsp;&nbsp;(578)|
+|&nbsp;&nbsp;&nbsp;&nbsp;(Optional)|&nbsp;&nbsp;&nbsp;&nbsp;(291)|&nbsp;&nbsp;&nbsp;&nbsp;(586)|
 
 ## <a name ='Action'>Action</a>
 
@@ -143,8 +143,8 @@ title: Ryu Certification - ivs
 |[UDP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/16_UDP_DST_IPv4.json)|x | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) / [OK](#ee030944f258a23b2c28535429a7d172) | [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) | [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) / [ERROR](#ee030944f258a23b2c28535429a7d172) |
 |[SCTP_SRC (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/17_SCTP_SRC_IPv4.json)|- | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [OK](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) | [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) / [ERROR](#b1866c1f93e4b9d4a6f88be3b9dd686d) |
 |[SCTP_DST (IPv4)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/18_SCTP_DST_IPv4.json)|- | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [OK](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) | [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) / [ERROR](#3b5fb36aac9f8c7e7e5163a09a534f7c) |
-|[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) |
-|[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
+|[ICMPV4_TYPE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/19_ICMPV4_TYPE.json)|- | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [OK](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) | [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) / [ERROR](#b20ebaff16d8e2a0219796e41563743f) |
+|[ICMPV4_CODE](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/20_ICMPV4_CODE.json)|- | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [OK](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) | [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) / [ERROR](#ad9044b9c4d90ae16d41d04cc1eb47f0) |
 |[IP_DSCP (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/08_IP_DSCP_IPv6.json)|- | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) / [OK](#1b6a15d9d1f95e9e50faab76b2188d92) | [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) | [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) / [ERROR](#1b6a15d9d1f95e9e50faab76b2188d92) |
 |[IP_ECN (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/09_IP_ECN_IPv6.json)|- | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) / [OK](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) | [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) / [ERROR](#3a26a012dc92d9753cfa7ca159b940b8) |
 |[IP_PROTO (IPv6)](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/match/10_IP_PROTO_IPv6.json)|x | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [OK](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) | [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) / [ERROR](#d7a546b0e9c4bd928613d26f2f5cc0d7) |
@@ -182,7 +182,7 @@ title: Ryu Certification - ivs
 | |Required|IPv4|IPv6|ARP|
 |-----------|----|----|----|----|
 |[ALL](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/00_ALL.json)|x | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) | [ERROR](#d6ac8fa11117c68ef8cfac688fe04d05) |
-|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) |
+|[SELECT_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Ether.json)|- | [OK](#2a87ce5fa38fa44c500672e260e565a8) | [ERROR](#2a87ce5fa38fa44c500672e260e565a8) | [OK](#2a87ce5fa38fa44c500672e260e565a8) |
 |[SELECT_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_IP.json)|- | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) | [ERROR](#890f325c255a32a6aace26e08a960250) |
 |[SELECT_Weight_Ether](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_Ether.json)|- | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) | [ERROR](#1677965b6b2cffd3c4d47b52b7629ca0) |
 |[SELECT_Weight_IP](https://github.com/osrg/ryu/tree/master/ryu/tests/switch/of13/group/01_SELECT_Weight_IP.json)|- | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) | [ERROR](#d52d0a95caf9ce38f77620354812c83c) |
@@ -426,11 +426,11 @@ title: Ryu Certification - ivs
 <a name="9e9826295e4fcce4158b54ff2f2ce35d">action: set_field: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_itag=100,actions=set_field:203->pbb_itag,output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
 </pre>
 <a name="ce97749e537c30572fe41bc5f97f525c">action: set_field: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -1023,44 +1023,44 @@ title: Ryu Certification - ivs
 <a name="42d8b469a2a3868f8fb4a5059ad451ff">match: 37_PBB_ISID</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:CONTROLLER' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=100,actions=output:2'          ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:CONTROLLER'      ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=100,actions=output:2'               ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 17, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': None, 'value': 100}}]}})
 </pre>
 <a name="a0f136634ba501a112c0bb437349a478">match: 37_PBB_ISID (Mask)</a>
 <pre>
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv4/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/ipv6/tcp-->'pbb_isid=96(mask=0xf0),actions=output:2' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=100)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:CONTROLLER' ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
     ethernet/svlan/itag(sid=203)/ethernet/svlan/vlan/arp-->'pbb_isid=96(mask=0xf0),actions=output:2'     ERROR
-        Added incorrect flows:
+        Added incorrect flows: flow_stats({'OFPMatch': {'type': 1, 'length': 12, 'oxm_fields': [{'OXMTlv': {'field': 'in_port', 'mask': None, 'value': 2}}]}} != {'OFPMatch': {'type': 1, 'length': 20, 'oxm_fields': [{'OXMTlv': {'field': 'eth_type', 'mask': None, 'value': 35047}}, {'OXMTlv': {'field': 'pbb_isid', 'mask': 240, 'value': 96}}]}})
 </pre>
 <a name="0445f4506456f0406f5f718b15173da7">match: 08_IP_DSCP (IPv4)</a>
 <pre>
@@ -1341,11 +1341,15 @@ title: Ryu Certification - ivs
 </pre>
 <a name="b20ebaff16d8e2a0219796e41563743f">match: 19_ICMPV4_TYPE</a>
 <pre>
-    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                        OK
-    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                               OK
+    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                        ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                               ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/ipv4/icmp(type=3)-->'icmpv4_type=8,actions=output:2'                                        OK
-    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                   OK
-    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                          OK
+    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:2'                                   ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/vlan/ipv4/icmp(type=8)-->'icmpv4_type=8,actions=output:CONTROLLER'                          ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/vlan/ipv4/icmp(type=3)-->'icmpv4_type=8,actions=output:2'                                   OK
     ethernet/mpls/ipv4/icmp(type=8)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_type=8,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
@@ -1362,11 +1366,15 @@ title: Ryu Certification - ivs
 </pre>
 <a name="ad9044b9c4d90ae16d41d04cc1eb47f0">match: 20_ICMPV4_CODE</a>
 <pre>
-    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                        OK
-    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                               OK
+    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                        ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                               ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/ipv4/icmp(code=1)-->'icmpv4_code=0,actions=output:2'                                        OK
-    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                   OK
-    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                          OK
+    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:2'                                   ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
+    ethernet/vlan/ipv4/icmp(code=0)-->'icmpv4_code=0,actions=output:CONTROLLER'                          ERROR
+        Received incorrect packet: Encounter an error during packet comparison. it is malformed.
     ethernet/vlan/ipv4/icmp(code=1)-->'icmpv4_code=0,actions=output:2'                                   OK
     ethernet/mpls/ipv4/icmp(code=0)-->'actions=pop_mpls:0x0800,goto_table:1','table_id:1,icmpv4_code=0,actions=output:2' ERROR
         Failed to add flows: OFPErrorMsg[type=0x02, code=0x00]
@@ -2062,59 +2070,59 @@ title: Ryu Certification - ivs
 <pre>
 ..........
     2Mbps(ethernet/ipv4/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
-        Received unexpected throughput: {'in_port': 2} 1794.05kbps, {'in_port': 3} 1794.05kbps
+        Received unexpected throughput: {'in_port': 2} 1793.66kbps, {'in_port': 3} 1793.66kbps
 ..........
     2Mbps(ethernet/ipv6/tcp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'          ERROR
-        Received unexpected throughput: {'in_port': 2} 1792.05kbps, {'in_port': 3} 1792.05kbps
+        Received unexpected throughput: {'in_port': 2} 1792.87kbps, {'in_port': 3} 1792.87kbps
 ..........
     2Mbps(ethernet/arp)-->'in_port=1,actions=group:all(actions=output:2/actions=output:3)'               ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.99kbps, {'in_port': 3} 1793.99kbps
+        Received unexpected throughput: {'in_port': 2} 1794.01kbps, {'in_port': 3} 1794.01kbps
 </pre>
 <a name="2a87ce5fa38fa44c500672e260e565a8">group: 01_SELECT_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 ..........
-    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
+    2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
+        Received unexpected throughput: {'in_port': 3} 894.09kbps
 ..........
-    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 3} 889.02kbps
+    2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' OK
 </pre>
 <a name="890f325c255a32a6aace26e08a960250">group: 01_SELECT_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1792.10kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1793.58kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1792.88kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1792.83kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(actions=output:2/actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.66kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1793.67kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="1677965b6b2cffd3c4d47b52b7629ca0">group: 01_SELECT_Weight_Ether</a>
 <pre>
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv4/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 898.78kbps, {'in_port': 3} 926.91kbps
+        Received unexpected throughput: {'in_port': 2} 927.28kbps, {'in_port': 3} 898.38kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/ipv6/tcp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 911.25kbps, {'in_port': 3} 913.60kbps
+        Received unexpected throughput: {'in_port': 2} 941.75kbps, {'in_port': 3} 881.98kbps
 ..........
     2Mbps(ethernet(dst=random,src=random)/arp)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 898.00kbps, {'in_port': 3} 925.73kbps
+        Received unexpected throughput: {'in_port': 2} 889.41kbps, {'in_port': 3} 936.28kbps
 </pre>
 <a name="d52d0a95caf9ce38f77620354812c83c">group: 01_SELECT_Weight_IP</a>
 <pre>
 ..........
     2Mbps(ethernet/ipv4(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.66kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1793.58kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/ipv6(src=random,dst=random)/tcp(src_port=random,dst_port=random))-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.66kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1792.80kbps, {'in_port': 3} 0.00kbps
 ..........
     2Mbps(ethernet/arp(src_ip=random,dst_ip=random)-->'in_port=1,actions=group:select(weight=1,actions=output:2/weight=2,actions=output:3)' ERROR
-        Received unexpected throughput: {'in_port': 2} 1793.26kbps, {'in_port': 3} 0.00kbps
+        Received unexpected throughput: {'in_port': 2} 1793.66kbps, {'in_port': 3} 0.00kbps
 </pre>
 <a name="9a2ce1d3a56a898592257439f05d22bf">meter: 01_DROP_00_KBPS_00_1M</a>
 <pre>
