@@ -8,10 +8,12 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-f1af0022-6160-4c62-ad0b-17eaf3ed5c02
+188f0942-dc1f-4e10-8017-69f64255fb4a
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth23"
+            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
@@ -19,12 +21,10 @@ f1af0022-6160-4c62-ad0b-17eaf3ed5c02
             Interface "eth22"
         Port "eth21"
             Interface "eth21"
-        Port "eth23"
-            Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 03547e3d-10f9-4139-b1bb-630f99f8fad5
-controller          : [e61c1534-096a-4850-adb1-90d91a55e6d6]
+_uuid               : 3009e4c9-3c44-44ce-9457-ff26efa5aa8a
+controller          : [69d7cc46-cd30-42a8-995e-3ac0aff6935c]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [5d4e6ac2-cbe5-4a15-bf4b-4ad1102dadbe, 8cbd1128-f34f-4a9f-8e5d-9f7163cf5eeb, 8e0cfbfc-30bb-45dd-945f-4b0c7489ff78, c89f73e7-ea4e-4790-8ea5-5c5a94b2ce52]
+ports               : [6ae69db9-0254-401f-90c8-66c70b9d6b39, aeb201db-e1aa-418f-b9c3-32395674d5e0, d0ef2cd2-9232-4b6e-b2c5-b2a3764e4fd6, d2ba5ade-4d76-490b-bae3-864c65e5ea3e]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : e61c1534-096a-4850-adb1-90d91a55e6d6
+_uuid               : 69d7cc46-cd30-42a8-995e-3ac0aff6935c
 is_connected        : false
 role                : other
 status              : {last_error="Connection refused", sec_since_connect="17", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 8cbd1128-f34f-4a9f-8e5d-9f7163cf5eeb
+_uuid               : 6ae69db9-0254-401f-90c8-66c70b9d6b39
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [d3bc73ec-4e55-48f9-92ab-4cffae7b186d]
+interfaces          : [54bfe409-c02a-4aad-be99-935774eeac66]
+name                : "eth23"
+
+_uuid               : d0ef2cd2-9232-4b6e-b2c5-b2a3764e4fd6
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [396375a4-c56e-486c-a93c-84859464b6e9]
 name                : "eth22"
 
-_uuid               : 8e0cfbfc-30bb-45dd-945f-4b0c7489ff78
+_uuid               : d2ba5ade-4d76-490b-bae3-864c65e5ea3e
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [01af0ec1-cf56-4969-99e0-d5795f217918]
+interfaces          : [5cb2cc9e-c3fd-4d85-8d9e-683b5b523784]
 name                : "eth21"
 
-_uuid               : 5d4e6ac2-cbe5-4a15-bf4b-4ad1102dadbe
+_uuid               : aeb201db-e1aa-418f-b9c3-32395674d5e0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [64b285e2-8368-41f9-bb01-66c3d2309b9f]
+interfaces          : [45022887-369a-4489-b244-7f2049e081a6]
 name                : "br0"
 
-_uuid               : c89f73e7-ea4e-4790-8ea5-5c5a94b2ce52
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [f575fe48-22f3-417f-a2d8-09a239122721]
-name                : "eth23"
-
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : f575fe48-22f3-417f-a2d8-09a239122721
-admin_state         : up
-duplex              : full
-ifindex             : 25
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5e"
-mtu                 : 1550
-name                : "eth23"
-ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5591701500, tx_dropped=0, tx_errors=0, tx_packets=3727801}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : d3bc73ec-4e55-48f9-92ab-4cffae7b186d
+_uuid               : 396375a4-c56e-486c-a93c-84859464b6e9
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -108,11 +91,28 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=28750579766, tx_dropped=0, tx_errors=0, tx_packets=19186071}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=28803225649, tx_dropped=0, tx_errors=0, tx_packets=19221489}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 01af0ec1-cf56-4969-99e0-d5795f217918
+_uuid               : 54bfe409-c02a-4aad-be99-935774eeac66
+admin_state         : up
+duplex              : full
+ifindex             : 25
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5e"
+mtu                 : 1550
+name                : "eth23"
+ofport              : 3
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=5679474000, tx_dropped=0, tx_errors=0, tx_packets=3786316}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : 5cb2cc9e-c3fd-4d85-8d9e-683b5b523784
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -125,14 +125,14 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=41225716200, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=27526963, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=41342767591, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=27605655, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 64b285e2-8368-41f9-bb01-66c3d2309b9f
+_uuid               : 45022887-369a-4489-b244-7f2049e081a6
 admin_state         : down
 duplex              : full
-ifindex             : 642
+ifindex             : 646
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -150,44 +150,18 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 873d85653d84289eb3a7fd253d95ebcbdad920f0
-Author:     Gurucharan Shetty &lt;guru@ovn.org&gt;
-AuthorDate: Mon Nov 30 15:52:09 2015 -0800
-Commit:     Gurucharan Shetty &lt;guru@ovn.org&gt;
-CommitDate: Wed Dec 2 10:00:46 2015 -0800
+commit 1b43cf9e68f4dd0dab4f9d3fa9dd80aeb642c139
+Author:     Joe Stringer &lt;joestringer@nicira.com&gt;
+AuthorDate: Tue Dec 1 16:17:46 2015 -0800
+Commit:     Joe Stringer &lt;joestringer@nicira.com&gt;
+CommitDate: Thu Dec 3 09:54:37 2015 -0800
 
-    debian: Skip systemctl redirect.
+    ofproto-dpif: Validate ct action support.
     
-    After some experimentation on Ubuntu15.04, I see the
-    following behavior.
+    Disallow installing rules that execute ct&#40;&#41; if conntrack is unsupported
+    in the datapath.
     
-    1. If you install openvswitch-switch with 'apt-get install',
-    then you automatically get a upstart and systemd config files
-    for openvswitch. The integration with 'interfaces' fails
-    because both the upstart and systemd jobs do not have logic
-    to handle it.
-    
-    The above behavior will likely get fixed soon in upstream
-    Ubuntu.
-    
-    2. If you install openvswitch-switch via the packages
-    created from the openvswitch repo, there is no systemd or
-    upstart conf files installed. But systemd notices this
-    and creates a runtime openvswitch conf file which does
-    nothing but call back the sysv startup script.
-    
-    In the above case when you call
-    &quot;/etc/init.d/openvswitch-switch start&quot;, it inturn calls
-    &quot;/bin/systemctl start openvswitch-switch.service&quot; and
-    that inturn again calls &quot;/etc/init.d/openvswitch-switch start&quot;.
-    But the above for some reason simply hangs. It looks like a call
-    to ifup when invoked in this manner does not return.
-    I am not sure why this is happening.
-    
-    We can avoid the above behavior completely by skipping the
-    systemctl redirect as done in this commit. This should fix
-    both 1. and 2. above.
-    
-    Signed-off-by: Gurucharan Shetty &lt;guru@ovn.org&gt;
-    Acked-by: Ben Pfaff &lt;blp@ovn.org&gt;
+    Reported-by: Ravindra Kenchappa &lt;ravindra.kenchappa@hpe.com&gt;
+    Signed-off-by: Joe Stringer &lt;joestringer@nicira.com&gt;
+    Acked-by: Jarno Rajahalme &lt;jarno@ovn.org&gt;
 </pre>
