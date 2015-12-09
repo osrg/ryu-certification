@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c17453da-ceed-41d3-8bb8-123472970c04
+0ea31736-bbde-4f7a-b597-fa61306b0d13
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth21"
+            Interface "eth21"
         Port "eth22"
             Interface "eth22"
+        Port "eth23"
+            Interface "eth23"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth21"
-            Interface "eth21"
-        Port "eth23"
-            Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 0854606c-7593-41c7-8b8a-81d53c3214f0
-controller          : [2fabdbe4-3f79-4df2-851a-ad2798571b99]
+_uuid               : 707e8001-e079-4183-bbbd-70798fde20d9
+controller          : [37cbcd9b-e75a-455b-9d1e-37d9d6a37f1a]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,70 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [65473e53-0501-4542-862e-493c642eaf6b, 9977a002-a163-407f-a856-cb8e4f6f6480, bb3d22e5-ef59-40f8-9a20-e3ddbb10c91a, f1307fd5-e9c6-4de9-8165-9afb75284d23]
+ports               : [02716a26-5ceb-42c7-992e-9ba2eaccecce, 30e62e61-7a14-419e-870e-991f142ff15c, 6a832ac3-5ad0-4a55-95a6-5541d19761bb, b5e2b122-cc8c-42c0-8569-f31dc61cee61]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 2fabdbe4-3f79-4df2-851a-ad2798571b99
+_uuid               : 37cbcd9b-e75a-455b-9d1e-37d9d6a37f1a
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="662", sec_since_disconnect="0", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="667", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f1307fd5-e9c6-4de9-8165-9afb75284d23
+_uuid               : 30e62e61-7a14-419e-870e-991f142ff15c
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [6e87fd91-61a1-404b-93ec-cd0bdf97d8b3]
-name                : "eth23"
-
-_uuid               : bb3d22e5-ef59-40f8-9a20-e3ddbb10c91a
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [3a577af4-aa63-45ae-ab85-45eb8e6ff6ce]
-name                : "eth21"
-
-_uuid               : 9977a002-a163-407f-a856-cb8e4f6f6480
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a0132492-0330-4650-a728-5007d13b8a2a]
-name                : "br0"
-
-_uuid               : 65473e53-0501-4542-862e-493c642eaf6b
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [49c0839e-baff-4e5d-8c18-fe96f8253c3a]
+interfaces          : [21d942ef-e2b6-49ab-8845-52e3ac785a15]
 name                : "eth22"
 
-$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3a577af4-aa63-45ae-ab85-45eb8e6ff6ce
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1550
+_uuid               : 02716a26-5ceb-42c7-992e-9ba2eaccecce
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [eb1c9230-950d-4a35-85fa-e00583a8e67b]
 name                : "eth21"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=41810846897, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=27920336, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
 
-_uuid               : 6e87fd91-61a1-404b-93ec-cd0bdf97d8b3
+_uuid               : b5e2b122-cc8c-42c0-8569-f31dc61cee61
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [932e23e7-a8a2-4731-aa22-f3b85d80d1e6]
+name                : "br0"
+
+_uuid               : 6a832ac3-5ad0-4a55-95a6-5541d19761bb
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [6ebaa848-61c4-4fe1-97eb-34d75971f531]
+name                : "eth23"
+
+$ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
+_uuid               : 6ebaa848-61c4-4fe1-97eb-34d75971f531
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -108,31 +91,31 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6030318000, tx_dropped=0, tx_errors=0, tx_packets=4020212}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6118108500, tx_dropped=0, tx_errors=0, tx_packets=4078739}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 49c0839e-baff-4e5d-8c18-fe96f8253c3a
+_uuid               : eb1c9230-950d-4a35-85fa-e00583a8e67b
 admin_state         : up
 duplex              : full
-ifindex             : 24
+ifindex             : 23
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
 link_speed          : 1000000000
 link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
+mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=29013895923, tx_dropped=0, tx_errors=0, tx_packets=19363216}
+name                : "eth21"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=41927868288, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=27999008, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : a0132492-0330-4650-a728-5007d13b8a2a
+_uuid               : 932e23e7-a8a2-4731-aa22-f3b85d80d1e6
 admin_state         : down
 duplex              : full
-ifindex             : 660
+ifindex             : 664
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -145,31 +128,42 @@ ofport              : 65534
 statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
+
+_uuid               : 21d942ef-e2b6-49ab-8845-52e3ac785a15
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=29066487806, tx_dropped=0, tx_errors=0, tx_packets=19398598}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
 </pre>
 
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 839c723379c5bc6beb678aa97fe4a33d05358f4b
-Author:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-AuthorDate: Mon Dec 7 18:23:21 2015 -0800
-Commit:     Pravin B Shelar &lt;pshelar@nicira.com&gt;
-CommitDate: Tue Dec 8 09:48:31 2015 -0800
+commit 042852d14cabb1d91fefc9f6ce713796d8459086
+Author:     Russell Bryant &lt;russell@ovn.org&gt;
+AuthorDate: Tue Dec 8 17:32:47 2015 -0500
+Commit:     Russell Bryant &lt;russell@ovn.org&gt;
+CommitDate: Wed Dec 9 11:17:11 2015 -0500
 
-    datapath: Backport: vxlan: interpret IP headers for ECN correctly
+    ovn: Fix ct_state bit mappings in OVN symtab.
     
-    Upstream commit:
-        When looking for outer IP header, use the actual socket address family, not
-        the address family of the default destination which is not set for metadata
-        based interfaces &#40;and doesn't have to match the address family of the
-        received packet even if it was set&#41;.
+    The OVN symbol table contained outdated mappings between connection
+    states and the corresponding bit in the ct_state field.  This patch
+    updates the symbol table with the proper values as defined in
+    lib/packets.h.
     
-        Fix also the misleading comment.
-    
-        Signed-off-by: Jiri Benc &lt;jbenc@redhat.com&gt;
-        Signed-off-by: David S. Miller &lt;davem@davemloft.net&gt;
-    
-    Upstream: ce212d0f6f5 &#40;&quot;vxlan: interpret IP headers for ECN correctly&quot;&#41;
-    Signed-off-by: Pravin B Shelar &lt;pshelar@nicira.com&gt;
-    Acked-by: Jesse Gross &lt;jesse@kernel.org&gt;
+    Signed-off-by: Russell Bryant &lt;russell@ovn.org&gt;
+    Fixes: 63bc9fb1c69f &#40;&quot;packets: Reorder CS_* flags to remove gap.&quot;&#41;
+    Acked-by: Joe Stringer &lt;joe@ovn.org&gt;
 </pre>
