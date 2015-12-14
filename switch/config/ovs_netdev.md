@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c6a3180e-75ba-402c-a7db-4b8a9890ff31
+1a367307-de91-475b-b680-57653d884a31
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth23"
-            Interface "eth23"
+        Port "eth21"
+            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
+        Port "eth23"
+            Interface "eth23"
         Port "eth22"
             Interface "eth22"
-        Port "eth21"
-            Interface "eth21"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : c903f5ae-1c38-4f1d-8e10-cabf3a54da95
-controller          : [d9145dc6-202e-422c-bf26-88708f0e7d1e]
+_uuid               : 78e27ccf-afd9-4371-8407-aaf0539414a5
+controller          : [d463a847-1ab6-4fdd-9a90-c3fa0c6177b8]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [014142e2-14be-4ce6-a6fc-2da6f4bf677a, 1238442d-6bd7-49b5-9fb4-94d113ff108f, bb1eaf4f-9a37-49c5-a36d-3e5e07a10e0f, e70b348e-50e3-489b-bfa6-85591ed671e1]
+ports               : [3af725fc-3f54-499c-913f-e4c8e5d52be0, 5e01da21-ee27-446a-b1fd-8b7230fb6c38, 696f528c-9957-4986-8aca-75e24d78d3d8, 8305d779-5d8c-4fdf-aa83-db163764faa4]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : d9145dc6-202e-422c-bf26-88708f0e7d1e
+_uuid               : d463a847-1ab6-4fdd-9a90-c3fa0c6177b8
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="662", sec_since_disconnect="0", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="667", sec_since_disconnect="2", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1238442d-6bd7-49b5-9fb4-94d113ff108f
+_uuid               : 696f528c-9957-4986-8aca-75e24d78d3d8
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [c3e77499-bb9d-4ec2-a36e-f61316dfe9d2]
-name                : "br0"
-
-_uuid               : 014142e2-14be-4ce6-a6fc-2da6f4bf677a
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [9648ab6a-26bc-445e-af08-7373b03926c8]
+interfaces          : [ceb42364-9f6e-4427-9fc1-9b88b3c83743]
 name                : "eth23"
 
-_uuid               : e70b348e-50e3-489b-bfa6-85591ed671e1
+_uuid               : 3af725fc-3f54-499c-913f-e4c8e5d52be0
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [7fb0193b-7cbe-4dc5-87b3-6336ce24533c]
+interfaces          : [c0eab948-1d1f-43bf-9561-387a5dcde64d]
 name                : "eth21"
 
-_uuid               : bb1eaf4f-9a37-49c5-a36d-3e5e07a10e0f
+_uuid               : 8305d779-5d8c-4fdf-aa83-db163764faa4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [3dde85bc-fdc5-4d09-be31-176c5dce3f07]
+interfaces          : [3422c364-33ad-4a7b-a121-a86045b58a0c]
 name                : "eth22"
 
+_uuid               : 5e01da21-ee27-446a-b1fd-8b7230fb6c38
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [7bdf8668-7844-4011-9037-3d8b7fe0c2db]
+name                : "br0"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3dde85bc-fdc5-4d09-be31-176c5dce3f07
+_uuid               : 3422c364-33ad-4a7b-a121-a86045b58a0c
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -91,14 +91,14 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=29224783955, tx_dropped=0, tx_errors=0, tx_packets=19505091}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=29277459838, tx_dropped=0, tx_errors=0, tx_packets=19540529}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : c3e77499-bb9d-4ec2-a36e-f61316dfe9d2
+_uuid               : 7bdf8668-7844-4011-9037-3d8b7fe0c2db
 admin_state         : down
 duplex              : full
-ifindex             : 676
+ifindex             : 680
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 9648ab6a-26bc-445e-af08-7373b03926c8
+_uuid               : ceb42364-9f6e-4427-9fc1-9b88b3c83743
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6380938500, tx_dropped=0, tx_errors=0, tx_packets=4253959}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=6468639000, tx_dropped=0, tx_errors=0, tx_packets=4312426}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 7fb0193b-7cbe-4dc5-87b3-6336ce24533c
+_uuid               : c0eab948-1d1f-43bf-9561-387a5dcde64d
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=42278920461, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=28235016, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=42395935852, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=28313684, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,22 +150,20 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit ab58aa48a198c3210021070f82042d4dea1e4b41
-Author:     Alin Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-AuthorDate: Fri Dec 11 14:59:07 2015 +0000
-Commit:     Justin Pettit &lt;jpettit@ovn.org&gt;
-CommitDate: Fri Dec 11 14:36:14 2015 -0800
+commit eb1746e63583509510978eeb0df62a1c160dfdb3
+Author:     Daniele Venturino &lt;daniele.venturino@m3s.it&gt;
+AuthorDate: Fri Dec 11 13:59:00 2015 +0100
+Commit:     Ben Pfaff &lt;blp@ovn.org&gt;
+CommitDate: Mon Dec 14 05:12:34 2015 -0800
 
-    datapath-windows: Cleanup Stt.c
+    AUTHORS: Add Carlo Andreotti
     
-    Remove double include for Flow.h and sort the includes alphabetically.
-    Also remove tabs.
+    Carlo was involved in the testing and validation processes of the Rapid
+    Spanning Tree Implementation.
     
-    Found by inspection.
+    I also updated the Copyright string in some files.
     
-    Signed-off-by: Alin Gabriel Serdean &lt;aserdean@cloudbasesolutions.com&gt;
-    Acked-by: Nithin Raju &lt;nithin@vmware.com&gt;
-    Acked-by: Sairam Venugopal &lt;vsairam@vmware.com&gt;
-    Acked-by: Sorin Vinturis &lt;svinturis@cloudbasesolutions.com&gt;
-    Signed-off-by: Justin Pettit &lt;jpettit@ovn.org&gt;
+    Signed-off by: Daniele Venturino &lt;daniele.venturino@m3s.it&gt;
+    
+    Signed-off-by: Ben Pfaff &lt;blp@ovn.org&gt;
 </pre>
