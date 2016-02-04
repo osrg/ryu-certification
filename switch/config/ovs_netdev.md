@@ -8,14 +8,14 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-136d9c87-96c6-4d31-9848-dbf71e7472ea
+7c9eb7fd-0004-47a1-b2a9-5927e019c69f
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
-        Port "eth23"
-            Interface "eth23"
         Port "eth21"
             Interface "eth21"
+        Port "eth23"
+            Interface "eth23"
         Port "eth22"
             Interface "eth22"
         Port "br0"
@@ -23,8 +23,8 @@ $ sudo ovs-vsctl show
                 type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : b68d068d-e4f5-4ced-b698-be395bfa0736
-controller          : [ef2bbee0-c002-411d-a840-b2e0a3fddd14]
+_uuid               : 7f243e5b-1df8-4764-9769-a1f8e004415c
+controller          : [50b34de9-57cb-41dc-aadc-c085ca5e891e]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [3b7cf919-0850-41ba-9ee1-53489e12be3f, a6527e76-448a-4eb9-925d-85c4a05d4b2e, e5ec84d1-42e3-47b0-92b2-0905d361dcf5, f9255844-8e63-4ae6-9847-6deafdf551ac]
+ports               : [4814cad3-86c0-48f8-b61f-b8e5aaea8d30, 5695cb70-2d3f-4b63-98cc-f071065564b1, c2f1adb1-1cc4-43f3-a993-26685c0b7d02, e1aae732-6034-4b7c-951b-5b0d25d1cbe4]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : ef2bbee0-c002-411d-a840-b2e0a3fddd14
+_uuid               : 50b34de9-57cb-41dc-aadc-c085ca5e891e
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="667", sec_since_disconnect="4", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="667", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : f9255844-8e63-4ae6-9847-6deafdf551ac
+_uuid               : 5695cb70-2d3f-4b63-98cc-f071065564b1
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [08d83377-333a-41f8-b850-b8ada63ba190]
-name                : "br0"
-
-_uuid               : e5ec84d1-42e3-47b0-92b2-0905d361dcf5
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [d678321e-1e11-460b-ac85-d7b998e5485c]
-name                : "eth22"
-
-_uuid               : 3b7cf919-0850-41ba-9ee1-53489e12be3f
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [90525587-625f-4061-8f7b-5ae16cb0d998]
+interfaces          : [628ab8a2-7ae6-4190-96ed-7a0eb9188cd9]
 name                : "eth23"
 
-_uuid               : a6527e76-448a-4eb9-925d-85c4a05d4b2e
+_uuid               : c2f1adb1-1cc4-43f3-a993-26685c0b7d02
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [4e3550cc-9ba6-48ae-ba46-0c27b2f0c6c2]
+interfaces          : [4cc914e2-ac57-4b08-9309-f6f901698885]
+name                : "eth22"
+
+_uuid               : e1aae732-6034-4b7c-951b-5b0d25d1cbe4
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [a77373cf-eb6c-40ad-9aca-fa0b096146b5]
+name                : "br0"
+
+_uuid               : 4814cad3-86c0-48f8-b61f-b8e5aaea8d30
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [ce9ef7f2-b81f-4fdb-bb25-d90fd05518f4]
 name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4e3550cc-9ba6-48ae-ba46-0c27b2f0c6c2
+_uuid               : ce9ef7f2-b81f-4fdb-bb25-d90fd05518f4
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -91,28 +91,11 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=44853344047, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=29965763, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=44970359438, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=30044431, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : d678321e-1e11-460b-ac85-d7b998e5485c
-admin_state         : up
-duplex              : full
-ifindex             : 24
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5d"
-mtu                 : 1550
-name                : "eth22"
-ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=30382940365, tx_dropped=0, tx_errors=0, tx_packets=20284246}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 90525587-625f-4061-8f7b-5ae16cb0d998
+_uuid               : 628ab8a2-7ae6-4190-96ed-7a0eb9188cd9
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -125,14 +108,31 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=8311090500, tx_dropped=0, tx_errors=0, tx_packets=5540727}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=8398786500, tx_dropped=0, tx_errors=0, tx_packets=5599191}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 08d83377-333a-41f8-b850-b8ada63ba190
+_uuid               : 4cc914e2-ac57-4b08-9309-f6f901698885
+admin_state         : up
+duplex              : full
+ifindex             : 24
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5d"
+mtu                 : 1550
+name                : "eth22"
+ofport              : 2
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=30435617748, tx_dropped=0, tx_errors=0, tx_packets=20319685}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : a77373cf-eb6c-40ad-9aca-fa0b096146b5
 admin_state         : down
 duplex              : full
-ifindex             : 760
+ifindex             : 764
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -150,18 +150,18 @@ type                : internal
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 88779d665a5aa2141c7efdb3d5902435f051e949
-Author:     Russell Bryant &lt;russell@ovn.org&gt;
-AuthorDate: Wed Feb 3 11:46:33 2016 -0500
-Commit:     Russell Bryant &lt;russell@ovn.org&gt;
-CommitDate: Wed Feb 3 11:49:40 2016 -0500
+commit 25c7da846dfaeb19189134f699710e0f5fdbf10c
+Author:     Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+AuthorDate: Tue Feb 2 20:55:48 2016 -0800
+Commit:     Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+CommitDate: Wed Feb 3 19:43:24 2016 -0800
 
-    ovn: Update comment about local datapath calculation.
+    cmap: Explain corner case in CMAP_FOR_EACH comment.
     
-    ovn-controller has a simple optimization for excluding some logical flow
-    processing that we know is unnecessary.  This update to a comment in the
-    code reflects a discussion we had on the mailing list about a better
-    algorithm that would let us exclude even more.
+    Commit d916785ce98c&#40;&quot;dpif-netdev: Fix improper use of CMAP_FOR_EACH.&quot;&#41;
+    fixes a problem that's worth documenting.
     
-    Signed-off-by: Russell Bryant &lt;russell@ovn.org&gt;
+    Requested-by: Jarno Rajahalme &lt;jarno@ovn.org&gt;
+    Signed-off-by: Daniele Di Proietto &lt;diproiettod@vmware.com&gt;
+    Acked-by: Ben Pfaff &lt;blp@ovn.org&gt;
 </pre>
