@@ -8,7 +8,7 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-77586ce1-8223-4681-b260-dcf056ecf62c
+dae78fd0-fa31-4e2f-a405-930d59ce9ea7
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
@@ -16,15 +16,15 @@ $ sudo ovs-vsctl show
             Interface "eth21"
         Port "eth23"
             Interface "eth23"
+        Port "eth22"
+            Interface "eth22"
         Port "br0"
             Interface "br0"
                 type: internal
-        Port "eth22"
-            Interface "eth22"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 02f61e6b-1dc0-4cef-a592-7f2d0febc5e1
-controller          : [c7033f76-2c2b-46ac-95a2-93dd67398f6f]
+_uuid               : fa66cc94-2441-4653-b3e1-460e8c6504f3
+controller          : [6c5b210f-5dcf-43d6-a344-67f86a39739a]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,56 +32,73 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [29f08366-7031-48e9-b9f9-460f1a988dd7, 4d7b397d-5585-4a8e-a882-e2d7a4707259, ab86f4db-9dc5-4605-a8c1-dda36ee8a4b3, ef5c5bfc-8d80-415b-becb-b74695fb5cfd]
+ports               : [4173f842-d0c8-4cd9-814b-035532d5cccd, 55383a35-46a5-4028-88af-14403ed5665f, e3556458-0d77-454d-b959-03d13bb98124, e9e19a9b-957e-469e-b36f-3613c6faf1b4]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : c7033f76-2c2b-46ac-95a2-93dd67398f6f
+_uuid               : 6c5b210f-5dcf-43d6-a344-67f86a39739a
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="662", sec_since_disconnect="0", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="667", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : ef5c5bfc-8d80-415b-becb-b74695fb5cfd
+_uuid               : e3556458-0d77-454d-b959-03d13bb98124
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [ccad99ed-d20f-48d0-9012-315db5e23601]
+interfaces          : [5caa65ab-5ac5-48fa-90d3-63f0ba58e9fe]
 name                : "eth22"
 
-_uuid               : 4d7b397d-5585-4a8e-a882-e2d7a4707259
+_uuid               : 55383a35-46a5-4028-88af-14403ed5665f
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1f643a41-edce-419c-8247-a7ed4ae1f1e8]
+interfaces          : [3e48c7f7-7a10-4063-8fad-49c3eacab829]
 name                : "eth23"
 
-_uuid               : 29f08366-7031-48e9-b9f9-460f1a988dd7
+_uuid               : 4173f842-d0c8-4cd9-814b-035532d5cccd
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [2b7a75f6-965a-4640-8229-cd7e35d03019]
+interfaces          : [d9a15d2b-480a-4893-87b2-0227e2cc0e45]
 name                : "eth21"
 
-_uuid               : ab86f4db-9dc5-4605-a8c1-dda36ee8a4b3
+_uuid               : e9e19a9b-957e-469e-b36f-3613c6faf1b4
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [1bd289b1-4602-48bb-8055-7c2a43e46e57]
+interfaces          : [e2eff393-0390-479e-a427-0552b0e04ce8]
 name                : "br0"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 1bd289b1-4602-48bb-8055-7c2a43e46e57
+_uuid               : d9a15d2b-480a-4893-87b2-0227e2cc0e45
+admin_state         : up
+duplex              : full
+ifindex             : 23
+ingress_policing_burst: 0
+ingress_policing_rate: 0
+link_resets         : 0
+link_speed          : 1000000000
+link_state          : up
+mac_in_use          : "00:60:e0:56:53:5c"
+mtu                 : 1550
+name                : "eth21"
+ofport              : 1
+statistics          : {collisions=0, rx_bytes=46374507872, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=30988420, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
+type                : ""
+
+_uuid               : e2eff393-0390-479e-a427-0552b0e04ce8
 admin_state         : down
 duplex              : full
-ifindex             : 806
+ifindex             : 810
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -95,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : ccad99ed-d20f-48d0-9012-315db5e23601
+_uuid               : 5caa65ab-5ac5-48fa-90d3-63f0ba58e9fe
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -108,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31015077703, tx_dropped=0, tx_errors=0, tx_packets=20709517}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31067728086, tx_dropped=0, tx_errors=0, tx_packets=20744938}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 1f643a41-edce-419c-8247-a7ed4ae1f1e8
+_uuid               : 3e48c7f7-7a10-4063-8fad-49c3eacab829
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -125,24 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9363442500, tx_dropped=0, tx_errors=0, tx_packets=6242295}
-status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
-type                : ""
-
-_uuid               : 2b7a75f6-965a-4640-8229-cd7e35d03019
-admin_state         : up
-duplex              : full
-ifindex             : 23
-ingress_policing_burst: 0
-ingress_policing_rate: 0
-link_resets         : 0
-link_speed          : 1000000000
-link_state          : up
-mac_in_use          : "00:60:e0:56:53:5c"
-mtu                 : 1550
-name                : "eth21"
-ofport              : 1
-statistics          : {collisions=0, rx_bytes=46257528481, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=30909776, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9451126500, tx_dropped=0, tx_errors=0, tx_packets=6300751}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,22 +150,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 250bd94d1e500a89c76cac944e660bd9c07ac364
-Author:     Pravin B Shelar &lt;pshelar@ovn.org&gt;
-AuthorDate: Thu Feb 11 01:05:16 2016 -0800
-Commit:     Pravin B Shelar &lt;pshelar@ovn.org&gt;
-CommitDate: Wed Feb 17 18:29:44 2016 -0800
+commit 5f8221294065b58f0c24b1535f099ffae337f74e
+Author:     Ben Pfaff &lt;blp@ovn.org&gt;
+AuthorDate: Fri Dec 4 14:26:47 2015 -0800
+Commit:     Ben Pfaff &lt;blp@ovn.org&gt;
+CommitDate: Fri Feb 19 00:22:48 2016 -0800
 
-    tunneling: Disable IPv6 tunnel
+    ovn: Reorganize action parsing test.
     
-    There are multiple issues in IPv6 userspace tunnel
-    implementation. Even the kernel module that ships with
-    2.5 does not support IPv6 tunneling. There is not
-    enough time to get all fixes in branch-2.5. So it make
-    sense to disable the support on 2.5.
+    It seems easier to understand if all of the tests for a given action
+    are grouped together.
     
-    Signed-off-by: Pravin B Shelar &lt;pshelar@ovn.org&gt;
-    Acked-by: Flavio Leitner &lt;fbl@sysclose.org&gt;
-    Acked-by: Thadeu Lima de Souza Cascardo &lt;cascardo@redhat.com&gt;
-    Acked-by: Jesse Gross &lt;jesse@kernel.org&gt;
+    Signed-off-by: Ben Pfaff &lt;blp@ovn.org&gt;
+    Acked-by: Justin Pettit &lt;jpettit@ovn.org&gt;
 </pre>
