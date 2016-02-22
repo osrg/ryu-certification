@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-4481e709-7599-4e77-a07f-877a9e188026
+97e6bfb1-9cb7-4427-b936-9054a3d55896
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "eth21"
+            Interface "eth21"
         Port "br0"
             Interface "br0"
                 type: internal
         Port "eth22"
             Interface "eth22"
-        Port "eth21"
-            Interface "eth21"
         Port "eth23"
             Interface "eth23"
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 6c35b736-0207-4afc-bbd0-949a88427731
-controller          : [c5c65207-d417-4638-8776-250c9ce3ea6a]
+_uuid               : b4bd296a-0c2e-4f6f-b03f-faf5b5949590
+controller          : [fb8b1c21-ff75-4fef-b416-dbaf168cbbe0]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [40b202e9-887b-4fb2-ab63-6025a7cb100c, 94c6a26c-59ca-4e9e-9a17-0a707ded7c42, af054da0-2c6b-4f12-a0ee-b7e7f3c9e0f2, fa60d657-62f3-4de1-aa36-38ab94119bbf]
+ports               : [33b8374f-96e4-4be1-949a-b3be39840264, 41535542-f9e1-47f1-b342-b14844bc3118, 42e7b44d-42c0-402b-8e32-6d8bb6e6cb32, 85109eac-42fc-4cd5-a644-ff97e4465c38]
 protocols           : ["OpenFlow13"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : c5c65207-d417-4638-8776-250c9ce3ea6a
+_uuid               : fb8b1c21-ff75-4fef-b416-dbaf168cbbe0
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="672", sec_since_disconnect="1", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="662", sec_since_disconnect="0", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : af054da0-2c6b-4f12-a0ee-b7e7f3c9e0f2
+_uuid               : 85109eac-42fc-4cd5-a644-ff97e4465c38
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [bfb77e5d-fe5f-4b2e-8d7f-f1cfef8cb90f]
-name                : "eth21"
-
-_uuid               : 94c6a26c-59ca-4e9e-9a17-0a707ded7c42
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [07f6c0d3-39fd-4967-8851-767b816afe74]
-name                : "eth22"
-
-_uuid               : 40b202e9-887b-4fb2-ab63-6025a7cb100c
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [c36123a1-bb3a-4229-ac70-e8038bf9e60f]
-name                : "br0"
-
-_uuid               : fa60d657-62f3-4de1-aa36-38ab94119bbf
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [4d68cf45-0e17-4659-8a54-99d268aa1f66]
+interfaces          : [b26144cc-f9c6-4c1e-8fd0-a49d872e5524]
 name                : "eth23"
 
+_uuid               : 42e7b44d-42c0-402b-8e32-6d8bb6e6cb32
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [3c41f65a-cdf1-4749-ab82-d833a4831b73]
+name                : "eth22"
+
+_uuid               : 41535542-f9e1-47f1-b342-b14844bc3118
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [138cacd2-fcc6-40a2-ad2f-e61ab970c9a9]
+name                : "br0"
+
+_uuid               : 33b8374f-96e4-4be1-949a-b3be39840264
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [0c587802-8957-4a64-8c57-ddaacaec3779]
+name                : "eth21"
+
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : 4d68cf45-0e17-4659-8a54-99d268aa1f66
+_uuid               : b26144cc-f9c6-4c1e-8fd0-a49d872e5524
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -91,14 +91,14 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9539004000, tx_dropped=0, tx_errors=0, tx_packets=6359336}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=9626532000, tx_dropped=0, tx_errors=0, tx_packets=6417688}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : c36123a1-bb3a-4229-ac70-e8038bf9e60f
+_uuid               : 138cacd2-fcc6-40a2-ad2f-e61ab970c9a9
 admin_state         : down
 duplex              : full
-ifindex             : 814
+ifindex             : 818
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : bfb77e5d-fe5f-4b2e-8d7f-f1cfef8cb90f
+_uuid               : 0c587802-8957-4a64-8c57-ddaacaec3779
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=46491524763, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=31067089, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=46608541654, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=31145758, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 07f6c0d3-39fd-4967-8851-767b816afe74
+_uuid               : 3c41f65a-cdf1-4749-ab82-d833a4831b73
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31120228469, tx_dropped=0, tx_errors=0, tx_packets=20780259}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31173075352, tx_dropped=0, tx_errors=0, tx_packets=20815811}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,21 +150,28 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit c6bd5e91520990ac2a227cafd98857fa672949ed
-Author:     Ben Pfaff &lt;blp@ovn.org&gt;
-AuthorDate: Tue Feb 16 11:13:35 2016 -0800
+commit e8fed7d01ca6fb6c7e96faf2b831fcfa4552cb4a
+Author:     William Tu &lt;u9012063@gmail.com&gt;
+AuthorDate: Wed Feb 17 18:00:22 2016 -0800
 Commit:     Ben Pfaff &lt;blp@ovn.org&gt;
-CommitDate: Fri Feb 19 16:46:19 2016 -0800
+CommitDate: Mon Feb 22 10:04:03 2016 -0800
 
-    tests: Better tolerate file system restriction on file name length.
+    gcc: Fix compile errors due to anonymous union initilization.
     
-    ecryptfs on Linux restricts file names to 143 bytes, but these two tests
-    used a 150-byte name.  This commit fixes the specific problem on ecryptfs
-    by reducing the name it test to 143 bytes.  It also fixes the more general
-    problem of name length restrictions by skipping the test, rather than
-    failing it, if a directory with the 143-byte name cannot be created, since
-    the most likely problem is that the name is too long for the file system.
+    gcc 4.4.7 lets you initialize named fields, and assign to anonymous union members,
+    but cannot statically initialize a named member of an anonymous union. This causes
+    errors when doing make:
+    fproto/fail-open.c: In function ‘send_bogus_packet_ins’:
+    ofproto/fail-open.c:130: error: unknown field ‘pin’ specified in initializer
+    ofproto/fail-open.c:131: error: unknown field ‘up’ specified in initializer
+    ofproto/fail-open.c:132: error: unknown field ‘packet’ specified in initializer
+    ofproto/fail-open.c:132: warning: missing braces around initializer
+    ofproto/fail-open.c:132: warning: &#40;near initialization for ‘am.&lt;anonymous&gt;.pin.up’&#41;
+    ofproto/fail-open.c:134: error: extra brace group at end of initializer
     
-    Reported-by: Zoltán Balogh &lt;zoltan.balogh@ericsson.com&gt;
+    Examaple: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=42875
+    We can either assign a name to the union or, in this patch, remove the unnecessary union.
+    
+    Signed-off-by: William Tu &lt;u9012063@gmail.com&gt;
     Signed-off-by: Ben Pfaff &lt;blp@ovn.org&gt;
 </pre>
