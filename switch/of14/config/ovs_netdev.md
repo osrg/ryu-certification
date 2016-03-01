@@ -8,23 +8,23 @@ title: Ryu Certification - ovs - config
 # OpenFlow related configuration
 <pre>
 $ sudo ovs-vsctl show
-c5abed0c-36db-4d2d-8d5e-aecf4da4b1c2
+92da9ae1-af22-42c3-ade2-97cb9dd0b317
     Bridge "br0"
         Controller "tcp:10.24.150.30:6633"
         fail_mode: secure
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth23"
+            Interface "eth23"
         Port "eth22"
             Interface "eth22"
         Port "eth21"
             Interface "eth21"
-        Port "eth23"
-            Interface "eth23"
-        Port "br0"
-            Interface "br0"
-                type: internal
 
 $ sudo ovs-vsctl list Bridge | grep -v '\[\]' | grep -v '{}'
-_uuid               : 3ac40be5-9f83-4f89-8870-af41bc18ec74
-controller          : [77df70eb-c42a-42d5-a610-094153e36b75]
+_uuid               : a29becd6-7d36-456d-9418-cc05ee960186
+controller          : [8a37eb29-5d8f-4301-a53e-0e1453ba6790]
 datapath_id         : "0000000000000001"
 datapath_type       : netdev
 datapath_version    : "<built-in>"
@@ -32,53 +32,53 @@ fail_mode           : secure
 mcast_snooping_enable: false
 name                : "br0"
 other_config        : {datapath-id="0000000000000001"}
-ports               : [4c6a793e-fa44-41b7-840d-f113195f13ac, a1f49297-7b23-4c9e-8ce8-b7d6d128bbcb, ad0dd19a-6c14-40f6-9097-d3c78388b9af, d551e59a-14da-4584-a17e-e88634e239ea]
+ports               : [08b79f10-17e7-44a7-b21c-170ee13b40be, 0fbd6f1a-e364-4577-a3a3-48e44b9b810a, 4f4ff3cc-8736-46af-bd63-6c6ff58cf833, e3a8a576-0195-4164-b1de-a4ad65ba96d2]
 protocols           : ["OpenFlow14"]
 rstp_enable         : false
 stp_enable          : false
 
 $ sudo ovs-vsctl list Controller | grep -v '\[\]' | grep -v '{}'
-_uuid               : 77df70eb-c42a-42d5-a610-094153e36b75
+_uuid               : 8a37eb29-5d8f-4301-a53e-0e1453ba6790
 is_connected        : false
 role                : other
-status              : {last_error="Connection refused", sec_since_connect="12", sec_since_disconnect="3", state=BACKOFF}
+status              : {last_error="Connection refused", sec_since_connect="11", sec_since_disconnect="3", state=BACKOFF}
 target              : "tcp:10.24.150.30:6633"
 
 $ sudo ovs-vsctl list Port | grep -v '\[\]' | grep -v '{}'
-_uuid               : d551e59a-14da-4584-a17e-e88634e239ea
+_uuid               : 4f4ff3cc-8736-46af-bd63-6c6ff58cf833
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [86f7e5e0-e326-42a1-aedb-273c121b7a7c]
-name                : "br0"
-
-_uuid               : ad0dd19a-6c14-40f6-9097-d3c78388b9af
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [a34b52e6-5c88-4ac2-b749-bf381e5445f2]
-name                : "eth23"
-
-_uuid               : 4c6a793e-fa44-41b7-840d-f113195f13ac
-bond_downdelay      : 0
-bond_fake_iface     : false
-bond_updelay        : 0
-fake_bridge         : false
-interfaces          : [95babf14-04d4-4761-8b6b-6626d2b6e153]
+interfaces          : [5dcaa765-bf13-4281-b6a7-faf172e5b583]
 name                : "eth22"
 
-_uuid               : a1f49297-7b23-4c9e-8ce8-b7d6d128bbcb
+_uuid               : 08b79f10-17e7-44a7-b21c-170ee13b40be
 bond_downdelay      : 0
 bond_fake_iface     : false
 bond_updelay        : 0
 fake_bridge         : false
-interfaces          : [eba3957c-001b-4a84-a3d8-9a9581af9ff4]
+interfaces          : [961dce81-016d-46b9-8a0c-1ecfa864a179]
+name                : "br0"
+
+_uuid               : 0fbd6f1a-e364-4577-a3a3-48e44b9b810a
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [eecb081f-ff36-40e1-b737-398d8a50185c]
+name                : "eth23"
+
+_uuid               : e3a8a576-0195-4164-b1de-a4ad65ba96d2
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_updelay        : 0
+fake_bridge         : false
+interfaces          : [75dfcf5c-e98e-4197-ae26-335cba021c59]
 name                : "eth21"
 
 $ sudo ovs-vsctl list Interface | grep -v '\[\]' | grep -v '{}'
-_uuid               : eba3957c-001b-4a84-a3d8-9a9581af9ff4
+_uuid               : 75dfcf5c-e98e-4197-ae26-335cba021c59
 admin_state         : up
 duplex              : full
 ifindex             : 23
@@ -91,14 +91,14 @@ mac_in_use          : "00:60:e0:56:53:5c"
 mtu                 : 1550
 name                : "eth21"
 ofport              : 1
-statistics          : {collisions=0, rx_bytes=47310652516, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=31617784, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
+statistics          : {collisions=0, rx_bytes=47427673907, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=31696456, tx_bytes=0, tx_dropped=0, tx_errors=0, tx_packets=0}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : 86f7e5e0-e326-42a1-aedb-273c121b7a7c
+_uuid               : 961dce81-016d-46b9-8a0c-1ecfa864a179
 admin_state         : down
 duplex              : full
-ifindex             : 846
+ifindex             : 850
 ingress_policing_burst: 0
 ingress_policing_rate: 0
 link_resets         : 0
@@ -112,7 +112,7 @@ statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_
 status              : {driver_name=tun, driver_version="1.6", firmware_version="N/A"}
 type                : internal
 
-_uuid               : 95babf14-04d4-4761-8b6b-6626d2b6e153
+_uuid               : 5dcaa765-bf13-4281-b6a7-faf172e5b583
 admin_state         : up
 duplex              : full
 ifindex             : 24
@@ -125,11 +125,11 @@ mac_in_use          : "00:60:e0:56:53:5d"
 mtu                 : 1550
 name                : "eth22"
 ofport              : 2
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31489297666, tx_dropped=0, tx_errors=0, tx_packets=21028556}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=31542354549, tx_dropped=0, tx_errors=0, tx_packets=21064248}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 
-_uuid               : a34b52e6-5c88-4ac2-b749-bf381e5445f2
+_uuid               : eecb081f-ff36-40e1-b737-398d8a50185c
 admin_state         : up
 duplex              : full
 ifindex             : 25
@@ -142,7 +142,7 @@ mac_in_use          : "00:60:e0:56:53:5e"
 mtu                 : 1550
 name                : "eth23"
 ofport              : 3
-statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=10152562500, tx_dropped=0, tx_errors=0, tx_packets=6768375}
+statistics          : {collisions=0, rx_bytes=0, rx_crc_err=0, rx_dropped=0, rx_errors=0, rx_frame_err=0, rx_over_err=0, rx_packets=0, tx_bytes=10239885000, tx_dropped=0, tx_errors=0, tx_packets=6826590}
 status              : {driver_name=igb, driver_version="3.2.10-k", firmware_version="2.10-9"}
 type                : ""
 </pre>
@@ -150,19 +150,17 @@ type                : ""
 # Version information
 <pre>
 $ git log -1 --pretty=fuller
-commit 06d4d4b68726d9cf153577a4a2287f944276f0d7
-Author:     Jarno Rajahalme &lt;jarno@ovn.org&gt;
-AuthorDate: Wed Feb 17 14:08:04 2016 -0800
-Commit:     Jarno Rajahalme &lt;jarno@ovn.org&gt;
-CommitDate: Mon Feb 29 11:40:45 2016 -0800
+commit d0a46cb4608e632f5028034762f0adde2ce947a0
+Author:     Russell Bryant &lt;russell@ovn.org&gt;
+AuthorDate: Mon Feb 29 15:51:57 2016 -0500
+Commit:     Russell Bryant &lt;russell@ovn.org&gt;
+CommitDate: Tue Mar 1 11:55:00 2016 -0500
 
-    ofp: Add support for bundles extension in OpenFlow 1.3.
+    ofpbuf: Fix trivial spelling typo.
     
-    ONF Extension 230 adds support for OpenFlow 1.4 bundles to OpenFlow
-    1.3.  Supporting this allows OpenFlow 1.3 controllers to start using
-    bundles.  Also the ovs-ofctl '--bundle' option can now be used with
-    OpenFlow 1.3.
+    s/bofy/body/. I noticed this spelling typo while reading this header
+    file.
     
-    Signed-off-by: Jarno Rajahalme &lt;jarno@ovn.org&gt;
+    Signed-off-by: Russell Bryant &lt;russell@ovn.org&gt;
     Acked-by: Ben Pfaff &lt;blp@ovn.org&gt;
 </pre>
